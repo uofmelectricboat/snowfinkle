@@ -53,6 +53,14 @@ BO_ 1302 IMU_Calibrated_Acceleration: 6 Vector__XXX
 BO_ 1304 IMU_Temperature: 8 Vector__XXX
  SG_ Temperature : 0|16@1+ (1,0) [0|0] "°C" Vector__XXX
 
+BO_ 1 UltraSonic_Voltage: 8 Vector__XXX
+ SG_ FrontSensorReading : 0|16@1+ (1,0) [0|0] "V" Vector__XXX
+ SG_ BackSensorReading : 16|1@1+ (1,0) [0|0] "V" Vector__XXX
+
+BO_ 2 Water_Sensor_V_H: 8 Vector__XXX
+ SG_ Water_Sensor_1 : 0|1@1+ (1,0) [0|0] "V" Vector__XXX
+ SG_ Water_Sensor_2 : 1|1@1+ (1,0) [0|0] "V" Vector__XXX
+
 
 
 BA_DEF_  "BusType" STRING ;
