@@ -1,0 +1,14 @@
+channel
+
+1 - throttle *power output
+2 - rudder *ratio of motors and maybe rudders
+3 - elevator *rise of front actuators
+4 - aileron *roll of front actuators
+5 - SC *drive mode (D, N, R)
+6 - SF *donut mode (no actuators - rudders are only for differential thrust )
+
+S1 and S2 can be fine tune adjustments
+
+14 to 29 is values
+
+Add another message since only 4 signals per message and configure in DBC - should just be FF01

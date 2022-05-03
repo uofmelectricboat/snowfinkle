@@ -1,0 +1,1438 @@
+// DBC_NMC_22s3p_Internal.dbc
+// 4/29/2022 12:49:53 PM
+// MsgID, Name, First Cell, Last Cell, First Therm, Last Therm
+// 0x200, M01N, m01n, 1, 11, 0, 2
+// 0x201, M01P, m01p, 1, 11, 0, 2
+// 0x202, M02N, m02n, 1, 11, 0, 2
+// 0x203, M02P, m02p, 1, 11, 0, 2
+//
+// CSM Voltage Type is 1000 Volt Vbatt Max 
+// CSM Voltage Range Type1 is 0 to 1000
+// CSM Voltage Range Type2 is -1000 to 1000
+// CSM Voltage Range Type3 is -1500 to 1500
+// CSM Voltage Gain Type1 is 0.25
+// CSM Voltage Gain Type2 is 0.5
+// CSM Voltage Gain Type3 is 0.75
+// IDM display messages Setting =  False
+// Manual Leakage display messages Setting =  False
+// Create Configue files =  True(.A123)
+
+VERSION ""
+
+
+NS_ : 
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_:
+
+BU_: BCM CSM IDM DST M01N M01P M02N M02P
+
+BO_ 81 BCM_SET_RTC: 8 BCM
+ SG_ csm_rtc_set_checksum : 7|8@0+ (1,0) [0|255] "sum"  CSM
+ SG_ csm_rtc_set_weekday : 23|8@0+ (1,0) [1|7] "weekday"  CSM
+ SG_ csm_rtc_set_year : 15|8@0+ (1,2000) [2001|2250] "year"  CSM
+ SG_ csm_rtc_set_month : 31|8@0+ (1,0) [1|12] "month"  CSM
+ SG_ csm_rtc_set_day : 39|8@0+ (1,0) [1|31] "day"  CSM
+ SG_ csm_rtc_set_hour : 47|8@0+ (1,0) [0|23] "hour"  CSM
+ SG_ csm_rtc_set_min : 55|8@0+ (1,0) [0|59] "min"  CSM
+ SG_ csm_rtc_set_sec : 63|8@0+ (1,0) [0|59] "sec"  CSM
+
+BO_ 144 CSM_DATA_1: 8 CSM
+ SG_ csm_mcu_integrity_key m22 : 47|8@0+ (1,0) [0|0] "" BCM
+ SG_ csm_mcu_integrity_status m21 : 41|2@0+ (1,0) [0|0] "" BCM
+ SG_ csm_iso_SHORT_POSITION m19 : 46|7@0+ (1,0) [0|0] "% of Vbatt" BCM
+ SG_ csm_iso_VBATT_MISMATCH m18 : 47|1@0+ (1,0) [0|0] "bool" BCM
+ SG_ csm_iso_MIDPACK_SHORT m18 : 46|1@0+ (1,0) [0|0] "bool" BCM
+ SG_ csm_iso_SHORT_BUS_NEG m18 : 45|1@0+ (1,0) [0|0] "bool" BCM
+ SG_ csm_iso_SHORT_BUS_POS m18 : 44|1@0+ (1,0) [0|0] "bool" BCM
+ SG_ csm_iso_RELAY_LO_FAIL_SHORT m18 : 43|1@0+ (1,0) [0|0] "bool" BCM
+ SG_ csm_iso_RELAY_LO_FAIL_OPEN m18 : 42|1@0+ (1,0) [0|0] "bool" BCM
+ SG_ csm_iso_RELAY_HI_FAIL_SHORT m18 : 41|1@0+ (1,0) [0|0] "bool" BCM
+ SG_ csm_iso_RELAY_HI_FAIL_OPEN m18 : 40|1@0+ (1,0) [0|0] "bool" BCM
+ SG_ csm_dtc_WATCHDOG_RESET m17 : 47|1@0+ (1,0) [0|0] "bool" BCM
+ SG_ csm_dtc_HW_SW_CONFLICT m17 : 46|1@0+ (1,0) [0|0] "bool" BCM
+ SG_ csm_dtc_ADC_REF_TEST m17 : 45|1@0+ (1,0) [0|0] "bool" BCM
+ SG_ csm_dtc_MCU_FAULT m17 : 44|1@0+ (1,0) [0|0] "bool" BCM
+ SG_ csm_dtc_ROM_CRC m17 : 43|1@0+ (1,0) [0|0] "bool" BCM
+ SG_ csm_dtc_RAM_CHECK m17 : 42|1@0+ (1,0) [0|0] "bool" BCM
+ SG_ csm_dtc_NVM_CHECKSUM m17 : 41|1@0+ (1,0) [0|0] "bool" BCM
+ SG_ csm_dtc_CALIBRATION_ERROR m17 : 40|1@0+ (1,0) [0|0] "bool" BCM
+ SG_ csm_CRC_lowbyte m15 : 47|8@0+ (1,0) [0|0] "CRC" BCM
+ SG_ csm_CRC_highbyte m14 : 47|8@0+ (1,0) [0|0] "CRC" BCM
+ SG_ csm_CRC_updated m13 : 40|1@0+ (1,0) [0|0] "Bool" BCM
+ SG_ csm_dtc_detail_count m20 : 47|8@0+ (1,0) [0|255] "" BCM
+ SG_ csm_dtc_detail m12 : 47|8@0+ (1,0) [0|255] "" BCM
+ SG_ csm_shunt_temp m3 : 47|8@0+ (0.5,-40) [-40|85] "DegC" BCM
+ SG_ csm_version_hardware m16 : 47|8@0+ (1,0) [0|255] "Version" BCM
+ SG_ csm_version_build m2 : 47|8@0+ (1,0) [0|255] "Version" BCM
+ SG_ csm_version_minor m1 : 47|8@0+ (1,0) [0|255] "Version" BCM
+ SG_ csm_version_major m0 : 47|8@0+ (1,0) [0|255] "Version" BCM
+ SG_ csm_therm8 m11 : 47|8@0+ (1,-40) [-40|210] "DegC" BCM
+ SG_ csm_therm7 m10 : 47|8@0+ (1,-40) [-40|210] "DegC" BCM
+ SG_ csm_therm6 m9 : 47|8@0+ (1,-40) [-40|210] "DegC" BCM
+ SG_ csm_therm5 m8 : 47|8@0+ (1,-40) [-40|210] "DegC" BCM
+ SG_ csm_therm4 m7 : 47|8@0+ (1,-40) [-40|210] "DegC" BCM
+ SG_ csm_therm3 m6 : 47|8@0+ (1,-40) [-40|210] "DegC" BCM
+ SG_ csm_therm2 m5 : 47|8@0+ (1,-40) [-40|210] "DegC" BCM
+ SG_ csm_therm1 m4 : 47|8@0+ (1,-40) [-40|210] "DegC" BCM
+ SG_ csm_multiplexor M : 23|8@0+ (1,0) [0|12] "mux" BCM
+ SG_ csm_dtc_set : 28|1@0+ (1,0) [0|1] "Bool" BCM
+ SG_ csm_fault_out : 31|1@0+ (1,0) [0|1] "Bool" BCM
+ SG_ csm_leakage_updated : 29|1@0+ (1,0) [0|1] "Bool" BCM
+ SG_ csm_leak_diag_result : 55|4@0+ (1,0) [0|15] "" BCM
+ SG_ csm_leak_diag_updated : 30|1@0+ (1,0) [0|1] "Bool" BCM
+ SG_ csm_leakage : 51|12@0+ (2.5,0) [0|10000] "kOhms"  BCM
+ SG_ csm_current_aihi : 27|12@0+ (0.5,-1200) [-1200|600] "Amps"  BCM
+ SG_ csm_current_asic : 7|16@0+ (0.04,-1200) [-1200|1200] "Amps"  BCM
+
+BO_ 145 CSM_DATA_2: 8 CSM
+ SG_ csm_response_id : 7|4@0+ (1,0) [0|15] "Index"  BCM
+ SG_ csm_fuse_ls : 51|12@0+ (0.25,0) [0|0.25] "Volts"  BCM
+ SG_ csm_fuse_hs : 47|12@0+ (0.25,0) [0|0.25] "Volts"  BCM
+ SG_ csm_vbus_neg : 27|12@0+ (0.5,-1000) [-1000|1000] "Volts"  BCM
+ SG_ csm_vbus_pos : 23|12@0+ (0.75,-1500) [-1500|1500] "Volts"  BCM
+ SG_ csm_vbatt : 3|12@0+ (0.25,0) [0|1000] "Volts"  BCM
+
+BO_ 147 CSM_DATA_3: 8 CSM
+ SG_ ASIC_reset_on_int m1 : 48|1@0+ (1,0) [0|0] "Bool" BCM
+ SG_ ASIC_reset_on_zeros m2 : 48|1@0+ (1,0) [0|0] "Bool" BCM
+ SG_ ASIC_reset_on_ffffs m3 : 48|1@0+ (1,0) [0|0] "Count" BCM
+ SG_ ASIC_Tint m1 : 63|6@0+ (0.1,0) [0|6.3] "ms" BCM
+ SG_ ASIC_zeros m2 : 63|6@0+ (1,0) [0|0] "Count" BCM
+ SG_ ASIC_ffffs m3 : 63|6@0+ (1,0) [0|0] "Count" BCM
+ SG_ ASIC_Protect_Info M : 57|2@0+ (1,0) [0|0] "mux" BCM
+ SG_ ASIC_CAL_RESET m0 : 62|3@0+ (1,0) [0|0] "Count" BCM
+ SG_ ASIC_CAL_OK m0 : 48|1@0+ (1,0) [0|0] "Bool" BCM
+ SG_ ASIC_ZZR_OK m0 : 63|1@0+ (1,0) [0|0] "Bool" BCM
+ SG_ csm_adc_sample_count : 55|5@0+ (1,0) [0|31] "ADC Samples" BCM
+ SG_ csm_leakage_switch : 50|2@0+ (1,0) [0|3] "mode" BCM
+ SG_ csm_vchrg_neg : 35|12@0+ (0.5,-1000) [-1000|1000] "Volts"  BCM
+ SG_ csm_vchrg_pos : 31|12@0+ (0.75,-1500) [-1500|1500] "Volts"  BCM
+ SG_ csm_vaux_neg : 11|12@0+ (0.5,-1000) [-1000|1000] "Volts"  BCM
+ SG_ csm_vaux_pos : 7|12@0+ (0.75,-1500) [-1500|1500] "Volts"  BCM
+
+BO_ 146 CSM_RTC: 8 CSM
+ SG_ csm_rtc_fault : 7|8@0+ (1,0) [0|0] "Sec" BCM
+ SG_ csm_rtc_weekday : 23|8@0+ (1,0) [1|7] "Weekday"  BCM
+ SG_ csm_rtc_year : 15|8@0+ (1,2000) [2001|2250] "Year"  BCM
+ SG_ csm_rtc_month : 31|8@0+ (1,0) [1|12] "Month"  BCM
+ SG_ csm_rtc_day : 39|8@0+ (1,0) [1|31] "Day"  BCM
+ SG_ csm_rtc_hour : 47|8@0+ (1,0) [0|23] "Hour"  BCM
+ SG_ csm_rtc_min : 55|8@0+ (1,0) [0|59] "Min"  BCM
+ SG_ csm_rtc_sec : 63|8@0+ (1,0) [0|59] "Sec"  BCM
+
+BO_ 152 CSM_DATA_EX: 8 CSM
+ SG_ ASIC_overflow : 52|1@0+ (1,0) [0|0] "Bool" BCM
+ SG_ ASIC_sample_count : 44|5@0+ (1,0) [0|0] "ADC Counts" BCM
+ SG_ ASIC_reset_hard : 55|3@0+ (1,0) [0|0] "Count" BCM
+ SG_ ASIC_reset_soft : 47|3@0+ (1,0) [0|0] "Count" BCM
+ SG_ csm_leakage_low_raw : 27|12@0+ (1,0) [0|4095] "Raw" BCM
+ SG_ csm_leakage_high_raw : 51|12@0+ (1,0) [0|4095] "Raw" BCM
+ SG_ csm_current_aihi_raw : 23|12@0+ (1,0) [0|4095] "Raw"  BCM
+ SG_ csm_current_asic_raw : 7|16@0- (1,0) [-32768|32767] "Raw"  BCM
+
+BO_ 1639 POR_IDENTIFY_CSM: 8 CSM
+ SG_ por_csm_soft_build : 63|8@0+ (1,0) [0|255] ""  BCM
+ SG_ por_csm_soft_minor : 55|8@0+ (1,0) [0|255] ""  BCM
+ SG_ por_csm_soft_major : 47|8@0+ (1,0) [0|255] ""  BCM
+ SG_ por_csm_rev : 39|8@0+ (1,0) [0|255] ""  BCM
+ SG_ por_csm_RCON : 7|16@0+ (1,0) [0|65535] ""  BCM
+ SG_ por_csm_hardware : 31|8@0+ (1,0) [0|255] ""  BCM
+
+BO_ 1984 CSM_DIAG_REQ: 8 BCM
+ SG_ diag_csm_mos_en_hvchrg m120520181 : 56|1@0+ (1,0) [0|1] "" CSM
+ SG_ diag_csm_mos_en_hvaux m120520181 : 48|1@0+ (1,0) [0|1] "" CSM
+ SG_ diag_csm_mos_en_hvbus m120520181 : 40|1@0+ (1,0) [0|1] "" CSM
+ SG_ diag_csm_mos_en_hvbatt m120520181 : 32|1@0+ (1,0) [0|1] "" CSM
+ SG_ diag_csm_heartbeat_clear m70353392 : 39|8@0+ (1,0) [0|0] "Raw" CSM
+ SG_ diag_csm_heartbeat_set m86965505 : 39|16@0+ (1,0) [0|255] "" CSM
+ SG_ diag_csm_leakage_diag m70188531 : 39|8@0+ (1,0) [0|1] "Bool" CSM
+ SG_ diag_csm_extra_2_3_raw m70188530 : 39|8@0+ (1,0) [0|1] "Bool" CSM
+ SG_ diag_csm_leakage_cmd m70188532 : 39|8@0+ (1,0) [0|7] "State" CSM
+ SG_ diag_csm_req_float m1 : 39|32@0- (1,0) [-1000|1000] "Based on DID"  CSM
+ SG_ diag_csm_req_type M : 7|32@0+ (1,0) [0|4294967295] "DataIdentifier"  CSM
+
+BO_ 1992 CSM_DIAG_RSP: 8 CSM
+ SG_ diag_csm_crc m65024 : 39|16@0+ (1,0) [0|65535] "" BCM
+ SG_ diag_csm_heartbeat m64769 : 39|16@0+ (1,0) [0|255] "" BCM
+ SG_ diag_csm_cal_inrange m65022 : 39|32@0+ (1,0) [0|4294967295] "State" BCM
+ SG_ diag_csm_cal_checksum m65021 : 39|32@0+ (1,0) [0|4294967295] "State" BCM
+ SG_ diag_csm_rsp_did M : 23|16@0+ (1,0) [0|65535] "DataIdentifier"  BCM
+ SG_ diag_csm_rsp_sid : 15|8@0+ (1,0) [0|255] "ServiceIdentifier"  BCM
+ SG_ diag_csm_rsp_length : 7|8@0+ (1,0) [0|255] "bytes"  BCM
+ SG_ diag_csm_rsp_float m1 : 39|32@0- (1,0) [-1000|1000] "Based on DID"  BCM
+
+
+BO_ 512 M01N_STD: 8 M01N
+ SG_ mod_v_max : 39|13@0+ (0.0005,1) [1|5] "Volts" BCM
+ SG_ mod_v_ave : 55|13@0+ (0.0005,1) [1|5] "Volts" BCM
+ SG_ mod_v_min : 23|13@0+ (0.0005,1) [1|5] "Volts" BCM
+ SG_ m01n_mux_chn M : 3|4@0+ (1,0) [0|15] "Channel" BCM
+ SG_ m01n_tmp_chn : 26|3@0+ (1,0) [0|7] "Channel" BCM
+ SG_ m01n_response_id_std : 7|4@0+ (1,0) [0|15] "Index" BCM
+ SG_ m01n_fault_in : 41|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_fault_out : 42|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_mbb_fault : 56|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_error_flag : 40|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_t0 m0 : 15|8@0+ (0.5,-40) [-40|87.5] "Deg C" BCM
+ SG_ m01n_t1 m1 : 15|8@0+ (0.5,-40) [-40|87.5] "Deg C" BCM
+ SG_ m01n_t2 m2 : 15|8@0+ (0.5,-40) [-40|87.5] "Deg C" BCM
+ SG_ m01n_rom_crc_ready m6 : 57|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_rom_crc_ms m6 : 15|8@0+ (1,0) [0|255] "Checksum"  BCM
+ SG_ m01n_rom_crc_ls m7 : 15|8@0+ (1,0) [0|255] "Checksum"  BCM
+ SG_ m01n_err_lol m8 : 15|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m01n_reset_por m8 : 14|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m01n_reset_pin m8 : 13|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m01n_reset_cop m8 : 12|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m01n_reset_iop m8 : 11|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m01n_reset_iad m8 : 10|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m01n_reset_loc m8 : 9|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m01n_reset_lvd m8 : 8|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m01n_reset_can m8 : 57|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m01n_err_mbb_total_undervolt m9 : 8|1@0+ (1,0) [0|1] "Flag"  BCM
+ SG_ m01n_err_sw_cell_undervolt m9 : 9|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_err_sw_cell_overvolt m9 : 10|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_err_hw_cell_overvolt m9 : 11|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_err_v_ref_drift m9 : 12|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_err_v_compare m9 : 13|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_err_no_can_overvolt m9 : 14|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_err_no_can m9 : 15|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_err_rom_check m10 : 9|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_err_nvm_check m10 : 8|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_err_ram_check m10 : 10|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_err_mbb_supply_oor m10 : 11|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_err_sample_fet_oor m10 : 12|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_err_mbb_total_overvolt m10 : 13|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_err_sense_fail m10 : 14|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_err_bal_fail m10 : 15|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_bal_count m11 : 15|8@0+ (1,0) [0|255] "Cells" BCM
+ SG_ m01n_cell_count m12 : 15|8@0+ (1,0) [0|255] "Cells" BCM
+ SG_ m01n_sw_ver_major m13 : 15|8@0+ (1,0) [0|255] "SW Version" BCM
+ SG_ m01n_sw_ver_minor m14 : 15|8@0+ (1,0) [0|255] "SW Version" BCM
+ SG_ m01n_sw_ver_build m15 : 15|8@0+ (1,0) [0|255] "SW Version" BCM
+
+BO_ 640 M01N_STD2: 8 M01N
+ SG_ m01n_sleep_mode : 51|2@0+ (3,0) [0|1] "Enum" BCM
+ SG_ m01n_mcu_integrity_status : 49|2@0+ (1,0) [0|1] "Enum" BCM
+ SG_ m01n_mcu_integrity_key : 63|8@0+ (1,0) [0|255] "Byte" BCM
+ SG_ m01n_mux2_chn M : 7|4@0+ (1,0) [0|15] "Channel" BCM
+ SG_ m01n_err_bal_cell_01 m0 : 3|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01n_err_bal_cell_02 m1 : 3|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01n_err_bal_cell_03 m0 : 1|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01n_err_bal_cell_04 m1 : 1|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01n_err_bal_cell_05 m0 : 15|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01n_err_bal_cell_06 m1 : 15|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01n_err_bal_cell_07 m0 : 13|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01n_err_bal_cell_08 m1 : 13|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01n_err_bal_cell_09 m0 : 11|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01n_err_bal_cell_10 m1 : 11|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01n_err_bal_cell_11 m0 : 9|2@0+ (1,0) [0|7] "Enum"  BCM
+
+BO_ 768 M01N_XD1: 8 M01N
+ SG_ m01n_response_id_xd1 : 7|4@0+ (1,0) [0|15] "Index" BCM
+ SG_ m01n_v_mbb_total : 0|15@0+ (0.008,6) [6|160] "Volts" BCM
+ SG_ m01n_v_cell_01 : 17|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01n_bal_cell_01 : 1|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_v_cell_02 : 35|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01n_bal_cell_02 : 2|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_v_cell_03 : 53|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01n_bal_cell_03 : 3|1@0+ (1,0) [0|1] "Flag" BCM
+
+BO_ 896 M01N_XD2: 8 M01N
+ SG_ m01n_response_id_xd2 : 7|4@0+ (1,0) [0|15] "Index" BCM
+ SG_ m01n_v_cell_04 : 15|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01n_bal_cell_04 : 0|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_v_cell_05 : 17|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01n_bal_cell_05 : 1|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_v_cell_06 : 35|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01n_bal_cell_06 : 2|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_v_cell_07 : 53|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01n_bal_cell_07 : 3|1@0+ (1,0) [0|1] "Flag" BCM
+
+BO_ 1024 M01N_XD3: 8 M01N
+ SG_ m01n_response_id_xd3 : 7|4@0+ (1,0) [0|15] "Index" BCM
+ SG_ m01n_v_cell_08 : 15|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01n_bal_cell_08 : 0|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_v_cell_09 : 17|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01n_bal_cell_09 : 1|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_v_cell_10 : 35|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01n_bal_cell_10 : 2|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01n_v_cell_11 : 53|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01n_bal_cell_11 : 3|1@0+ (1,0) [0|1] "Flag" BCM
+
+BO_ 513 M01P_STD: 8 M01P
+ SG_ mod_v_max : 39|13@0+ (0.0005,1) [1|5] "Volts" BCM
+ SG_ mod_v_ave : 55|13@0+ (0.0005,1) [1|5] "Volts" BCM
+ SG_ mod_v_min : 23|13@0+ (0.0005,1) [1|5] "Volts" BCM
+ SG_ m01p_mux_chn M : 3|4@0+ (1,0) [0|15] "Channel" BCM
+ SG_ m01p_tmp_chn : 26|3@0+ (1,0) [0|7] "Channel" BCM
+ SG_ m01p_response_id_std : 7|4@0+ (1,0) [0|15] "Index" BCM
+ SG_ m01p_fault_in : 41|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_fault_out : 42|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_mbb_fault : 56|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_error_flag : 40|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_t0 m0 : 15|8@0+ (0.5,-40) [-40|87.5] "Deg C" BCM
+ SG_ m01p_t1 m1 : 15|8@0+ (0.5,-40) [-40|87.5] "Deg C" BCM
+ SG_ m01p_t2 m2 : 15|8@0+ (0.5,-40) [-40|87.5] "Deg C" BCM
+ SG_ m01p_rom_crc_ready m6 : 57|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_rom_crc_ms m6 : 15|8@0+ (1,0) [0|255] "Checksum"  BCM
+ SG_ m01p_rom_crc_ls m7 : 15|8@0+ (1,0) [0|255] "Checksum"  BCM
+ SG_ m01p_err_lol m8 : 15|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m01p_reset_por m8 : 14|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m01p_reset_pin m8 : 13|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m01p_reset_cop m8 : 12|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m01p_reset_iop m8 : 11|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m01p_reset_iad m8 : 10|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m01p_reset_loc m8 : 9|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m01p_reset_lvd m8 : 8|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m01p_reset_can m8 : 57|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m01p_err_mbb_total_undervolt m9 : 8|1@0+ (1,0) [0|1] "Flag"  BCM
+ SG_ m01p_err_sw_cell_undervolt m9 : 9|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_err_sw_cell_overvolt m9 : 10|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_err_hw_cell_overvolt m9 : 11|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_err_v_ref_drift m9 : 12|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_err_v_compare m9 : 13|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_err_no_can_overvolt m9 : 14|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_err_no_can m9 : 15|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_err_rom_check m10 : 9|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_err_nvm_check m10 : 8|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_err_ram_check m10 : 10|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_err_mbb_supply_oor m10 : 11|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_err_sample_fet_oor m10 : 12|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_err_mbb_total_overvolt m10 : 13|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_err_sense_fail m10 : 14|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_err_bal_fail m10 : 15|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_bal_count m11 : 15|8@0+ (1,0) [0|255] "Cells" BCM
+ SG_ m01p_cell_count m12 : 15|8@0+ (1,0) [0|255] "Cells" BCM
+ SG_ m01p_sw_ver_major m13 : 15|8@0+ (1,0) [0|255] "SW Version" BCM
+ SG_ m01p_sw_ver_minor m14 : 15|8@0+ (1,0) [0|255] "SW Version" BCM
+ SG_ m01p_sw_ver_build m15 : 15|8@0+ (1,0) [0|255] "SW Version" BCM
+
+BO_ 641 M01P_STD2: 8 M01P
+ SG_ m01p_sleep_mode : 51|2@0+ (3,0) [0|1] "Enum" BCM
+ SG_ m01p_mcu_integrity_status : 49|2@0+ (1,0) [0|1] "Enum" BCM
+ SG_ m01p_mcu_integrity_key : 63|8@0+ (1,0) [0|255] "Byte" BCM
+ SG_ m01p_mux2_chn M : 7|4@0+ (1,0) [0|15] "Channel" BCM
+ SG_ m01p_err_bal_cell_01 m0 : 3|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01p_err_bal_cell_02 m1 : 3|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01p_err_bal_cell_03 m0 : 1|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01p_err_bal_cell_04 m1 : 1|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01p_err_bal_cell_05 m0 : 15|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01p_err_bal_cell_06 m1 : 15|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01p_err_bal_cell_07 m0 : 13|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01p_err_bal_cell_08 m1 : 13|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01p_err_bal_cell_09 m0 : 11|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01p_err_bal_cell_10 m1 : 11|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m01p_err_bal_cell_11 m0 : 9|2@0+ (1,0) [0|7] "Enum"  BCM
+
+BO_ 769 M01P_XD1: 8 M01P
+ SG_ m01p_response_id_xd1 : 7|4@0+ (1,0) [0|15] "Index" BCM
+ SG_ m01p_v_mbb_total : 0|15@0+ (0.008,6) [6|160] "Volts" BCM
+ SG_ m01p_v_cell_01 : 17|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01p_bal_cell_01 : 1|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_v_cell_02 : 35|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01p_bal_cell_02 : 2|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_v_cell_03 : 53|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01p_bal_cell_03 : 3|1@0+ (1,0) [0|1] "Flag" BCM
+
+BO_ 897 M01P_XD2: 8 M01P
+ SG_ m01p_response_id_xd2 : 7|4@0+ (1,0) [0|15] "Index" BCM
+ SG_ m01p_v_cell_04 : 15|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01p_bal_cell_04 : 0|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_v_cell_05 : 17|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01p_bal_cell_05 : 1|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_v_cell_06 : 35|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01p_bal_cell_06 : 2|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_v_cell_07 : 53|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01p_bal_cell_07 : 3|1@0+ (1,0) [0|1] "Flag" BCM
+
+BO_ 1025 M01P_XD3: 8 M01P
+ SG_ m01p_response_id_xd3 : 7|4@0+ (1,0) [0|15] "Index" BCM
+ SG_ m01p_v_cell_08 : 15|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01p_bal_cell_08 : 0|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_v_cell_09 : 17|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01p_bal_cell_09 : 1|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_v_cell_10 : 35|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01p_bal_cell_10 : 2|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m01p_v_cell_11 : 53|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m01p_bal_cell_11 : 3|1@0+ (1,0) [0|1] "Flag" BCM
+
+BO_ 514 M02N_STD: 8 M02N
+ SG_ mod_v_max : 39|13@0+ (0.0005,1) [1|5] "Volts" BCM
+ SG_ mod_v_ave : 55|13@0+ (0.0005,1) [1|5] "Volts" BCM
+ SG_ mod_v_min : 23|13@0+ (0.0005,1) [1|5] "Volts" BCM
+ SG_ m02n_mux_chn M : 3|4@0+ (1,0) [0|15] "Channel" BCM
+ SG_ m02n_tmp_chn : 26|3@0+ (1,0) [0|7] "Channel" BCM
+ SG_ m02n_response_id_std : 7|4@0+ (1,0) [0|15] "Index" BCM
+ SG_ m02n_fault_in : 41|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_fault_out : 42|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_mbb_fault : 56|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_error_flag : 40|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_t0 m0 : 15|8@0+ (0.5,-40) [-40|87.5] "Deg C" BCM
+ SG_ m02n_t1 m1 : 15|8@0+ (0.5,-40) [-40|87.5] "Deg C" BCM
+ SG_ m02n_t2 m2 : 15|8@0+ (0.5,-40) [-40|87.5] "Deg C" BCM
+ SG_ m02n_rom_crc_ready m6 : 57|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_rom_crc_ms m6 : 15|8@0+ (1,0) [0|255] "Checksum"  BCM
+ SG_ m02n_rom_crc_ls m7 : 15|8@0+ (1,0) [0|255] "Checksum"  BCM
+ SG_ m02n_err_lol m8 : 15|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m02n_reset_por m8 : 14|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m02n_reset_pin m8 : 13|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m02n_reset_cop m8 : 12|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m02n_reset_iop m8 : 11|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m02n_reset_iad m8 : 10|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m02n_reset_loc m8 : 9|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m02n_reset_lvd m8 : 8|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m02n_reset_can m8 : 57|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m02n_err_mbb_total_undervolt m9 : 8|1@0+ (1,0) [0|1] "Flag"  BCM
+ SG_ m02n_err_sw_cell_undervolt m9 : 9|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_err_sw_cell_overvolt m9 : 10|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_err_hw_cell_overvolt m9 : 11|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_err_v_ref_drift m9 : 12|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_err_v_compare m9 : 13|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_err_no_can_overvolt m9 : 14|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_err_no_can m9 : 15|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_err_rom_check m10 : 9|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_err_nvm_check m10 : 8|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_err_ram_check m10 : 10|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_err_mbb_supply_oor m10 : 11|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_err_sample_fet_oor m10 : 12|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_err_mbb_total_overvolt m10 : 13|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_err_sense_fail m10 : 14|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_err_bal_fail m10 : 15|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_bal_count m11 : 15|8@0+ (1,0) [0|255] "Cells" BCM
+ SG_ m02n_cell_count m12 : 15|8@0+ (1,0) [0|255] "Cells" BCM
+ SG_ m02n_sw_ver_major m13 : 15|8@0+ (1,0) [0|255] "SW Version" BCM
+ SG_ m02n_sw_ver_minor m14 : 15|8@0+ (1,0) [0|255] "SW Version" BCM
+ SG_ m02n_sw_ver_build m15 : 15|8@0+ (1,0) [0|255] "SW Version" BCM
+
+BO_ 642 M02N_STD2: 8 M02N
+ SG_ m02n_sleep_mode : 51|2@0+ (3,0) [0|1] "Enum" BCM
+ SG_ m02n_mcu_integrity_status : 49|2@0+ (1,0) [0|1] "Enum" BCM
+ SG_ m02n_mcu_integrity_key : 63|8@0+ (1,0) [0|255] "Byte" BCM
+ SG_ m02n_mux2_chn M : 7|4@0+ (1,0) [0|15] "Channel" BCM
+ SG_ m02n_err_bal_cell_01 m0 : 3|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02n_err_bal_cell_02 m1 : 3|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02n_err_bal_cell_03 m0 : 1|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02n_err_bal_cell_04 m1 : 1|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02n_err_bal_cell_05 m0 : 15|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02n_err_bal_cell_06 m1 : 15|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02n_err_bal_cell_07 m0 : 13|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02n_err_bal_cell_08 m1 : 13|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02n_err_bal_cell_09 m0 : 11|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02n_err_bal_cell_10 m1 : 11|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02n_err_bal_cell_11 m0 : 9|2@0+ (1,0) [0|7] "Enum"  BCM
+
+BO_ 770 M02N_XD1: 8 M02N
+ SG_ m02n_response_id_xd1 : 7|4@0+ (1,0) [0|15] "Index" BCM
+ SG_ m02n_v_mbb_total : 0|15@0+ (0.008,6) [6|160] "Volts" BCM
+ SG_ m02n_v_cell_01 : 17|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02n_bal_cell_01 : 1|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_v_cell_02 : 35|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02n_bal_cell_02 : 2|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_v_cell_03 : 53|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02n_bal_cell_03 : 3|1@0+ (1,0) [0|1] "Flag" BCM
+
+BO_ 898 M02N_XD2: 8 M02N
+ SG_ m02n_response_id_xd2 : 7|4@0+ (1,0) [0|15] "Index" BCM
+ SG_ m02n_v_cell_04 : 15|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02n_bal_cell_04 : 0|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_v_cell_05 : 17|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02n_bal_cell_05 : 1|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_v_cell_06 : 35|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02n_bal_cell_06 : 2|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_v_cell_07 : 53|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02n_bal_cell_07 : 3|1@0+ (1,0) [0|1] "Flag" BCM
+
+BO_ 1026 M02N_XD3: 8 M02N
+ SG_ m02n_response_id_xd3 : 7|4@0+ (1,0) [0|15] "Index" BCM
+ SG_ m02n_v_cell_08 : 15|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02n_bal_cell_08 : 0|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_v_cell_09 : 17|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02n_bal_cell_09 : 1|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_v_cell_10 : 35|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02n_bal_cell_10 : 2|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02n_v_cell_11 : 53|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02n_bal_cell_11 : 3|1@0+ (1,0) [0|1] "Flag" BCM
+
+BO_ 515 M02P_STD: 8 M02P
+ SG_ mod_v_max : 39|13@0+ (0.0005,1) [1|5] "Volts" BCM
+ SG_ mod_v_ave : 55|13@0+ (0.0005,1) [1|5] "Volts" BCM
+ SG_ mod_v_min : 23|13@0+ (0.0005,1) [1|5] "Volts" BCM
+ SG_ m02p_mux_chn M : 3|4@0+ (1,0) [0|15] "Channel" BCM
+ SG_ m02p_tmp_chn : 26|3@0+ (1,0) [0|7] "Channel" BCM
+ SG_ m02p_response_id_std : 7|4@0+ (1,0) [0|15] "Index" BCM
+ SG_ m02p_fault_in : 41|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_fault_out : 42|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_mbb_fault : 56|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_error_flag : 40|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_t0 m0 : 15|8@0+ (0.5,-40) [-40|87.5] "Deg C" BCM
+ SG_ m02p_t1 m1 : 15|8@0+ (0.5,-40) [-40|87.5] "Deg C" BCM
+ SG_ m02p_t2 m2 : 15|8@0+ (0.5,-40) [-40|87.5] "Deg C" BCM
+ SG_ m02p_rom_crc_ready m6 : 57|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_rom_crc_ms m6 : 15|8@0+ (1,0) [0|255] "Checksum"  BCM
+ SG_ m02p_rom_crc_ls m7 : 15|8@0+ (1,0) [0|255] "Checksum"  BCM
+ SG_ m02p_err_lol m8 : 15|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m02p_reset_por m8 : 14|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m02p_reset_pin m8 : 13|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m02p_reset_cop m8 : 12|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m02p_reset_iop m8 : 11|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m02p_reset_iad m8 : 10|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m02p_reset_loc m8 : 9|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m02p_reset_lvd m8 : 8|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m02p_reset_can m8 : 57|1@0+ (1,0) [0|1] "Enum"  BCM
+ SG_ m02p_err_mbb_total_undervolt m9 : 8|1@0+ (1,0) [0|1] "Flag"  BCM
+ SG_ m02p_err_sw_cell_undervolt m9 : 9|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_err_sw_cell_overvolt m9 : 10|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_err_hw_cell_overvolt m9 : 11|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_err_v_ref_drift m9 : 12|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_err_v_compare m9 : 13|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_err_no_can_overvolt m9 : 14|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_err_no_can m9 : 15|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_err_rom_check m10 : 9|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_err_nvm_check m10 : 8|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_err_ram_check m10 : 10|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_err_mbb_supply_oor m10 : 11|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_err_sample_fet_oor m10 : 12|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_err_mbb_total_overvolt m10 : 13|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_err_sense_fail m10 : 14|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_err_bal_fail m10 : 15|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_bal_count m11 : 15|8@0+ (1,0) [0|255] "Cells" BCM
+ SG_ m02p_cell_count m12 : 15|8@0+ (1,0) [0|255] "Cells" BCM
+ SG_ m02p_sw_ver_major m13 : 15|8@0+ (1,0) [0|255] "SW Version" BCM
+ SG_ m02p_sw_ver_minor m14 : 15|8@0+ (1,0) [0|255] "SW Version" BCM
+ SG_ m02p_sw_ver_build m15 : 15|8@0+ (1,0) [0|255] "SW Version" BCM
+
+BO_ 643 M02P_STD2: 8 M02P
+ SG_ m02p_sleep_mode : 51|2@0+ (3,0) [0|1] "Enum" BCM
+ SG_ m02p_mcu_integrity_status : 49|2@0+ (1,0) [0|1] "Enum" BCM
+ SG_ m02p_mcu_integrity_key : 63|8@0+ (1,0) [0|255] "Byte" BCM
+ SG_ m02p_mux2_chn M : 7|4@0+ (1,0) [0|15] "Channel" BCM
+ SG_ m02p_err_bal_cell_01 m0 : 3|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02p_err_bal_cell_02 m1 : 3|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02p_err_bal_cell_03 m0 : 1|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02p_err_bal_cell_04 m1 : 1|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02p_err_bal_cell_05 m0 : 15|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02p_err_bal_cell_06 m1 : 15|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02p_err_bal_cell_07 m0 : 13|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02p_err_bal_cell_08 m1 : 13|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02p_err_bal_cell_09 m0 : 11|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02p_err_bal_cell_10 m1 : 11|2@0+ (1,0) [0|7] "Enum"  BCM
+ SG_ m02p_err_bal_cell_11 m0 : 9|2@0+ (1,0) [0|7] "Enum"  BCM
+
+BO_ 771 M02P_XD1: 8 M02P
+ SG_ m02p_response_id_xd1 : 7|4@0+ (1,0) [0|15] "Index" BCM
+ SG_ m02p_v_mbb_total : 0|15@0+ (0.008,6) [6|160] "Volts" BCM
+ SG_ m02p_v_cell_01 : 17|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02p_bal_cell_01 : 1|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_v_cell_02 : 35|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02p_bal_cell_02 : 2|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_v_cell_03 : 53|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02p_bal_cell_03 : 3|1@0+ (1,0) [0|1] "Flag" BCM
+
+BO_ 899 M02P_XD2: 8 M02P
+ SG_ m02p_response_id_xd2 : 7|4@0+ (1,0) [0|15] "Index" BCM
+ SG_ m02p_v_cell_04 : 15|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02p_bal_cell_04 : 0|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_v_cell_05 : 17|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02p_bal_cell_05 : 1|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_v_cell_06 : 35|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02p_bal_cell_06 : 2|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_v_cell_07 : 53|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02p_bal_cell_07 : 3|1@0+ (1,0) [0|1] "Flag" BCM
+
+BO_ 1027 M02P_XD3: 8 M02P
+ SG_ m02p_response_id_xd3 : 7|4@0+ (1,0) [0|15] "Index" BCM
+ SG_ m02p_v_cell_08 : 15|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02p_bal_cell_08 : 0|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_v_cell_09 : 17|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02p_bal_cell_09 : 1|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_v_cell_10 : 35|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02p_bal_cell_10 : 2|1@0+ (1,0) [0|1] "Flag" BCM
+ SG_ m02p_v_cell_11 : 53|14@0+ (0.00025,0) [0|4.095] "Volts" BCM
+ SG_ m02p_bal_cell_11 : 3|1@0+ (1,0) [0|1] "Flag" BCM
+
+BO_ 80 BCM_CMD: 8 BCM
+ SG_ bcm_request_id : 7|4@0+ (1,0) [0|15] "Index" CSM,M01N,M01P,M02N,M02P
+ SG_ bcm_request_type : 25|2@0+ (1,0) [0|3] "mode" CSM,M01N,M01P,M02N,M02P
+ SG_ bcm_leakage_cmd_csm : 31|3@0+ (1,0) [0|7] "mode" CSM
+ SG_ bcm_leakage_cmd_idm : 28|3@0+ (1,0) [0|7] "mode" IDM
+ SG_ bcm_message_format : 39|4@0+ (1,0) [0|15] "mode" M01N,M01P,M02N,M02P
+ SG_ bcm_diag_cmd_target M : 47|8@0+ (1,0) [0|250] "MBB address" M01N,M01P,M02N,M02P
+ SG_ bcm_v_balance_target : 15|13@0+ (0.0005,1) [1|4.1] "Volts"  M01N,M01P,M02N,M02P
+ SG_ bcm_sense_bal_cmd : 16|1@0+ (1,0) [0|1] "Enum"  M01N,M01P,M02N,M02P
+ SG_ bcm_mcu_integrity_seed m224 : 63|8@0+ (1,0) [0|255] "Byte"  M01N,M01P,M02N,M02P
+ 
+ SG_ bcm_m01n_bal_ena_cell_01 m0 : 56|1@0+ (1,0) [0|1] "Flag" M01N
+ SG_ bcm_m01n_bal_ena_cell_02 m0 : 57|1@0+ (1,0) [0|1] "Flag" M01N
+ SG_ bcm_m01n_bal_ena_cell_03 m0 : 58|1@0+ (1,0) [0|1] "Flag" M01N
+ SG_ bcm_m01n_bal_ena_cell_04 m0 : 59|1@0+ (1,0) [0|1] "Flag" M01N
+ SG_ bcm_m01n_bal_ena_cell_05 m0 : 60|1@0+ (1,0) [0|1] "Flag" M01N
+ SG_ bcm_m01n_bal_ena_cell_06 m0 : 61|1@0+ (1,0) [0|1] "Flag" M01N
+ SG_ bcm_m01n_bal_ena_cell_07 m0 : 62|1@0+ (1,0) [0|1] "Flag" M01N
+ SG_ bcm_m01n_bal_ena_cell_08 m0 : 63|1@0+ (1,0) [0|1] "Flag" M01N
+ SG_ bcm_m01n_bal_ena_cell_09 m0 : 48|1@0+ (1,0) [0|1] "Flag" M01N
+ SG_ bcm_m01n_bal_ena_cell_10 m0 : 49|1@0+ (1,0) [0|1] "Flag" M01N
+ SG_ bcm_m01n_bal_ena_cell_11 m0 : 50|1@0+ (1,0) [0|1] "Flag" M01N
+ SG_ bcm_m01n_bal_power_level m0 : 35|4@0+ (12.5,0) [0|100] "%" M01N
+ SG_ bcm_m01n_ovic_fault_ena m48 : 54|1@0+ (1,0) [0|1] "Flag" M01N
+ SG_ bcm_m01n_ovic_circuit_ena m48 : 55|1@0+ (1,0) [0|1] "Flag" M01N
+ SG_ bcm_m01n_ovic_test_cmd m48 : 63|8@0+ (1,0) [0|255] "Enum" M01N
+
+ SG_ bcm_m01p_bal_ena_cell_01 m1 : 56|1@0+ (1,0) [0|1] "Flag" M01P
+ SG_ bcm_m01p_bal_ena_cell_02 m1 : 57|1@0+ (1,0) [0|1] "Flag" M01P
+ SG_ bcm_m01p_bal_ena_cell_03 m1 : 58|1@0+ (1,0) [0|1] "Flag" M01P
+ SG_ bcm_m01p_bal_ena_cell_04 m1 : 59|1@0+ (1,0) [0|1] "Flag" M01P
+ SG_ bcm_m01p_bal_ena_cell_05 m1 : 60|1@0+ (1,0) [0|1] "Flag" M01P
+ SG_ bcm_m01p_bal_ena_cell_06 m1 : 61|1@0+ (1,0) [0|1] "Flag" M01P
+ SG_ bcm_m01p_bal_ena_cell_07 m1 : 62|1@0+ (1,0) [0|1] "Flag" M01P
+ SG_ bcm_m01p_bal_ena_cell_08 m1 : 63|1@0+ (1,0) [0|1] "Flag" M01P
+ SG_ bcm_m01p_bal_ena_cell_09 m1 : 48|1@0+ (1,0) [0|1] "Flag" M01P
+ SG_ bcm_m01p_bal_ena_cell_10 m1 : 49|1@0+ (1,0) [0|1] "Flag" M01P
+ SG_ bcm_m01p_bal_ena_cell_11 m1 : 50|1@0+ (1,0) [0|1] "Flag" M01P
+ SG_ bcm_m01p_bal_power_level m1 : 35|4@0+ (12.5,0) [0|100] "%" M01P
+ SG_ bcm_m01p_ovic_fault_ena m49 : 54|1@0+ (1,0) [0|1] "Flag" M01P
+ SG_ bcm_m01p_ovic_circuit_ena m49 : 55|1@0+ (1,0) [0|1] "Flag" M01P
+ SG_ bcm_m01p_ovic_test_cmd m49 : 63|8@0+ (1,0) [0|255] "Enum" M01P
+
+ SG_ bcm_m02n_bal_ena_cell_01 m2 : 56|1@0+ (1,0) [0|1] "Flag" M02N
+ SG_ bcm_m02n_bal_ena_cell_02 m2 : 57|1@0+ (1,0) [0|1] "Flag" M02N
+ SG_ bcm_m02n_bal_ena_cell_03 m2 : 58|1@0+ (1,0) [0|1] "Flag" M02N
+ SG_ bcm_m02n_bal_ena_cell_04 m2 : 59|1@0+ (1,0) [0|1] "Flag" M02N
+ SG_ bcm_m02n_bal_ena_cell_05 m2 : 60|1@0+ (1,0) [0|1] "Flag" M02N
+ SG_ bcm_m02n_bal_ena_cell_06 m2 : 61|1@0+ (1,0) [0|1] "Flag" M02N
+ SG_ bcm_m02n_bal_ena_cell_07 m2 : 62|1@0+ (1,0) [0|1] "Flag" M02N
+ SG_ bcm_m02n_bal_ena_cell_08 m2 : 63|1@0+ (1,0) [0|1] "Flag" M02N
+ SG_ bcm_m02n_bal_ena_cell_09 m2 : 48|1@0+ (1,0) [0|1] "Flag" M02N
+ SG_ bcm_m02n_bal_ena_cell_10 m2 : 49|1@0+ (1,0) [0|1] "Flag" M02N
+ SG_ bcm_m02n_bal_ena_cell_11 m2 : 50|1@0+ (1,0) [0|1] "Flag" M02N
+ SG_ bcm_m02n_bal_power_level m2 : 35|4@0+ (12.5,0) [0|100] "%" M02N
+ SG_ bcm_m02n_ovic_fault_ena m50 : 54|1@0+ (1,0) [0|1] "Flag" M02N
+ SG_ bcm_m02n_ovic_circuit_ena m50 : 55|1@0+ (1,0) [0|1] "Flag" M02N
+ SG_ bcm_m02n_ovic_test_cmd m50 : 63|8@0+ (1,0) [0|255] "Enum" M02N
+
+ SG_ bcm_m02p_bal_ena_cell_01 m3 : 56|1@0+ (1,0) [0|1] "Flag" M02P
+ SG_ bcm_m02p_bal_ena_cell_02 m3 : 57|1@0+ (1,0) [0|1] "Flag" M02P
+ SG_ bcm_m02p_bal_ena_cell_03 m3 : 58|1@0+ (1,0) [0|1] "Flag" M02P
+ SG_ bcm_m02p_bal_ena_cell_04 m3 : 59|1@0+ (1,0) [0|1] "Flag" M02P
+ SG_ bcm_m02p_bal_ena_cell_05 m3 : 60|1@0+ (1,0) [0|1] "Flag" M02P
+ SG_ bcm_m02p_bal_ena_cell_06 m3 : 61|1@0+ (1,0) [0|1] "Flag" M02P
+ SG_ bcm_m02p_bal_ena_cell_07 m3 : 62|1@0+ (1,0) [0|1] "Flag" M02P
+ SG_ bcm_m02p_bal_ena_cell_08 m3 : 63|1@0+ (1,0) [0|1] "Flag" M02P
+ SG_ bcm_m02p_bal_ena_cell_09 m3 : 48|1@0+ (1,0) [0|1] "Flag" M02P
+ SG_ bcm_m02p_bal_ena_cell_10 m3 : 49|1@0+ (1,0) [0|1] "Flag" M02P
+ SG_ bcm_m02p_bal_ena_cell_11 m3 : 50|1@0+ (1,0) [0|1] "Flag" M02P
+ SG_ bcm_m02p_bal_power_level m3 : 35|4@0+ (12.5,0) [0|100] "%" M02P
+ SG_ bcm_m02p_ovic_fault_ena m51 : 54|1@0+ (1,0) [0|1] "Flag" M02P
+ SG_ bcm_m02p_ovic_circuit_ena m51 : 55|1@0+ (1,0) [0|1] "Flag" M02P
+ SG_ bcm_m02p_ovic_test_cmd m51 : 63|8@0+ (1,0) [0|255] "Enum" M02P
+ SG_ bcm_mbb_all_ovic_fault_ena m72 : 54|1@0+ (1,0) [0|1] "Flag" M02P
+ SG_ bcm_mbb_all_ovic_circuit_ena m72 : 55|1@0+ (1,0) [0|1] "Flag" M02P
+ SG_ bcm_mbb_all_ovic_test_cmd m72 : 63|8@0+ (1,0) [0|255] "Flag" M02P
+
+BO_ 1968 BCM_DIAG_REQ: 8 DST
+ SG_ diag_sid : 15|8@0+ (1,0) [0|255] "ServiceIdentifier"  BCM
+ SG_ diag_length : 7|8@0+ (1,0) [0|255] "bytes"  BCM
+ SG_ diag_float : 39|32@0- (1,0) [0|0] "Based on DID"  BCM
+ SG_ diag_did_bcm : 23|16@0+ (1,0) [0|65535] "DataIdentifier"  BCM
+
+BO_ 1976 BCM_DIAG_RSP: 8 BCM
+ SG_ diag_float : 39|32@0- (1,0) [0|0] "Based on DID"  DST
+ SG_ diag_did_bcm : 23|16@0+ (1,0) [0|65535] "DataIdentifier"  DST
+ SG_ diag_sid : 15|8@0+ (1,0) [0|255] "ServiceIdentifier"  DST
+ SG_ diag_length : 7|8@0+ (1,0) [0|255] "bytes"  DST
+
+
+
+
+CM_ BU_ BCM "Battery Control Module (BCM)";
+CM_ BU_ CSM "Current Sense Module (CSM)";
+CM_ BU_ IDM "Isolation Detection Module (IDM)";
+CM_ BU_ DST "Diagnostic Service Tool";
+CM_ BU_ M01N "Battery Monitor/Balance Board (MBB)";
+CM_ BU_ M01P "Battery Monitor/Balance Board (MBB)";
+CM_ BU_ M02N "Battery Monitor/Balance Board (MBB)";
+CM_ BU_ M02P "Battery Monitor/Balance Board (MBB)";
+
+CM_ SG_ 81 csm_rtc_set_checksum "Checksum for RTC correction";
+CM_ SG_ 81 csm_rtc_set_weekday "Day of Week";
+CM_ SG_ 81 csm_rtc_set_year "Year";
+CM_ SG_ 81 csm_rtc_set_month "Month";
+CM_ SG_ 81 csm_rtc_set_day "Day of Month";
+CM_ SG_ 81 csm_rtc_set_hour "Hours";
+CM_ SG_ 81 csm_rtc_set_min "Minutes";
+CM_ SG_ 81 csm_rtc_set_sec "Seconds";
+CM_ SG_ 1992 diag_csm_crc "Minutes";
+CM_ SG_ 1992 diag_csm_heartbeat "Hex";
+CM_ SG_ 1992 diag_csm_cal_inrange "Commands start/stop/diagnosis of leakage measurement";
+CM_ SG_ 1992 diag_csm_cal_checksum "Commands start/stop/diagnosis of leakage measurement";
+CM_ SG_ 1984 diag_csm_mos_en_hvchrg "Flag";
+CM_ SG_ 1984 diag_csm_mos_en_hvbus "Flag";
+CM_ SG_ 1984 diag_csm_mos_en_hvbatt "Flag";
+CM_ SG_ 1984 diag_csm_mos_en_hvaux "Flag";
+CM_ SG_ 1984 diag_csm_heartbeat_clear "Flag";
+CM_ SG_ 1984 diag_csm_heartbeat_set "Flag";
+CM_ SG_ 1984 diag_csm_leakage_diag "Commands start/stop/diagnosis of leakage measurement";
+CM_ SG_ 1984 diag_csm_extra_2_3_raw "Commands start/stop/diagnosis of leakage measurement";
+CM_ SG_ 1984 diag_csm_leakage_cmd "Commands start/stop/diagnosis of leakage measurement";
+CM_ SG_ 1639 por_csm_soft_minor "Software Version minor # (MM.mm.bb)";
+CM_ SG_ 1639 por_csm_soft_major "Software Version Major # (MM.mm.bb)";
+CM_ SG_ 1639 por_csm_soft_build "Software Version Build # (MM.mm.bb)";
+CM_ SG_ 1639 por_csm_rev "PCB Rev #";
+CM_ SG_ 1639 por_csm_hardware "CSM hardware #";
+CM_ SG_ 147 csm_leakage_switch "State of High Voltage Relays";
+CM_ SG_ 147 csm_adc_sample_count "Number ASIC interrup reads / ADC reads per signal";
+CM_ SG_ 147 csm_vchrg_pos "Vehicle bus positive voltage.";
+CM_ SG_ 147 csm_vchrg_neg "Vehicle bus negative voltage.";
+CM_ SG_ 147 csm_vaux_pos "Vehicle bus positive voltage.";
+CM_ SG_ 147 csm_vaux_neg "Vehicle bus negative voltage.";
+CM_ SG_ 146 csm_rtc_fault "Seconds";
+CM_ SG_ 146 csm_rtc_weekday "Day of Week";
+CM_ SG_ 146 csm_rtc_year "Year";
+CM_ SG_ 146 csm_rtc_month "Month";
+CM_ SG_ 146 csm_rtc_day "Day of Month";
+CM_ SG_ 146 csm_rtc_hour "Hours";
+CM_ SG_ 146 csm_rtc_min "Minutes";
+CM_ SG_ 146 csm_rtc_sec "Seconds";
+CM_ SG_ 145 csm_response_id "Response index.";
+CM_ SG_ 145 csm_fuse_ls "Pack fuse terminal voltage.";
+CM_ SG_ 145 csm_fuse_hs "Pack fuse terminal voltage.";
+CM_ SG_ 145 csm_vbus_pos "Vehicle bus positive voltage.";
+CM_ SG_ 145 csm_vbus_neg "Vehicle bus negative voltage.";
+CM_ SG_ 145 csm_vbatt "Battery positive voltage.";
+CM_ SG_ 144 csm_iso_VBATT_MISMATCH "Sum of halfs in dual mode did not equal Vbatt within 10%";
+CM_ SG_ 144 csm_version_hardware "Hardware Version PCBA";
+CM_ SG_ 144 csm_version_minor "Software Version - minor (MM.mm.bb)";
+CM_ SG_ 144 csm_version_major "Software Version - Major (MM.mm.bb)";
+CM_ SG_ 144 csm_version_build "Software Version - build (MM.mm.bb)";
+CM_ SG_ 144 csm_shunt_temp "PCB temperature.";
+CM_ SG_ 144 csm_leakage_updated "Toggles on completion of calculation";
+CM_ SG_ 144 csm_leak_diag_updated "Toggles on completion of self check";
+CM_ SG_ 144 csm_leak_diag_result "Self Check of Leakage Circuit";
+CM_ SG_ 144 csm_fault_out "Status of Fault/Heartbeat Pin on LV csm header";
+CM_ SG_ 144 csm_dtc_set "calibration data fails checksum, or outside nominal range";
+CM_ SG_ 144 csm_therm8 "Thermistor Channel 8";
+CM_ SG_ 144 csm_therm7 "Thermistor Channel 7";
+CM_ SG_ 144 csm_therm6 "Thermistor Channel 6";
+CM_ SG_ 144 csm_therm5 "Thermistor Channel 5";
+CM_ SG_ 144 csm_therm4 "Thermistor Channel 4";
+CM_ SG_ 144 csm_therm3 "Thermistor Channel 3";
+CM_ SG_ 144 csm_therm2 "Thermistor Channel 2";
+CM_ SG_ 144 csm_therm1 "Thermistor Channel 1";
+CM_ SG_ 144 csm_leakage "Pack isolation measurement.";
+CM_ SG_ 144 csm_current_aihi "Analog input averaged current since last request.";
+CM_ SG_ 144 csm_current_asic "ASIC averaged current since last request.";
+CM_ BO_ 512 "Standard data message 01." ;
+ CM_ SG_ 512 m01n_err_v_ref_drift "Voltage reference drift error detected." ;
+ CM_ SG_ 512 m01n_err_mbb_total_overvolt "The MBB total voltage measurement is over the software limit." ;
+ CM_ SG_ 512 m01n_err_mbb_total_undervolt "The MBB total voltage measurement is under the software limit." ;
+ CM_ SG_ 512 m01n_err_sw_cell_undervolt "Cell undervoltage detected in software.  Undervoltage threshold is 1.5V" ;
+ CM_ SG_ 512 m01n_err_sw_cell_overvolt "Cell overvoltage detected in software. Overvoltage threshold is 3.8V" ;
+ CM_ SG_ 512 m01n_err_hw_cell_overvolt "Cell overvoltage detected in hardware. Overvoltage threshold is 4.1V" ;
+ CM_ SG_ 512 m01n_err_rom_check "Program memory checksum incorrect." ;
+ CM_ SG_ 512 m01n_err_ram_check "Random access memory check failed." ;
+ CM_ SG_ 512 m01n_err_nvm_check "Non-volatile memory check failed." ;
+ CM_ SG_ 512 m01n_err_no_can_overvolt "MBB woke up but received no command message and detected cell overvoltage in hardware this on cycle." ;
+ CM_ SG_ 512 m01n_err_no_can "MBB woke up but received no command message this on cycle." ;
+ CM_ SG_ 512 m01n_cell_count "Number of cells monitored by this MBB." ;
+ CM_ SG_ 512 m01n_sw_ver_minor "MBB SW major version." ;
+ CM_ SG_ 512 m01n_sw_ver_build "MBB SW major version." ;
+ CM_ SG_ 512 m01n_sw_ver_major "MBB SW major version." ;
+ CM_ SG_ 512 m01n_bal_count "Number of cells with balance enabled." ;
+ CM_ SG_ 512 m01n_err_v_compare "Module voltage does not agree with sum of cell voltages within CAL." ;
+ CM_ SG_ 512 m01n_err_mbb_supply_oor "10V Power Supply to microprocessor was more than 100 mV outof range." ;
+ CM_ SG_ 512 m01n_err_sample_fet_oor "Measurement at Sample FET control not at expected voltage." ;
+ CM_ SG_ 512 m01n_mbb_fault "The MBB is driving the fault out signal." ;
+ CM_ SG_ 512 m01n_err_bal_fail "A balance circuit failure was detected on at least one cell." ;
+ CM_ SG_ 512 m01n_err_sense_fail "A sense line failure was detected on at least one cell." ;
+ CM_ SG_ 512 m01n_rom_crc_ready "Flag indicating that ROM CRC is completed." ;
+ CM_ SG_ 512 m01n_rom_crc_ms "The upper 8 bytes of the ROM CRC16 Checksum." ;
+ CM_ SG_ 512 m01n_rom_crc_ls "The lower 8 bytes of the ROM CRC16 Checksum." ;
+ CM_ SG_ 512 m01n_err_lol "Error was caused by the loss of PLL lock." ;
+ CM_ SG_ 512 m01n_reset_por "Reset was caused by the power-on detection logic." ;
+ CM_ SG_ 512 m01n_reset_pin "Reset was caused by an active-low level on the external reset pin." ;
+ CM_ SG_ 512 m01n_reset_cop "Reset was caused by the COP watchdog timer timing out." ;
+ CM_ SG_ 512 m01n_reset_iop "Reset was caused by an attempt to execute an unimplemented or illegal opcode." ;
+ CM_ SG_ 512 m01n_reset_iad "Reset was caused by an attempt to access either data or an instruction at an unimplemented memory address." ;
+ CM_ SG_ 512 m01n_reset_loc "Reset was caused by a loss of external clock." ;
+ CM_ SG_ 512 m01n_reset_lvd "Reset was caused by low voltage." ;
+ CM_ SG_ 512 m01n_reset_can "Reset was caused by illegal BCM Request Lock being engaged (Hardware Failure)." ;
+ CM_ SG_ 512 mod_v_max "Module maximum cell voltage." ;
+ CM_ SG_ 512 mod_v_ave "Module average cell voltage." ;
+ CM_ SG_ 512 mod_v_min "Module minimum cell voltage." ;
+ CM_ SG_ 512 m01n_tmp_chn "Module temperature multiplexor, clipped version of mux_chn for backwards compatability." ;
+ CM_ SG_ 512 m01n_response_id_std "Response index." ;
+ CM_ SG_ 512 m01n_fault_in "Module fault input line." ;
+ CM_ SG_ 512 m01n_error_flag "One or more error conditions detected." ;
+ CM_ SG_ 512 m01n_mux_chn "Standard data message multiplexor." ;
+ CM_ SG_ 512 m01n_t0 "Temperature sensor." ;
+ CM_ SG_ 512 m01n_t1 "Temperature sensor." ;
+ CM_ SG_ 512 m01n_t2 "Temperature sensor." ;
+CM_ BO_ 640 "Standard 2 Data Message 01." ;
+ CM_ SG_ 640 m01n_sleep_mode "Calibration mode the MBB is operating in. Sets sleep mode behavior." ;
+ CM_ SG_ 640 m01n_mcu_integrity_status "Indicates the status of the micro integrity test." ;
+ CM_ SG_ 640 m01n_mcu_integrity_key "The calculated key from the micro integrity test; Seed provied for in the BCM_CMD message." ;
+ CM_ SG_ 640 m01n_err_bal_cell_01  "The state of the cell 01 sense line/balance circuit check." ;
+ CM_ SG_ 640 m01n_err_bal_cell_02  "The state of the cell 02 sense line/balance circuit check." ;
+ CM_ SG_ 640 m01n_err_bal_cell_03  "The state of the cell 03 sense line/balance circuit check." ;
+ CM_ SG_ 640 m01n_err_bal_cell_04  "The state of the cell 04 sense line/balance circuit check." ;
+ CM_ SG_ 640 m01n_err_bal_cell_05  "The state of the cell 05 sense line/balance circuit check." ;
+ CM_ SG_ 640 m01n_err_bal_cell_06  "The state of the cell 06 sense line/balance circuit check." ;
+ CM_ SG_ 640 m01n_err_bal_cell_07  "The state of the cell 07 sense line/balance circuit check." ;
+ CM_ SG_ 640 m01n_err_bal_cell_08  "The state of the cell 08 sense line/balance circuit check." ;
+ CM_ SG_ 640 m01n_err_bal_cell_09  "The state of the cell 09 sense line/balance circuit check." ;
+ CM_ SG_ 640 m01n_err_bal_cell_10  "The state of the cell 10 sense line/balance circuit check." ;
+ CM_ SG_ 640 m01n_err_bal_cell_11  "The state of the cell 11 sense line/balance circuit check." ;
+
+CM_ BO_ 768 "Extra data message 1.  Measurements taken when BCM_CMD:bcm_request_type is not 0x0." ;
+ CM_ SG_ 768 m01n_response_id_xd1 "Response index." ;
+ CM_ SG_ 768 m01n_v_mbb_total "MBB total voltage." ;
+ CM_ SG_ 768 m01n_v_cell_01 "Cell voltage." ;
+ CM_ SG_ 768 m01n_bal_cell_01 "Cell balancing response." ;
+ CM_ SG_ 768 m01n_v_cell_02 "Cell voltage." ;
+ CM_ SG_ 768 m01n_bal_cell_02 "Cell balancing response." ;
+ CM_ SG_ 768 m01n_v_cell_03 "Cell voltage." ;
+ CM_ SG_ 768 m01n_bal_cell_03 "Cell balancing response." ;
+
+CM_ BO_ 896 "Extra data message 2.  Measurements taken when BCM_CMD:bcm_request_type is not 0x0." ;
+ CM_ SG_ 896 m01n_response_id_xd2 "Response index." ;
+ CM_ SG_ 896 m01n_v_cell_04 "Cell voltage." ;
+ CM_ SG_ 896 m01n_bal_cell_04 "Cell balancing response." ;
+ CM_ SG_ 896 m01n_v_cell_05 "Cell voltage." ;
+ CM_ SG_ 896 m01n_bal_cell_05 "Cell balancing response." ;
+ CM_ SG_ 896 m01n_v_cell_06 "Cell voltage." ;
+ CM_ SG_ 896 m01n_bal_cell_06 "Cell balancing response." ;
+ CM_ SG_ 896 m01n_v_cell_07 "Cell voltage." ;
+ CM_ SG_ 896 m01n_bal_cell_07 "Cell balancing response." ;
+
+CM_ BO_ 1024 "Extra data message 3.  Measurements taken when BCM_CMD:bcm_request_type is not 0x0." ;
+ CM_ SG_ 1024 m01n_response_id_xd3 "Response index." ;
+ CM_ SG_ 1024 m01n_v_cell_08 "Cell voltage." ;
+ CM_ SG_ 1024 m01n_bal_cell_08 "Cell balancing response." ;
+ CM_ SG_ 1024 m01n_v_cell_09 "Cell voltage." ;
+ CM_ SG_ 1024 m01n_bal_cell_09 "Cell balancing response." ;
+ CM_ SG_ 1024 m01n_v_cell_10 "Cell voltage." ;
+ CM_ SG_ 1024 m01n_bal_cell_10 "Cell balancing response." ;
+ CM_ SG_ 1024 m01n_v_cell_11 "Cell voltage." ;
+ CM_ SG_ 1024 m01n_bal_cell_11 "Cell balancing response." ;
+
+CM_ BO_ 513 "Standard data message 02." ;
+ CM_ SG_ 513 m01p_err_v_ref_drift "Voltage reference drift error detected." ;
+ CM_ SG_ 513 m01p_err_mbb_total_overvolt "The MBB total voltage measurement is over the software limit." ;
+ CM_ SG_ 513 m01p_err_mbb_total_undervolt "The MBB total voltage measurement is under the software limit." ;
+ CM_ SG_ 513 m01p_err_sw_cell_undervolt "Cell undervoltage detected in software.  Undervoltage threshold is 1.5V" ;
+ CM_ SG_ 513 m01p_err_sw_cell_overvolt "Cell overvoltage detected in software. Overvoltage threshold is 3.8V" ;
+ CM_ SG_ 513 m01p_err_hw_cell_overvolt "Cell overvoltage detected in hardware. Overvoltage threshold is 4.1V" ;
+ CM_ SG_ 513 m01p_err_rom_check "Program memory checksum incorrect." ;
+ CM_ SG_ 513 m01p_err_ram_check "Random access memory check failed." ;
+ CM_ SG_ 513 m01p_err_nvm_check "Non-volatile memory check failed." ;
+ CM_ SG_ 513 m01p_err_no_can_overvolt "MBB woke up but received no command message and detected cell overvoltage in hardware this on cycle." ;
+ CM_ SG_ 513 m01p_err_no_can "MBB woke up but received no command message this on cycle." ;
+ CM_ SG_ 513 m01p_cell_count "Number of cells monitored by this MBB." ;
+ CM_ SG_ 513 m01p_sw_ver_minor "MBB SW major version." ;
+ CM_ SG_ 513 m01p_sw_ver_build "MBB SW major version." ;
+ CM_ SG_ 513 m01p_sw_ver_major "MBB SW major version." ;
+ CM_ SG_ 513 m01p_bal_count "Number of cells with balance enabled." ;
+ CM_ SG_ 513 m01p_err_v_compare "Module voltage does not agree with sum of cell voltages within CAL." ;
+ CM_ SG_ 513 m01p_err_mbb_supply_oor "10V Power Supply to microprocessor was more than 100 mV outof range." ;
+ CM_ SG_ 513 m01p_err_sample_fet_oor "Measurement at Sample FET control not at expected voltage." ;
+ CM_ SG_ 513 m01p_mbb_fault "The MBB is driving the fault out signal." ;
+ CM_ SG_ 513 m01p_err_bal_fail "A balance circuit failure was detected on at least one cell." ;
+ CM_ SG_ 513 m01p_err_sense_fail "A sense line failure was detected on at least one cell." ;
+ CM_ SG_ 513 m01p_rom_crc_ready "Flag indicating that ROM CRC is completed." ;
+ CM_ SG_ 513 m01p_rom_crc_ms "The upper 8 bytes of the ROM CRC16 Checksum." ;
+ CM_ SG_ 513 m01p_rom_crc_ls "The lower 8 bytes of the ROM CRC16 Checksum." ;
+ CM_ SG_ 513 m01p_err_lol "Error was caused by the loss of PLL lock." ;
+ CM_ SG_ 513 m01p_reset_por "Reset was caused by the power-on detection logic." ;
+ CM_ SG_ 513 m01p_reset_pin "Reset was caused by an active-low level on the external reset pin." ;
+ CM_ SG_ 513 m01p_reset_cop "Reset was caused by the COP watchdog timer timing out." ;
+ CM_ SG_ 513 m01p_reset_iop "Reset was caused by an attempt to execute an unimplemented or illegal opcode." ;
+ CM_ SG_ 513 m01p_reset_iad "Reset was caused by an attempt to access either data or an instruction at an unimplemented memory address." ;
+ CM_ SG_ 513 m01p_reset_loc "Reset was caused by a loss of external clock." ;
+ CM_ SG_ 513 m01p_reset_lvd "Reset was caused by low voltage." ;
+ CM_ SG_ 513 m01p_reset_can "Reset was caused by illegal BCM Request Lock being engaged (Hardware Failure)." ;
+ CM_ SG_ 513 mod_v_max "Module maximum cell voltage." ;
+ CM_ SG_ 513 mod_v_ave "Module average cell voltage." ;
+ CM_ SG_ 513 mod_v_min "Module minimum cell voltage." ;
+ CM_ SG_ 513 m01p_tmp_chn "Module temperature multiplexor, clipped version of mux_chn for backwards compatability." ;
+ CM_ SG_ 513 m01p_response_id_std "Response index." ;
+ CM_ SG_ 513 m01p_fault_in "Module fault input line." ;
+ CM_ SG_ 513 m01p_error_flag "One or more error conditions detected." ;
+ CM_ SG_ 513 m01p_mux_chn "Standard data message multiplexor." ;
+ CM_ SG_ 513 m01p_t0 "Temperature sensor." ;
+ CM_ SG_ 513 m01p_t1 "Temperature sensor." ;
+ CM_ SG_ 513 m01p_t2 "Temperature sensor." ;
+CM_ BO_ 641 "Standard 2 Data Message 02." ;
+ CM_ SG_ 641 m01p_sleep_mode "Calibration mode the MBB is operating in. Sets sleep mode behavior." ;
+ CM_ SG_ 641 m01p_mcu_integrity_status "Indicates the status of the micro integrity test." ;
+ CM_ SG_ 641 m01p_mcu_integrity_key "The calculated key from the micro integrity test; Seed provied for in the BCM_CMD message." ;
+ CM_ SG_ 641 m01p_err_bal_cell_01  "The state of the cell 01 sense line/balance circuit check." ;
+ CM_ SG_ 641 m01p_err_bal_cell_02  "The state of the cell 02 sense line/balance circuit check." ;
+ CM_ SG_ 641 m01p_err_bal_cell_03  "The state of the cell 03 sense line/balance circuit check." ;
+ CM_ SG_ 641 m01p_err_bal_cell_04  "The state of the cell 04 sense line/balance circuit check." ;
+ CM_ SG_ 641 m01p_err_bal_cell_05  "The state of the cell 05 sense line/balance circuit check." ;
+ CM_ SG_ 641 m01p_err_bal_cell_06  "The state of the cell 06 sense line/balance circuit check." ;
+ CM_ SG_ 641 m01p_err_bal_cell_07  "The state of the cell 07 sense line/balance circuit check." ;
+ CM_ SG_ 641 m01p_err_bal_cell_08  "The state of the cell 08 sense line/balance circuit check." ;
+ CM_ SG_ 641 m01p_err_bal_cell_09  "The state of the cell 09 sense line/balance circuit check." ;
+ CM_ SG_ 641 m01p_err_bal_cell_10  "The state of the cell 10 sense line/balance circuit check." ;
+ CM_ SG_ 641 m01p_err_bal_cell_11  "The state of the cell 11 sense line/balance circuit check." ;
+
+CM_ BO_ 769 "Extra data message 1.  Measurements taken when BCM_CMD:bcm_request_type is not 0x0." ;
+ CM_ SG_ 769 m01p_response_id_xd1 "Response index." ;
+ CM_ SG_ 769 m01p_v_mbb_total "MBB total voltage." ;
+ CM_ SG_ 769 m01p_v_cell_01 "Cell voltage." ;
+ CM_ SG_ 769 m01p_bal_cell_01 "Cell balancing response." ;
+ CM_ SG_ 769 m01p_v_cell_02 "Cell voltage." ;
+ CM_ SG_ 769 m01p_bal_cell_02 "Cell balancing response." ;
+ CM_ SG_ 769 m01p_v_cell_03 "Cell voltage." ;
+ CM_ SG_ 769 m01p_bal_cell_03 "Cell balancing response." ;
+
+CM_ BO_ 897 "Extra data message 2.  Measurements taken when BCM_CMD:bcm_request_type is not 0x0." ;
+ CM_ SG_ 897 m01p_response_id_xd2 "Response index." ;
+ CM_ SG_ 897 m01p_v_cell_04 "Cell voltage." ;
+ CM_ SG_ 897 m01p_bal_cell_04 "Cell balancing response." ;
+ CM_ SG_ 897 m01p_v_cell_05 "Cell voltage." ;
+ CM_ SG_ 897 m01p_bal_cell_05 "Cell balancing response." ;
+ CM_ SG_ 897 m01p_v_cell_06 "Cell voltage." ;
+ CM_ SG_ 897 m01p_bal_cell_06 "Cell balancing response." ;
+ CM_ SG_ 897 m01p_v_cell_07 "Cell voltage." ;
+ CM_ SG_ 897 m01p_bal_cell_07 "Cell balancing response." ;
+
+CM_ BO_ 1025 "Extra data message 3.  Measurements taken when BCM_CMD:bcm_request_type is not 0x0." ;
+ CM_ SG_ 1025 m01p_response_id_xd3 "Response index." ;
+ CM_ SG_ 1025 m01p_v_cell_08 "Cell voltage." ;
+ CM_ SG_ 1025 m01p_bal_cell_08 "Cell balancing response." ;
+ CM_ SG_ 1025 m01p_v_cell_09 "Cell voltage." ;
+ CM_ SG_ 1025 m01p_bal_cell_09 "Cell balancing response." ;
+ CM_ SG_ 1025 m01p_v_cell_10 "Cell voltage." ;
+ CM_ SG_ 1025 m01p_bal_cell_10 "Cell balancing response." ;
+ CM_ SG_ 1025 m01p_v_cell_11 "Cell voltage." ;
+ CM_ SG_ 1025 m01p_bal_cell_11 "Cell balancing response." ;
+
+CM_ BO_ 514 "Standard data message 03." ;
+ CM_ SG_ 514 m02n_err_v_ref_drift "Voltage reference drift error detected." ;
+ CM_ SG_ 514 m02n_err_mbb_total_overvolt "The MBB total voltage measurement is over the software limit." ;
+ CM_ SG_ 514 m02n_err_mbb_total_undervolt "The MBB total voltage measurement is under the software limit." ;
+ CM_ SG_ 514 m02n_err_sw_cell_undervolt "Cell undervoltage detected in software.  Undervoltage threshold is 1.5V" ;
+ CM_ SG_ 514 m02n_err_sw_cell_overvolt "Cell overvoltage detected in software. Overvoltage threshold is 3.8V" ;
+ CM_ SG_ 514 m02n_err_hw_cell_overvolt "Cell overvoltage detected in hardware. Overvoltage threshold is 4.1V" ;
+ CM_ SG_ 514 m02n_err_rom_check "Program memory checksum incorrect." ;
+ CM_ SG_ 514 m02n_err_ram_check "Random access memory check failed." ;
+ CM_ SG_ 514 m02n_err_nvm_check "Non-volatile memory check failed." ;
+ CM_ SG_ 514 m02n_err_no_can_overvolt "MBB woke up but received no command message and detected cell overvoltage in hardware this on cycle." ;
+ CM_ SG_ 514 m02n_err_no_can "MBB woke up but received no command message this on cycle." ;
+ CM_ SG_ 514 m02n_cell_count "Number of cells monitored by this MBB." ;
+ CM_ SG_ 514 m02n_sw_ver_minor "MBB SW major version." ;
+ CM_ SG_ 514 m02n_sw_ver_build "MBB SW major version." ;
+ CM_ SG_ 514 m02n_sw_ver_major "MBB SW major version." ;
+ CM_ SG_ 514 m02n_bal_count "Number of cells with balance enabled." ;
+ CM_ SG_ 514 m02n_err_v_compare "Module voltage does not agree with sum of cell voltages within CAL." ;
+ CM_ SG_ 514 m02n_err_mbb_supply_oor "10V Power Supply to microprocessor was more than 100 mV outof range." ;
+ CM_ SG_ 514 m02n_err_sample_fet_oor "Measurement at Sample FET control not at expected voltage." ;
+ CM_ SG_ 514 m02n_mbb_fault "The MBB is driving the fault out signal." ;
+ CM_ SG_ 514 m02n_err_bal_fail "A balance circuit failure was detected on at least one cell." ;
+ CM_ SG_ 514 m02n_err_sense_fail "A sense line failure was detected on at least one cell." ;
+ CM_ SG_ 514 m02n_rom_crc_ready "Flag indicating that ROM CRC is completed." ;
+ CM_ SG_ 514 m02n_rom_crc_ms "The upper 8 bytes of the ROM CRC16 Checksum." ;
+ CM_ SG_ 514 m02n_rom_crc_ls "The lower 8 bytes of the ROM CRC16 Checksum." ;
+ CM_ SG_ 514 m02n_err_lol "Error was caused by the loss of PLL lock." ;
+ CM_ SG_ 514 m02n_reset_por "Reset was caused by the power-on detection logic." ;
+ CM_ SG_ 514 m02n_reset_pin "Reset was caused by an active-low level on the external reset pin." ;
+ CM_ SG_ 514 m02n_reset_cop "Reset was caused by the COP watchdog timer timing out." ;
+ CM_ SG_ 514 m02n_reset_iop "Reset was caused by an attempt to execute an unimplemented or illegal opcode." ;
+ CM_ SG_ 514 m02n_reset_iad "Reset was caused by an attempt to access either data or an instruction at an unimplemented memory address." ;
+ CM_ SG_ 514 m02n_reset_loc "Reset was caused by a loss of external clock." ;
+ CM_ SG_ 514 m02n_reset_lvd "Reset was caused by low voltage." ;
+ CM_ SG_ 514 m02n_reset_can "Reset was caused by illegal BCM Request Lock being engaged (Hardware Failure)." ;
+ CM_ SG_ 514 mod_v_max "Module maximum cell voltage." ;
+ CM_ SG_ 514 mod_v_ave "Module average cell voltage." ;
+ CM_ SG_ 514 mod_v_min "Module minimum cell voltage." ;
+ CM_ SG_ 514 m02n_tmp_chn "Module temperature multiplexor, clipped version of mux_chn for backwards compatability." ;
+ CM_ SG_ 514 m02n_response_id_std "Response index." ;
+ CM_ SG_ 514 m02n_fault_in "Module fault input line." ;
+ CM_ SG_ 514 m02n_error_flag "One or more error conditions detected." ;
+ CM_ SG_ 514 m02n_mux_chn "Standard data message multiplexor." ;
+ CM_ SG_ 514 m02n_t0 "Temperature sensor." ;
+ CM_ SG_ 514 m02n_t1 "Temperature sensor." ;
+ CM_ SG_ 514 m02n_t2 "Temperature sensor." ;
+CM_ BO_ 642 "Standard 2 Data Message 03." ;
+ CM_ SG_ 642 m02n_sleep_mode "Calibration mode the MBB is operating in. Sets sleep mode behavior." ;
+ CM_ SG_ 642 m02n_mcu_integrity_status "Indicates the status of the micro integrity test." ;
+ CM_ SG_ 642 m02n_mcu_integrity_key "The calculated key from the micro integrity test; Seed provied for in the BCM_CMD message." ;
+ CM_ SG_ 642 m02n_err_bal_cell_01  "The state of the cell 01 sense line/balance circuit check." ;
+ CM_ SG_ 642 m02n_err_bal_cell_02  "The state of the cell 02 sense line/balance circuit check." ;
+ CM_ SG_ 642 m02n_err_bal_cell_03  "The state of the cell 03 sense line/balance circuit check." ;
+ CM_ SG_ 642 m02n_err_bal_cell_04  "The state of the cell 04 sense line/balance circuit check." ;
+ CM_ SG_ 642 m02n_err_bal_cell_05  "The state of the cell 05 sense line/balance circuit check." ;
+ CM_ SG_ 642 m02n_err_bal_cell_06  "The state of the cell 06 sense line/balance circuit check." ;
+ CM_ SG_ 642 m02n_err_bal_cell_07  "The state of the cell 07 sense line/balance circuit check." ;
+ CM_ SG_ 642 m02n_err_bal_cell_08  "The state of the cell 08 sense line/balance circuit check." ;
+ CM_ SG_ 642 m02n_err_bal_cell_09  "The state of the cell 09 sense line/balance circuit check." ;
+ CM_ SG_ 642 m02n_err_bal_cell_10  "The state of the cell 10 sense line/balance circuit check." ;
+ CM_ SG_ 642 m02n_err_bal_cell_11  "The state of the cell 11 sense line/balance circuit check." ;
+
+CM_ BO_ 770 "Extra data message 1.  Measurements taken when BCM_CMD:bcm_request_type is not 0x0." ;
+ CM_ SG_ 770 m02n_response_id_xd1 "Response index." ;
+ CM_ SG_ 770 m02n_v_mbb_total "MBB total voltage." ;
+ CM_ SG_ 770 m02n_v_cell_01 "Cell voltage." ;
+ CM_ SG_ 770 m02n_bal_cell_01 "Cell balancing response." ;
+ CM_ SG_ 770 m02n_v_cell_02 "Cell voltage." ;
+ CM_ SG_ 770 m02n_bal_cell_02 "Cell balancing response." ;
+ CM_ SG_ 770 m02n_v_cell_03 "Cell voltage." ;
+ CM_ SG_ 770 m02n_bal_cell_03 "Cell balancing response." ;
+
+CM_ BO_ 898 "Extra data message 2.  Measurements taken when BCM_CMD:bcm_request_type is not 0x0." ;
+ CM_ SG_ 898 m02n_response_id_xd2 "Response index." ;
+ CM_ SG_ 898 m02n_v_cell_04 "Cell voltage." ;
+ CM_ SG_ 898 m02n_bal_cell_04 "Cell balancing response." ;
+ CM_ SG_ 898 m02n_v_cell_05 "Cell voltage." ;
+ CM_ SG_ 898 m02n_bal_cell_05 "Cell balancing response." ;
+ CM_ SG_ 898 m02n_v_cell_06 "Cell voltage." ;
+ CM_ SG_ 898 m02n_bal_cell_06 "Cell balancing response." ;
+ CM_ SG_ 898 m02n_v_cell_07 "Cell voltage." ;
+ CM_ SG_ 898 m02n_bal_cell_07 "Cell balancing response." ;
+
+CM_ BO_ 1026 "Extra data message 3.  Measurements taken when BCM_CMD:bcm_request_type is not 0x0." ;
+ CM_ SG_ 1026 m02n_response_id_xd3 "Response index." ;
+ CM_ SG_ 1026 m02n_v_cell_08 "Cell voltage." ;
+ CM_ SG_ 1026 m02n_bal_cell_08 "Cell balancing response." ;
+ CM_ SG_ 1026 m02n_v_cell_09 "Cell voltage." ;
+ CM_ SG_ 1026 m02n_bal_cell_09 "Cell balancing response." ;
+ CM_ SG_ 1026 m02n_v_cell_10 "Cell voltage." ;
+ CM_ SG_ 1026 m02n_bal_cell_10 "Cell balancing response." ;
+ CM_ SG_ 1026 m02n_v_cell_11 "Cell voltage." ;
+ CM_ SG_ 1026 m02n_bal_cell_11 "Cell balancing response." ;
+
+CM_ BO_ 515 "Standard data message 04." ;
+ CM_ SG_ 515 m02p_err_v_ref_drift "Voltage reference drift error detected." ;
+ CM_ SG_ 515 m02p_err_mbb_total_overvolt "The MBB total voltage measurement is over the software limit." ;
+ CM_ SG_ 515 m02p_err_mbb_total_undervolt "The MBB total voltage measurement is under the software limit." ;
+ CM_ SG_ 515 m02p_err_sw_cell_undervolt "Cell undervoltage detected in software.  Undervoltage threshold is 1.5V" ;
+ CM_ SG_ 515 m02p_err_sw_cell_overvolt "Cell overvoltage detected in software. Overvoltage threshold is 3.8V" ;
+ CM_ SG_ 515 m02p_err_hw_cell_overvolt "Cell overvoltage detected in hardware. Overvoltage threshold is 4.1V" ;
+ CM_ SG_ 515 m02p_err_rom_check "Program memory checksum incorrect." ;
+ CM_ SG_ 515 m02p_err_ram_check "Random access memory check failed." ;
+ CM_ SG_ 515 m02p_err_nvm_check "Non-volatile memory check failed." ;
+ CM_ SG_ 515 m02p_err_no_can_overvolt "MBB woke up but received no command message and detected cell overvoltage in hardware this on cycle." ;
+ CM_ SG_ 515 m02p_err_no_can "MBB woke up but received no command message this on cycle." ;
+ CM_ SG_ 515 m02p_cell_count "Number of cells monitored by this MBB." ;
+ CM_ SG_ 515 m02p_sw_ver_minor "MBB SW major version." ;
+ CM_ SG_ 515 m02p_sw_ver_build "MBB SW major version." ;
+ CM_ SG_ 515 m02p_sw_ver_major "MBB SW major version." ;
+ CM_ SG_ 515 m02p_bal_count "Number of cells with balance enabled." ;
+ CM_ SG_ 515 m02p_err_v_compare "Module voltage does not agree with sum of cell voltages within CAL." ;
+ CM_ SG_ 515 m02p_err_mbb_supply_oor "10V Power Supply to microprocessor was more than 100 mV outof range." ;
+ CM_ SG_ 515 m02p_err_sample_fet_oor "Measurement at Sample FET control not at expected voltage." ;
+ CM_ SG_ 515 m02p_mbb_fault "The MBB is driving the fault out signal." ;
+ CM_ SG_ 515 m02p_err_bal_fail "A balance circuit failure was detected on at least one cell." ;
+ CM_ SG_ 515 m02p_err_sense_fail "A sense line failure was detected on at least one cell." ;
+ CM_ SG_ 515 m02p_rom_crc_ready "Flag indicating that ROM CRC is completed." ;
+ CM_ SG_ 515 m02p_rom_crc_ms "The upper 8 bytes of the ROM CRC16 Checksum." ;
+ CM_ SG_ 515 m02p_rom_crc_ls "The lower 8 bytes of the ROM CRC16 Checksum." ;
+ CM_ SG_ 515 m02p_err_lol "Error was caused by the loss of PLL lock." ;
+ CM_ SG_ 515 m02p_reset_por "Reset was caused by the power-on detection logic." ;
+ CM_ SG_ 515 m02p_reset_pin "Reset was caused by an active-low level on the external reset pin." ;
+ CM_ SG_ 515 m02p_reset_cop "Reset was caused by the COP watchdog timer timing out." ;
+ CM_ SG_ 515 m02p_reset_iop "Reset was caused by an attempt to execute an unimplemented or illegal opcode." ;
+ CM_ SG_ 515 m02p_reset_iad "Reset was caused by an attempt to access either data or an instruction at an unimplemented memory address." ;
+ CM_ SG_ 515 m02p_reset_loc "Reset was caused by a loss of external clock." ;
+ CM_ SG_ 515 m02p_reset_lvd "Reset was caused by low voltage." ;
+ CM_ SG_ 515 m02p_reset_can "Reset was caused by illegal BCM Request Lock being engaged (Hardware Failure)." ;
+ CM_ SG_ 515 mod_v_max "Module maximum cell voltage." ;
+ CM_ SG_ 515 mod_v_ave "Module average cell voltage." ;
+ CM_ SG_ 515 mod_v_min "Module minimum cell voltage." ;
+ CM_ SG_ 515 m02p_tmp_chn "Module temperature multiplexor, clipped version of mux_chn for backwards compatability." ;
+ CM_ SG_ 515 m02p_response_id_std "Response index." ;
+ CM_ SG_ 515 m02p_fault_in "Module fault input line." ;
+ CM_ SG_ 515 m02p_error_flag "One or more error conditions detected." ;
+ CM_ SG_ 515 m02p_mux_chn "Standard data message multiplexor." ;
+ CM_ SG_ 515 m02p_t0 "Temperature sensor." ;
+ CM_ SG_ 515 m02p_t1 "Temperature sensor." ;
+ CM_ SG_ 515 m02p_t2 "Temperature sensor." ;
+CM_ BO_ 643 "Standard 2 Data Message 04." ;
+ CM_ SG_ 643 m02p_sleep_mode "Calibration mode the MBB is operating in. Sets sleep mode behavior." ;
+ CM_ SG_ 643 m02p_mcu_integrity_status "Indicates the status of the micro integrity test." ;
+ CM_ SG_ 643 m02p_mcu_integrity_key "The calculated key from the micro integrity test; Seed provied for in the BCM_CMD message." ;
+ CM_ SG_ 643 m02p_err_bal_cell_01  "The state of the cell 01 sense line/balance circuit check." ;
+ CM_ SG_ 643 m02p_err_bal_cell_02  "The state of the cell 02 sense line/balance circuit check." ;
+ CM_ SG_ 643 m02p_err_bal_cell_03  "The state of the cell 03 sense line/balance circuit check." ;
+ CM_ SG_ 643 m02p_err_bal_cell_04  "The state of the cell 04 sense line/balance circuit check." ;
+ CM_ SG_ 643 m02p_err_bal_cell_05  "The state of the cell 05 sense line/balance circuit check." ;
+ CM_ SG_ 643 m02p_err_bal_cell_06  "The state of the cell 06 sense line/balance circuit check." ;
+ CM_ SG_ 643 m02p_err_bal_cell_07  "The state of the cell 07 sense line/balance circuit check." ;
+ CM_ SG_ 643 m02p_err_bal_cell_08  "The state of the cell 08 sense line/balance circuit check." ;
+ CM_ SG_ 643 m02p_err_bal_cell_09  "The state of the cell 09 sense line/balance circuit check." ;
+ CM_ SG_ 643 m02p_err_bal_cell_10  "The state of the cell 10 sense line/balance circuit check." ;
+ CM_ SG_ 643 m02p_err_bal_cell_11  "The state of the cell 11 sense line/balance circuit check." ;
+
+CM_ BO_ 771 "Extra data message 1.  Measurements taken when BCM_CMD:bcm_request_type is not 0x0." ;
+ CM_ SG_ 771 m02p_response_id_xd1 "Response index." ;
+ CM_ SG_ 771 m02p_v_mbb_total "MBB total voltage." ;
+ CM_ SG_ 771 m02p_v_cell_01 "Cell voltage." ;
+ CM_ SG_ 771 m02p_bal_cell_01 "Cell balancing response." ;
+ CM_ SG_ 771 m02p_v_cell_02 "Cell voltage." ;
+ CM_ SG_ 771 m02p_bal_cell_02 "Cell balancing response." ;
+ CM_ SG_ 771 m02p_v_cell_03 "Cell voltage." ;
+ CM_ SG_ 771 m02p_bal_cell_03 "Cell balancing response." ;
+
+CM_ BO_ 899 "Extra data message 2.  Measurements taken when BCM_CMD:bcm_request_type is not 0x0." ;
+ CM_ SG_ 899 m02p_response_id_xd2 "Response index." ;
+ CM_ SG_ 899 m02p_v_cell_04 "Cell voltage." ;
+ CM_ SG_ 899 m02p_bal_cell_04 "Cell balancing response." ;
+ CM_ SG_ 899 m02p_v_cell_05 "Cell voltage." ;
+ CM_ SG_ 899 m02p_bal_cell_05 "Cell balancing response." ;
+ CM_ SG_ 899 m02p_v_cell_06 "Cell voltage." ;
+ CM_ SG_ 899 m02p_bal_cell_06 "Cell balancing response." ;
+ CM_ SG_ 899 m02p_v_cell_07 "Cell voltage." ;
+ CM_ SG_ 899 m02p_bal_cell_07 "Cell balancing response." ;
+
+CM_ BO_ 1027 "Extra data message 3.  Measurements taken when BCM_CMD:bcm_request_type is not 0x0." ;
+ CM_ SG_ 1027 m02p_response_id_xd3 "Response index." ;
+ CM_ SG_ 1027 m02p_v_cell_08 "Cell voltage." ;
+ CM_ SG_ 1027 m02p_bal_cell_08 "Cell balancing response." ;
+ CM_ SG_ 1027 m02p_v_cell_09 "Cell voltage." ;
+ CM_ SG_ 1027 m02p_bal_cell_09 "Cell balancing response." ;
+ CM_ SG_ 1027 m02p_v_cell_10 "Cell voltage." ;
+ CM_ SG_ 1027 m02p_bal_cell_10 "Cell balancing response." ;
+ CM_ SG_ 1027 m02p_v_cell_11 "Cell voltage." ;
+ CM_ SG_ 1027 m02p_bal_cell_11 "Cell balancing response." ;
+
+CM_ BO_ 80 "BCM measurement request." ;
+ CM_ SG_ 80 bcm_message_format "Message format definition to determine how 0x50 message should be interpreted and how MBBs should respond." ;
+ CM_ SG_ 80 bcm_request_type "Request Type (standard/all data)" ;
+ CM_ SG_ 80 bcm_leakage_cmd_idm "Leakage measurement mode command." ;
+ CM_ SG_ 80 bcm_diag_cmd_target "Address of MBB to receive this set of balance commands." ;
+ CM_ SG_ 80 bcm_leakage_cmd_csm "Leakage measurement mode command." ;
+ CM_ SG_ 80 bcm_v_balance_target "Target voltage for module cell balancing." ;
+ CM_ SG_ 80 bcm_request_id "Request index." ;
+ CM_ SG_ 80 bcm_sense_bal_cmd " The diagnostic command for balance circuit. Note, the transition triggers a diagnostic test." ;
+
+ CM_ SG_ 80 bcm_m01n_bal_power_level "Cell balance power level (active balance system)." ;
+ CM_ SG_ 80 bcm_m01n_ovic_circuit_ena "Enables the OV IC test pin on this MBB." ;
+ CM_ SG_ 80 bcm_m01n_ovic_fault_ena "Enables the fault control on the MBB." ;
+ CM_ SG_ 80 bcm_m01n_ovic_test_cmd "Indicates the OV IC group and comparator to test." ;
+ CM_ SG_ 80 bcm_m01n_bal_ena_cell_01 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01n_bal_ena_cell_02 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01n_bal_ena_cell_03 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01n_bal_ena_cell_04 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01n_bal_ena_cell_05 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01n_bal_ena_cell_06 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01n_bal_ena_cell_07 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01n_bal_ena_cell_08 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01n_bal_ena_cell_09 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01n_bal_ena_cell_10 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01n_bal_ena_cell_11 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01p_bal_power_level "Cell balance power level (active balance system)." ;
+ CM_ SG_ 80 bcm_m01p_ovic_circuit_ena "Enables the OV IC test pin on this MBB." ;
+ CM_ SG_ 80 bcm_m01p_ovic_fault_ena "Enables the fault control on the MBB." ;
+ CM_ SG_ 80 bcm_m01p_ovic_test_cmd "Indicates the OV IC group and comparator to test." ;
+ CM_ SG_ 80 bcm_m01p_bal_ena_cell_01 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01p_bal_ena_cell_02 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01p_bal_ena_cell_03 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01p_bal_ena_cell_04 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01p_bal_ena_cell_05 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01p_bal_ena_cell_06 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01p_bal_ena_cell_07 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01p_bal_ena_cell_08 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01p_bal_ena_cell_09 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01p_bal_ena_cell_10 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m01p_bal_ena_cell_11 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02n_bal_power_level "Cell balance power level (active balance system)." ;
+ CM_ SG_ 80 bcm_m02n_ovic_circuit_ena "Enables the OV IC test pin on this MBB." ;
+ CM_ SG_ 80 bcm_m02n_ovic_fault_ena "Enables the fault control on the MBB." ;
+ CM_ SG_ 80 bcm_m02n_ovic_test_cmd "Indicates the OV IC group and comparator to test." ;
+ CM_ SG_ 80 bcm_m02n_bal_ena_cell_01 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02n_bal_ena_cell_02 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02n_bal_ena_cell_03 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02n_bal_ena_cell_04 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02n_bal_ena_cell_05 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02n_bal_ena_cell_06 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02n_bal_ena_cell_07 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02n_bal_ena_cell_08 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02n_bal_ena_cell_09 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02n_bal_ena_cell_10 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02n_bal_ena_cell_11 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02p_bal_power_level "Cell balance power level (active balance system)." ;
+ CM_ SG_ 80 bcm_m02p_ovic_circuit_ena "Enables the OV IC test pin on this MBB." ;
+ CM_ SG_ 80 bcm_m02p_ovic_fault_ena "Enables the fault control on the MBB." ;
+ CM_ SG_ 80 bcm_m02p_ovic_test_cmd "Indicates the OV IC group and comparator to test." ;
+ CM_ SG_ 80 bcm_m02p_bal_ena_cell_01 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02p_bal_ena_cell_02 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02p_bal_ena_cell_03 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02p_bal_ena_cell_04 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02p_bal_ena_cell_05 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02p_bal_ena_cell_06 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02p_bal_ena_cell_07 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02p_bal_ena_cell_08 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02p_bal_ena_cell_09 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02p_bal_ena_cell_10 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_m02p_bal_ena_cell_11 "Cell balancing command." ;
+ CM_ SG_ 80 bcm_mbb_all_ovic_circuit_ena "Enables the OV IC test pin on this MBB." ;
+ CM_ SG_ 80 bcm_mbb_all_ovic_fault_ena "Enables the fault control on the MBB." ;
+ CM_ SG_ 80 bcm_mbb_all_ovic_test_cmd "Indicates the OV IC group and comparator to test." ;
+
+CM_ BO_ 80 "BCM diagnostic request." ;
+CM_ SG_ 1968 diag_sid "ISO14229: Service Identifier" ;
+CM_ SG_ 1968 diag_did_bcm "ISO14229: Data Identifier" ;
+CM_ SG_ 1968 diag_length "ISO14229: Data length" ;
+CM_ SG_ 1968 diag_float "ISO14229: DID specific" ;
+
+CM_ BO_ 80 "BCM diagnostic response." ;
+CM_ SG_ 1976 diag_sid "ISO14229: Service Identifier" ;
+CM_ SG_ 1976 diag_did_bcm "ISO14229: Data Identifier" ;
+CM_ SG_ 1976 diag_length "ISO14229: Data length" ;
+CM_ SG_ 1976 diag_float "ISO14229: DID specific" ;
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+
+VAL_ 80 bcm_request_type 3 "Summary & 2 Extra Per Request" 2 "Summary & 1 Extra Per Request" 1 "Summary & All Extra" 0 "Summary Data" ;
+VAL_ 80 bcm_v_balance_target 8191 "ERROR" 8190 "NoValue" ;
+VAL_ 80 bcm_leakage_cmd_idm 7 "ENABLE_BATT_ONLY_LEAK_DIAG" 3 "ENABLE_BOTH_RELAYS" 6 "ENABLE_LEAKAGE_DIAG" 5 "ENABLE_LOW_SIDE_RELAY" 4 "ENABLE_HIGH_SIDE_RELAY" 1 "ENABLE" 0 "DISABLE_MEASUREMENT" ;
+VAL_ 80 bcm_leakage_cmd_csm 3 "ENABLE_BOTH_RELAYS" 7 "ENABLE_BATT_ONLY_LEAK_DIAG" 6 "ENABLE_LEAKAGE_DIAG" 5 "ENABLE_LOW_SIDE_RELAY" 4 "ENABLE_HIGH_SIDE_RELAY" 1 "ENABLE" 0 "DISABLE_MEASUREMENT" ;
+VAL_ 80 bcm_message_format 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Reserved" 2 "v2: Cell Addressable Previous" 1 "v1: Cell Addressable Current" 0 "v0: NOT SUPPORTED" ;
+VAL_ 80 bcm_sense_bal_cmd 0 "DIAG_LO" 1 "DIAG_HI" ;
+VAL_ 80 bcm_diag_cmd_target 255 "All Balance Clear" 250 "Diag Even Cells" 245 "Diag Odd Cells" 240 "All Balance Off" 151 "MBB 24 Bal, Cells 16 - 30" 150 "MBB 23 Bal, Cells 16 - 30" 149 "MBB 22 Bal, Cells 16 - 30" 148 "MBB 21 Bal, Cells 16 - 30" 147 "MBB 20 Bal, Cells 16 - 30" 146 "MBB 19 Bal, Cells 16 - 30" 145 "MBB 18 Bal, Cells 16 - 30" 144 "MBB 17 Bal, Cells 16 - 30" 143 "MBB 16 Bal, Cells 16 - 30" 142 "MBB 15 Bal, Cells 16 - 30" 141 "MBB 14 Bal, Cells 16 - 30" 140 "MBB 13 Bal, Cells 16 - 30" 139 "MBB 12 Bal, Cells 16 - 30" 138 "MBB 11 Bal, Cells 16 - 30" 137 "MBB 10 Bal, Cells 16 - 30" 136 "MBB 09 Bal, Cells 16 - 30" 135 "MBB 08 Bal, Cells 16 - 30" 134 "MBB 07 Bal, Cells 16 - 30" 133 "MBB 06 Bal, Cells 16 - 30" 132 "MBB 05 Bal, Cells 16 - 30" 131 "MBB 04 Bal, Cells 16 - 30" 130 "MBB 03 Bal, Cells 16 - 30" 129 "MBB 02 Bal, Cells 16 - 30" 128 "MBB 01 Bal, Cells 16 - 30" 23 "MBB 24 Bal, Cells 1 - 15" 22 "MBB 23 Bal, Cells 1 - 15" 21 "MBB 22 Bal, Cells 1 - 15" 20 "MBB 21 Bal, Cells 1 - 15" 19 "MBB 20 Bal, Cells 1 - 15" 18 "MBB 19 Bal, Cells 1 - 15" 17 "MBB 18 Bal, Cells 1 - 15" 16 "MBB 17 Bal, Cells 1 - 15" 15 "MBB 16 Bal, Cells 1 - 15" 14 "MBB 15 Bal, Cells 1 - 15" 13 "MBB 14 Bal, Cells 1 - 15" 12 "MBB 13 Bal, Cells 1 - 15" 11 "MBB 12 Bal, Cells 1 - 15" 10 "MBB 11 Bal, Cells 1 - 15" 9 "MBB 10 Bal, Cells 1 - 15" 8 "MBB 09 Bal, Cells 1 - 15" 7 "MBB 08 Bal, Cells 1 - 15" 6 "MBB 07 Bal, Cells 1 - 15" 5 "MBB 06 Bal, Cells 1 - 15" 4 "MBB 05 Bal, Cells 1 - 15" 3 "MBB 04 Bal, Cells 1 - 15" 2 "MBB 03 Bal, Cells 1 - 15" 1 "MBB 02 Bal, Cells 1 - 15" 0 "MBB 01 Bal, Cells 1 - 15" 72 "MBB ALL OV IC, Cells 1 - 30" 71 "MBB 24 OV Test, Cells 1 - 30" 70 "MBB 23 OV Test, Cells 1 - 30" 69 "MBB 22 OV Test, Cells 1 - 30" 68 "MBB 21 OV Test, Cells 1 - 30" 67 "MBB 20 OV Test, Cells 1 - 30" 66 "MBB 19 OV Test, Cells 1 - 30" 65 "MBB 18 OV Test, Cells 1 - 30" 64 "MBB 17 OV Test, Cells 1 - 30" 63 "MBB 16 OV Test, Cells 1 - 30" 62 "MBB 15 OV Test, Cells 1 - 30" 61 "MBB 14 OV Test, Cells 1 - 30" 60 "MBB 13 OV Test, Cells 1 - 30" 59 "MBB 12 OV Test, Cells 1 - 30" 58 "MBB 11 OV Test, Cells 1 - 30" 57 "MBB 10 OV Test, Cells 1 - 30" 56 "MBB 09 OV Test, Cells 1 - 30" 55 "MBB 08 OV Test, Cells 1 - 30" 54 "MBB 07 OV Test, Cells 1 - 30" 53 "MBB 06 OV Test, Cells 1 - 30" 52 "MBB 05 OV Test, Cells 1 - 30" 51 "MBB 04 OV Test, Cells 1 - 30" 50 "MBB 03 OV Test, Cells 1 - 30" 49 "MBB 02 OV Test, Cells 1 - 30" 48 "MBB 01 OV Test, Cells 1 - 30" 224 "Micro Integrity Test" ;
+ VAL_ 80 bcm_m01n_ovic_circuit_ena 0 "Off" 1 "On" ;
+ VAL_ 80 bcm_m01n_ovic_fault_ena 0 "Off" 1 "On" ;
+ VAL_ 80 bcm_m01n_ovic_test_cmd 0 "All Off" 1 "Group 1: Comparator 1" 2 "Group 1: Comparator 2" 3 "Group 1: Comparator 3" 4 "Group 1: Comparator 4"  5 "Group 2: Comparator 1" 6 "Group 2: Comparator 2" 7 "Group 2: Comparator 3" 8 "Group 2: Comparator 4"  9 "Group 3: Comparator 1" 10 "Group 3: Comparator 2" 11 "Group 3: Comparator 3" 12 "Group 3: Comparator 4"  13 "Group 4: Comparator 1" 14 "Group 4: Comparator 2" 15 "Group 4: Comparator 3" 16 "Group 4: Comparator 4"  17 "Group 5: Comparator 1" 18 "Group 5: Comparator 2" 19 "Group 5: Comparator 3" 20 "Group 5: Comparator 4"  21 "Group 6: Comparator 1" 22 "Group 6: Comparator 2" 23 "Group 6: Comparator 3" 24 "Group 6: Comparator 4"  25 "Group 7: Comparator 1" 26 "Group 7: Comparator 2" 27 "Group 7: Comparator 3" 28 "Group 7: Comparator 4"  29 "Group 8: Comparator 1" 30 "Group 8: Comparator 2" 31 "Group 8: Comparator 3" 32 "Group 9: Comparator 1" 33 "Group 9: Comparator 2" ;
+ VAL_ 80 bcm_m01p_ovic_circuit_ena 0 "Off" 1 "On" ;
+ VAL_ 80 bcm_m01p_ovic_fault_ena 0 "Off" 1 "On" ;
+ VAL_ 80 bcm_m01p_ovic_test_cmd 0 "All Off" 1 "Group 1: Comparator 1" 2 "Group 1: Comparator 2" 3 "Group 1: Comparator 3" 4 "Group 1: Comparator 4"  5 "Group 2: Comparator 1" 6 "Group 2: Comparator 2" 7 "Group 2: Comparator 3" 8 "Group 2: Comparator 4"  9 "Group 3: Comparator 1" 10 "Group 3: Comparator 2" 11 "Group 3: Comparator 3" 12 "Group 3: Comparator 4"  13 "Group 4: Comparator 1" 14 "Group 4: Comparator 2" 15 "Group 4: Comparator 3" 16 "Group 4: Comparator 4"  17 "Group 5: Comparator 1" 18 "Group 5: Comparator 2" 19 "Group 5: Comparator 3" 20 "Group 5: Comparator 4"  21 "Group 6: Comparator 1" 22 "Group 6: Comparator 2" 23 "Group 6: Comparator 3" 24 "Group 6: Comparator 4"  25 "Group 7: Comparator 1" 26 "Group 7: Comparator 2" 27 "Group 7: Comparator 3" 28 "Group 7: Comparator 4"  29 "Group 8: Comparator 1" 30 "Group 8: Comparator 2" 31 "Group 8: Comparator 3" 32 "Group 9: Comparator 1" 33 "Group 9: Comparator 2" ;
+ VAL_ 80 bcm_m02n_ovic_circuit_ena 0 "Off" 1 "On" ;
+ VAL_ 80 bcm_m02n_ovic_fault_ena 0 "Off" 1 "On" ;
+ VAL_ 80 bcm_m02n_ovic_test_cmd 0 "All Off" 1 "Group 1: Comparator 1" 2 "Group 1: Comparator 2" 3 "Group 1: Comparator 3" 4 "Group 1: Comparator 4"  5 "Group 2: Comparator 1" 6 "Group 2: Comparator 2" 7 "Group 2: Comparator 3" 8 "Group 2: Comparator 4"  9 "Group 3: Comparator 1" 10 "Group 3: Comparator 2" 11 "Group 3: Comparator 3" 12 "Group 3: Comparator 4"  13 "Group 4: Comparator 1" 14 "Group 4: Comparator 2" 15 "Group 4: Comparator 3" 16 "Group 4: Comparator 4"  17 "Group 5: Comparator 1" 18 "Group 5: Comparator 2" 19 "Group 5: Comparator 3" 20 "Group 5: Comparator 4"  21 "Group 6: Comparator 1" 22 "Group 6: Comparator 2" 23 "Group 6: Comparator 3" 24 "Group 6: Comparator 4"  25 "Group 7: Comparator 1" 26 "Group 7: Comparator 2" 27 "Group 7: Comparator 3" 28 "Group 7: Comparator 4"  29 "Group 8: Comparator 1" 30 "Group 8: Comparator 2" 31 "Group 8: Comparator 3" 32 "Group 9: Comparator 1" 33 "Group 9: Comparator 2" ;
+ VAL_ 80 bcm_m02p_ovic_circuit_ena 0 "Off" 1 "On" ;
+ VAL_ 80 bcm_m02p_ovic_fault_ena 0 "Off" 1 "On" ;
+ VAL_ 80 bcm_m02p_ovic_test_cmd 0 "All Off" 1 "Group 1: Comparator 1" 2 "Group 1: Comparator 2" 3 "Group 1: Comparator 3" 4 "Group 1: Comparator 4"  5 "Group 2: Comparator 1" 6 "Group 2: Comparator 2" 7 "Group 2: Comparator 3" 8 "Group 2: Comparator 4"  9 "Group 3: Comparator 1" 10 "Group 3: Comparator 2" 11 "Group 3: Comparator 3" 12 "Group 3: Comparator 4"  13 "Group 4: Comparator 1" 14 "Group 4: Comparator 2" 15 "Group 4: Comparator 3" 16 "Group 4: Comparator 4"  17 "Group 5: Comparator 1" 18 "Group 5: Comparator 2" 19 "Group 5: Comparator 3" 20 "Group 5: Comparator 4"  21 "Group 6: Comparator 1" 22 "Group 6: Comparator 2" 23 "Group 6: Comparator 3" 24 "Group 6: Comparator 4"  25 "Group 7: Comparator 1" 26 "Group 7: Comparator 2" 27 "Group 7: Comparator 3" 28 "Group 7: Comparator 4"  29 "Group 8: Comparator 1" 30 "Group 8: Comparator 2" 31 "Group 8: Comparator 3" 32 "Group 9: Comparator 1" 33 "Group 9: Comparator 2" ;
+ VAL_ 80 bcm_mbb_all_ovic_circuit_ena 0 "Off" 1 "On" ;
+ VAL_ 80 bcm_mbb_all_ovic_fault_ena 0 "Off" 1 "On" ;
+ VAL_ 80 bcm_mbb_all_ovic_test_cmd 0 "All Off" 1 "Group 1: Comparator 1" 2 "Group 1: Comparator 2" 3 "Group 1: Comparator 3" 4 "Group 1: Comparator 4"  5 "Group 2: Comparator 1" 6 "Group 2: Comparator 2" 7 "Group 2: Comparator 3" 8 "Group 2: Comparator 4"  9 "Group 3: Comparator 1" 10 "Group 3: Comparator 2" 11 "Group 3: Comparator 3" 12 "Group 3: Comparator 4"  13 "Group 4: Comparator 1" 14 "Group 4: Comparator 2" 15 "Group 4: Comparator 3" 14 "Group 4: Comparator 4"  17 "Group 5: Comparator 1" 18 "Group 5: Comparator 2" 19 "Group 5: Comparator 3" 20 "Group 5: Comparator 4"  21 "Group 6: Comparator 1" 22 "Group 6: Comparator 2" 23 "Group 6: Comparator 3" 24 "Group 6: Comparator 4"  25 "Group 7: Comparator 1" 26 "Group 7: Comparator 2" 27 "Group 7: Comparator 3" 28 "Group 7: Comparator 4"  29 "Group 8: Comparator 1" 30 "Group 8: Comparator 2" 31 "Group 8: Comparator 3" 32 "Group 9: Comparator 1" 33 "Group 9: Comparator 2" ;
+
+VAL_ 1968 diag_sid 110 "WriteDataByIdentifier-PosRsp" 98 "ReadDataByIdentifier-PosRsp" 127 "NegativeResponse" 46 "WriteDataByIdentifier" 34 "ReadDataByIdentifier" ;
+VAL_ 1968 diag_did_bcm 65010 "dtcCalSet" 65009 "calSet" 65008 "diagDataMessageMask" 61842 "sysSupplierECUHwNumber" 61836 "ECUSerialNumber" 61825 "appSwIdentification" 61824 "bootSwIdentification" 61456 "StateOfCharge" 57423 "AI31" 57422 "AI30" 57421 "AI29" 57420 "AI28" 57419 "AI27" 57418 "AI26" 57417 "AI25" 57416 "AI24" 57415 "AI23" 57414 "AI22" 57413 "AI21" 57412 "AI20" 57411 "AI19" 57410 "AI18" 57409 "AI17" 57408 "AI16" 57407 "AI15" 57406 "AI14" 57405 "AI13" 57404 "AI12" 57403 "AI11" 57402 "AI10" 57401 "AI09" 57400 "AI08" 57399 "AI07" 57398 "AI06" 57397 "AI05" 57396 "AI04" 57395 "AI03" 57394 "AI02" 57393 "AI01" 57392 "AI00" ;
+
+VAL_ 1976 diag_sid 110 "WriteDataByIdentifier-PosRsp" 98 "ReadDataByIdentifier-PosRsp" 127 "NegativeResponse" 46 "WriteDataByIdentifier" 34 "ReadDataByIdentifier" ;
+VAL_ 1976 diag_did_bcm 65010 "dtcCalSet" 65009 "calSet" 65008 "diagDataMessageMask" 61842 "sysSupplierECUHwNumber" 61836 "ECUSerialNumber" 61825 "appSwIdentification" 61824 "bootSwIdentification" 61456 "StateOfCharge" 57423 "AI31" 57422 "AI30" 57421 "AI29" 57420 "AI28" 57419 "AI27" 57418 "AI26" 57417 "AI25" 57416 "AI24" 57415 "AI23" 57414 "AI22" 57413 "AI21" 57412 "AI20" 57411 "AI19" 57410 "AI18" 57409 "AI17" 57408 "AI16" 57407 "AI15" 57406 "AI14" 57405 "AI13" 57404 "AI12" 57403 "AI11" 57402 "AI10" 57401 "AI09" 57400 "AI08" 57399 "AI07" 57398 "AI06" 57397 "AI05" 57396 "AI04" 57395 "AI03" 57394 "AI02" 57393 "AI01" 57392 "AI00" ;
+
+VAL_ 81 csm_rtc_set_weekday 7 "Saturday" 6 "Friday" 5 "Thursday" 4 "Wednesday" 3 "Tuesday" 2 "Monday" 1 "Sunday" ;
+VAL_ 1639 por_csm_RCON 9488 "WATCHDOG_RESET" 9536 "SOFTWARE_RESET" 9475 "NORMAL_BROWN_OUT_POR" ;
+VAL_ 1992 diag_csm_heartbeat 191 "HEARTBEAT_CSM" ;
+VAL_ 1992 diag_csm_cal_inrange 0 "CHECK PASSED" ;
+VAL_ 1992 diag_csm_cal_checksum 0 "CHECK PASSED" ;
+VAL_ 1992 diag_csm_rsp_sid 127 "NegativeResponse" 110 "WriteDataByIdentifier-PosRsp" 98 "ReadDataByIdentifier-PosRsp" 46 "WriteDataByIdentifier" 34 "ReadDataByIdentifier" ;
+VAL_ 1984 diag_csm_heartbeat_clear 241 "CLEAR" ;
+VAL_ 1984 diag_csm_heartbeat_set 191 "HEARTBEAT_CSM" ;
+VAL_ 1984 diag_csm_leakage_diag 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 1984 diag_csm_extra_2_3_raw 1 "ENABLE" 0 "DISABLE" ;
+VAL_ 1984 diag_csm_leakage_cmd 14 "USE_BCM__DISABLE_OVERRIDE" 6 "OVERRIDE__ENABLE_LEAK_DIAG" 5 "OVERRIDE__ENABLE_LOW_SIDE_RELAY" 4 "OVERRIDE__ENABLE_HIGH_SIDE_RELAY" 1 "OVERRIDE__ENABLE" 0 "OVERRIDE__STOP_LEAKAGE" ;
+VAL_ 1984 diag_csm_req_type 120520181 "W__MOSFET_OVERRIDE_ENABLE" 52624896 "READ_ROM_CRC" 70353392 "HEART_BEAT_CLEAR" 86965505 "HEART_BEAT_SET" 70188532 "W__LEAKAGE_OVERRIDE_BCM" 70188531 "W__EN_LEAK_DEBUG_MESSAGES" 70188530 "W__EN_EXTRA_RAW_MESSAGES" 120520177 "W__REAL_TIME_CLOCK_WWHHMMSS" 120520176 "W__REAL_TIME_CLOCK_YYYYMMDD" 52624894 "R__CAL_IN_RANGE_STATUS_REG" 52624893 "R__CAL_CHECK_SUM_STATUS_REG" ;
+VAL_ 147 csm_leakage_switch 3 "OFF" 2 "BOTH" 1 "HIGH_SIDE" 0 "LOW_SIDE" ;
+VAL_ 147 csm_vchrg_pos 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 147 csm_vchrg_neg 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 147 csm_vaux_pos 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 147 csm_vaux_neg 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 146 csm_rtc_fault 0 "NO_ERROR" ;
+VAL_ 146 csm_rtc_weekday 255 "ERROR" 254 "NO_VALUE" 7 "Saturday" 6 "Friday" 5 "Thursday" 4 "Wednesday" 3 "Tuesday" 2 "Monday" 1 "Sunday" ;
+VAL_ 146 csm_rtc_year 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 146 csm_rtc_month 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 146 csm_rtc_day 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 146 csm_rtc_hour 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 146 csm_rtc_min 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 146 csm_rtc_sec 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 145 csm_fuse_ls 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 145 csm_fuse_hs 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 145 csm_vbus_pos 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 145 csm_vbus_neg 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 145 csm_vbatt 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 144 csm_mcu_integrity_status 3 "SEED_OUT_OF_SEQUENCE" 2 "SEED_INVALID" 1 "SEED_CORRECT" 0 "NOT_ACTIVE" ;
+VAL_ 144 csm_leak_diag_result 13 "INSUFFICENT_VOLTAGE" 15 "ERROR" 14 "NO_VALUE" 5 "FAIL_MIDPACK_SHORT" 4 "FAIL_EXTERN_SHORT" 3 "FAIL_HARDWARE" 2 "FAIL_CALC" 1 "DIAG_PASS" 0 "DIAG_OFF" ;
+VAL_ 144 csm_dtc_detail 255 "ERROR" 254 "NO_VALUE" 253 "UNCALIBRATED" 86 "SEED_TABLE_NOT_FOUND" 85 "INCORRECT_HEADER_SPACE_2200" 84 "INCORRECT_HEADER_SPACE_2000" 83 "INCORRECT_BOOTLOADER" 82 "UNKNOWN_HARDWARE_REVISION" 81 "UNKNOWN_HARDWARE_SUFFIX" 80 "HARDWARE_SUFFIX_NOT_CSM" 79 "SOFTWARE_RESET" 78 "EXTERNAL_RESET" 77 "BANDGAP_NOT_STABLE" 76 "ILLEGAL_OPCODE" 75 "TRAP_RESET" 74 "FOSC_XT_MODE" 73 "REFERENCE_TEST_FAIL" 72 "WATCHDOG_RESET" 71 "RAM_CHECK_FAILED" 69 "ROM_CRC_FAILED" 68 "PROGRAM_ERROR__ADC" 67 "PROGRAM_ERROR__DIAG" 66 "PROGRAM_ERROR__SPI2" 65 "PROGRAM_ERROR__SPI1" 64 "PROGRAM_ERROR__CAN_CONFIG" 63 "RANGE_FAIL__" 62 "RANGE_FAIL__" 61 "RANGE_FAIL__" 60 "RANGE_FAIL__" 59 "RANGE_FAIL__CHRG_NEG_OFFSET" 58 "RANGE_FAIL__CHRG_NEG_GAIN" 57 "RANGE_FAIL__CHRG_POS_OFFSET" 56 "RANGE_FAIL__CHRG_POS_GAIN" 55 "RANGE_FAIL__AUX_NEG_OFFSET" 54 "RANGE_FAIL__AUX_NEG_GAIN" 53 "RANGE_FAIL__AUX_POS_OFFSET" 52 "RANGE_FAIL__AUX_POS_GAIN" 51 "RANGE_FAIL__AS8501_OFFSET" 50 "RANGE_FAIL__AS8501_GAIN" 49 "RANGE_FAIL__LEAK_LS_OFFSET" 48 "RANGE_FAIL__LEAK_LS_GAIN" 47 "RANGE_FAIL__SHNT_TEMP_OFFSET" 46 "RANGE_FAIL__SHNT_TEMP_GAIN" 45 "RANGE_FAIL__LEAK_HI_OFFSET" 44 "RANGE_FAIL__LEAK_HI_GAIN" 43 "RANGE_FAIL__FUSE_LS_OFFSET" 42 "RANGE_FAIL__FUSE_LS_GAIN" 41 "RANGE_FAIL__FUSE_HS_OFFSET" 40 "RANGE_FAIL__FUSE_HS_GAIN" 39 "RANGE_FAIL__BUS_NEG_OFFSET" 38 "RANGE_FAIL__BUS_NEG_GAIN" 37 "RANGE_FAIL__BUS_POS_OFFSET" 36 "RANGE_FAIL__BUS_POS_GAIN" 35 "RANGE_FAIL__BATT_POS_OFFSET" 34 "RANGE_FAIL__BATT_POS_GAIN" 33 "RANGE_FAIL__AIHI_OFFSET" 32 "RANGE_FAIL__AIHI_GAIN" 31 "CHECK_SUM_FAIL__" 30 "CHECK_SUM_FAIL__" 29 "CHECK_SUM_FAIL__" 28 "CHECK_SUM_FAIL__" 27 "CHECK_SUM_FAIL__CHRG_NEG_OFFSET" 26 "CHECK_SUM_FAIL__CHRG_NEG_GAIN" 25 "CHECK_SUM_FAIL__CHRG_POS_OFFSET" 24 "CHECK_SUM_FAIL__CHRG_POS_GAIN" 23 "CHECK_SUM_FAIL__AUX_NEG_OFFSET" 22 "CHECK_SUM_FAIL__AUX_NEG_GAIN" 21 "CHECK_SUM_FAIL__AUX_POS_OFFSET" 20 "CHECK_SUM_FAIL__AUX_POS_GAIN" 19 "CHECK_SUM_FAIL__AS8501_OFFSET" 18 "CHECK_SUM_FAIL__AS8501_GAIN" 17 "CHECK_SUM_FAIL__LEAK_LS_OFFSET" 16 "CHECK_SUM_FAIL__LEAK_LS_GAIN" 15 "CHECK_SUM_FAIL__SHNT_TEMP_OFFSET" 14 "CHECK_SUM_FAIL__SHNT_TEMP_GAIN" 13 "CHECK_SUM_FAIL__LEAK_HI_OFFSET" 12 "CHECK_SUM_FAIL__LEAK_HI_GAIN" 11 "CHECK_SUM_FAIL__FUSE_LS_OFFSET" 10 "CHECK_SUM_FAIL__FUSE_LS_GAIN" 9 "CHECK_SUM_FAIL__FUSE_HS_OFFSET" 8 "CHECK_SUM_FAIL__FUSE_HS_GAIN" 7 "CHECK_SUM__FAIL__BUS_NEG_OFFSET" 6 "CHECK_SUM_FAIL__BUS_NEG_GAIN" 5 "CHECK_SUM_FAIL__BUS_POS_OFFSET" 4 "CHECK_SUM_FAIL__BUS_POS_GAIN" 3 "CHECK_SUM_FAIL__BATT_POS_OFFSET" 2 "CHECK_SUM_FAIL__BATT_POS_GAIN" 1 "CHECK_SUM_FAIL__AIHI_OFFSET" 0 "CHECK_SUM_FAIL__AIHI_GAIN" ;
+VAL_ 144 csm_therm8 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 144 csm_therm7 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 144 csm_therm6 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 144 csm_therm5 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 144 csm_therm4 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 144 csm_therm3 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 144 csm_therm2 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 144 csm_therm1 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 144 csm_multiplexor 22 "MCU_INTEGRITY_KEY" 21 "MCU_INTEGRITY_STATUS" 20 "DTC_CODE_COUNT" 19 "ISO_DEBUG_SHORT_POSITION" 18 "ISO_DEBUG_FLAGS" 17 "DTC_FLAGS" 16 "HARDWARE_TYPE" 15 "CRC_LOW_BYTE" 14 "CRC_HIGH_BYTE" 13 "CRC_UPDATED" 12 "DTC_CODE" 11 "THERM8" 10 "THERM7" 9 "THERM6" 8 "THERM5" 7 "THERM4" 6 "THERM3" 5 "THERM2" 4 "THERM1" 3 "SHUNT_TEMP" 2 "SOFT_BUILD" 1 "SOFT_MINOR" 0 "SOFT_MAJOR" ;
+VAL_ 144 csm_shunt_temp 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 144 csm_leakage 4093 "INSUFFICIENT_VOLTAGE" 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 144 csm_current_aihi 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 144 csm_current_asic 65535 "ERROR" 65534 "NO_VALUE" ;
+VAL_ 512 mod_v_max 8191 "Error" 8190 "NoValue" ;
+VAL_ 512 mod_v_ave 8191 "Error" 8190 "NoValue" ;
+VAL_ 512 mod_v_min 8191 "Error" 8190 "NoValue" ;
+VAL_ 512 m01n_tmp_chn 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Temperature 4" 3 "Temperature 3" 2 "Temperature 2" 1 "Temperature 1" 0 "Temperature 0" ;
+VAL_ 512 m01n_t0 0 "BELOW -40C" 250 "ABOVE 85C" 254 "OPEN_CIRCUIT" 255 "SHORT_CIRCUIT";
+VAL_ 512 m01n_t1 0 "BELOW -40C" 250 "ABOVE 85C" 254 "OPEN_CIRCUIT" 255 "SHORT_CIRCUIT";
+VAL_ 512 m01n_t2 0 "BELOW -40C" 250 "ABOVE 85C" 254 "OPEN_CIRCUIT" 255 "SHORT_CIRCUIT";
+VAL_ 640 m01n_sleep_mode 1 "No Balance" 0 "Default Mode" ;
+VAL_ 640 m01n_mcu_integrity_status 3 "SEED_OUT_OF_SEQUENCE" 2 "SEED_INVALID" 1 "SEED_CORRECT" 0 "NOT_ACTIVE" ;
+VAL_ 640 m01n_err_bal_cell_01 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 640 m01n_err_bal_cell_02 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 640 m01n_err_bal_cell_03 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 640 m01n_err_bal_cell_04 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 640 m01n_err_bal_cell_05 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 640 m01n_err_bal_cell_06 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 640 m01n_err_bal_cell_07 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 640 m01n_err_bal_cell_08 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 640 m01n_err_bal_cell_09 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 640 m01n_err_bal_cell_10 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 640 m01n_err_bal_cell_11 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+
+VAL_ 768 m01n_v_mbb_total 0 "BELOW 6V" 7375 "ABOVE 160V" 32764 "SHORTED SENSE" 32765 "OPEN SENSE"  32766 "NoValue" 32767 "ERROR"  ;
+VAL_ 768 m01n_v_cell_01 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 768 m01n_v_cell_02 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 768 m01n_v_cell_03 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+
+VAL_ 896 m01n_v_cell_04 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 896 m01n_v_cell_05 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 896 m01n_v_cell_06 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 896 m01n_v_cell_07 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+
+VAL_ 1024 m01n_v_cell_08 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 1024 m01n_v_cell_09 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 1024 m01n_v_cell_10 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 1024 m01n_v_cell_11 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+
+VAL_ 513 mod_v_max 8191 "Error" 8190 "NoValue" ;
+VAL_ 513 mod_v_ave 8191 "Error" 8190 "NoValue" ;
+VAL_ 513 mod_v_min 8191 "Error" 8190 "NoValue" ;
+VAL_ 513 m01p_tmp_chn 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Temperature 4" 3 "Temperature 3" 2 "Temperature 2" 1 "Temperature 1" 0 "Temperature 0" ;
+VAL_ 513 m01p_t0 0 "BELOW -40C" 250 "ABOVE 85C" 254 "OPEN_CIRCUIT" 255 "SHORT_CIRCUIT";
+VAL_ 513 m01p_t1 0 "BELOW -40C" 250 "ABOVE 85C" 254 "OPEN_CIRCUIT" 255 "SHORT_CIRCUIT";
+VAL_ 513 m01p_t2 0 "BELOW -40C" 250 "ABOVE 85C" 254 "OPEN_CIRCUIT" 255 "SHORT_CIRCUIT";
+VAL_ 641 m01p_sleep_mode 1 "No Balance" 0 "Default Mode" ;
+VAL_ 641 m01p_mcu_integrity_status 3 "SEED_OUT_OF_SEQUENCE" 2 "SEED_INVALID" 1 "SEED_CORRECT" 0 "NOT_ACTIVE" ;
+VAL_ 641 m01p_err_bal_cell_01 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 641 m01p_err_bal_cell_02 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 641 m01p_err_bal_cell_03 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 641 m01p_err_bal_cell_04 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 641 m01p_err_bal_cell_05 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 641 m01p_err_bal_cell_06 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 641 m01p_err_bal_cell_07 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 641 m01p_err_bal_cell_08 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 641 m01p_err_bal_cell_09 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 641 m01p_err_bal_cell_10 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 641 m01p_err_bal_cell_11 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+
+VAL_ 769 m01p_v_mbb_total 0 "BELOW 6V" 7375 "ABOVE 160V" 32764 "SHORTED SENSE" 32765 "OPEN SENSE"  32766 "NoValue" 32767 "ERROR"  ;
+VAL_ 769 m01p_v_cell_01 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 769 m01p_v_cell_02 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 769 m01p_v_cell_03 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+
+VAL_ 897 m01p_v_cell_04 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 897 m01p_v_cell_05 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 897 m01p_v_cell_06 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 897 m01p_v_cell_07 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+
+VAL_ 1025 m01p_v_cell_08 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 1025 m01p_v_cell_09 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 1025 m01p_v_cell_10 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 1025 m01p_v_cell_11 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+
+VAL_ 514 mod_v_max 8191 "Error" 8190 "NoValue" ;
+VAL_ 514 mod_v_ave 8191 "Error" 8190 "NoValue" ;
+VAL_ 514 mod_v_min 8191 "Error" 8190 "NoValue" ;
+VAL_ 514 m02n_tmp_chn 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Temperature 4" 3 "Temperature 3" 2 "Temperature 2" 1 "Temperature 1" 0 "Temperature 0" ;
+VAL_ 514 m02n_t0 0 "BELOW -40C" 250 "ABOVE 85C" 254 "OPEN_CIRCUIT" 255 "SHORT_CIRCUIT";
+VAL_ 514 m02n_t1 0 "BELOW -40C" 250 "ABOVE 85C" 254 "OPEN_CIRCUIT" 255 "SHORT_CIRCUIT";
+VAL_ 514 m02n_t2 0 "BELOW -40C" 250 "ABOVE 85C" 254 "OPEN_CIRCUIT" 255 "SHORT_CIRCUIT";
+VAL_ 642 m02n_sleep_mode 1 "No Balance" 0 "Default Mode" ;
+VAL_ 642 m02n_mcu_integrity_status 3 "SEED_OUT_OF_SEQUENCE" 2 "SEED_INVALID" 1 "SEED_CORRECT" 0 "NOT_ACTIVE" ;
+VAL_ 642 m02n_err_bal_cell_01 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 642 m02n_err_bal_cell_02 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 642 m02n_err_bal_cell_03 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 642 m02n_err_bal_cell_04 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 642 m02n_err_bal_cell_05 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 642 m02n_err_bal_cell_06 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 642 m02n_err_bal_cell_07 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 642 m02n_err_bal_cell_08 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 642 m02n_err_bal_cell_09 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 642 m02n_err_bal_cell_10 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 642 m02n_err_bal_cell_11 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+
+VAL_ 770 m02n_v_mbb_total 0 "BELOW 6V" 7375 "ABOVE 160V" 32764 "SHORTED SENSE" 32765 "OPEN SENSE"  32766 "NoValue" 32767 "ERROR"  ;
+VAL_ 770 m02n_v_cell_01 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 770 m02n_v_cell_02 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 770 m02n_v_cell_03 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+
+VAL_ 898 m02n_v_cell_04 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 898 m02n_v_cell_05 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 898 m02n_v_cell_06 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 898 m02n_v_cell_07 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+
+VAL_ 1026 m02n_v_cell_08 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 1026 m02n_v_cell_09 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 1026 m02n_v_cell_10 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 1026 m02n_v_cell_11 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+
+VAL_ 515 mod_v_max 8191 "Error" 8190 "NoValue" ;
+VAL_ 515 mod_v_ave 8191 "Error" 8190 "NoValue" ;
+VAL_ 515 mod_v_min 8191 "Error" 8190 "NoValue" ;
+VAL_ 515 m02p_tmp_chn 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Temperature 4" 3 "Temperature 3" 2 "Temperature 2" 1 "Temperature 1" 0 "Temperature 0" ;
+VAL_ 515 m02p_t0 0 "BELOW -40C" 250 "ABOVE 85C" 254 "OPEN_CIRCUIT" 255 "SHORT_CIRCUIT";
+VAL_ 515 m02p_t1 0 "BELOW -40C" 250 "ABOVE 85C" 254 "OPEN_CIRCUIT" 255 "SHORT_CIRCUIT";
+VAL_ 515 m02p_t2 0 "BELOW -40C" 250 "ABOVE 85C" 254 "OPEN_CIRCUIT" 255 "SHORT_CIRCUIT";
+VAL_ 643 m02p_sleep_mode 1 "No Balance" 0 "Default Mode" ;
+VAL_ 643 m02p_mcu_integrity_status 3 "SEED_OUT_OF_SEQUENCE" 2 "SEED_INVALID" 1 "SEED_CORRECT" 0 "NOT_ACTIVE" ;
+VAL_ 643 m02p_err_bal_cell_01 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 643 m02p_err_bal_cell_02 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 643 m02p_err_bal_cell_03 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 643 m02p_err_bal_cell_04 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 643 m02p_err_bal_cell_05 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 643 m02p_err_bal_cell_06 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 643 m02p_err_bal_cell_07 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 643 m02p_err_bal_cell_08 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 643 m02p_err_bal_cell_09 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 643 m02p_err_bal_cell_10 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+VAL_ 643 m02p_err_bal_cell_11 0 "NOT_ACTIVE" 1 "NO_ERR" 2 "SENSE_FAIL"  3 "BAL_FAIL";
+
+VAL_ 771 m02p_v_mbb_total 0 "BELOW 6V" 7375 "ABOVE 160V" 32764 "SHORTED SENSE" 32765 "OPEN SENSE"  32766 "NoValue" 32767 "ERROR"  ;
+VAL_ 771 m02p_v_cell_01 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 771 m02p_v_cell_02 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 771 m02p_v_cell_03 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+
+VAL_ 899 m02p_v_cell_04 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 899 m02p_v_cell_05 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 899 m02p_v_cell_06 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 899 m02p_v_cell_07 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+
+VAL_ 1027 m02p_v_cell_08 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 1027 m02p_v_cell_09 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 1027 m02p_v_cell_10 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+VAL_ 1027 m02p_v_cell_11 0 "OOR_LOW" 16380 "OOR_HIGH" 16382 "NoValue"  16383 "ERROR";
+
+SIG_VALTYPE_ 1976 diag_float : 1;
+SIG_VALTYPE_ 1968 diag_float : 1;
+SIG_VALTYPE_ 1992 diag_csm_rsp_float : 1;
+SIG_VALTYPE_ 1984 diag_csm_req_float : 1;

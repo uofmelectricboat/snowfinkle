@@ -1,0 +1,229 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCL HSC BCM
+VAL_TABLE_ DebugRequest 16 "ADC Channel 0010'" 15 "ADC Channel 00F'" 14 "ADC Channel 00E'" 13 "ADC Channel 00D'" 12 "ADC Channel 00C'" 11 "ADC Channel 00B'" 10 "ADC Channel 00A'" 9 "ADC Channel 009'" 8 "ADC Channel 008'" 7 "ADC Channel 007'" 6 "ADC Channel 006'" 5 "ADC Channel 005'" 4 "ADC Channel 004'" 3 "ADC Channel 003'" 2 "ADC Channel 002'" 1 "ADC Channel 001'" 0 "ADC Channel 000'" ;
+VAL_TABLE_ u13_error_no_value 8191 "ERROR" 8190 "NO_VALUE" ;
+VAL_TABLE_ u10_error_no_value 1023 "ERROR" 1022 "NO_VALUE" ;
+VAL_TABLE_ mainc_step 12 "MAIN_P_CLOSED_CHARGE" 11 "MAIN_PN_CLOSED_DRIVE" 10 "FAILED_MAINP_OPEN" 9 "OPEN_MAINR" 8 "CLOSE_MAINP" 7 "WAIT_PRECHARGE" 6 "FAILED_MAINN_OPEN" 5 "CLOSE_MAINN" 4 "FAILED_MAINN_WELD" 3 "FAILED_MAINR_OPEN" 2 "CLOSE_MAINR" 1 "FAILED_MAINP_OR_R_WELD" 0 "ALL_OPEN" ;
+VAL_TABLE_ pump_stat 3 "FAILED_HIGH" 2 "FAILED_LOW" 1 "ON" 0 "OFF" ;
+VAL_TABLE_ alarm_enum 3 "TYPE3" 2 "TYPE2" 1 "TYPE1" 0 "NONE" ;
+VAL_TABLE_ contactor_enum 2 "FAILURE" 1 "CLOSED" 0 "OPEN" ;
+VAL_TABLE_ u12_error_no_value 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_TABLE_ u16_error_no_value 65534 "NO_VALUE" 65535 "ERROR" ;
+VAL_TABLE_ u16_error 65535 "ERROR" ;
+VAL_TABLE_ u8_error_no_value 255 "ERROR" 254 "NO_VALUE" ;
+VAL_TABLE_ u8_error 255 "ERROR" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ bcm_cell_vmin_a : 0|12@0+ (0.002,0) [0|5] "volts" Vector__XXX
+ SG_ bcm_cell_vmax_a : 0|12@0+ (0.002,0) [0|5] "volts" Vector__XXX
+
+BO_ 1057 BCM_Limits_B: 8 Vector__XXX
+ SG_ bcm_soc_b : 63|8@0+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ bcm_cell_tmin_b : 55|8@0+ (0.5,-40) [-40|85] "DegC" Vector__XXX
+ SG_ bcm_cell_tmax_b : 47|8@0+ (0.5,-40) [-40|85] "DegC" Vector__XXX
+ SG_ bcm_chg_buf_b : 39|8@0+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ bcm_dis_buf_b : 31|8@0+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ bcm_chg_max_b : 11|12@0+ (0.25,0) [0|1000] "amps" Vector__XXX
+ SG_ bcm_dis_max_b : 7|12@0+ (0.25,0) [0|1000] "amps" Vector__XXX
+
+BO_ 1073 BCM_Meas_B: 8 Vector__XXX
+ SG_ bcm_cell_vmin_b : 51|12@0+ (0.002,0) [0|5] "volts" Vector__XXX
+ SG_ bcm_cell_vmax_b : 47|12@0+ (0.002,0) [0|5] "volts" Vector__XXX
+ SG_ bcm_i_lem_b : 7|16@0+ (0.025,-1000) [-1000|500] "amps" Vector__XXX
+ SG_ bcm_vfuse_b : 31|8@0+ (0.5,0) [0|125] "volts" Vector__XXX
+ SG_ bcm_vbus_b : 39|8@0+ (0.5,0) [0|125] "volts" Vector__XXX
+ SG_ bcm_vbat_b : 23|8@0+ (0.5,0) [0|125] "volts" Vector__XXX
+
+BO_ 1072 BCM_Meas_A: 8 Vector__XXX
+ SG_ bcm_cell_vmin_a : 51|12@0+ (0.002,0) [0|5] "volts" Vector__XXX
+ SG_ bcm_cell_vmax_a : 47|12@0+ (0.002,0) [0|5] "volts" Vector__XXX
+ SG_ bcm_vfuse_a : 31|8@0+ (0.5,0) [0|125] "volts" Vector__XXX
+ SG_ bcm_vbus_a : 39|8@0+ (0.5,0) [0|125] "volts" Vector__XXX
+ SG_ bcm_vbat_a : 23|8@0+ (0.5,0) [0|125] "volts" Vector__XXX
+ SG_ bcm_i_lem_a : 7|16@0+ (0.025,-1000) [-1000|500] "amps" Vector__XXX
+
+BO_ 1056 BCM_Limits_A: 8 BCM
+ SG_ bcm_soc_a : 63|8@0+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ bcm_cell_tmin_a : 55|8@0+ (0.5,-40) [-40|85] "DegC" Vector__XXX
+ SG_ bcm_cell_tmax_a : 47|8@0+ (0.5,-40) [-40|85] "DegC" Vector__XXX
+ SG_ bcm_chg_buf_a : 39|8@0+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ bcm_dis_buf_a : 31|8@0+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ bcm_dis_max_a : 7|12@0+ (0.25,0) [0|1000] "amps"  VCL,HSC
+ SG_ bcm_chg_max_a : 11|12@0+ (0.25,0) [0|1000] "amps"  VCL,HSC
+
+BO_ 1040 BCM_Status: 8 BCM
+ SG_ bcm_fault_mon : 27|1@0+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ bcm_eeprom_wip : 26|1@0+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ bcm_balancing : 25|1@0+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ bcm_mainc_step : 31|4@0+ (1,0) [0|15] "enum" Vector__XXX
+ SG_ bcm_veh_mon : 6|1@0+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ bcm_mod_ena : 7|1@0+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ bcm_lvbat : 63|8@0+ (0.2,0) [0|51] "Volts" Vector__XXX
+ SG_ bcm_vbus_neg : 55|8@0+ (1,-128) [-128|127] "volts" Vector__XXX
+ SG_ bcm_cpwr_mon : 13|1@0+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ bcm_cpwr_cmd : 12|1@0+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ bcm_hvil_mon : 3|1@0+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ bcm_ready : 0|1@0+ (1,0) [0|1] "flag"  VCL,HSC
+ SG_ bcm_on_plug : 2|1@0+ (1,0) [0|1] "flag"  VCL,HSC
+ SG_ bcm_mainc_stat : 5|2@0+ (1,0) [0|2] "enum"  VCL,HSC
+ SG_ bcm_i_csm : 39|16@0+ (0.025,-1000) [-1000|500] "amps"  VCL,HSC
+ SG_ bcm_gfd : 11|12@0+ (0.25,0) [0|1000] "kOhm"  VCL,HSC
+ SG_ bcm_epo : 1|1@0+ (1,0) [0|1] "flag"  VCL,HSC
+ SG_ bcm_alarm : 15|2@0+ (1,0) [0|3] "enum"  VCL,HSC
+
+BO_ 1024 BCM_Request: 4 HSC
+ SG_ hsc_bcm_mainc_close : 2|1@0+ (1,0) [0|1] "flag"  VCL,BCM
+ SG_ hsc_bcm_leakage_ena : 3|1@0+ (1,0) [0|1] "flag"  VCL,BCM
+ SG_ hsc_bcm_epo : 1|1@0+ (1,0) [0|1] "flag"  VCL,BCM
+ SG_ hsc_bcm_enable : 0|1@0+ (1,0) [0|1] "flag"  VCL,BCM
+
+
+
+CM_ BU_ VCL "Vehicle CAN Logger";
+CM_ BU_ HSC "Hybrid System Controller";
+CM_ BU_ BCM "Battery Control Module";
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 bcm_cell_vmin_a "Min cell voltage.";
+CM_ SG_ 3221225472 bcm_cell_vmax_a "Max cell voltage.";
+CM_ SG_ 1057 bcm_soc_b "Battery State of Charge.";
+CM_ SG_ 1057 bcm_cell_tmin_b "Min cell case temperature.";
+CM_ SG_ 1057 bcm_cell_tmax_b "Max cell case temperature.";
+CM_ SG_ 1057 bcm_chg_buf_b "Transient acceptance indicator, how soon before the BCM will start to limit it's max charge current.
+100% - large buffer to accept charge up to bcm_chg_max.
+0% - bcm_chg_max is being reduced to steady-state level.";
+CM_ SG_ 1057 bcm_dis_buf_b "Transient acceptance indicator, how soon before the BCM will start to limit it's max discharge current.
+100% - large buffer to accept discharge up to bcm_dis_max.
+0% - bcm_dis_max is being reduced to steady-state level.";
+CM_ SG_ 1057 bcm_chg_max_b "Max allowed charge current.";
+CM_ SG_ 1057 bcm_dis_max_b "Max allowed discharge current.";
+CM_ SG_ 1073 bcm_cell_vmin_b "Min cell voltage.";
+CM_ SG_ 1073 bcm_cell_vmax_b "Max cell voltage.";
+CM_ SG_ 1073 bcm_i_lem_b "[Development Sensor] HV Battery Current where negative is battery discharge and positive is battery charge.";
+CM_ SG_ 1073 bcm_vfuse_b "HV bus positive voltage measurement.";
+CM_ SG_ 1073 bcm_vbus_b "HV bus positive voltage measurement.";
+CM_ SG_ 1073 bcm_vbat_b "HV bus positive voltage measurement.";
+CM_ SG_ 1072 bcm_cell_vmin_a "Min cell voltage.";
+CM_ SG_ 1072 bcm_cell_vmax_a "Max cell voltage.";
+CM_ SG_ 1072 bcm_vfuse_a "HV bus positive voltage measurement.";
+CM_ SG_ 1072 bcm_vbus_a "HV bus positive voltage measurement.";
+CM_ SG_ 1072 bcm_vbat_a "HV bus positive voltage measurement.";
+CM_ SG_ 1072 bcm_i_lem_a "[Development Sensor] HV Battery Current where negative is battery discharge and positive is battery charge.";
+CM_ SG_ 1056 bcm_soc_a "Battery State of Charge.";
+CM_ SG_ 1056 bcm_cell_tmin_a "Min cell case temperature.";
+CM_ SG_ 1056 bcm_cell_tmax_a "Max cell case temperature.";
+CM_ SG_ 1056 bcm_chg_buf_a "Transient acceptance indicator, how soon before the BCM will start to limit it's max charge current.
+100% - large buffer to accept charge up to bcm_chg_max.
+0% - bcm_chg_max is being reduced to steady-state level.";
+CM_ SG_ 1056 bcm_dis_buf_a "Transient acceptance indicator, how soon before the BCM will start to limit it's max discharge current.
+100% - large buffer to accept discharge up to bcm_dis_max.
+0% - bcm_dis_max is being reduced to steady-state level.";
+CM_ SG_ 1056 bcm_dis_max_a "Max allowed discharge current.";
+CM_ SG_ 1056 bcm_chg_max_a "Max allowed charge current.";
+CM_ SG_ 1040 bcm_fault_mon "Module Fault monitor, indicates if of the modules triggered a hardware based fault (0=low, 1=high).";
+CM_ SG_ 1040 bcm_eeprom_wip "BCM fault status: EEPROM write in progress.";
+CM_ SG_ 1040 bcm_balancing "Charge balance circuits are active.";
+CM_ SG_ 1040 bcm_mainc_step "Main contactor control state enumeration.";
+CM_ SG_ 1040 bcm_veh_mon "Vehicle wakeup monitor (0=low, 1=high).";
+CM_ SG_ 1040 bcm_mod_ena "Module 12V enable command (0=off, 1=on).";
+CM_ SG_ 1040 bcm_lvbat "SLI Battery Voltage.";
+CM_ SG_ 1040 bcm_vbus_neg "HV bus negative voltage measurement.";
+CM_ SG_ 1040 bcm_cpwr_mon "Contactor Power Relay monitor (0=low, 1=high).";
+CM_ SG_ 1040 bcm_cpwr_cmd "Contactor Power Relay command state (0=off, 1=on).";
+CM_ SG_ 1040 bcm_hvil_mon "HVIL monitor (0=low, 1=high).";
+CM_ SG_ 1040 bcm_ready "BCM completed Power On Self Test and is ready.";
+CM_ SG_ 1040 bcm_on_plug "Charger is plugged into AC socket, use an an input to start/drive-away logic.";
+CM_ SG_ 1040 bcm_mainc_stat "Main contactor status.";
+CM_ SG_ 1040 bcm_i_csm "HV Battery Current where negative is battery discharge and positive is battery charge.";
+CM_ SG_ 1040 bcm_gfd "Ground fault detection result.";
+CM_ SG_ 1040 bcm_epo "BCM Emergency Power Off status.";
+CM_ SG_ 1040 bcm_alarm "Alarm condition from the BCM indicating overall condition.";
+CM_ SG_ 1024 hsc_bcm_mainc_close "Vehicle main contactor command.";
+CM_ SG_ 1024 hsc_bcm_leakage_ena "Vehicle leakage detection enabled (bcm_gfd calculation).";
+CM_ SG_ 1024 hsc_bcm_epo "Vehicle Emergency Power Off command, fast shutdown.";
+CM_ SG_ 1024 hsc_bcm_enable "Flag from vehicle controller allowing BCM to accept commands.";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 10 1000;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgCycleTime" 100;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "GenMsgCycleTime" BO_ 1040 50;
+BA_ "GenMsgCycleTime" BO_ 1024 10;
+BA_ "GenSigStartValue" SG_ 1057 bcm_cell_tmin_b 130;
+BA_ "GenSigStartValue" SG_ 1057 bcm_cell_tmax_b 130;
+BA_ "GenSigStartValue" SG_ 1056 bcm_cell_tmin_a 130;
+BA_ "GenSigStartValue" SG_ 1056 bcm_cell_tmax_a 130;
+BA_ "GenSigStartValue" SG_ 1040 bcm_vbus_neg 128;
+VAL_ 3221225472 bcm_cell_vmin_a 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 3221225472 bcm_cell_vmax_a 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 1057 bcm_soc_b 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 1057 bcm_cell_tmin_b 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 1057 bcm_cell_tmax_b 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 1057 bcm_chg_buf_b 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 1057 bcm_dis_buf_b 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 1057 bcm_chg_max_b 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 1057 bcm_dis_max_b 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 1073 bcm_cell_vmin_b 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 1073 bcm_cell_vmax_b 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 1073 bcm_i_lem_b 65534 "NO_VALUE" 65535 "ERROR" ;
+VAL_ 1073 bcm_vfuse_b 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 1073 bcm_vbus_b 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 1073 bcm_vbat_b 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 1072 bcm_cell_vmin_a 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 1072 bcm_cell_vmax_a 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 1072 bcm_vfuse_a 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 1072 bcm_vbus_a 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 1072 bcm_vbat_a 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 1072 bcm_i_lem_a 65534 "NO_VALUE" 65535 "ERROR" ;
+VAL_ 1056 bcm_soc_a 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 1056 bcm_cell_tmin_a 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 1056 bcm_cell_tmax_a 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 1056 bcm_chg_buf_a 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 1056 bcm_dis_buf_a 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 1056 bcm_dis_max_a 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 1056 bcm_chg_max_a 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 1040 bcm_mainc_step 14 "ALL_OPEN_SHUTDOWN" 13 "SHUTDOWN_REQUEST" 12 "MAIN_P_CLOSED_CHARGE" 11 "MAIN_PN_CLOSED_DRIVE" 10 "FAILED_MAINP_OPEN" 9 "OPEN_MAINR" 8 "CLOSE_MAINP" 7 "WAIT_PRECHARGE" 6 "FAILED_MAINN_OPEN" 5 "CLOSE_MAINN" 4 "FAILED_MAINN_WELD" 3 "FAILED_MAINR_OPEN" 2 "CLOSE_MAINR" 1 "FAILED_MAINP_OR_R_WELD" 0 "ALL_OPEN" ;
+VAL_ 1040 bcm_lvbat 255 "ERROR" 254 "NO_VALUE" ;
+VAL_ 1040 bcm_vbus_neg 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 1040 bcm_mainc_stat 2 "FAILURE" 1 "CLOSED" 0 "OPEN" ;
+VAL_ 1040 bcm_i_csm 65534 "NO_VALUE" 65535 "ERROR" ;
+VAL_ 1040 bcm_gfd 4095 "ERROR" 4094 "NO_VALUE" ;
+VAL_ 1040 bcm_alarm 3 "TYPE3" 2 "TYPE2" 1 "TYPE1" 0 "NONE" ;
+
