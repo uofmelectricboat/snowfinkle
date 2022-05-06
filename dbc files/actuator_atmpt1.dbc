@@ -41,7 +41,7 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ NewSignal_0007 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ NewSignal_0010 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 127 actuatorV1: 8 Vector__XXX
+BO_ 127 actuator_dataV1: 8 Vector__XXX
  SG_ NewSignal_0001 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ NewSignal_0002 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ NewSignal_0003 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -49,8 +49,17 @@ BO_ 127 actuatorV1: 8 Vector__XXX
  SG_ avg_current_over_interval : 40|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ pcb_temp : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 3 NewMessage_0002: 2 Vector__XXX
- SG_ maybe_position_send : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 30 actuator1: 2 Vector__XXX
+ SG_ position_send1 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 31 actuator2: 2 Vector__XXX
+ SG_ position_send2 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 32 actuator3: 2 Vector__XXX
+ SG_ position_send3 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 33 actuator4: 2 Vector__XXX
+ SG_ position_send4 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
 
 
 
