@@ -7,7 +7,7 @@
    Copyright (c) 2018 New Eagle Products, Inc.
    All rights reserved.
 
-   Code Generated at: Mon May  2 19:02:32 2022
+   Code Generated at: Mon May 16 18:10:45 2022
  *****************************************************************************/
 
 #include "Lightning_McSeas_VCU.h"
@@ -147,14 +147,14 @@ void application_int(void)
   /* CAN Bus Initializations */
   CANFrame_Queue_Create(&g_CAN1_TxQueue, CAN1_TxQueue_data, (20));
   CANFrame_Queue_Create(&g_CAN1_RxQueue, CAN1_RxQueue_data, (16));
-  pre_start_CAN_499__0015();           /* <Root>/raptor_can_def */
+  pre_start_CAN_755__0027();           /* <Root>/raptor_can_def */
   CANFrame_Queue_Create(&g_CAN2_TxQueue, CAN2_TxQueue_data, (20));
   CANFrame_Queue_Create(&g_CAN2_RxQueue, CAN2_RxQueue_data, (16));
-  pre_start_CAN_500__0015();           /* <Root>/raptor_can_def1 */
+  pre_start_CAN_756__0027();           /* <Root>/raptor_can_def1 */
 
   /* start_CAN(); */
-  post_start_CAN_499__0015();          /* <Root>/raptor_can_def */
-  post_start_CAN_500__0015();          /* <Root>/raptor_can_def1 */
+  post_start_CAN_755__0027();          /* <Root>/raptor_can_def */
+  post_start_CAN_756__0027();          /* <Root>/raptor_can_def1 */
   Xcp_Initialize();
 
   {
@@ -170,12 +170,6 @@ void application_int(void)
 
   /* Init AnalogInput WAKE_INPUT1 */
   AnalogInputInit(KEYSW);
-
-  /* Init AnalogInput AN7 */
-  AnalogInputInit(AN7);
-
-  /* Init AnalogInput AN8 */
-  AnalogInputInit(AN8);
 
   /* Set LSO_EN to Enabled */
   {

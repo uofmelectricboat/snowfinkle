@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'Lightning_McSeas_VCU'.
  *
- * Model version                  : 6.44
+ * Model version                  : 6.87
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Mon May  2 19:02:32 2022
+ * C/C++ source code generated on : Mon May 16 18:10:45 2022
  *
  * Target selection: raptor.tlc
  * Embedded hardware selection: Freescale->MPC55xx
@@ -19,6 +19,9 @@
 
 #include "Lightning_McSeas_VCU.h"
 #include "Lightning_McSeas_VCU_private.h"
+
+/* Block signals (default storage) */
+BlockIO_Lightning_McSeas_VCU Lightning_McSeas_VCU_B;
 
 /* Block states (default storage) */
 D_Work_Lightning_McSeas_VCU Lightning_McSeas_VCU_DWork;
@@ -596,134 +599,93 @@ void Lightning_McSeas_VCU_Background(void)
   Lightning_McSeas_VCU_DWork.init1_DSTATE = false;
 }
 
-/* System initialize for function-call system: '<Root>/Foreground' */
-void Lightning_McSeas_VCU_Foreground_Init(void)
-{
-  /* Start for S-Function (raptor_sfun_analog_in): '<S7>/raptor_analog_in' */
-
-  /* S-Function Block: AN7 */
-  {
-  }
-
-  /* Start for S-Function (raptor_sfun_analog_in): '<S7>/raptor_analog_in1' */
-
-  /* S-Function Block: AN8 */
-  {
-  }
-
-  /* Start for S-Function (raptor_sfun_digital_in): '<S10>/raptor_digital_in' */
-
-  /* S-Function Block: DG1 */
-  {
-    extern void din_pad_config(E_DIGITAL_INPUT din);
-    din_pad_config(DG1_DG);
-  }
-
-  /* Start for S-Function (raptor_sfun_digital_in): '<S10>/raptor_digital_in1' */
-
-  /* S-Function Block: DG2 */
-  {
-    extern void din_pad_config(E_DIGITAL_INPUT din);
-    din_pad_config(DG2_DG);
-  }
-}
-
 /* Enable for function-call system: '<Root>/Foreground' */
 void Lightning_McSeas_VCU_Foreground_Enable(void)
 {
-  /* Enable for S-Function (raptor_sfun_can_txmsg): '<S7>/raptor_can_txmsg' */
-  /* Level2 S-Function Block: '<S7>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_14__0015(0U);
+  /* Enable for S-Function (raptor_sfun_can_txmsg): '<S6>/raptor_can_txmsg2' */
+  /* Level2 S-Function Block: '<S6>/raptor_can_txmsg2' (raptor_sfun_can_txmsg) */
+  can_set_period_80__0012(0U);
 
-  /* Enable for S-Function (raptor_sfun_can_txmsg): '<S9>/raptor_can_txmsg' */
-  /* Level2 S-Function Block: '<S9>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_27__0015(0U);
+  /* Enable for S-Function (raptor_sfun_can_txmsg): '<S6>/raptor_can_txmsg3' */
+  /* Level2 S-Function Block: '<S6>/raptor_can_txmsg3' (raptor_sfun_can_txmsg) */
+  can_set_period_81__0012(0U);
 
-  /* Enable for S-Function (raptor_sfun_can_txmsg): '<S10>/raptor_can_txmsg' */
-  /* Level2 S-Function Block: '<S10>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_49__0015(0U);
+  /* Enable for S-Function (raptor_sfun_can_txmsg): '<S6>/raptor_can_txmsg1' */
+  /* Level2 S-Function Block: '<S6>/raptor_can_txmsg1' (raptor_sfun_can_txmsg) */
+  can_set_period_79__0012(0U);
+
+  /* Enable for S-Function (raptor_sfun_can_txmsg): '<S6>/raptor_can_txmsg' */
+  /* Level2 S-Function Block: '<S6>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
+  can_set_period_78__0012(0U);
 }
 
 /* Disable for function-call system: '<Root>/Foreground' */
 void Lightning_McSeas_VCU_Foreground_Disable(void)
 {
-  /* Disable for S-Function (raptor_sfun_can_txmsg): '<S7>/raptor_can_txmsg' */
-  /* Level2 S-Function Block: '<S7>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_14__0015(0);
+  /* Disable for S-Function (raptor_sfun_can_txmsg): '<S6>/raptor_can_txmsg2' */
+  /* Level2 S-Function Block: '<S6>/raptor_can_txmsg2' (raptor_sfun_can_txmsg) */
+  can_set_period_80__0012(0);
 
-  /* Disable for S-Function (raptor_sfun_can_txmsg): '<S9>/raptor_can_txmsg' */
-  /* Level2 S-Function Block: '<S9>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_27__0015(0);
+  /* Disable for S-Function (raptor_sfun_can_txmsg): '<S6>/raptor_can_txmsg3' */
+  /* Level2 S-Function Block: '<S6>/raptor_can_txmsg3' (raptor_sfun_can_txmsg) */
+  can_set_period_81__0012(0);
 
-  /* Disable for S-Function (raptor_sfun_can_txmsg): '<S10>/raptor_can_txmsg' */
-  /* Level2 S-Function Block: '<S10>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_49__0015(0);
+  /* Disable for S-Function (raptor_sfun_can_txmsg): '<S6>/raptor_can_txmsg1' */
+  /* Level2 S-Function Block: '<S6>/raptor_can_txmsg1' (raptor_sfun_can_txmsg) */
+  can_set_period_79__0012(0);
+
+  /* Disable for S-Function (raptor_sfun_can_txmsg): '<S6>/raptor_can_txmsg' */
+  /* Level2 S-Function Block: '<S6>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
+  can_set_period_78__0012(0);
 }
 
 /* Output and update for function-call system: '<Root>/Foreground' */
 void Lightning_McSeas_VCU_Foreground(void)
 {
   /* local block i/o variables */
+  real_T rtb_raptor_can_rxmsg_o5;
+  real_T rtb_raptor_can_rxmsg_o2;
   real_T rtb_raptor_can_rxmsg_o3;
+  real_T rtb_Gain2;
+  uint16_T rtb_raptor_can_rxmsg1_o1;
   uint16_T rtb_raptor_can_rxmsg_o1;
-  boolean_T rtb_raptor_digital_in;
-  boolean_T rtb_raptor_digital_in1;
-  real_T rtb_Gain;
+  real_T rtb_Gain1;
 
-  /* S-Function (raptor_sfun_can_txmsg): '<S7>/raptor_can_txmsg' incorporates:
-   *  S-Function (raptor_sfun_analog_in): '<S7>/raptor_analog_in'
-   *  S-Function (raptor_sfun_analog_in): '<S7>/raptor_analog_in1'
-   */
+  /* S-Function (raptor_sfun_can_rxmsg): '<S5>/raptor_can_rxmsg1' */
 
-  /* S-Function Block:<S7>/raptor_can_txmsg */
-  {
-    uint8_T data[8U] = { 0, 0, 0, 0, 0, 0, 0, 0, };
-
-    uint32_T temp;
-    uint8_T temp_shift;
-
-    /* Signal: FrontUltrasonic */
-    /* FrontUltrasonic - StartBit: 0U, BitLength: 16U, Endian: 0U */
-
-    /* signal type is unsigned */
-
-    /* Optimize the checks out since both the min and max are within the limits of this particular data type */
-    {
-      temp = (uint32_T)((((uint16_T)ADC_Read_Chan(AN7))));
-    }
-
-    temp_shift = (uint8_T)(temp >> 0);
-    data[0U] |= temp_shift;
-    temp_shift = (uint8_T)(temp >> 8);
-    data[1U] |= temp_shift;
-
-    /* Signal: RearUltrasonic  */
-    /* RearUltrasonic  - StartBit: 16U, BitLength: 16U, Endian: 0U */
-
-    /* signal type is unsigned */
-
-    /* Optimize the checks out since both the min and max are within the limits of this particular data type */
-    {
-      temp = (uint32_T)((((uint16_T)ADC_Read_Chan(AN8))));
-    }
-
-    temp_shift = (uint8_T)(temp >> 0);
-    data[2U] |= temp_shift;
-    temp_shift = (uint8_T)(temp >> 8);
-    data[3U] |= temp_shift;
-    can_set_period_14__0015(0U);
-    can_send_14__0015(1305U & 0x7FF, 0, 8U, &data[0]);
-  }
-
-  /* S-Function (raptor_sfun_can_rxmsg): '<S8>/raptor_can_rxmsg' */
-
-  /* S-Function Block:<S8>/raptor_can_rxmsg */
+  /* S-Function Block:<S5>/raptor_can_rxmsg1 */
   {
     uint8_T data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
 
-    /* Signal: Channel_1 not connected */
+    /* Signal: Channel_5 not connected */
     uint32_T temp;
-    can_get_46__0017(&rtb_raptor_can_rxmsg_o1, NULL, NULL, &data[0], 8);
+    can_get_292__0012(&rtb_raptor_can_rxmsg1_o1, NULL, NULL, &data[0], 8);
+
+    /* Signal: Channel_6 */
+    temp = 0;
+    temp |= ((uint32_T)data[2U]) ;
+    temp |= ((uint32_T)data[3U]) << 8;
+    rtb_Gain2 = (((real_T) temp ) + (real_T)-1426.0);
+
+    /* Signal: Channel_7 not connected */
+
+    /* Signal: Channel_8 not connected */
+  }
+
+  /* S-Function (raptor_sfun_can_rxmsg): '<S5>/raptor_can_rxmsg' */
+
+  /* S-Function Block:<S5>/raptor_can_rxmsg */
+  {
+    uint8_T data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
+
+    uint32_T temp;
+    can_get_291__0012(&rtb_raptor_can_rxmsg_o1, NULL, NULL, &data[0], 8);
+
+    /* Signal: Channel_1 */
+    temp = 0;
+    temp |= ((uint32_T)data[0U]) ;
+    temp |= ((uint32_T)data[1U]) << 8;
+    rtb_raptor_can_rxmsg_o2 = (((real_T) temp ) + (real_T)-1426.0);
 
     /* Signal: Channel_2 */
     temp = 0;
@@ -733,94 +695,182 @@ void Lightning_McSeas_VCU_Foreground(void)
 
     /* Signal: Channel_3 not connected */
 
-    /* Signal: Channel_4 not connected */
+    /* Signal: Channel_4 */
+    temp = 0;
+    temp |= ((uint32_T)data[6U]) ;
+    temp |= ((uint32_T)data[7U]) << 8;
+    rtb_raptor_can_rxmsg_o5 = (((real_T) temp ) + (real_T)-1426.0);
   }
 
-  /* Gain: '<S9>/Gain' */
-  rtb_Gain = 45.0 * rtb_raptor_can_rxmsg_o3;
+  /* If: '<S7>/If' incorporates:
+   *  Constant: '<S7>/Constant3'
+   *  Inport: '<S10>/Xb'
+   *  Inport: '<S8>/Xa'
+   *  Inport: '<S9>/Xb'
+   */
+  if (rtb_Gain2 > 1400.0) {
+    /* Outputs for IfAction SubSystem: '<S7>/If Action Subsystem' incorporates:
+     *  ActionPort: '<S8>/Action Port'
+     */
+    Lightning_McSeas_VCU_B.Xa = 0.0;
 
-  /* S-Function (raptor_sfun_can_txmsg): '<S9>/raptor_can_txmsg' */
+    /* End of Outputs for SubSystem: '<S7>/If Action Subsystem' */
+  } else if (rtb_Gain2 > 250.0) {
+    /* Outputs for IfAction SubSystem: '<S7>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S10>/Action Port'
+     */
+    Lightning_McSeas_VCU_B.Xb_m = rtb_raptor_can_rxmsg_o5;
 
-  /* S-Function Block:<S9>/raptor_can_txmsg */
+    /* End of Outputs for SubSystem: '<S7>/If Action Subsystem2' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S7>/If Action Subsystem1' incorporates:
+     *  ActionPort: '<S9>/Action Port'
+     */
+    Lightning_McSeas_VCU_B.Xb = 750.0;
+
+    /* End of Outputs for SubSystem: '<S7>/If Action Subsystem1' */
+  }
+
+  /* End of If: '<S7>/If' */
+
+  /* Gain: '<S6>/Gain2' incorporates:
+   *  Sum: '<S7>/Add'
+   */
+  rtb_Gain2 = ((Lightning_McSeas_VCU_B.Xa + Lightning_McSeas_VCU_B.Xb) +
+               Lightning_McSeas_VCU_B.Xb_m) * 45.0;
+
+  /* S-Function (raptor_sfun_can_txmsg): '<S6>/raptor_can_txmsg2' */
+
+  /* S-Function Block:<S6>/raptor_can_txmsg2 */
   {
     uint8_T data[2U] = { 0, 0, };
 
     uint32_T temp;
     uint8_T temp_shift;
 
-    /* Signal: maybe_position_send */
-    /* maybe_position_send - StartBit: 0U, BitLength: 16U, Endian: 0U */
+    /* Signal: position_send3 */
+    /* position_send3 - StartBit: 0U, BitLength: 16U, Endian: 0U */
 
     /* signal type is unsigned */
-    if (rtb_Gain < 0.0000000000F)
+    if (rtb_Gain2 < 0.0000000000F)
       temp = (uint32_T)0U;
-    else if (rtb_Gain > 65535.0000000000F)
+    else if (rtb_Gain2 > 65535.0000000000F)
       temp = (uint32_T)65535U;
     else {
-      if ((real_T)rtb_Gain < 0)
-        temp = (uint32_T)(int32_T)((rtb_Gain));
+      if ((real_T)rtb_Gain2 < 0)
+        temp = (uint32_T)(int32_T)((rtb_Gain2));
       else
-        temp = (uint32_T)((rtb_Gain));
+        temp = (uint32_T)((rtb_Gain2));
     }
 
     temp_shift = (uint8_T)(temp >> 0);
     data[0U] |= temp_shift;
     temp_shift = (uint8_T)(temp >> 8);
     data[1U] |= temp_shift;
-    can_set_period_27__0015(0U);
-    can_send_27__0015(3U & 0x7FF, 0, 2U, &data[0]);
+    can_set_period_80__0012(0U);
+    can_send_80__0012(32U & 0x7FF, 0, 2U, &data[0]);
   }
 
-  /* S-Function (raptor_sfun_digital_in): '<S10>/raptor_digital_in' */
-  /* S-Function Block: DG1 */
-  {
-    rtb_raptor_digital_in = (boolean_T) Digital_Input_Read_Chan(DG1_DG);
-  }
+  /* S-Function (raptor_sfun_can_txmsg): '<S6>/raptor_can_txmsg3' */
 
-  /* S-Function (raptor_sfun_digital_in): '<S10>/raptor_digital_in1' */
-  /* S-Function Block: DG2 */
+  /* S-Function Block:<S6>/raptor_can_txmsg3 */
   {
-    rtb_raptor_digital_in1 = (boolean_T) Digital_Input_Read_Chan(DG2_DG);
-  }
-
-  /* S-Function (raptor_sfun_can_txmsg): '<S10>/raptor_can_txmsg' */
-
-  /* S-Function Block:<S10>/raptor_can_txmsg */
-  {
-    uint8_T data[8U] = { 0, 0, 0, 0, 0, 0, 0, 0, };
+    uint8_T data[2U] = { 0, 0, };
 
     uint32_T temp;
     uint8_T temp_shift;
 
-    /* Signal: Water_Sensor_1 */
-    /* Water_Sensor_1 - StartBit: 0U, BitLength: 1U, Endian: 0U */
+    /* Signal: position_send4 */
+    /* position_send4 - StartBit: 0U, BitLength: 16U, Endian: 0U */
 
     /* signal type is unsigned */
-
-    /* Optimize the checks out since both the min and max are within the limits of this particular data type */
-    {
-      temp = (uint32_T)((rtb_raptor_digital_in));
+    if (rtb_Gain2 < 0.0000000000F)
+      temp = (uint32_T)0U;
+    else if (rtb_Gain2 > 65535.0000000000F)
+      temp = (uint32_T)65535U;
+    else {
+      if ((real_T)rtb_Gain2 < 0)
+        temp = (uint32_T)(int32_T)((rtb_Gain2));
+      else
+        temp = (uint32_T)((rtb_Gain2));
     }
 
     temp_shift = (uint8_T)(temp >> 0);
-    temp_shift &= ((uint8_T)1U);
     data[0U] |= temp_shift;
+    temp_shift = (uint8_T)(temp >> 8);
+    data[1U] |= temp_shift;
+    can_set_period_81__0012(0U);
+    can_send_81__0012(33U & 0x7FF, 0, 2U, &data[0]);
+  }
 
-    /* Signal: Water_Sensor_2 */
-    /* Water_Sensor_2 - StartBit: 1U, BitLength: 1U, Endian: 0U */
+  /* Gain: '<S6>/Gain1' */
+  rtb_Gain1 = 45.0 * rtb_raptor_can_rxmsg_o3;
+
+  /* S-Function (raptor_sfun_can_txmsg): '<S6>/raptor_can_txmsg1' */
+
+  /* S-Function Block:<S6>/raptor_can_txmsg1 */
+  {
+    uint8_T data[2U] = { 0, 0, };
+
+    uint32_T temp;
+    uint8_T temp_shift;
+
+    /* Signal: position_send2 */
+    /* position_send2 - StartBit: 0U, BitLength: 16U, Endian: 0U */
 
     /* signal type is unsigned */
-
-    /* Optimize the checks out since both the min and max are within the limits of this particular data type */
-    {
-      temp = (uint32_T)((rtb_raptor_digital_in1));
+    if (rtb_Gain1 < 0.0000000000F)
+      temp = (uint32_T)0U;
+    else if (rtb_Gain1 > 65535.0000000000F)
+      temp = (uint32_T)65535U;
+    else {
+      if ((real_T)rtb_Gain1 < 0)
+        temp = (uint32_T)(int32_T)((rtb_Gain1));
+      else
+        temp = (uint32_T)((rtb_Gain1));
     }
 
-    temp_shift = (uint8_T)(temp << 1);
-    temp_shift &= ((uint8_T)2U);
+    temp_shift = (uint8_T)(temp >> 0);
     data[0U] |= temp_shift;
-    can_set_period_49__0015(0U);
-    can_send_49__0015(2U & 0x7FF, 0, 8U, &data[0]);
+    temp_shift = (uint8_T)(temp >> 8);
+    data[1U] |= temp_shift;
+    can_set_period_79__0012(0U);
+    can_send_79__0012(31U & 0x7FF, 0, 2U, &data[0]);
+  }
+
+  /* Gain: '<S6>/Gain' */
+  rtb_Gain1 = 45.0 * rtb_raptor_can_rxmsg_o2;
+
+  /* S-Function (raptor_sfun_can_txmsg): '<S6>/raptor_can_txmsg' */
+
+  /* S-Function Block:<S6>/raptor_can_txmsg */
+  {
+    uint8_T data[2U] = { 0, 0, };
+
+    uint32_T temp;
+    uint8_T temp_shift;
+
+    /* Signal: position_send1 */
+    /* position_send1 - StartBit: 0U, BitLength: 16U, Endian: 0U */
+
+    /* signal type is unsigned */
+    if (rtb_Gain1 < 0.0000000000F)
+      temp = (uint32_T)0U;
+    else if (rtb_Gain1 > 65535.0000000000F)
+      temp = (uint32_T)65535U;
+    else {
+      if ((real_T)rtb_Gain1 < 0)
+        temp = (uint32_T)(int32_T)((rtb_Gain1));
+      else
+        temp = (uint32_T)((rtb_Gain1));
+    }
+
+    temp_shift = (uint8_T)(temp >> 0);
+    data[0U] |= temp_shift;
+    temp_shift = (uint8_T)(temp >> 8);
+    data[1U] |= temp_shift;
+    can_set_period_78__0012(0U);
+    can_send_78__0012(3U & 0x7FF, 0, 2U, &data[0]);
   }
 }
 
@@ -845,6 +895,13 @@ void Lightning_McSeas_VCU_step(void)
 void Lightning_McSeas_VCU_initialize(void)
 {
   /* Registration code */
+
+  /* block I/O */
+  {
+    Lightning_McSeas_VCU_B.Xb = 0.0;
+    Lightning_McSeas_VCU_B.Xb_m = 0.0;
+    Lightning_McSeas_VCU_B.Xa = 0.0;
+  }
 
   /* states (dwork) */
   (void) memset((void *)&Lightning_McSeas_VCU_DWork, 0,
@@ -876,13 +933,6 @@ void Lightning_McSeas_VCU_initialize(void)
   }
 
   Lightning_McSeas_VCU_PrevZCSigState.StoreEEPROM_Trig_ZCE = ZERO_ZCSIG;
-
-  /* SystemInitialize for S-Function (raptor_sfun_timed_trigger): '<Root>/raptor_timed_trigger' incorporates:
-   *  SubSystem: '<Root>/Foreground'
-   */
-  Lightning_McSeas_VCU_Foreground_Init();
-
-  /* End of SystemInitialize for S-Function (raptor_sfun_timed_trigger): '<Root>/raptor_timed_trigger' */
 
   /* SystemInitialize for S-Function (raptor_sfun_timed_trigger): '<S2>/raptor_timed_trigger' incorporates:
    *  SubSystem: '<S2>/Background'

@@ -2,7 +2,7 @@ channel
 
 1 - throttle *power output
 2 - rudder *ratio of motors and maybe rudders
-3 - elevator *rise of front actuators
+3 - elevator *rise of front actuators 
 4 - aileron *turn of rudder when in I mode
 5 - SC *drive mode (D, N, R - only change motors)
 6 - S *aft foil mode (I, U, L)
@@ -13,3 +13,30 @@ S1 and S2 can be fine tune adjustments
 14 to 29 is values
 
 Add another message since only 4 signals per message and configure in DBC - should just be FF01
+
+
+
+------------------------
+front t foils sync
+
+dont control yaw - only do pitch (not yaw) - v tail plane controls 
+
+back foils go same as front
+
+-knobs
+one knob is gain of front
+one knob is gain of back 
+
+------------------------------------------------
+right joystick is flap controls
+left knob is tfoil controls 
+
+
+1 - left motor
+2 - right motor
+3 - rise of back actuators
+4 - rise of front actuators (knob)
+5 - SC *drive mode (D, x, R - only change motors)
+6 - S *foil mode (I, U, L) -freeze actuators or lock
+7 - S *battery cutoff (motors shut off before batteries - give delay)
+8 - s *motor cutoff 

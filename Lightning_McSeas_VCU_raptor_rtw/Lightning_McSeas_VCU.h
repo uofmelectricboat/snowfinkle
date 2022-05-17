@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'Lightning_McSeas_VCU'.
  *
- * Model version                  : 6.44
+ * Model version                  : 6.87
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Mon May  2 19:02:32 2022
+ * C/C++ source code generated on : Mon May 16 18:10:45 2022
  *
  * Target selection: raptor.tlc
  * Embedded hardware selection: Freescale->MPC55xx
@@ -30,14 +30,21 @@
 #include "sdk_interface.h"
 #include "xcp_protocol.h"
 #include "LIN2_common.h"
-#include "can_499__0015.h"
-#include "can_500__0015.h"
-#include "lin_501__0015.h"
+#include "can_755__0027.h"
+#include "can_756__0027.h"
+#include "lin_757__0027.h"
 #endif                               /* Lightning_McSeas_VCU_COMMON_INCLUDES_ */
 
 #include "Lightning_McSeas_VCU_types.h"
 
 /* Macros for accessing real-time model data structure */
+
+/* Block signals (default storage) */
+typedef struct {
+  real_T Xb;                           /* '<S9>/Xb' */
+  real_T Xb_m;                         /* '<S10>/Xb' */
+  real_T Xa;                           /* '<S8>/Xa' */
+} BlockIO_Lightning_McSeas_VCU;
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
@@ -65,6 +72,9 @@ typedef struct {
   ZCSigState RaiseStartupEvent_Trig_ZCE;/* '<S11>/Raise Startup Event' */
   ZCSigState RaiseShutdownEvent_Trig_ZCE;/* '<S11>/Raise Shutdown Event' */
 } PrevZCSigStates_Lightning_McSeas_VCU;
+
+/* Block signals (default storage) */
+extern BlockIO_Lightning_McSeas_VCU Lightning_McSeas_VCU_B;
 
 /* Block states (default storage) */
 extern D_Work_Lightning_McSeas_VCU Lightning_McSeas_VCU_DWork;
@@ -95,13 +105,13 @@ extern void Lightning_McSeas_VCU_terminate(void);
  * '<S1>'   : 'Lightning_McSeas_VCU/Foreground'
  * '<S2>'   : 'Lightning_McSeas_VCU/GCM48 Power Up_Down'
  * '<S3>'   : 'Lightning_McSeas_VCU/raptor_xcp_def'
- * '<S4>'   : 'Lightning_McSeas_VCU/Foreground/Analog'
- * '<S5>'   : 'Lightning_McSeas_VCU/Foreground/CAN'
- * '<S6>'   : 'Lightning_McSeas_VCU/Foreground/Digial'
- * '<S7>'   : 'Lightning_McSeas_VCU/Foreground/Analog/Ultasonic'
- * '<S8>'   : 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx'
- * '<S9>'   : 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/Actuators'
- * '<S10>'  : 'Lightning_McSeas_VCU/Foreground/Digial/WaterDetection'
+ * '<S4>'   : 'Lightning_McSeas_VCU/Foreground/CAN'
+ * '<S5>'   : 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx'
+ * '<S6>'   : 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/Actuators'
+ * '<S7>'   : 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/Actuators/If statement for on off switch3'
+ * '<S8>'   : 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/Actuators/If statement for on off switch3/If Action Subsystem'
+ * '<S9>'   : 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/Actuators/If statement for on off switch3/If Action Subsystem1'
+ * '<S10>'  : 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/Actuators/If statement for on off switch3/If Action Subsystem2'
  * '<S11>'  : 'Lightning_McSeas_VCU/GCM48 Power Up_Down/Background'
  * '<S12>'  : 'Lightning_McSeas_VCU/GCM48 Power Up_Down/Background/CntrSat2'
  * '<S13>'  : 'Lightning_McSeas_VCU/GCM48 Power Up_Down/Background/Raise Shutdown Event'

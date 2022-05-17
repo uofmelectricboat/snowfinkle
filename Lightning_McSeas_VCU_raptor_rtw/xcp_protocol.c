@@ -7,7 +7,7 @@
    Copyright (c) 2018 New Eagle Products, Inc.
    All rights reserved.
 
-   Code Generated at: Mon May  2 19:02:32 2022
+   Code Generated at: Mon May 16 18:10:45 2022
  *****************************************************************************/
 
 #include "rtwtypes.h"
@@ -20,11 +20,11 @@ const uint16_T* Xcp_IdTableRevPtr = &CONSTVariables.IdTableRev;
 Xcp_SlaveId_t Xcp_SlaveIds[] = {
   {
     24,
-    (Xcp_CfgPtr8)"Lightning_McSeas_VCU_008",
+    (Xcp_CfgPtr8)"Lightning_McSeas_VCU_019",
     (Xcp_CfgPtr8)&CONSTVariables.HardwareType,
     (Xcp_CfgPtr8)EcuAddr_RAM_Ptr(),
     27,
-    (Xcp_CfgPtr8)"Lightning_McSeas_VCU_008_A4",
+    (Xcp_CfgPtr8)"Lightning_McSeas_VCU_019_A4",
     28,
     (Xcp_CfgPtr8)&CONSTVariables.CalIdTxt,
     21,

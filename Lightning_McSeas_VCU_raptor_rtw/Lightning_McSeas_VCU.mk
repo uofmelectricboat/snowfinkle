@@ -5,7 +5,7 @@ SYS_TARGET_FILE = raptor.tlc
 SHELL           = cmd
 
 MODEL_NAME		= Lightning_McSeas_VCU
-MODULES			= LIN2.c Timer_BGND_9AY_V.c Timer_ooqlV.c XCP_App.c can_499__0015.c can_500__0015.c data.c hw_user.c lin_501__0015.c lin_general.c raptor_printf.c xcp_protocol.c XCP_App.c.c
+MODULES			= LIN2.c Timer_BGND_9AY_V.c Timer_ooqlV.c XCP_App.c can_755__0027.c can_756__0027.c data.c hw_user.c lin_757__0027.c lin_general.c raptor_printf.c xcp_protocol.c XCP_App.c.c
 NUMST           = 
 MODEL_HAS_DYNAMICALLY_LOADED_SFCNS =
 NCSTATES =

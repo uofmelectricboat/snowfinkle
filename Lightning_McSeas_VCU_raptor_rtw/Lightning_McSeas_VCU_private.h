@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'Lightning_McSeas_VCU'.
  *
- * Model version                  : 6.44
+ * Model version                  : 6.87
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Mon May  2 19:02:32 2022
+ * C/C++ source code generated on : Mon May 16 18:10:45 2022
  *
  * Target selection: raptor.tlc
  * Embedded hardware selection: Freescale->MPC55xx
@@ -79,7 +79,6 @@ extern void CAN1_XCP_CAN_PreStart(uint32_T, uint32_T, uint32_T);
 extern void Lightning_McSeas_VCU_Background_Init(void);
 extern void Lightning_McSeas_VCU_Background_Reset(void);
 extern void Lightning_McSeas_VCU_Background(void);
-extern void Lightning_McSeas_VCU_Foreground_Init(void);
 extern void Lightning_McSeas_VCU_Foreground_Enable(void);
 extern void Lightning_McSeas_VCU_Foreground_Disable(void);
 extern void Lightning_McSeas_VCU_Foreground(void);
