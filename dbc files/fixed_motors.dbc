@@ -1,0 +1,172 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ YesNoValue 1 "Yes" 0 "No" ;
+VAL_TABLE_ TemperatureMode 15 "Not Available" 14 "Error" 3 "Trip High" 2 "Reduction High" 1 "Warning High" 0 "Ok" ;
+VAL_TABLE_ ControlMode 15 "Not Available" 14 "Error" 3 "Cranking Mode" 2 "Dc Voltage Control" 1 "Current Control" 0 "Speed Control" ;
+VAL_TABLE_ ActualStatus 4 "Restart" 3 "Error" 2 "Enabled" 1 "Standby" 0 "Initializing" ;
+VAL_TABLE_ CommandControl 3 "Take No Action" 2 "Reserved" 1 "Command Enable" 0 "Command Disable" ;
+
+
+BO_ 2566851273 Inv2_Debug3: 8 Vector__XXX
+ SG_ I2_InternalSpdRef : 16|16@1+ (0.25,-8032.75) [-8032.75|8351] "Rpm" Vector__XXX
+ SG_ I2_CurrentLimitType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I2_RegulatorStatus : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566851017 Inv2_Debug2: 8 Vector__XXX
+ SG_ I2_ActTorque : 48|16@1+ (0.1,-3276.8) [0|0] "Nm" Vector__XXX
+ SG_ I2_RefTorque : 32|16@1+ (0.1,-3276.8) [0|0] "Nm" Vector__XXX
+ SG_ I2_VoltageAngle : 16|16@1+ (1,0) [0|0] "Deg" Vector__XXX
+ SG_ I2_UpeakNormalized : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566850761 Inv2_Debug1: 8 Vector__XXX
+ SG_ I2_ActUqRef : 48|16@1+ (1,-32768) [0|0] "" Vector__XXX
+ SG_ I2_ActUdRef : 32|16@1+ (1,-32768) [0|0] "" Vector__XXX
+ SG_ I2_ActIq : 16|16@1+ (1,-32768) [0|0] "Apk" Vector__XXX
+ SG_ I2_ActId : 0|16@1+ (1,-32768) [0|0] "Apk" Vector__XXX
+
+BO_ 2365523145 Inv2_Status: 8 Vector__XXX
+ SG_ I2_DriveTemperature : 40|8@1+ (1,-40) [-40|215] "DegC" Vector__XXX
+ SG_ I2_MotorTemperature : 32|8@1+ (1,-40) [-40|215] "DegC" Vector__XXX
+ SG_ I2_DcBusDerate : 22|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I2_SpeedDerate : 20|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I2_MotorTempDerate : 18|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I2_DriveTempDerate : 16|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I2_Saturated : 10|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I2_ErrorActive : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I2_ActualControlMode : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I2_ActualStatus : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566850505 Inv2_ErrorAndWarnings: 8 Vector__XXX
+ SG_ I2_WarningBitword : 32|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I2_ErrorBitword : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2365522889 Inv2_Actual: 8 Vector__XXX
+ SG_ I2_DcBusCurrent : 48|16@1+ (0.05,-1600) [-1600|1676.75] "Adc" Vector__XXX
+ SG_ I2_DcBusVoltage : 32|16@1+ (0.05,0) [0|3276.75] "Vdc" Vector__XXX
+ SG_ I2_RmsMotorCurrent : 16|16@1+ (0.05,-1600) [-1600|1676.75] "Arms" Vector__XXX
+ SG_ I2_ActualSpeed : 0|16@1+ (0.25,-8032.75) [-8032.75|8351] "Rpm" Vector__XXX
+
+BO_ 2365526471 Inv2_Command: 8 Vector__XXX
+ SG_ I2_CommandVoltage : 48|16@1+ (0.05,0) [0|3276.75] "Vdc" Vector__XXX
+ SG_ I2_CommandAcCurrent : 32|16@1+ (0.05,-1600) [-1600|1676.75] "Arms" Vector__XXX
+ SG_ I2_CommandSpeed : 16|16@1+ (0.25,-8032.75) [-8032.75|8351] "Rpm" Vector__XXX
+ SG_ I2_EnableDebugMessages : 10|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I2_CommandFan : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I2_CommandContact : 6|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I2_ReqControlMode : 2|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I2_CommandEnable : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566851272 Inv1_Debug3: 8 Vector__XXX
+ SG_ I1_InternalSpdRef : 16|16@1+ (0.25,-8032.75) [-8032.75|8351] "Rpm" Vector__XXX
+ SG_ I1_CurrentLimitType : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I1_RegulatorStatus : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566851016 Inv1_Debug2: 8 Vector__XXX
+ SG_ I1_ActTorque : 48|16@1+ (0.1,-3276.8) [0|0] "Nm" Vector__XXX
+ SG_ I1_RefTorque : 32|16@1+ (0.1,-3276.8) [0|0] "Nm" Vector__XXX
+ SG_ I1_VoltageAngle : 16|16@1+ (1,0) [0|0] "Deg" Vector__XXX
+ SG_ I1_UpeakNormalized : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566850504 Inv1_ErrorAndWarnings: 8 Vector__XXX
+ SG_ I1_WarningBitword : 32|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I1_ErrorBitword : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2365522375 Inv1_Command: 8 Vector__XXX
+ SG_ I1_CommandAcCurrent : 32|16@1+ (0.05,-1600) [-1600|1676.75] "Arms" Vector__XXX
+ SG_ I1_CommandVoltage : 48|16@1+ (0.05,0) [0|3276.75] "Vdc" Vector__XXX
+ SG_ I1_CommandSpeed : 16|16@1+ (0.25,-8032.75) [-8032.75|8351] "Rpm" Vector__XXX
+ SG_ I1_EnableDebugMessages : 10|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I1_CommandFan : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I1_CommandContact : 6|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I1_ReqControlMode : 2|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I1_CommandEnable : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566850760 Inv1_Debug1: 8 Vector__XXX
+ SG_ I1_ActUqRef : 48|16@1+ (1,-32768) [0|0] "" Vector__XXX
+ SG_ I1_ActUdRef : 32|16@1+ (1,-32768) [0|0] "" Vector__XXX
+ SG_ I1_ActIq : 16|16@1+ (1,-32768) [0|0] "Apk" Vector__XXX
+ SG_ I1_ActId : 0|16@1+ (1,-32768) [0|0] "Apk" Vector__XXX
+
+BO_ 2365523144 Inv1_Status: 8 Vector__XXX
+ SG_ I1_DriveTemperature : 40|8@1+ (1,-40) [-40|215] "DegC" Vector__XXX
+ SG_ I1_MotorTemperature : 32|8@1+ (1,-40) [-40|215] "DegC" Vector__XXX
+ SG_ I1_DcBusDerate : 22|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I1_SpeedDerate : 20|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I1_MotorTempDerate : 18|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I1_DriveTempDerate : 16|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I1_Saturated : 10|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I1_ErrorActive : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I1_ActualControlMode : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I1_ActualStatus : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2365522888 Inv1_Actual: 8 Vector__XXX
+ SG_ I1_DcBusCurrent : 48|16@1+ (0.05,-1600) [-1600|1676.75] "Adc" Vector__XXX
+ SG_ I1_DcBusVoltage : 32|16@1+ (0.05,0) [0|3276.75] "Vdc" Vector__XXX
+ SG_ I1_RmsMotorCurrent : 16|16@1+ (0.05,-1600) [-1600|1676.75] "Arms" Vector__XXX
+ SG_ I1_ActualSpeed : 0|16@1+ (0.25,-8032.75) [-8032.75|8351] "Rpm" Vector__XXX
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 2365523145 I2_DcBusDerate 1 "Yes" 0 "No" ;
+VAL_ 2365523145 I2_SpeedDerate 1 "Yes" 0 "No" ;
+VAL_ 2365523145 I2_MotorTempDerate 1 "Yes" 0 "No" ;
+VAL_ 2365523145 I2_DriveTempDerate 1 "Yes" 0 "No" ;
+VAL_ 2365523145 I2_Saturated 1 "Yes" 0 "No" ;
+VAL_ 2365523145 I2_ErrorActive 1 "Yes" 0 "No" ;
+VAL_ 2365523145 I2_ActualControlMode 15 "Not Available" 14 "Error" 3 "Cranking Mode" 2 "Dc Voltage Control" 1 "Current Control" 0 "Speed Control" ;
+VAL_ 2365523145 I2_ActualStatus 4 "Restart" 3 "Error" 2 "Enabled" 1 "Standby" 0 "Initializing" ;
+VAL_ 2365526471 I2_EnableDebugMessages 3 "Take No Action" 2 "Reserved" 1 "Command Enable" 0 "Command Disable" ;
+VAL_ 2365526471 I2_CommandFan 3 "Take No Action" 2 "Reserved" 1 "Command Enable" 0 "Command Disable" ;
+VAL_ 2365526471 I2_CommandContact 3 "Take No Action" 2 "Reserved" 1 "Command Enable" 0 "Command Disable" ;
+VAL_ 2365526471 I2_ReqControlMode 15 "Not Available" 14 "Error" 3 "Cranking Mode" 2 "Dc Voltage Control" 1 "Current Control" 0 "Speed Control" ;
+VAL_ 2365526471 I2_CommandEnable 3 "Take No Action" 2 "Reserved" 1 "Command Enable" 0 "Command Disable" ;
+VAL_ 2365522375 I1_EnableDebugMessages 3 "Take No Action" 2 "Reserved" 1 "Command Enable" 0 "Command Disable" ;
+VAL_ 2365522375 I1_CommandFan 3 "Take No Action" 2 "Reserved" 1 "Command Enable" 0 "Command Disable" ;
+VAL_ 2365522375 I1_CommandContact 3 "Take No Action" 2 "Reserved" 1 "Command Enable" 0 "Command Disable" ;
+VAL_ 2365522375 I1_ReqControlMode 15 "Not Available" 14 "Error" 3 "Cranking Mode" 2 "Dc Voltage Control" 1 "Current Control" 0 "Speed Control" ;
+VAL_ 2365522375 I1_CommandEnable 3 "Take No Action" 2 "Reserved" 1 "Command Enable" 0 "Command Disable" ;
+VAL_ 2365523144 I1_DcBusDerate 1 "Yes" 0 "No" ;
+VAL_ 2365523144 I1_SpeedDerate 1 "Yes" 0 "No" ;
+VAL_ 2365523144 I1_MotorTempDerate 1 "Yes" 0 "No" ;
+VAL_ 2365523144 I1_DriveTempDerate 1 "Yes" 0 "No" ;
+VAL_ 2365523144 I1_Saturated 1 "Yes" 0 "No" ;
+VAL_ 2365523144 I1_ErrorActive 1 "Yes" 0 "No" ;
+VAL_ 2365523144 I1_ActualControlMode 15 "Not Available" 14 "Error" 3 "Cranking Mode" 2 "Dc Voltage Control" 1 "Current Control" 0 "Speed Control" ;
+VAL_ 2365523144 I1_ActualStatus 4 "Restart" 3 "Error" 2 "Enabled" 1 "Standby" 0 "Initializing" ;
+

@@ -7,7 +7,7 @@
    Copyright (c) 2018 New Eagle Products, Inc.
    All rights reserved.
 
-   Code Generated at: Mon May 16 18:10:45 2022
+   Code Generated at: Thu May 26 11:24:05 2022
  *****************************************************************************/
 
 #include "raptor_types.h"
@@ -65,7 +65,7 @@ const CONSTVariables_T CONSTVariables __attribute__ ((section (".romsymbols"))) 
 {
   { 76U, 105U, 103U, 104U, 116U, 110U, 105U, 110U, 103U, 95U, 77U, 99U, 83U,
     101U, 97U, 115U, 95U, 86U, 67U, 85U, },/* ModelName */
-  19UL,                                /* BuildNumber */
+  45UL,                                /* BuildNumber */
 
   { 40U, 82U, 50U, 48U, 50U, 49U, 98U, 41U, 32U, 57U, 46U, 49U, 49U, },/* MatlabVersion */
 
@@ -73,20 +73,20 @@ const CONSTVariables_T CONSTVariables __attribute__ ((section (".romsymbols"))) 
     95U, 54U, 49U, 49U, 53U, },        /* RaptorVersion */
 
   { 76U, 105U, 103U, 104U, 116U, 110U, 105U, 110U, 103U, 95U, 77U, 99U, 83U,
-    101U, 97U, 115U, 95U, 86U, 67U, 85U, 95U, 48U, 49U, 57U, },/* SwIdTxt */
+    101U, 97U, 115U, 95U, 86U, 67U, 85U, 95U, 48U, 52U, 53U, },/* SwIdTxt */
 
   { 76U, 105U, 103U, 104U, 116U, 110U, 105U, 110U, 103U, 95U, 77U, 99U, 83U,
-    101U, 97U, 115U, 95U, 86U, 67U, 85U, 95U, 48U, 49U, 57U, 95U, 48U, 48U, 48U,
+    101U, 97U, 115U, 95U, 86U, 67U, 85U, 95U, 48U, 52U, 53U, 95U, 48U, 48U, 48U,
   },                                   /* CalIdTxt */
 
-  { 107U, 82U, 54U, 101U, 118U, 75U, 103U, 105U, 84U, 48U, 101U, 118U, 102U, 89U,
-    116U, 107U, 95U, 51U, 90U, 71U, 67U, },/* BuildUID */
+  { 95U, 105U, 80U, 82U, 112U, 121U, 72U, 100U, 71U, 69U, 75U, 115U, 82U, 111U,
+    121U, 110U, 53U, 98U, 99U, 95U, 87U, },/* BuildUID */
   4,                                   /* IdTableRev */
   18940163UL,                          /* HardwareType */
 
-  { 49U, 54U, 45U, 77U, 97U, 121U, 45U, 50U, 48U, 50U, 50U, 32U, 49U, 56U, 58U,
-    49U, 48U, 58U, 52U, 53U, },        /* DateStamp */
-  3486137002UL,                        /* LiteModeKey */
+  { 50U, 54U, 45U, 77U, 97U, 121U, 45U, 50U, 48U, 50U, 50U, 32U, 49U, 49U, 58U,
+    50U, 52U, 58U, 48U, 53U, },        /* DateStamp */
+  2185081314UL,                        /* LiteModeKey */
 };
 
 void initCONSTVariables(const CONSTVariables_T* cv)

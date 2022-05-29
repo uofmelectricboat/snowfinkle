@@ -40,3 +40,7 @@ left knob is tfoil controls
 6 - S *foil mode (I, U, L) -freeze actuators or lock
 7 - S *battery cutoff (motors shut off before batteries - give delay)
 8 - s *motor cutoff 
+
+we switched *** channel 6 and 7 with 10 and 9
+
+-also we dont have a foil off mode 

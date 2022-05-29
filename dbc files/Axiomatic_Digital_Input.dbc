@@ -43,16 +43,22 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ NewSignal_0004 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2566848640 PWM_Channel_1_4: 8 Vector__XXX
- SG_ Channel_1 : 0|16@1+ (1,-1426) [0|0] "" Vector__XXX
- SG_ Channel_2 : 16|16@1+ (1,-1426) [0|0] "" Vector__XXX
- SG_ Channel_3 : 32|16@1+ (1,-1426) [0|0] "" Vector__XXX
- SG_ Channel_4 : 48|16@1+ (1,-1426) [0|0] "" Vector__XXX
+ SG_ Channel_1 : 0|16@1+ (1,-1230) [0|0] "" Vector__XXX
+ SG_ Channel_2 : 16|16@1+ (1,-1230) [0|0] "" Vector__XXX
+ SG_ Channel_3 : 32|16@1+ (1,-1230) [0|0] "" Vector__XXX
+ SG_ Channel_4 : 48|16@1+ (1,-1230) [0|0] "" Vector__XXX
 
 BO_ 2566848896 PWM_Channel_5_8: 8 Vector__XXX
- SG_ Channel_5 : 0|16@1+ (1,-1426) [0|0] "" Vector__XXX
- SG_ Channel_6 : 16|16@1+ (1,-1426) [0|0] "" Vector__XXX
- SG_ Channel_7 : 32|16@1+ (1,-1426) [0|0] "" Vector__XXX
- SG_ Channel_8 : 48|16@1+ (1,-1426) [0|0] "" Vector__XXX
+ SG_ Channel_5 : 0|16@1+ (1,-1230) [0|0] "" Vector__XXX
+ SG_ Channel_6 : 16|16@1+ (1,-1230) [0|0] "" Vector__XXX
+ SG_ Channel_7 : 32|16@1+ (1,-1230) [0|0] "" Vector__XXX
+ SG_ Channel_8 : 48|16@1+ (1,-1230) [0|0] "" Vector__XXX
+
+BO_ 2566849152 NewMessage_0001: 8 Vector__XXX
+ SG_ Channel_10 : 0|16@1+ (1,-1230) [0|0] "" Vector__XXX
+ SG_ Channel_9 : 16|16@1+ (1,-1230) [0|0] "" Vector__XXX
+ SG_ NewSignal_0007 : 32|16@1+ (1,-1426) [0|0] "" Vector__XXX
+ SG_ NewSignal_0008 : 48|16@1+ (1,-1426) [0|0] "" Vector__XXX
 
 
 
