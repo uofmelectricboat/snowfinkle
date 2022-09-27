@@ -42,5 +42,5 @@ left knob is tfoil controls
 8 - s *motor cutoff 
 
 we switched *** channel 6 and 7 with 10 and 9
-
+ 
 -also we dont have a foil off mode 
