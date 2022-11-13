@@ -13,6 +13,8 @@ Warning: 'Output Port 5' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/raptor_ca
 Warning: 'Output Port 1' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/raptor_can_rxmsg2' is not connected.
 Warning: 'Output Port 4' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/raptor_can_rxmsg2' is not connected.
 Warning: 'Output Port 5' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/raptor_can_rxmsg2' is not connected.
+Warning: 'Input Port 2' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/Battery Switch/raptor_can_txmsg' is not connected.
+Warning: 'Input Port 3' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/Battery Switch/raptor_can_txmsg' is not connected.
 Warning: 'Input Port 1' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg' is not connected.
 Warning: 'Input Port 4' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg' is not connected.
 Warning: 'Input Port 6' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg' is not connected.
@@ -21,10 +23,10 @@ Warning: 'Input Port 1' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/MCU/raptor
 Warning: 'Input Port 4' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg1' is not connected.
 Warning: 'Input Port 6' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg1' is not connected.
 Warning: 'Input Port 7' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg1' is not connected.
-### Model update completed... (1.3 seconds) 
+### Model update completed... (1.6 seconds) 
 ### Building with Raptor_2021b_1.0.14409...
 ### Building with MATLAB R2021b(x64)...
-### Current Time: May 26, 2022 11:24:00
+### Current Time: Nov 06, 2022 17:27:09
 ### Raptor-Dev 2021b is operating in Lite mode - Limited Model Size
 ### Raptor IO Customization for Target: GCM-5605B-048-2104...
 Processing with raptor_rlc... 
@@ -120,6 +122,8 @@ Warning: 'Output Port 5' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/raptor_ca
 Warning: 'Output Port 1' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/raptor_can_rxmsg2' is not connected.
 Warning: 'Output Port 4' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/raptor_can_rxmsg2' is not connected.
 Warning: 'Output Port 5' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/raptor_can_rxmsg2' is not connected.
+Warning: 'Input Port 2' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/Battery Switch/raptor_can_txmsg' is not connected.
+Warning: 'Input Port 3' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/Battery Switch/raptor_can_txmsg' is not connected.
 Warning: 'Input Port 1' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg' is not connected.
 Warning: 'Input Port 4' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg' is not connected.
 Warning: 'Input Port 6' of 'Lightning_McSeas_VCU/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg' is not connected.
@@ -155,7 +159,7 @@ Timer_BGND_9AY_V, Interval : Background
 Timed_Trigger_XCP, Interval : Foreground
 ### Including : GCM_5605B_048_genfiles.tlc
 ### Generating lcffile: 2048 byte stack size
-.......
+........
 ### Real-Time Workshop, finished target language compiler...
 ### Saving binary information cache.
 
@@ -178,11 +182,11 @@ Lightning_McSeas_VCU.c:100:11: warning: variable 'rtb_raptor_lin_state_o1' set b
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/Timer_BGND_9AY_V.o" Timer_BGND_9AY_V.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/Timer_ooqlV.o" Timer_ooqlV.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/XCP_App.o" XCP_App.c  
-powerpc-eabivle-gcc "@compiler.args" -o "./objs/can_909__0001.o" can_909__0001.c  
-powerpc-eabivle-gcc "@compiler.args" -o "./objs/can_910__0001.o" can_910__0001.c  
+powerpc-eabivle-gcc "@compiler.args" -o "./objs/can_935__0024.o" can_935__0024.c  
+powerpc-eabivle-gcc "@compiler.args" -o "./objs/can_936__0024.o" can_936__0024.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/data.o" data.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/hw_user.o" hw_user.c  
-powerpc-eabivle-gcc "@compiler.args" -o "./objs/lin_911__0001.o" lin_911__0001.c  
+powerpc-eabivle-gcc "@compiler.args" -o "./objs/lin_937__0024.o" lin_937__0024.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/lin_general.o" lin_general.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/raptor_printf.o" raptor_printf.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/xcp_protocol.o" xcp_protocol.c  
@@ -192,18 +196,18 @@ Copy : Lightning_McSeas_VCU.hex
 Generating ASAP2 file... 
 A2L:  Build Dir: C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Lightning_McSeas_VCU_raptor_rtw 
 A2L: Model Name: Lightning_McSeas_VCU 
-A2L:    SwIDTxt: Lightning_McSeas_VCU_045 
+A2L:    SwIDTxt: Lightning_McSeas_VCU_049 
 A2L:     Target: GCM-5605B-048-2104 
 Address Mode: SYM 
 Preparing to generate ASAP2 file... 
 Creating ASAP2 file for access level 4... 
 Creating ASAP2 file for access level 2... 
-Creating ASAP2 file for access level RPG... 
 Creating ASAP2 file for access level 1... 
-Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Lightning_McSeas_VCU_raptor_rtw\Lightning_McSeas_VCU_045_A1.a2l
-Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Lightning_McSeas_VCU_raptor_rtw\Lightning_McSeas_VCU_045_A2.a2l
-Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Lightning_McSeas_VCU_raptor_rtw\Lightning_McSeas_VCU_045_A4.a2l
-Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Lightning_McSeas_VCU_raptor_rtw\Lightning_McSeas_VCU_045_RPG.a2l
+Creating ASAP2 file for access level RPG... 
+Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Lightning_McSeas_VCU_raptor_rtw\Lightning_McSeas_VCU_049_A1.a2l
+Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Lightning_McSeas_VCU_raptor_rtw\Lightning_McSeas_VCU_049_A2.a2l
+Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Lightning_McSeas_VCU_raptor_rtw\Lightning_McSeas_VCU_049_A4.a2l
+Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Lightning_McSeas_VCU_raptor_rtw\Lightning_McSeas_VCU_049_RPG.a2l
 settings = 
   struct with fields:
                Target: 'GCM-5605B-048-2104'
@@ -224,14 +228,14 @@ settings =
             RaptorDir: 'C:\Program Files (x86)\NewEagle\Raptor\2021b_1.0.14409'
           AddBuildNum: 1
           SetFileName: 0
-             BuildNum: 45
+             BuildNum: 49
         buildLocation: 'Raptor Default'
-              SwIdTxt: 'Lightning_McSeas_VCU_045'
-             CalIdTxt: 'Lightning_McSeas_VCU_045_000'
+              SwIdTxt: 'Lightning_McSeas_VCU_049'
+             CalIdTxt: 'Lightning_McSeas_VCU_049_000'
          HardwareType: '18940163'
            IdTableRev: '4'
        ProgramFileExt: 'hex'
-            DateStamp: '26-May-2022 11:24:15'
+            DateStamp: '06-Nov-2022 17:27:36'
          OutputHexA2L: 0
           exeLocation: 'C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Lightning_McSeas_VCU_raptor_rtw'
           a2lLocation: 'C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Lightning_McSeas_VCU_raptor_rtw'
@@ -241,13 +245,13 @@ settings =
 ### Calculating Memory Usage
 Memory Usage Summary:
  
-   FLASH (ALL)                         :  110840  of  655104 Bytes ( 16.9 %)
+   FLASH (ALL)                         :  110982  of  655104 Bytes ( 16.9 %)
                         CONSTVariables :     160             Bytes (  0.0 %)
                    EEVariables_DEFAULT :      44             Bytes (  0.0 %)
                       Timer_BGND_9AY_V :      20             Bytes (  0.0 %)
                            Timer_ooqlV :      20             Bytes (  0.0 %)
    EEPROM                              :      44  of   13440 Bytes (  0.3 %)
-   INTERNAL RAM                        :   11372  of   65408 Bytes ( 17.4 %)
+   INTERNAL RAM                        :   11368  of   65408 Bytes ( 17.4 %)
                  EEVariables_RAMShadow :      44             Bytes (  0.1 %)
                           RAMVariables :      72             Bytes (  0.1 %)
                                  STACK :    2048             Bytes (  3.1 %)
@@ -262,11 +266,11 @@ Descriptor.exe - Manipulates GCM48-5605B ROM binary images.
  Check descriptor.......Done.
  Writing output file....Done.
  Complete.
-RPG written to: C:\ECU\rpg\Lightning_McSeas_VCU_045.rpg
+RPG written to: C:\ECU\rpg\Lightning_McSeas_VCU_049.rpg
 RILPackager: Finished
  
-Build Number: 45
-Build Time: 27.7 seconds.
+Build Number: 49
+Build Time: 44.9 seconds.
  
 ########################################
 #####   Successful Raptor Build    #####
