@@ -1,5 +1,5 @@
 channel
-
+ 
 1 - throttle *power output
 2 - rudder *ratio of motors and maybe rudders
 3 - elevator *rise of front actuators 
