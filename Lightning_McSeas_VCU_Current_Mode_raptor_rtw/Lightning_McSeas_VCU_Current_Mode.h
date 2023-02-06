@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'Lightning_McSeas_VCU_Current_Mode'.
  *
- * Model version                  : 6.200
+ * Model version                  : 6.202
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Fri Jan 27 12:39:18 2023
+ * C/C++ source code generated on : Sun Feb  5 16:27:08 2023
  *
  * Target selection: raptor.tlc
  * Embedded hardware selection: Freescale->MPC55xx
@@ -30,9 +30,9 @@
 #include "sdk_interface.h"
 #include "xcp_protocol.h"
 #include "LIN2_common.h"
-#include "can_1062__0001.h"
-#include "can_1063__0001.h"
-#include "lin_1064__0001.h"
+#include "can_3349__0001.h"
+#include "can_3350__0001.h"
+#include "lin_3351__0001.h"
 #endif                  /* Lightning_McSeas_VCU_Current_Mode_COMMON_INCLUDES_ */
 
 #include "Lightning_McSeas_VCU_Current_Mode_types.h"

@@ -7,7 +7,7 @@
    Copyright (c) 2018 New Eagle Products, Inc.
    All rights reserved.
 
-   Code Generated at: Fri Jan 27 12:39:18 2023
+   Code Generated at: Sun Feb  5 16:27:08 2023
  *****************************************************************************/
 
 #include "Lightning_McSeas_VCU_Current_Mode.h"
@@ -147,14 +147,14 @@ void application_int(void)
   /* CAN Bus Initializations */
   CANFrame_Queue_Create(&g_CAN1_TxQueue, CAN1_TxQueue_data, (20));
   CANFrame_Queue_Create(&g_CAN1_RxQueue, CAN1_RxQueue_data, (16));
-  pre_start_CAN_1062__0001();          /* <Root>/raptor_can_def */
+  pre_start_CAN_3349__0001();          /* <Root>/raptor_can_def */
   CANFrame_Queue_Create(&g_CAN2_TxQueue, CAN2_TxQueue_data, (20));
   CANFrame_Queue_Create(&g_CAN2_RxQueue, CAN2_RxQueue_data, (16));
-  pre_start_CAN_1063__0001();          /* <Root>/raptor_can_def1 */
+  pre_start_CAN_3350__0001();          /* <Root>/raptor_can_def1 */
 
   /* start_CAN(); */
-  post_start_CAN_1062__0001();         /* <Root>/raptor_can_def */
-  post_start_CAN_1063__0001();         /* <Root>/raptor_can_def1 */
+  post_start_CAN_3349__0001();         /* <Root>/raptor_can_def */
+  post_start_CAN_3350__0001();         /* <Root>/raptor_can_def1 */
   Xcp_Initialize();
 
   {

@@ -55,7 +55,7 @@ C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(
 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(adc.o)
                               ./objs/Lightning_McSeas_VCU_Current_Mode.o (ADC_Read_Chan)
 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can.o)
-                              ./objs/can_1062__0001.o (start_CAN)
+                              ./objs/can_3349__0001.o (start_CAN)
 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can_config.o)
                               C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can.o) (can_Controller)
 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(crc.o)
@@ -1734,11 +1734,11 @@ LOAD ./objs/Lightning_McSeas_VCU_Current_Mode.o
 LOAD ./objs/Timer_BGND_9AY_V.o
 LOAD ./objs/Timer_ooqlV.o
 LOAD ./objs/XCP_App.o
-LOAD ./objs/can_1062__0001.o
-LOAD ./objs/can_1063__0001.o
+LOAD ./objs/can_3349__0001.o
+LOAD ./objs/can_3350__0001.o
 LOAD ./objs/data.o
 LOAD ./objs/hw_user.o
-LOAD ./objs/lin_1064__0001.o
+LOAD ./objs/lin_3351__0001.o
 LOAD ./objs/lin_general.o
 LOAD ./objs/raptor_printf.o
 LOAD ./objs/xcp_protocol.o
@@ -1812,11 +1812,11 @@ LOAD c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gc
  .text          0x0002315c        0x0 ./objs/Timer_BGND_9AY_V.o
  .text          0x0002315c        0x0 ./objs/Timer_ooqlV.o
  .text          0x0002315c        0x0 ./objs/XCP_App.o
- .text          0x0002315c        0x0 ./objs/can_1062__0001.o
- .text          0x0002315c        0x0 ./objs/can_1063__0001.o
+ .text          0x0002315c        0x0 ./objs/can_3349__0001.o
+ .text          0x0002315c        0x0 ./objs/can_3350__0001.o
  .text          0x0002315c        0x0 ./objs/data.o
  .text          0x0002315c        0x0 ./objs/hw_user.o
- .text          0x0002315c        0x0 ./objs/lin_1064__0001.o
+ .text          0x0002315c        0x0 ./objs/lin_3351__0001.o
  .text          0x0002315c        0x0 ./objs/lin_general.o
  .text          0x0002315c        0x0 ./objs/raptor_printf.o
  .text          0x0002315c        0x0 ./objs/xcp_protocol.o
@@ -2077,211 +2077,211 @@ LOAD c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gc
                 0x000265c8       0xd8 ./objs/XCP_App.o
                 0x000265c8                Timed_Trigger_XCP
  .text.CAN_CAN1_get_baud_rate
-                0x000266a0        0x8 ./objs/can_1062__0001.o
+                0x000266a0        0x8 ./objs/can_3349__0001.o
                 0x000266a0                CAN_CAN1_get_baud_rate
  *fill*         0x000266a8        0x0 
- .text.pre_start_CAN_1062__0001
-                0x000266a8        0x2 ./objs/can_1062__0001.o
-                0x000266a8                pre_start_CAN_1062__0001
+ .text.pre_start_CAN_3349__0001
+                0x000266a8        0x2 ./objs/can_3349__0001.o
+                0x000266a8                pre_start_CAN_3349__0001
  *fill*         0x000266aa        0x2 
- .text.rxFn_173__0002
-                0x000266ac       0xc0 ./objs/can_1062__0001.o
-                0x000266ac                rxFn_173__0002
- .text.can_get_173__0002
-                0x0002676c       0xe8 ./objs/can_1062__0001.o
-                0x0002676c                can_get_173__0002
+ .text.rxFn_173__001
+                0x000266ac       0xc0 ./objs/can_3349__0001.o
+                0x000266ac                rxFn_173__001
+ .text.can_get_173__001
+                0x0002676c       0xe8 ./objs/can_3349__0001.o
+                0x0002676c                can_get_173__001
  *fill*         0x00026854        0x0 
  .text.rxFn_RxTrig_XCP_BC_CAN1
-                0x00026854       0xd8 ./objs/can_1062__0001.o
+                0x00026854       0xd8 ./objs/can_3349__0001.o
                 0x00026854                rxFn_RxTrig_XCP_BC_CAN1
  .text.can_init_rxIdRxTrig_XCP_BC_CAN1
-                0x0002692c       0x14 ./objs/can_1062__0001.o
+                0x0002692c       0x14 ./objs/can_3349__0001.o
                 0x0002692c                can_init_rxIdRxTrig_XCP_BC_CAN1
  *fill*         0x00026940        0x0 
  .text.can_get_RxTrig_XCP_BC_CAN1
-                0x00026940       0xe8 ./objs/can_1062__0001.o
+                0x00026940       0xe8 ./objs/can_3349__0001.o
                 0x00026940                can_get_RxTrig_XCP_BC_CAN1
  *fill*         0x00026a28        0x0 
  .text.rxFn_RxTrig_XCP_CMD_CAN1
-                0x00026a28       0xd8 ./objs/can_1062__0001.o
+                0x00026a28       0xd8 ./objs/can_3349__0001.o
                 0x00026a28                rxFn_RxTrig_XCP_CMD_CAN1
  .text.can_init_rxIdRxTrig_XCP_CMD_CAN1
-                0x00026b00       0x14 ./objs/can_1062__0001.o
+                0x00026b00       0x14 ./objs/can_3349__0001.o
                 0x00026b00                can_init_rxIdRxTrig_XCP_CMD_CAN1
  *fill*         0x00026b14        0x0 
  .text.can_get_RxTrig_XCP_CMD_CAN1
-                0x00026b14       0xe8 ./objs/can_1062__0001.o
+                0x00026b14       0xe8 ./objs/can_3349__0001.o
                 0x00026b14                can_get_RxTrig_XCP_CMD_CAN1
  *fill*         0x00026bfc        0x0 
  .text.can_get_uds_receive
-                0x00026bfc       0xe8 ./objs/can_1062__0001.o
+                0x00026bfc       0xe8 ./objs/can_3349__0001.o
                 0x00026bfc                can_get_uds_receive
  *fill*         0x00026ce4        0x0 
- .text.can_send_72__0002
-                0x00026ce4       0x1c ./objs/can_1062__0001.o
-                0x00026ce4                can_send_72__0002
- .text.can_update_72__0002
-                0x00026d00        0x2 ./objs/can_1062__0001.o
-                0x00026d00                can_update_72__0002
+ .text.can_send_72__001
+                0x00026ce4       0x1c ./objs/can_3349__0001.o
+                0x00026ce4                can_send_72__001
+ .text.can_update_72__001
+                0x00026d00        0x2 ./objs/can_3349__0001.o
+                0x00026d00                can_update_72__001
  *fill*         0x00026d02        0x2 
- .text.can_set_period_72__0002
-                0x00026d04        0xc ./objs/can_1062__0001.o
-                0x00026d04                can_set_period_72__0002
- .text.can_send_71__0005
-                0x00026d10       0x1c ./objs/can_1062__0001.o
-                0x00026d10                can_send_71__0005
- .text.can_update_71__0005
-                0x00026d2c        0x2 ./objs/can_1062__0001.o
-                0x00026d2c                can_update_71__0005
+ .text.can_set_period_72__001
+                0x00026d04        0xc ./objs/can_3349__0001.o
+                0x00026d04                can_set_period_72__001
+ .text.can_send_71__0012
+                0x00026d10       0x1c ./objs/can_3349__0001.o
+                0x00026d10                can_send_71__0012
+ .text.can_update_71__0012
+                0x00026d2c        0x2 ./objs/can_3349__0001.o
+                0x00026d2c                can_update_71__0012
  *fill*         0x00026d2e        0x2 
- .text.can_set_period_71__0005
-                0x00026d30        0xc ./objs/can_1062__0001.o
-                0x00026d30                can_set_period_71__0005
- .text.can_send_176__0002
-                0x00026d3c       0x1c ./objs/can_1062__0001.o
-                0x00026d3c                can_send_176__0002
- .text.can_update_176__0002
-                0x00026d58        0x2 ./objs/can_1062__0001.o
-                0x00026d58                can_update_176__0002
+ .text.can_set_period_71__0012
+                0x00026d30        0xc ./objs/can_3349__0001.o
+                0x00026d30                can_set_period_71__0012
+ .text.can_send_176__001
+                0x00026d3c       0x1c ./objs/can_3349__0001.o
+                0x00026d3c                can_send_176__001
+ .text.can_update_176__001
+                0x00026d58        0x2 ./objs/can_3349__0001.o
+                0x00026d58                can_update_176__001
  *fill*         0x00026d5a        0x2 
- .text.can_set_period_176__0002
-                0x00026d5c        0xc ./objs/can_1062__0001.o
-                0x00026d5c                can_set_period_176__0002
- .text.can_send_177__0002
-                0x00026d68       0x1c ./objs/can_1062__0001.o
-                0x00026d68                can_send_177__0002
- .text.can_update_177__0002
-                0x00026d84        0x2 ./objs/can_1062__0001.o
-                0x00026d84                can_update_177__0002
+ .text.can_set_period_176__001
+                0x00026d5c        0xc ./objs/can_3349__0001.o
+                0x00026d5c                can_set_period_176__001
+ .text.can_send_177__001
+                0x00026d68       0x1c ./objs/can_3349__0001.o
+                0x00026d68                can_send_177__001
+ .text.can_update_177__001
+                0x00026d84        0x2 ./objs/can_3349__0001.o
+                0x00026d84                can_update_177__001
  *fill*         0x00026d86        0x2 
- .text.can_set_period_177__0002
-                0x00026d88        0xc ./objs/can_1062__0001.o
-                0x00026d88                can_set_period_177__0002
- .text.can_send_285__0002
-                0x00026d94       0x1c ./objs/can_1062__0001.o
-                0x00026d94                can_send_285__0002
- .text.can_update_285__0002
-                0x00026db0        0x2 ./objs/can_1062__0001.o
-                0x00026db0                can_update_285__0002
+ .text.can_set_period_177__001
+                0x00026d88        0xc ./objs/can_3349__0001.o
+                0x00026d88                can_set_period_177__001
+ .text.can_send_285__001
+                0x00026d94       0x1c ./objs/can_3349__0001.o
+                0x00026d94                can_send_285__001
+ .text.can_update_285__001
+                0x00026db0        0x2 ./objs/can_3349__0001.o
+                0x00026db0                can_update_285__001
  *fill*         0x00026db2        0x2 
- .text.can_set_period_285__0002
-                0x00026db4        0xc ./objs/can_1062__0001.o
-                0x00026db4                can_set_period_285__0002
- .text.can_send_573__0004
-                0x00026dc0       0x1c ./objs/can_1062__0001.o
-                0x00026dc0                can_send_573__0004
- .text.can_update_573__0004
-                0x00026ddc        0x2 ./objs/can_1062__0001.o
-                0x00026ddc                can_update_573__0004
+ .text.can_set_period_285__001
+                0x00026db4        0xc ./objs/can_3349__0001.o
+                0x00026db4                can_set_period_285__001
+ .text.can_send_1085__0035
+                0x00026dc0       0x1c ./objs/can_3349__0001.o
+                0x00026dc0                can_send_1085__0035
+ .text.can_update_1085__0035
+                0x00026ddc        0x2 ./objs/can_3349__0001.o
+                0x00026ddc                can_update_1085__0035
  *fill*         0x00026dde        0x2 
- .text.can_set_period_573__0004
-                0x00026de0        0xc ./objs/can_1062__0001.o
-                0x00026de0                can_set_period_573__0004
- .text.can_send_574__0001
-                0x00026dec       0x1c ./objs/can_1062__0001.o
-                0x00026dec                can_send_574__0001
- .text.can_update_574__0001
-                0x00026e08        0x2 ./objs/can_1062__0001.o
-                0x00026e08                can_update_574__0001
+ .text.can_set_period_1085__0035
+                0x00026de0        0xc ./objs/can_3349__0001.o
+                0x00026de0                can_set_period_1085__0035
+ .text.can_send_1086__0033
+                0x00026dec       0x1c ./objs/can_3349__0001.o
+                0x00026dec                can_send_1086__0033
+ .text.can_update_1086__0033
+                0x00026e08        0x2 ./objs/can_3349__0001.o
+                0x00026e08                can_update_1086__0033
  *fill*         0x00026e0a        0x2 
- .text.can_set_period_574__0001
-                0x00026e0c        0xc ./objs/can_1062__0001.o
-                0x00026e0c                can_set_period_574__0001
- .text.can_send_612__0001
-                0x00026e18       0x1c ./objs/can_1062__0001.o
-                0x00026e18                can_send_612__0001
- .text.can_update_612__0001
-                0x00026e34        0x2 ./objs/can_1062__0001.o
-                0x00026e34                can_update_612__0001
+ .text.can_set_period_1086__0033
+                0x00026e0c        0xc ./objs/can_3349__0001.o
+                0x00026e0c                can_set_period_1086__0033
+ .text.can_send_1124__0032
+                0x00026e18       0x1c ./objs/can_3349__0001.o
+                0x00026e18                can_send_1124__0032
+ .text.can_update_1124__0032
+                0x00026e34        0x2 ./objs/can_3349__0001.o
+                0x00026e34                can_update_1124__0032
  *fill*         0x00026e36        0x2 
- .text.can_set_period_612__0001
-                0x00026e38        0xc ./objs/can_1062__0001.o
-                0x00026e38                can_set_period_612__0001
+ .text.can_set_period_1124__0032
+                0x00026e38        0xc ./objs/can_3349__0001.o
+                0x00026e38                can_set_period_1124__0032
  .text.can_send_Tx_XCP_CAN1
-                0x00026e44       0x20 ./objs/can_1062__0001.o
+                0x00026e44       0x20 ./objs/can_3349__0001.o
                 0x00026e44                can_send_Tx_XCP_CAN1
  .text.can_update_Tx_XCP_CAN1
-                0x00026e64        0x2 ./objs/can_1062__0001.o
+                0x00026e64        0x2 ./objs/can_3349__0001.o
                 0x00026e64                can_update_Tx_XCP_CAN1
  *fill*         0x00026e66        0x2 
  .text.can_set_period_Tx_XCP_CAN1
-                0x00026e68        0xc ./objs/can_1062__0001.o
+                0x00026e68        0xc ./objs/can_3349__0001.o
                 0x00026e68                can_set_period_Tx_XCP_CAN1
  .text.can_send_uds_send
-                0x00026e74       0x1c ./objs/can_1062__0001.o
+                0x00026e74       0x1c ./objs/can_3349__0001.o
                 0x00026e74                can_send_uds_send
  .text.uds_request_trigger
-                0x00026e90       0xa0 ./objs/can_1062__0001.o
+                0x00026e90       0xa0 ./objs/can_3349__0001.o
                 0x00026e90                uds_request_trigger
  .text.rxFn_uds_receive
-                0x00026f30       0xd8 ./objs/can_1062__0001.o
+                0x00026f30       0xd8 ./objs/can_3349__0001.o
                 0x00026f30                rxFn_uds_receive
- .text.CAN_ReceiveDispatch_1062__0001
-                0x00027008       0xb4 ./objs/can_1062__0001.o
-                0x00027008                CAN_ReceiveDispatch_1062__0001
+ .text.CAN_ReceiveDispatch_3349__0001
+                0x00027008       0xb4 ./objs/can_3349__0001.o
+                0x00027008                CAN_ReceiveDispatch_3349__0001
  *fill*         0x000270bc        0x0 
  .text.can_update_uds_send
-                0x000270bc        0x2 ./objs/can_1062__0001.o
+                0x000270bc        0x2 ./objs/can_3349__0001.o
                 0x000270bc                can_update_uds_send
  *fill*         0x000270be        0x2 
  .text.can_set_period_uds_send
-                0x000270c0        0xc ./objs/can_1062__0001.o
+                0x000270c0        0xc ./objs/can_3349__0001.o
                 0x000270c0                can_set_period_uds_send
- .text.post_start_CAN_1062__0001
-                0x000270cc       0x40 ./objs/can_1062__0001.o
-                0x000270cc                post_start_CAN_1062__0001
+ .text.post_start_CAN_3349__0001
+                0x000270cc       0x40 ./objs/can_3349__0001.o
+                0x000270cc                post_start_CAN_3349__0001
  .text.CAN_CAN2_get_baud_rate
-                0x0002710c        0x8 ./objs/can_1063__0001.o
+                0x0002710c        0x8 ./objs/can_3350__0001.o
                 0x0002710c                CAN_CAN2_get_baud_rate
  *fill*         0x00027114        0x0 
- .text.pre_start_CAN_1063__0001
-                0x00027114        0x2 ./objs/can_1063__0001.o
-                0x00027114                pre_start_CAN_1063__0001
+ .text.pre_start_CAN_3350__0001
+                0x00027114        0x2 ./objs/can_3350__0001.o
+                0x00027114                pre_start_CAN_3350__0001
  *fill*         0x00027116        0x2 
- .text.rxFn_599__0001
-                0x00027118       0xc0 ./objs/can_1063__0001.o
-                0x00027118                rxFn_599__0001
- .text.can_get_599__0001
-                0x000271d8       0xe8 ./objs/can_1063__0001.o
-                0x000271d8                can_get_599__0001
+ .text.rxFn_1111__0033
+                0x00027118       0xc0 ./objs/can_3350__0001.o
+                0x00027118                rxFn_1111__0033
+ .text.can_get_1111__0033
+                0x000271d8       0xe8 ./objs/can_3350__0001.o
+                0x000271d8                can_get_1111__0033
  *fill*         0x000272c0        0x0 
- .text.rxFn_600__0001
-                0x000272c0       0xc0 ./objs/can_1063__0001.o
-                0x000272c0                rxFn_600__0001
- .text.can_get_600__0001
-                0x00027380       0xe8 ./objs/can_1063__0001.o
-                0x00027380                can_get_600__0001
+ .text.rxFn_1112__0033
+                0x000272c0       0xc0 ./objs/can_3350__0001.o
+                0x000272c0                rxFn_1112__0033
+ .text.can_get_1112__0033
+                0x00027380       0xe8 ./objs/can_3350__0001.o
+                0x00027380                can_get_1112__0033
  *fill*         0x00027468        0x0 
- .text.rxFn_174__0002
-                0x00027468       0xc0 ./objs/can_1063__0001.o
-                0x00027468                rxFn_174__0002
- .text.can_get_174__0002
-                0x00027528       0xe8 ./objs/can_1063__0001.o
-                0x00027528                can_get_174__0002
+ .text.rxFn_174__001
+                0x00027468       0xc0 ./objs/can_3350__0001.o
+                0x00027468                rxFn_174__001
+ .text.can_get_174__001
+                0x00027528       0xe8 ./objs/can_3350__0001.o
+                0x00027528                can_get_174__001
  *fill*         0x00027610        0x0 
- .text.rxFn_601__0001
-                0x00027610       0xc0 ./objs/can_1063__0001.o
-                0x00027610                rxFn_601__0001
- .text.CAN_ReceiveDispatch_1063__0001
-                0x000276d0       0xc0 ./objs/can_1063__0001.o
-                0x000276d0                CAN_ReceiveDispatch_1063__0001
- .text.can_get_601__0001
-                0x00027790       0xe8 ./objs/can_1063__0001.o
-                0x00027790                can_get_601__0001
+ .text.rxFn_1113__0033
+                0x00027610       0xc0 ./objs/can_3350__0001.o
+                0x00027610                rxFn_1113__0033
+ .text.CAN_ReceiveDispatch_3350__0001
+                0x000276d0       0xc0 ./objs/can_3350__0001.o
+                0x000276d0                CAN_ReceiveDispatch_3350__0001
+ .text.can_get_1113__0033
+                0x00027790       0xe8 ./objs/can_3350__0001.o
+                0x00027790                can_get_1113__0033
  *fill*         0x00027878        0x0 
- .text.can_send_175__0002
-                0x00027878       0x1c ./objs/can_1063__0001.o
-                0x00027878                can_send_175__0002
- .text.can_update_175__0002
-                0x00027894        0x2 ./objs/can_1063__0001.o
-                0x00027894                can_update_175__0002
+ .text.can_send_175__001
+                0x00027878       0x1c ./objs/can_3350__0001.o
+                0x00027878                can_send_175__001
+ .text.can_update_175__001
+                0x00027894        0x2 ./objs/can_3350__0001.o
+                0x00027894                can_update_175__001
  *fill*         0x00027896        0x2 
- .text.can_set_period_175__0002
-                0x00027898        0xc ./objs/can_1063__0001.o
-                0x00027898                can_set_period_175__0002
- .text.post_start_CAN_1063__0001
-                0x000278a4       0x40 ./objs/can_1063__0001.o
-                0x000278a4                post_start_CAN_1063__0001
+ .text.can_set_period_175__001
+                0x00027898        0xc ./objs/can_3350__0001.o
+                0x00027898                can_set_period_175__001
+ .text.post_start_CAN_3350__0001
+                0x000278a4       0x40 ./objs/can_3350__0001.o
+                0x000278a4                post_start_CAN_3350__0001
  .text.initRAMVariables
                 0x000278e4       0x20 ./objs/data.o
                 0x000278e4                initRAMVariables
@@ -3809,7 +3809,7 @@ LOAD c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gc
 
 .rodata         0x0003d7f0      0x964
  *(.rodata)
- .rodata        0x0003d7f0        0x8 ./objs/can_1062__0001.o
+ .rodata        0x0003d7f0        0x8 ./objs/can_3349__0001.o
  .rodata        0x0003d7f8        0x6 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_cmd.o)
  *fill*         0x0003d7fe        0x2 
  .rodata        0x0003d800       0x10 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_thenan_sf.o)
@@ -3905,40 +3905,40 @@ LOAD c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gc
 .dynsym         0x0003e168     0x3400
  .dynsym        0x0003e168     0x3400 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
 
-.dynstr         0x00041568     0x39fb
- .dynstr        0x00041568     0x39fb c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
+.dynstr         0x00041568     0x39f1
+ .dynstr        0x00041568     0x39f1 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
 
-.hash           0x00044f64     0x152c
- .hash          0x00044f64     0x152c c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
+.hash           0x00044f5c     0x152c
+ .hash          0x00044f5c     0x152c c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
 
-.romsymbols     0x00046490      0x114
- .romsymbols    0x00046490      0x114 ./objs/data.o
-                0x00046490                RAMVariables_DEFAULT
-                0x000464d8                CONSTVariables
+.romsymbols     0x00046488      0x114
+ .romsymbols    0x00046488      0x114 ./objs/data.o
+                0x00046488                RAMVariables_DEFAULT
+                0x000464d0                CONSTVariables
 
-.eh_frame_hdr   0x000465a4       0x24
+.eh_frame_hdr   0x0004659c       0x24
  *(.eh_frame_hdr)
- .eh_frame_hdr  0x000465a4       0x24 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_udivdi3.o)
-                0x000465a4                __GNU_EH_FRAME_HDR
+ .eh_frame_hdr  0x0004659c       0x24 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_udivdi3.o)
+                0x0004659c                __GNU_EH_FRAME_HDR
 
-.eh_frame       0x000465c8      0x104
+.eh_frame       0x000465c0      0x104
  *(.eh_frame)
- .eh_frame      0x000465c8        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
-                0x000465c8                __EH_FRAME_BEGIN__
- .eh_frame      0x000465c8        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
- .eh_frame      0x000465c8        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/crtbegin.o
- .eh_frame      0x000465c8       0x48 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_udivdi3.o)
- .eh_frame      0x00046610       0x38 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_umoddi3.o)
+ .eh_frame      0x000465c0        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
+                0x000465c0                __EH_FRAME_BEGIN__
+ .eh_frame      0x000465c0        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
+ .eh_frame      0x000465c0        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/crtbegin.o
+ .eh_frame      0x000465c0       0x48 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_udivdi3.o)
+ .eh_frame      0x00046608       0x38 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_umoddi3.o)
                                  0x4c (size before relaxing)
- .eh_frame      0x00046648       0x7c c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(e200crtresxgpr.o)
- .eh_frame      0x000466c4        0x4 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/crtend.o
- .eh_frame      0x000466c8        0x4 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrtn.o
-                0x000466c8                __EH_FRAME_END__
-                0x000466cc                __gccend_rom = .
+ .eh_frame      0x00046640       0x7c c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(e200crtresxgpr.o)
+ .eh_frame      0x000466bc        0x4 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/crtend.o
+ .eh_frame      0x000466c0        0x4 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrtn.o
+                0x000466c0                __EH_FRAME_END__
+                0x000466c4                __gccend_rom = .
 
 .postbuild_config_desc
-                0x000466cc        0x0
-                0x000466cc                __gccbegin_postbuild_config_desc = .
+                0x000466c4        0x0
+                0x000466c4                __gccbegin_postbuild_config_desc = .
  *(.postbuild_config_desc)
  *(.postbuild_config_desc.*)
 
@@ -3946,7 +3946,7 @@ LOAD c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gc
  *(.postbuild_config_rom)
  *(.postbuild_config_rom.*)
 
-.bootmailbox    0x4000ff80       0x18 load address 0x000466cc
+.bootmailbox    0x4000ff80       0x18 load address 0x000466c4
  *(.bootmailbox)
  .bootmailbox   0x4000ff80       0x18 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(bootmailbox.o)
                 0x4000ff80                bootmailbox
@@ -3969,7 +3969,7 @@ LOAD c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gc
                 0x40000904                . = (. + 0x4)
  *fill*         0x40000900        0x4 deadc0de
 
-.data           0x40000904      0x310 load address 0x000466e4
+.data           0x40000904      0x310 load address 0x000466dc
  *(.data)
  .data          0x40000904        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
  .data          0x40000904        0x4 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/crtbegin.o
@@ -3979,11 +3979,11 @@ LOAD c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gc
  .data          0x40000908        0x0 ./objs/Timer_BGND_9AY_V.o
  .data          0x40000908        0x0 ./objs/Timer_ooqlV.o
  .data          0x40000908        0x0 ./objs/XCP_App.o
- .data          0x40000908        0x0 ./objs/can_1062__0001.o
- .data          0x40000908        0x0 ./objs/can_1063__0001.o
+ .data          0x40000908        0x0 ./objs/can_3349__0001.o
+ .data          0x40000908        0x0 ./objs/can_3350__0001.o
  .data          0x40000908        0x0 ./objs/data.o
  .data          0x40000908        0x0 ./objs/hw_user.o
- .data          0x40000908        0x0 ./objs/lin_1064__0001.o
+ .data          0x40000908        0x0 ./objs/lin_3351__0001.o
  .data          0x40000908        0x0 ./objs/lin_general.o
  .data          0x40000908        0x0 ./objs/raptor_printf.o
  .data          0x40000908        0x0 ./objs/xcp_protocol.o
@@ -4191,50 +4191,50 @@ LOAD c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gc
  .data.random_next
                 0x40000c10        0x4 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(rand.o)
 
-.fixup          0x40000c14        0x0 load address 0x000469f4
+.fixup          0x40000c14        0x0 load address 0x000469ec
  .fixup         0x40000c14        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
  .fixup         0x40000c14        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrtn.o
 
 .gcc_except_table
-                0x40000c14        0x0 load address 0x000469f4
+                0x40000c14        0x0 load address 0x000469ec
  .gcc_except_table
                 0x40000c14        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
  .gcc_except_table
                 0x40000c14        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrtn.o
 
-.dynamic        0x40000c14       0x60 load address 0x000469f4
+.dynamic        0x40000c14       0x60 load address 0x000469ec
  .dynamic       0x40000c14       0x60 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
                 0x40000c14                _DYNAMIC
 
-.got            0x40000c74       0x10 load address 0x00046a54
+.got            0x40000c74       0x10 load address 0x00046a4c
  .got           0x40000c74       0x10 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
                 0x40000c78                _GLOBAL_OFFSET_TABLE_
 
-.jcr            0x40000c84        0x4 load address 0x00046a64
+.jcr            0x40000c84        0x4 load address 0x00046a5c
  .jcr           0x40000c84        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/crtbegin.o
  .jcr           0x40000c84        0x4 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/crtend.o
 
 .tm_clone_table
-                0x40000c88        0x0 load address 0x00046a68
+                0x40000c88        0x0 load address 0x00046a60
  .tm_clone_table
                 0x40000c88        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/crtbegin.o
  .tm_clone_table
                 0x40000c88        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/crtend.o
 
-.sdata2         0x40000c88        0x0 load address 0x00046a68
+.sdata2         0x40000c88        0x0 load address 0x00046a60
  *(.sdata2)
  .sdata2        0x40000c88        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
  .sdata2        0x40000c88        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
  .sdata2        0x40000c88        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrtn.o
  *(.sdata2.*)
 
-.sbss2          0x40000c88        0x0 load address 0x00046a68
+.sbss2          0x40000c88        0x0 load address 0x00046a60
  *(.sbss2)
  .sbss2         0x40000c88        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
  .sbss2         0x40000c88        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrtn.o
  *(.sbss2.*)
 
-.rela.dyn       0x40000c88        0x0 load address 0x00046a68
+.rela.dyn       0x40000c88        0x0 load address 0x00046a60
  .rela.got      0x40000c88        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
  .rela.plt      0x40000c88        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
  .rela.bss      0x40000c88        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
@@ -4251,9 +4251,9 @@ LOAD c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gc
                 0x40000c88        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
  .rela.text.uds_request_trigger
                 0x40000c88        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
- .rela.text.CAN_ReceiveDispatch_1062__0001
+ .rela.text.CAN_ReceiveDispatch_3349__0001
                 0x40000c88        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
- .rela.text.CAN_ReceiveDispatch_1063__0001
+ .rela.text.CAN_ReceiveDispatch_3350__0001
                 0x40000c88        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
  .rela.text._etoa
                 0x40000c88        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
@@ -4326,7 +4326,7 @@ LOAD c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gc
  .rela.text.sbrk
                 0x40000c88        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
 
-.sdata          0x40000c88       0xfc load address 0x00046a68
+.sdata          0x40000c88       0xfc load address 0x00046a60
  *(.sdata)
  .sdata         0x40000c88        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
                 0x40000c88                __SDATA_START__
@@ -4347,17 +4347,17 @@ LOAD c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gc
  .sdata.CAN1__XCP_TX_ID_RAM
                 0x40000ca0        0x4 ./objs/XCP_App.o
                 0x40000ca0                CAN1__XCP_TX_ID_RAM
- .sdata.CAN_CAN1_baud_rate
-                0x40000ca4        0x4 ./objs/can_1062__0001.o
-                0x40000ca4                CAN_CAN1_baud_rate
  .sdata.RxTrig_XCP_CMD_CAN1_msgID
-                0x40000ca8        0x4 ./objs/can_1062__0001.o
-                0x40000ca8                RxTrig_XCP_CMD_CAN1_msgID
+                0x40000ca4        0x4 ./objs/can_3349__0001.o
+                0x40000ca4                RxTrig_XCP_CMD_CAN1_msgID
  .sdata.RxTrig_XCP_BC_CAN1_msgID
-                0x40000cac        0x4 ./objs/can_1062__0001.o
-                0x40000cac                RxTrig_XCP_BC_CAN1_msgID
+                0x40000ca8        0x4 ./objs/can_3349__0001.o
+                0x40000ca8                RxTrig_XCP_BC_CAN1_msgID
+ .sdata.CAN_CAN1_baud_rate
+                0x40000cac        0x4 ./objs/can_3349__0001.o
+                0x40000cac                CAN_CAN1_baud_rate
  .sdata.CAN_CAN2_baud_rate
-                0x40000cb0        0x4 ./objs/can_1063__0001.o
+                0x40000cb0        0x4 ./objs/can_3350__0001.o
                 0x40000cb0                CAN_CAN2_baud_rate
  .sdata.Xcp0_PageConfigs0
                 0x40000cb4        0x2 ./objs/xcp_protocol.o
@@ -4482,7 +4482,7 @@ LOAD c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gc
                 0x40000d7c        0x8 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libm.a(float.o)
                 0x40000d7c                __extended_huge
 
-.bss            0x40000d84     0x2128 load address 0x00046b64
+.bss            0x40000d84     0x214c load address 0x00046b5c
                 0x40000d84                __BSS_START = .
  *(.sbss)
  .sbss          0x40000d84        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
@@ -4512,829 +4512,837 @@ LOAD c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gc
                 0x40000d9c        0x1 ./objs/XCP_App.o
                 0x40000d9c                g_msgObjId
  .sbss.rxQTail_uds_receive
-                0x40000d9d        0x1 ./objs/can_1062__0001.o
+                0x40000d9d        0x1 ./objs/can_3349__0001.o
                 0x40000d9d                rxQTail_uds_receive
- .sbss.txQHead_71__0005
-                0x40000d9e        0x1 ./objs/can_1062__0001.o
-                0x40000d9e                txQHead_71__0005
- *fill*         0x40000d9f        0x1 
- .sbss.txLen_612__0001
-                0x40000da0        0x1 ./objs/can_1062__0001.o
-                0x40000da0                txLen_612__0001
- *fill*         0x40000da1        0x3 
- .sbss.txLen_285__0002
-                0x40000da4        0x1 ./objs/can_1062__0001.o
-                0x40000da4                txLen_285__0002
- .sbss.txQTail_574__0001
-                0x40000da5        0x1 ./objs/can_1062__0001.o
-                0x40000da5                txQTail_574__0001
- .sbss.txData_176__0002
-                0x40000da6        0x8 ./objs/can_1062__0001.o
-                0x40000da6                txData_176__0002
+ *fill*         0x40000d9e        0x2 
+ .sbss.txID_176__001
+                0x40000da0        0x4 ./objs/can_3349__0001.o
+                0x40000da0                txID_176__001
+ .sbss.rxBuf_RxTrig_XCP_CMD_CAN1
+                0x40000da4        0x8 ./objs/can_3349__0001.o
+                0x40000da4                rxBuf_RxTrig_XCP_CMD_CAN1
+ .sbss.txQHead_177__001
+                0x40000dac        0x1 ./objs/can_3349__0001.o
+                0x40000dac                txQHead_177__001
+ .sbss.txQTail_1085__0035
+                0x40000dad        0x1 ./objs/can_3349__0001.o
+                0x40000dad                txQTail_1085__0035
  *fill*         0x40000dae        0x2 
  .sbss.txID_uds_send
-                0x40000db0        0x4 ./objs/can_1062__0001.o
+                0x40000db0        0x4 ./objs/can_3349__0001.o
                 0x40000db0                txID_uds_send
- .sbss.rxLen_RxTrig_XCP_CMD_CAN1
-                0x40000db4        0x1 ./objs/can_1062__0001.o
-                0x40000db4                rxLen_RxTrig_XCP_CMD_CAN1
- .sbss.txQHead_72__0002
-                0x40000db5        0x1 ./objs/can_1062__0001.o
-                0x40000db5                txQHead_72__0002
+ .sbss.txQTail_71__0012
+                0x40000db4        0x1 ./objs/can_3349__0001.o
+                0x40000db4                txQTail_71__0012
+ *fill*         0x40000db5        0x3 
+ .sbss.txExt_1085__0035
+                0x40000db8        0x1 ./objs/can_3349__0001.o
+                0x40000db8                txExt_1085__0035
  .sbss.RxTrig_XCP_BC_CAN1_msgExtended
-                0x40000db6        0x1 ./objs/can_1062__0001.o
-                0x40000db6                RxTrig_XCP_BC_CAN1_msgExtended
+                0x40000db9        0x1 ./objs/can_3349__0001.o
+                0x40000db9                RxTrig_XCP_BC_CAN1_msgExtended
+ .sbss.rxQTail_173__001
+                0x40000dba        0x1 ./objs/can_3349__0001.o
+                0x40000dba                rxQTail_173__001
  .sbss.rxQTail_RxTrig_XCP_CMD_CAN1
-                0x40000db7        0x1 ./objs/can_1062__0001.o
-                0x40000db7                rxQTail_RxTrig_XCP_CMD_CAN1
+                0x40000dbb        0x1 ./objs/can_3349__0001.o
+                0x40000dbb                rxQTail_RxTrig_XCP_CMD_CAN1
  .sbss.txLen_uds_send
-                0x40000db8        0x1 ./objs/can_1062__0001.o
-                0x40000db8                txLen_uds_send
- .sbss.rxBuf_RxTrig_XCP_CMD_CAN1
-                0x40000db9        0x8 ./objs/can_1062__0001.o
-                0x40000db9                rxBuf_RxTrig_XCP_CMD_CAN1
- .sbss.txQHead_Tx_XCP_CAN1
-                0x40000dc1        0x1 ./objs/can_1062__0001.o
-                0x40000dc1                txQHead_Tx_XCP_CAN1
- .sbss.txData_177__0002
-                0x40000dc2        0x8 ./objs/can_1062__0001.o
-                0x40000dc2                txData_177__0002
+                0x40000dbc        0x1 ./objs/can_3349__0001.o
+                0x40000dbc                txLen_uds_send
+ *fill*         0x40000dbd        0x3 
+ .sbss.rxLen_173__001
+                0x40000dc0        0x1 ./objs/can_3349__0001.o
+                0x40000dc0                rxLen_173__001
+ .sbss.txQTail_1086__0033
+                0x40000dc1        0x1 ./objs/can_3349__0001.o
+                0x40000dc1                txQTail_1086__0033
+ .sbss.txData_1085__0035
+                0x40000dc2        0x8 ./objs/can_3349__0001.o
+                0x40000dc2                txData_1085__0035
  *fill*         0x40000dca        0x2 
- .sbss.txExt_176__0002
-                0x40000dcc        0x1 ./objs/can_1062__0001.o
-                0x40000dcc                txExt_176__0002
- .sbss.txData_285__0002
-                0x40000dcd        0x4 ./objs/can_1062__0001.o
-                0x40000dcd                txData_285__0002
- .sbss.rxQTail_173__0002
-                0x40000dd1        0x1 ./objs/can_1062__0001.o
-                0x40000dd1                rxQTail_173__0002
+ .sbss.started_3349__0001
+                0x40000dcc        0x4 ./objs/can_3349__0001.o
+                0x40000dcc                started_3349__0001
+ .sbss.txExt_1086__0033
+                0x40000dd0        0x1 ./objs/can_3349__0001.o
+                0x40000dd0                txExt_1086__0033
+ *fill*         0x40000dd1        0x3 
+ .sbss.txID_1085__0035
+                0x40000dd4        0x4 ./objs/can_3349__0001.o
+                0x40000dd4                txID_1085__0035
+ .sbss.txQHead_1085__0035
+                0x40000dd8        0x1 ./objs/can_3349__0001.o
+                0x40000dd8                txQHead_1085__0035
  .sbss.txData_uds_send
-                0x40000dd2        0x8 ./objs/can_1062__0001.o
-                0x40000dd2                txData_uds_send
- .sbss.txQHead_574__0001
-                0x40000dda        0x1 ./objs/can_1062__0001.o
-                0x40000dda                txQHead_574__0001
- *fill*         0x40000ddb        0x1 
- .sbss.txExt_177__0002
-                0x40000ddc        0x1 ./objs/can_1062__0001.o
-                0x40000ddc                txExt_177__0002
- *fill*         0x40000ddd        0x3 
- .sbss.txLen_574__0001
-                0x40000de0        0x1 ./objs/can_1062__0001.o
-                0x40000de0                txLen_574__0001
- .sbss.txQHead_573__0004
-                0x40000de1        0x1 ./objs/can_1062__0001.o
-                0x40000de1                txQHead_573__0004
- *fill*         0x40000de2        0x2 
- .sbss.started_1062__0001
-                0x40000de4        0x4 ./objs/can_1062__0001.o
-                0x40000de4                started_1062__0001
- .sbss.rxAge_173__0002
-                0x40000de8        0x2 ./objs/can_1062__0001.o
-                0x40000de8                rxAge_173__0002
+                0x40000dd9        0x8 ./objs/can_3349__0001.o
+                0x40000dd9                txData_uds_send
+ .sbss.txData_285__001
+                0x40000de1        0x4 ./objs/can_3349__0001.o
+                0x40000de1                txData_285__001
+ *fill*         0x40000de5        0x3 
+ .sbss.txLen_176__001
+                0x40000de8        0x1 ./objs/can_3349__0001.o
+                0x40000de8                txLen_176__001
+ .sbss.txQTail_177__001
+                0x40000de9        0x1 ./objs/can_3349__0001.o
+                0x40000de9                txQTail_177__001
  *fill*         0x40000dea        0x2 
- .sbss.txExt_71__0005
-                0x40000dec        0x1 ./objs/can_1062__0001.o
-                0x40000dec                txExt_71__0005
- .sbss.txQTail_71__0005
-                0x40000ded        0x1 ./objs/can_1062__0001.o
-                0x40000ded                txQTail_71__0005
+ .sbss.txLen_72__001
+                0x40000dec        0x1 ./objs/can_3349__0001.o
+                0x40000dec                txLen_72__001
+ .sbss.txData_72__001
+                0x40000ded        0x2 ./objs/can_3349__0001.o
+                0x40000ded                txData_72__001
+ *fill*         0x40000def        0x1 
+ .sbss.txID_1086__0033
+                0x40000df0        0x4 ./objs/can_3349__0001.o
+                0x40000df0                txID_1086__0033
+ .sbss.txQHead_1086__0033
+                0x40000df4        0x1 ./objs/can_3349__0001.o
+                0x40000df4                txQHead_1086__0033
+ *fill*         0x40000df5        0x3 
+ .sbss.txLen_1085__0035
+                0x40000df8        0x1 ./objs/can_3349__0001.o
+                0x40000df8                txLen_1085__0035
+ .sbss.txQHead_Tx_XCP_CAN1
+                0x40000df9        0x1 ./objs/can_3349__0001.o
+                0x40000df9                txQHead_Tx_XCP_CAN1
+ .sbss.txQHead_71__0012
+                0x40000dfa        0x1 ./objs/can_3349__0001.o
+                0x40000dfa                txQHead_71__0012
+ .sbss.rxQHead_173__001
+                0x40000dfb        0x1 ./objs/can_3349__0001.o
+                0x40000dfb                rxQHead_173__001
  .sbss.txData_Tx_XCP_CAN1
-                0x40000dee        0x8 ./objs/can_1062__0001.o
-                0x40000dee                txData_Tx_XCP_CAN1
+                0x40000dfc        0x8 ./objs/can_3349__0001.o
+                0x40000dfc                txData_Tx_XCP_CAN1
  .sbss.rxQHead_RxTrig_XCP_BC_CAN1
-                0x40000df6        0x1 ./objs/can_1062__0001.o
-                0x40000df6                rxQHead_RxTrig_XCP_BC_CAN1
- *fill*         0x40000df7        0x1 
- .sbss.txExt_573__0004
-                0x40000df8        0x1 ./objs/can_1062__0001.o
-                0x40000df8                txExt_573__0004
- .sbss.rxBuf_173__0002
-                0x40000df9        0x8 ./objs/can_1062__0001.o
-                0x40000df9                rxBuf_173__0002
- *fill*         0x40000e01        0x3 
- .sbss.txID_71__0005
-                0x40000e04        0x4 ./objs/can_1062__0001.o
-                0x40000e04                txID_71__0005
+                0x40000e04        0x1 ./objs/can_3349__0001.o
+                0x40000e04                rxQHead_RxTrig_XCP_BC_CAN1
+ *fill*         0x40000e05        0x3 
+ .sbss.txExt_177__001
+                0x40000e08        0x1 ./objs/can_3349__0001.o
+                0x40000e08                txExt_177__001
+ *fill*         0x40000e09        0x3 
+ .sbss.rxLen_RxTrig_XCP_CMD_CAN1
+                0x40000e0c        0x1 ./objs/can_3349__0001.o
+                0x40000e0c                rxLen_RxTrig_XCP_CMD_CAN1
+ *fill*         0x40000e0d        0x3 
+ .sbss.txLen_1086__0033
+                0x40000e10        0x1 ./objs/can_3349__0001.o
+                0x40000e10                txLen_1086__0033
+ *fill*         0x40000e11        0x3 
  .sbss.rxLen_RxTrig_XCP_BC_CAN1
-                0x40000e08        0x1 ./objs/can_1062__0001.o
-                0x40000e08                rxLen_RxTrig_XCP_BC_CAN1
+                0x40000e14        0x1 ./objs/can_3349__0001.o
+                0x40000e14                rxLen_RxTrig_XCP_BC_CAN1
  .sbss.rxBuf_RxTrig_XCP_BC_CAN1
-                0x40000e09        0x8 ./objs/can_1062__0001.o
-                0x40000e09                rxBuf_RxTrig_XCP_BC_CAN1
- *fill*         0x40000e11        0x1 
+                0x40000e15        0x8 ./objs/can_3349__0001.o
+                0x40000e15                rxBuf_RxTrig_XCP_BC_CAN1
+ *fill*         0x40000e1d        0x1 
  .sbss.rxAge_RxTrig_XCP_CMD_CAN1
-                0x40000e12        0x2 ./objs/can_1062__0001.o
-                0x40000e12                rxAge_RxTrig_XCP_CMD_CAN1
- .sbss.txData_574__0001
-                0x40000e14        0x8 ./objs/can_1062__0001.o
-                0x40000e14                txData_574__0001
- .sbss.txQTail_612__0001
-                0x40000e1c        0x1 ./objs/can_1062__0001.o
-                0x40000e1c                txQTail_612__0001
- *fill*         0x40000e1d        0x3 
- .sbss.txLen_71__0005
-                0x40000e20        0x1 ./objs/can_1062__0001.o
-                0x40000e20                txLen_71__0005
- .sbss.txData_72__0002
-                0x40000e21        0x2 ./objs/can_1062__0001.o
-                0x40000e21                txData_72__0002
- *fill*         0x40000e23        0x1 
- .sbss.txID_72__0002
-                0x40000e24        0x4 ./objs/can_1062__0001.o
-                0x40000e24                txID_72__0002
- .sbss.txData_612__0001
-                0x40000e28        0x8 ./objs/can_1062__0001.o
-                0x40000e28                txData_612__0001
+                0x40000e1e        0x2 ./objs/can_3349__0001.o
+                0x40000e1e                rxAge_RxTrig_XCP_CMD_CAN1
+ .sbss.txQHead_72__001
+                0x40000e20        0x1 ./objs/can_3349__0001.o
+                0x40000e20                txQHead_72__001
+ *fill*         0x40000e21        0x3 
+ .sbss.txExt_72__001
+                0x40000e24        0x1 ./objs/can_3349__0001.o
+                0x40000e24                txExt_72__001
+ *fill*         0x40000e25        0x3 
+ .sbss.txExt_176__001
+                0x40000e28        0x1 ./objs/can_3349__0001.o
+                0x40000e28                txExt_176__001
+ *fill*         0x40000e29        0x3 
+ .sbss.txLen_177__001
+                0x40000e2c        0x1 ./objs/can_3349__0001.o
+                0x40000e2c                txLen_177__001
+ .sbss.txData_1086__0033
+                0x40000e2d        0x8 ./objs/can_3349__0001.o
+                0x40000e2d                txData_1086__0033
+ *fill*         0x40000e35        0x3 
  .sbss.txExt_uds_send
-                0x40000e30        0x1 ./objs/can_1062__0001.o
-                0x40000e30                txExt_uds_send
- *fill*         0x40000e31        0x3 
- .sbss.txLen_573__0004
-                0x40000e34        0x1 ./objs/can_1062__0001.o
-                0x40000e34                txLen_573__0004
+                0x40000e38        0x1 ./objs/can_3349__0001.o
+                0x40000e38                txExt_uds_send
+ .sbss.txData_71__0012
+                0x40000e39        0x2 ./objs/can_3349__0001.o
+                0x40000e39                txData_71__0012
  .sbss.rxQHead_uds_receive
-                0x40000e35        0x1 ./objs/can_1062__0001.o
-                0x40000e35                rxQHead_uds_receive
+                0x40000e3b        0x1 ./objs/can_3349__0001.o
+                0x40000e3b                rxQHead_uds_receive
  .sbss.rxAge_RxTrig_XCP_BC_CAN1
-                0x40000e36        0x2 ./objs/can_1062__0001.o
-                0x40000e36                rxAge_RxTrig_XCP_BC_CAN1
+                0x40000e3c        0x2 ./objs/can_3349__0001.o
+                0x40000e3c                rxAge_RxTrig_XCP_BC_CAN1
+ .sbss.txQTail_1124__0032
+                0x40000e3e        0x1 ./objs/can_3349__0001.o
+                0x40000e3e                txQTail_1124__0032
+ .sbss.txQHead_1124__0032
+                0x40000e3f        0x1 ./objs/can_3349__0001.o
+                0x40000e3f                txQHead_1124__0032
  .sbss.RxTrig_XCP_CMD_CAN1_msgExtended
-                0x40000e38        0x1 ./objs/can_1062__0001.o
-                0x40000e38                RxTrig_XCP_CMD_CAN1_msgExtended
+                0x40000e40        0x1 ./objs/can_3349__0001.o
+                0x40000e40                RxTrig_XCP_CMD_CAN1_msgExtended
+ *fill*         0x40000e41        0x3 
+ .sbss.txExt_1124__0032
+                0x40000e44        0x1 ./objs/can_3349__0001.o
+                0x40000e44                txExt_1124__0032
+ .sbss.txQTail_176__001
+                0x40000e45        0x1 ./objs/can_3349__0001.o
+                0x40000e45                txQTail_176__001
  .sbss.txQTail_uds_send
-                0x40000e39        0x1 ./objs/can_1062__0001.o
-                0x40000e39                txQTail_uds_send
- *fill*         0x40000e3a        0x2 
- .sbss.txExt_285__0002
-                0x40000e3c        0x1 ./objs/can_1062__0001.o
-                0x40000e3c                txExt_285__0002
- *fill*         0x40000e3d        0x3 
- .sbss.txExt_612__0001
-                0x40000e40        0x1 ./objs/can_1062__0001.o
-                0x40000e40                txExt_612__0001
- .sbss.txQHead_177__0002
-                0x40000e41        0x1 ./objs/can_1062__0001.o
-                0x40000e41                txQHead_177__0002
- .sbss.txQHead_176__0002
-                0x40000e42        0x1 ./objs/can_1062__0001.o
-                0x40000e42                txQHead_176__0002
- .sbss.txQHead_612__0001
-                0x40000e43        0x1 ./objs/can_1062__0001.o
-                0x40000e43                txQHead_612__0001
- .sbss.txQTail_176__0002
-                0x40000e44        0x1 ./objs/can_1062__0001.o
-                0x40000e44                txQTail_176__0002
- .sbss.rxQHead_RxTrig_XCP_CMD_CAN1
-                0x40000e45        0x1 ./objs/can_1062__0001.o
-                0x40000e45                rxQHead_RxTrig_XCP_CMD_CAN1
- *fill*         0x40000e46        0x2 
- .sbss.rxID_RxTrig_XCP_BC_CAN1
-                0x40000e48        0x4 ./objs/can_1062__0001.o
-                0x40000e48                rxID_RxTrig_XCP_BC_CAN1
- .sbss.txLen_176__0002
-                0x40000e4c        0x1 ./objs/can_1062__0001.o
-                0x40000e4c                txLen_176__0002
- *fill*         0x40000e4d        0x3 
- .sbss.txID_574__0001
-                0x40000e50        0x4 ./objs/can_1062__0001.o
-                0x40000e50                txID_574__0001
- .sbss.rxID_173__0002
-                0x40000e54        0x4 ./objs/can_1062__0001.o
-                0x40000e54                rxID_173__0002
- .sbss.rxID_RxTrig_XCP_CMD_CAN1
-                0x40000e58        0x4 ./objs/can_1062__0001.o
-                0x40000e58                rxID_RxTrig_XCP_CMD_CAN1
- .sbss.txID_285__0002
-                0x40000e5c        0x4 ./objs/can_1062__0001.o
-                0x40000e5c                txID_285__0002
- .sbss.rxID_uds_receive
-                0x40000e60        0x4 ./objs/can_1062__0001.o
-                0x40000e60                rxID_uds_receive
- .sbss.txID_612__0001
-                0x40000e64        0x4 ./objs/can_1062__0001.o
-                0x40000e64                txID_612__0001
- .sbss.txLen_177__0002
-                0x40000e68        0x1 ./objs/can_1062__0001.o
-                0x40000e68                txLen_177__0002
- *fill*         0x40000e69        0x3 
- .sbss.txLen_72__0002
-                0x40000e6c        0x1 ./objs/can_1062__0001.o
-                0x40000e6c                txLen_72__0002
- .sbss.txQHead_uds_send
-                0x40000e6d        0x1 ./objs/can_1062__0001.o
-                0x40000e6d                txQHead_uds_send
- *fill*         0x40000e6e        0x2 
- .sbss.txExt_574__0001
-                0x40000e70        0x1 ./objs/can_1062__0001.o
-                0x40000e70                txExt_574__0001
- .sbss.txData_573__0004
-                0x40000e71        0x8 ./objs/can_1062__0001.o
-                0x40000e71                txData_573__0004
- *fill*         0x40000e79        0x1 
- .sbss.rxAge_uds_receive
-                0x40000e7a        0x2 ./objs/can_1062__0001.o
-                0x40000e7a                rxAge_uds_receive
- .sbss.txQTail_573__0004
-                0x40000e7c        0x1 ./objs/can_1062__0001.o
-                0x40000e7c                txQTail_573__0004
- *fill*         0x40000e7d        0x3 
- .sbss.txExt_Tx_XCP_CAN1
-                0x40000e80        0x1 ./objs/can_1062__0001.o
-                0x40000e80                txExt_Tx_XCP_CAN1
- .sbss.rxQHead_173__0002
-                0x40000e81        0x1 ./objs/can_1062__0001.o
-                0x40000e81                rxQHead_173__0002
- .sbss.txQTail_285__0002
-                0x40000e82        0x1 ./objs/can_1062__0001.o
-                0x40000e82                txQTail_285__0002
- .sbss.txQTail_Tx_XCP_CAN1
-                0x40000e83        0x1 ./objs/can_1062__0001.o
-                0x40000e83                txQTail_Tx_XCP_CAN1
- .sbss.txQHead_285__0002
-                0x40000e84        0x1 ./objs/can_1062__0001.o
-                0x40000e84                txQHead_285__0002
- .sbss.txQTail_177__0002
-                0x40000e85        0x1 ./objs/can_1062__0001.o
-                0x40000e85                txQTail_177__0002
- .sbss.rxQTail_RxTrig_XCP_BC_CAN1
-                0x40000e86        0x1 ./objs/can_1062__0001.o
-                0x40000e86                rxQTail_RxTrig_XCP_BC_CAN1
- *fill*         0x40000e87        0x1 
- .sbss.txExt_72__0002
-                0x40000e88        0x1 ./objs/can_1062__0001.o
-                0x40000e88                txExt_72__0002
- *fill*         0x40000e89        0x3 
- .sbss.rxLen_uds_receive
-                0x40000e8c        0x1 ./objs/can_1062__0001.o
-                0x40000e8c                rxLen_uds_receive
- *fill*         0x40000e8d        0x3 
+                0x40000e46        0x1 ./objs/can_3349__0001.o
+                0x40000e46                txQTail_uds_send
+ *fill*         0x40000e47        0x1 
+ .sbss.txID_1124__0032
+                0x40000e48        0x4 ./objs/can_3349__0001.o
+                0x40000e48                txID_1124__0032
  .sbss.txLen_Tx_XCP_CAN1
-                0x40000e90        0x1 ./objs/can_1062__0001.o
-                0x40000e90                txLen_Tx_XCP_CAN1
- .sbss.txQTail_72__0002
-                0x40000e91        0x1 ./objs/can_1062__0001.o
-                0x40000e91                txQTail_72__0002
- *fill*         0x40000e92        0x2 
- .sbss.txID_Tx_XCP_CAN1
-                0x40000e94        0x4 ./objs/can_1062__0001.o
-                0x40000e94                txID_Tx_XCP_CAN1
- .sbss.txID_176__0002
-                0x40000e98        0x4 ./objs/can_1062__0001.o
-                0x40000e98                txID_176__0002
- .sbss.txID_573__0004
-                0x40000e9c        0x4 ./objs/can_1062__0001.o
-                0x40000e9c                txID_573__0004
- .sbss.txData_71__0005
-                0x40000ea0        0x2 ./objs/can_1062__0001.o
-                0x40000ea0                txData_71__0005
- .sbss.rxBuf_uds_receive
-                0x40000ea2        0x8 ./objs/can_1062__0001.o
-                0x40000ea2                rxBuf_uds_receive
- *fill*         0x40000eaa        0x2 
- .sbss.txID_177__0002
-                0x40000eac        0x4 ./objs/can_1062__0001.o
-                0x40000eac                txID_177__0002
- .sbss.rxLen_173__0002
-                0x40000eb0        0x1 ./objs/can_1062__0001.o
-                0x40000eb0                rxLen_173__0002
- .sbss.rxQHead_600__0001
-                0x40000eb1        0x1 ./objs/can_1063__0001.o
-                0x40000eb1                rxQHead_600__0001
- *fill*         0x40000eb2        0x2 
- .sbss.rxID_601__0001
-                0x40000eb4        0x4 ./objs/can_1063__0001.o
-                0x40000eb4                rxID_601__0001
- .sbss.txLen_175__0002
-                0x40000eb8        0x1 ./objs/can_1063__0001.o
-                0x40000eb8                txLen_175__0002
+                0x40000e4c        0x1 ./objs/can_3349__0001.o
+                0x40000e4c                txLen_Tx_XCP_CAN1
+ .sbss.txData_177__001
+                0x40000e4d        0x8 ./objs/can_3349__0001.o
+                0x40000e4d                txData_177__001
+ *fill*         0x40000e55        0x3 
+ .sbss.txID_285__001
+                0x40000e58        0x4 ./objs/can_3349__0001.o
+                0x40000e58                txID_285__001
+ .sbss.rxQHead_RxTrig_XCP_CMD_CAN1
+                0x40000e5c        0x1 ./objs/can_3349__0001.o
+                0x40000e5c                rxQHead_RxTrig_XCP_CMD_CAN1
+ *fill*         0x40000e5d        0x3 
+ .sbss.rxID_RxTrig_XCP_BC_CAN1
+                0x40000e60        0x4 ./objs/can_3349__0001.o
+                0x40000e60                rxID_RxTrig_XCP_BC_CAN1
+ .sbss.txData_176__001
+                0x40000e64        0x8 ./objs/can_3349__0001.o
+                0x40000e64                txData_176__001
+ .sbss.txID_72__001
+                0x40000e6c        0x4 ./objs/can_3349__0001.o
+                0x40000e6c                txID_72__001
+ .sbss.rxID_RxTrig_XCP_CMD_CAN1
+                0x40000e70        0x4 ./objs/can_3349__0001.o
+                0x40000e70                rxID_RxTrig_XCP_CMD_CAN1
+ .sbss.txQTail_72__001
+                0x40000e74        0x1 ./objs/can_3349__0001.o
+                0x40000e74                txQTail_72__001
+ *fill*         0x40000e75        0x3 
+ .sbss.rxID_uds_receive
+                0x40000e78        0x4 ./objs/can_3349__0001.o
+                0x40000e78                rxID_uds_receive
+ .sbss.txQTail_285__001
+                0x40000e7c        0x1 ./objs/can_3349__0001.o
+                0x40000e7c                txQTail_285__001
+ .sbss.txQHead_176__001
+                0x40000e7d        0x1 ./objs/can_3349__0001.o
+                0x40000e7d                txQHead_176__001
+ *fill*         0x40000e7e        0x2 
+ .sbss.txLen_1124__0032
+                0x40000e80        0x1 ./objs/can_3349__0001.o
+                0x40000e80                txLen_1124__0032
+ *fill*         0x40000e81        0x3 
+ .sbss.txID_177__001
+                0x40000e84        0x4 ./objs/can_3349__0001.o
+                0x40000e84                txID_177__001
+ .sbss.txQHead_uds_send
+                0x40000e88        0x1 ./objs/can_3349__0001.o
+                0x40000e88                txQHead_uds_send
+ *fill*         0x40000e89        0x3 
+ .sbss.rxID_173__001
+                0x40000e8c        0x4 ./objs/can_3349__0001.o
+                0x40000e8c                rxID_173__001
+ .sbss.txLen_285__001
+                0x40000e90        0x1 ./objs/can_3349__0001.o
+                0x40000e90                txLen_285__001
+ *fill*         0x40000e91        0x3 
+ .sbss.txExt_Tx_XCP_CAN1
+                0x40000e94        0x1 ./objs/can_3349__0001.o
+                0x40000e94                txExt_Tx_XCP_CAN1
+ .sbss.txData_1124__0032
+                0x40000e95        0x8 ./objs/can_3349__0001.o
+                0x40000e95                txData_1124__0032
+ *fill*         0x40000e9d        0x3 
+ .sbss.txID_71__0012
+                0x40000ea0        0x4 ./objs/can_3349__0001.o
+                0x40000ea0                txID_71__0012
+ .sbss.txQTail_Tx_XCP_CAN1
+                0x40000ea4        0x1 ./objs/can_3349__0001.o
+                0x40000ea4                txQTail_Tx_XCP_CAN1
+ *fill*         0x40000ea5        0x3 
+ .sbss.txExt_71__0012
+                0x40000ea8        0x1 ./objs/can_3349__0001.o
+                0x40000ea8                txExt_71__0012
+ *fill*         0x40000ea9        0x1 
+ .sbss.rxAge_173__001
+                0x40000eaa        0x2 ./objs/can_3349__0001.o
+                0x40000eaa                rxAge_173__001
+ .sbss.rxQTail_RxTrig_XCP_BC_CAN1
+                0x40000eac        0x1 ./objs/can_3349__0001.o
+                0x40000eac                rxQTail_RxTrig_XCP_BC_CAN1
+ .sbss.rxBuf_173__001
+                0x40000ead        0x8 ./objs/can_3349__0001.o
+                0x40000ead                rxBuf_173__001
+ *fill*         0x40000eb5        0x3 
+ .sbss.rxLen_uds_receive
+                0x40000eb8        0x1 ./objs/can_3349__0001.o
+                0x40000eb8                rxLen_uds_receive
  *fill*         0x40000eb9        0x1 
- .sbss.rxAge_600__0001
-                0x40000eba        0x2 ./objs/can_1063__0001.o
-                0x40000eba                rxAge_600__0001
- .sbss.rxQTail_601__0001
-                0x40000ebc        0x1 ./objs/can_1063__0001.o
-                0x40000ebc                rxQTail_601__0001
- .sbss.rxQHead_174__0002
-                0x40000ebd        0x1 ./objs/can_1063__0001.o
-                0x40000ebd                rxQHead_174__0002
- *fill*         0x40000ebe        0x2 
- .sbss.rxLen_174__0002
-                0x40000ec0        0x1 ./objs/can_1063__0001.o
-                0x40000ec0                rxLen_174__0002
- .sbss.rxQHead_601__0001
-                0x40000ec1        0x1 ./objs/can_1063__0001.o
-                0x40000ec1                rxQHead_601__0001
- .sbss.rxAge_601__0001
-                0x40000ec2        0x2 ./objs/can_1063__0001.o
-                0x40000ec2                rxAge_601__0001
- .sbss.rxLen_599__0001
-                0x40000ec4        0x1 ./objs/can_1063__0001.o
-                0x40000ec4                rxLen_599__0001
- *fill*         0x40000ec5        0x3 
- .sbss.rxID_599__0001
-                0x40000ec8        0x4 ./objs/can_1063__0001.o
-                0x40000ec8                rxID_599__0001
- .sbss.txData_175__0002
-                0x40000ecc        0x8 ./objs/can_1063__0001.o
-                0x40000ecc                txData_175__0002
- .sbss.rxID_174__0002
-                0x40000ed4        0x4 ./objs/can_1063__0001.o
-                0x40000ed4                rxID_174__0002
- .sbss.rxQTail_599__0001
-                0x40000ed8        0x1 ./objs/can_1063__0001.o
-                0x40000ed8                rxQTail_599__0001
- .sbss.rxBuf_599__0001
-                0x40000ed9        0x8 ./objs/can_1063__0001.o
-                0x40000ed9                rxBuf_599__0001
- .sbss.rxQTail_174__0002
-                0x40000ee1        0x1 ./objs/can_1063__0001.o
-                0x40000ee1                rxQTail_174__0002
- .sbss.txQTail_175__0002
-                0x40000ee2        0x1 ./objs/can_1063__0001.o
-                0x40000ee2                txQTail_175__0002
- .sbss.rxQHead_599__0001
-                0x40000ee3        0x1 ./objs/can_1063__0001.o
-                0x40000ee3                rxQHead_599__0001
- .sbss.rxLen_600__0001
-                0x40000ee4        0x1 ./objs/can_1063__0001.o
-                0x40000ee4                rxLen_600__0001
- .sbss.rxBuf_600__0001
-                0x40000ee5        0x8 ./objs/can_1063__0001.o
-                0x40000ee5                rxBuf_600__0001
- .sbss.rxBuf_174__0002
-                0x40000eed        0x8 ./objs/can_1063__0001.o
-                0x40000eed                rxBuf_174__0002
- .sbss.txQHead_175__0002
-                0x40000ef5        0x1 ./objs/can_1063__0001.o
-                0x40000ef5                txQHead_175__0002
- *fill*         0x40000ef6        0x2 
- .sbss.started_1063__0001
-                0x40000ef8        0x4 ./objs/can_1063__0001.o
-                0x40000ef8                started_1063__0001
- .sbss.rxLen_601__0001
-                0x40000efc        0x1 ./objs/can_1063__0001.o
-                0x40000efc                rxLen_601__0001
- *fill*         0x40000efd        0x1 
- .sbss.rxAge_174__0002
-                0x40000efe        0x2 ./objs/can_1063__0001.o
-                0x40000efe                rxAge_174__0002
- .sbss.rxID_600__0001
-                0x40000f00        0x4 ./objs/can_1063__0001.o
-                0x40000f00                rxID_600__0001
- .sbss.rxAge_599__0001
-                0x40000f04        0x2 ./objs/can_1063__0001.o
-                0x40000f04                rxAge_599__0001
- .sbss.rxBuf_601__0001
-                0x40000f06        0x8 ./objs/can_1063__0001.o
-                0x40000f06                rxBuf_601__0001
- .sbss.rxQTail_600__0001
-                0x40000f0e        0x1 ./objs/can_1063__0001.o
-                0x40000f0e                rxQTail_600__0001
- *fill*         0x40000f0f        0x1 
- .sbss.txExt_175__0002
-                0x40000f10        0x1 ./objs/can_1063__0001.o
-                0x40000f10                txExt_175__0002
- *fill*         0x40000f11        0x3 
- .sbss.txID_175__0002
-                0x40000f14        0x4 ./objs/can_1063__0001.o
-                0x40000f14                txID_175__0002
- .sbss.g_Thread_Foreground_Idx
-                0x40000f18        0x1 ./objs/hw_user.o
-                0x40000f18                g_Thread_Foreground_Idx
- .sbss.g_Thread_Background_Idx
-                0x40000f19        0x1 ./objs/hw_user.o
-                0x40000f19                g_Thread_Background_Idx
- .sbss.app_is_in_shutdown
-                0x40000f1a        0x1 ./objs/hw_user.o
-                0x40000f1a                app_is_in_shutdown
- *fill*         0x40000f1b        0x1 
- .sbss.pSlave_LIN_Def
-                0x40000f1c        0x4 ./objs/lin_general.o
-                0x40000f1c                pSlave_LIN_Def
- .sbss.XcpCan0_Session
-                0x40000f20        0x1 ./objs/xcp_protocol.o
-                0x40000f20                XcpCan0_Session
- .sbss.Xcp0_SegStates
-                0x40000f21        0x4 ./objs/xcp_protocol.o
-                0x40000f21                Xcp0_SegStates
- *fill*         0x40000f25        0x3 
- .sbss.XcpCustSecurity
-                0x40000f28        0x4 ./objs/xcp_protocol.o
-                0x40000f28                XcpCustSecurity
- .sbss.XcpCan_TxPendingOnMsgObj
-                0x40000f2c        0x2 ./objs/xcp_protocol.o
-                0x40000f2c                XcpCan_TxPendingOnMsgObj
+ .sbss.rxAge_uds_receive
+                0x40000eba        0x2 ./objs/can_3349__0001.o
+                0x40000eba                rxAge_uds_receive
+ .sbss.txQHead_285__001
+                0x40000ebc        0x1 ./objs/can_3349__0001.o
+                0x40000ebc                txQHead_285__001
+ *fill*         0x40000ebd        0x3 
+ .sbss.txID_Tx_XCP_CAN1
+                0x40000ec0        0x4 ./objs/can_3349__0001.o
+                0x40000ec0                txID_Tx_XCP_CAN1
+ .sbss.txLen_71__0012
+                0x40000ec4        0x1 ./objs/can_3349__0001.o
+                0x40000ec4                txLen_71__0012
+ .sbss.rxBuf_uds_receive
+                0x40000ec5        0x8 ./objs/can_3349__0001.o
+                0x40000ec5                rxBuf_uds_receive
+ *fill*         0x40000ecd        0x3 
+ .sbss.txExt_285__001
+                0x40000ed0        0x1 ./objs/can_3349__0001.o
+                0x40000ed0                txExt_285__001
+ .sbss.rxQHead_174__001
+                0x40000ed1        0x1 ./objs/can_3350__0001.o
+                0x40000ed1                rxQHead_174__001
+ .sbss.rxQTail_1113__0033
+                0x40000ed2        0x1 ./objs/can_3350__0001.o
+                0x40000ed2                rxQTail_1113__0033
+ *fill*         0x40000ed3        0x1 
+ .sbss.rxAge_174__001
+                0x40000ed4        0x2 ./objs/can_3350__0001.o
+                0x40000ed4                rxAge_174__001
+ *fill*         0x40000ed6        0x2 
+ .sbss.rxLen_1111__0033
+                0x40000ed8        0x1 ./objs/can_3350__0001.o
+                0x40000ed8                rxLen_1111__0033
+ *fill*         0x40000ed9        0x3 
+ .sbss.rxID_174__001
+                0x40000edc        0x4 ./objs/can_3350__0001.o
+                0x40000edc                rxID_174__001
+ .sbss.txLen_175__001
+                0x40000ee0        0x1 ./objs/can_3350__0001.o
+                0x40000ee0                txLen_175__001
+ *fill*         0x40000ee1        0x3 
+ .sbss.txExt_175__001
+                0x40000ee4        0x1 ./objs/can_3350__0001.o
+                0x40000ee4                txExt_175__001
+ *fill*         0x40000ee5        0x3 
+ .sbss.rxLen_174__001
+                0x40000ee8        0x1 ./objs/can_3350__0001.o
+                0x40000ee8                rxLen_174__001
+ .sbss.rxBuf_1112__0033
+                0x40000ee9        0x8 ./objs/can_3350__0001.o
+                0x40000ee9                rxBuf_1112__0033
+ .sbss.txQTail_175__001
+                0x40000ef1        0x1 ./objs/can_3350__0001.o
+                0x40000ef1                txQTail_175__001
+ .sbss.rxQHead_1111__0033
+                0x40000ef2        0x1 ./objs/can_3350__0001.o
+                0x40000ef2                rxQHead_1111__0033
+ .sbss.rxBuf_174__001
+                0x40000ef3        0x8 ./objs/can_3350__0001.o
+                0x40000ef3                rxBuf_174__001
+ *fill*         0x40000efb        0x1 
+ .sbss.rxAge_1111__0033
+                0x40000efc        0x2 ./objs/can_3350__0001.o
+                0x40000efc                rxAge_1111__0033
+ .sbss.rxBuf_1113__0033
+                0x40000efe        0x8 ./objs/can_3350__0001.o
+                0x40000efe                rxBuf_1113__0033
+ *fill*         0x40000f06        0x2 
+ .sbss.rxID_1113__0033
+                0x40000f08        0x4 ./objs/can_3350__0001.o
+                0x40000f08                rxID_1113__0033
+ .sbss.rxID_1112__0033
+                0x40000f0c        0x4 ./objs/can_3350__0001.o
+                0x40000f0c                rxID_1112__0033
+ .sbss.rxQHead_1112__0033
+                0x40000f10        0x1 ./objs/can_3350__0001.o
+                0x40000f10                rxQHead_1112__0033
+ .sbss.rxQTail_1111__0033
+                0x40000f11        0x1 ./objs/can_3350__0001.o
+                0x40000f11                rxQTail_1111__0033
+ .sbss.txData_175__001
+                0x40000f12        0x8 ./objs/can_3350__0001.o
+                0x40000f12                txData_175__001
+ .sbss.rxAge_1112__0033
+                0x40000f1a        0x2 ./objs/can_3350__0001.o
+                0x40000f1a                rxAge_1112__0033
+ .sbss.rxLen_1112__0033
+                0x40000f1c        0x1 ./objs/can_3350__0001.o
+                0x40000f1c                rxLen_1112__0033
+ .sbss.rxQTail_1112__0033
+                0x40000f1d        0x1 ./objs/can_3350__0001.o
+                0x40000f1d                rxQTail_1112__0033
+ .sbss.rxQHead_1113__0033
+                0x40000f1e        0x1 ./objs/can_3350__0001.o
+                0x40000f1e                rxQHead_1113__0033
+ .sbss.txQHead_175__001
+                0x40000f1f        0x1 ./objs/can_3350__0001.o
+                0x40000f1f                txQHead_175__001
+ .sbss.started_3350__0001
+                0x40000f20        0x4 ./objs/can_3350__0001.o
+                0x40000f20                started_3350__0001
+ .sbss.rxID_1111__0033
+                0x40000f24        0x4 ./objs/can_3350__0001.o
+                0x40000f24                rxID_1111__0033
+ .sbss.txID_175__001
+                0x40000f28        0x4 ./objs/can_3350__0001.o
+                0x40000f28                txID_175__001
+ .sbss.rxAge_1113__0033
+                0x40000f2c        0x2 ./objs/can_3350__0001.o
+                0x40000f2c                rxAge_1113__0033
  *fill*         0x40000f2e        0x2 
+ .sbss.rxLen_1113__0033
+                0x40000f30        0x1 ./objs/can_3350__0001.o
+                0x40000f30                rxLen_1113__0033
+ .sbss.rxQTail_174__001
+                0x40000f31        0x1 ./objs/can_3350__0001.o
+                0x40000f31                rxQTail_174__001
+ .sbss.rxBuf_1111__0033
+                0x40000f32        0x8 ./objs/can_3350__0001.o
+                0x40000f32                rxBuf_1111__0033
+ .sbss.g_Thread_Foreground_Idx
+                0x40000f3a        0x1 ./objs/hw_user.o
+                0x40000f3a                g_Thread_Foreground_Idx
+ .sbss.g_Thread_Background_Idx
+                0x40000f3b        0x1 ./objs/hw_user.o
+                0x40000f3b                g_Thread_Background_Idx
+ .sbss.app_is_in_shutdown
+                0x40000f3c        0x1 ./objs/hw_user.o
+                0x40000f3c                app_is_in_shutdown
+ *fill*         0x40000f3d        0x3 
+ .sbss.pSlave_LIN_Def
+                0x40000f40        0x4 ./objs/lin_general.o
+                0x40000f40                pSlave_LIN_Def
+ .sbss.XcpCan0_Session
+                0x40000f44        0x1 ./objs/xcp_protocol.o
+                0x40000f44                XcpCan0_Session
+ .sbss.Xcp0_SegStates
+                0x40000f45        0x4 ./objs/xcp_protocol.o
+                0x40000f45                Xcp0_SegStates
+ *fill*         0x40000f49        0x3 
+ .sbss.XcpCustSecurity
+                0x40000f4c        0x4 ./objs/xcp_protocol.o
+                0x40000f4c                XcpCustSecurity
+ .sbss.XcpCan_TxPendingOnMsgObj
+                0x40000f50        0x2 ./objs/xcp_protocol.o
+                0x40000f50                XcpCan_TxPendingOnMsgObj
+ *fill*         0x40000f52        0x2 
  .sbss.XCP_MSG_RX_ID
-                0x40000f30        0x4 ./objs/xcp_protocol.o
-                0x40000f30                XCP_MSG_RX_ID
+                0x40000f54        0x4 ./objs/xcp_protocol.o
+                0x40000f54                XCP_MSG_RX_ID
  .sbss.Xcp_SavedMsr
-                0x40000f34        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_target.o)
-                0x40000f34                Xcp_SavedMsr
+                0x40000f58        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_target.o)
+                0x40000f58                Xcp_SavedMsr
  .sbss.nextSession
-                0x40000f38        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(SeednKey.o)
-                0x40000f38                nextSession
+                0x40000f5c        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(SeednKey.o)
+                0x40000f5c                nextSession
  .sbss.defaultKey
-                0x40000f39        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(SeednKey.o)
-                0x40000f39                defaultKey
+                0x40000f5d        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(SeednKey.o)
+                0x40000f5d                defaultKey
  .sbss.defaultSeed
-                0x40000f3d        0x6 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(SeednKey.o)
-                0x40000f3d                defaultSeed
+                0x40000f61        0x6 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(SeednKey.o)
+                0x40000f61                defaultSeed
  .sbss.defaultKeyBuf
-                0x40000f43        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(SeednKey.o)
-                0x40000f43                defaultKeyBuf
- *fill*         0x40000f47        0x1 
+                0x40000f67        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(SeednKey.o)
+                0x40000f67                defaultKeyBuf
+ *fill*         0x40000f6b        0x1 
  .sbss.g_FLEXCAN2_RX_OVERRUNS
-                0x40000f48        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(flexcan_init.o)
-                0x40000f48                g_FLEXCAN2_RX_OVERRUNS
+                0x40000f6c        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(flexcan_init.o)
+                0x40000f6c                g_FLEXCAN2_RX_OVERRUNS
  .sbss.g_FLEXCAN3_RX_OVERRUNS
-                0x40000f4c        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(flexcan_init.o)
-                0x40000f4c                g_FLEXCAN3_RX_OVERRUNS
+                0x40000f70        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(flexcan_init.o)
+                0x40000f70                g_FLEXCAN3_RX_OVERRUNS
  .sbss.pflash_pfcr1
-                0x40000f50        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(memory.o)
-                0x40000f50                pflash_pfcr1
+                0x40000f74        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(memory.o)
+                0x40000f74                pflash_pfcr1
  .sbss.pflash_pfcr2
-                0x40000f54        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(memory.o)
-                0x40000f54                pflash_pfcr2
+                0x40000f78        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(memory.o)
+                0x40000f78                pflash_pfcr2
  .sbss.g_Upper64Count
-                0x40000f58        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(system.o)
-                0x40000f58                g_Upper64Count
+                0x40000f7c        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(system.o)
+                0x40000f7c                g_Upper64Count
  .sbss.g_TicksInMS
-                0x40000f5c        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(system.o)
-                0x40000f5c                g_TicksInMS
+                0x40000f80        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(system.o)
+                0x40000f80                g_TicksInMS
  .sbss.g_WakeSources
-                0x40000f60        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(system.o)
-                0x40000f60                g_WakeSources
+                0x40000f84        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(system.o)
+                0x40000f84                g_WakeSources
  .sbss.NCV7517_FLTB
-                0x40000f61        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(drv_diagnostics.o)
-                0x40000f61                NCV7517_FLTB
+                0x40000f85        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(drv_diagnostics.o)
+                0x40000f85                NCV7517_FLTB
  .sbss.NCV7517_STAB
-                0x40000f62        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(drv_diagnostics.o)
-                0x40000f62                NCV7517_STAB
- *fill*         0x40000f63        0x1 
+                0x40000f86        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(drv_diagnostics.o)
+                0x40000f86                NCV7517_STAB
+ *fill*         0x40000f87        0x1 
  .sbss.g_EnableNCV7517_FaultRead
-                0x40000f64        0x2 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(drv_diagnostics.o)
-                0x40000f64                g_EnableNCV7517_FaultRead
+                0x40000f88        0x2 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(drv_diagnostics.o)
+                0x40000f88                g_EnableNCV7517_FaultRead
  .sbss.eraseStatus_Flag
-                0x40000f66        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_highlevel.o)
-                0x40000f66                eraseStatus_Flag
- *fill*         0x40000f67        0x1 
+                0x40000f8a        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_highlevel.o)
+                0x40000f8a                eraseStatus_Flag
+ *fill*         0x40000f8b        0x1 
  .sbss.erasingCycleInternal
-                0x40000f68        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_highlevel.o)
-                0x40000f68                erasingCycleInternal
+                0x40000f8c        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_highlevel.o)
+                0x40000f8c                erasingCycleInternal
  .sbss.sourceBlockIndexInternal
-                0x40000f6c        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_highlevel.o)
-                0x40000f6c                sourceBlockIndexInternal
+                0x40000f90        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_highlevel.o)
+                0x40000f90                sourceBlockIndexInternal
  .sbss.eccErrorStatus_Flag
-                0x40000f70        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_highlevel.o)
-                0x40000f70                eccErrorStatus_Flag
- *fill*         0x40000f71        0x1 
+                0x40000f94        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_highlevel.o)
+                0x40000f94                eccErrorStatus_Flag
+ *fill*         0x40000f95        0x1 
  .sbss.g_Enable_Pwm_Reads
-                0x40000f72        0x2 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(pwm_input.o)
-                0x40000f72                g_Enable_Pwm_Reads
+                0x40000f96        0x2 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(pwm_input.o)
+                0x40000f96                g_Enable_Pwm_Reads
  .sbss.g_SPI1_Initialized
-                0x40000f74        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(spidrv.o)
-                0x40000f74                g_SPI1_Initialized
+                0x40000f98        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(spidrv.o)
+                0x40000f98                g_SPI1_Initialized
  *(.bss)
- .bss           0x40000f75        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
- *fill*         0x40000f75        0x3 
- .bss           0x40000f78       0x20 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/crtbegin.o
- .bss           0x40000f98        0x0 ./objs/LIN2.o
- .bss           0x40000f98        0x0 ./objs/Lightning_McSeas_VCU_Current_Mode.o
- .bss           0x40000f98        0x0 ./objs/Timer_BGND_9AY_V.o
- .bss           0x40000f98        0x0 ./objs/Timer_ooqlV.o
- .bss           0x40000f98        0x0 ./objs/XCP_App.o
- .bss           0x40000f98        0x0 ./objs/can_1062__0001.o
- .bss           0x40000f98        0x0 ./objs/can_1063__0001.o
- .bss           0x40000f98        0x0 ./objs/data.o
- .bss           0x40000f98        0x0 ./objs/hw_user.o
- .bss           0x40000f98        0x0 ./objs/lin_1064__0001.o
- .bss           0x40000f98        0x0 ./objs/lin_general.o
- .bss           0x40000f98        0x0 ./objs/raptor_printf.o
- .bss           0x40000f98        0x0 ./objs/xcp_protocol.o
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_cmd.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_getrxbuf.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_gettxbuf.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_init.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_peekrxbuf.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_rxcallback.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_rxnext.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_txcallback.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_txnext.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmd.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdcalpage.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdchecksum.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdconnect.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmddaq.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmddownload.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmddyndaq.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdflash.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdseednkey.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdupload.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_event.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_stim.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_target.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(SeednKey.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_callbacks.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_daq.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(adc.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can_config.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(crc.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(digital_input.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(flexcan_init.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(Interrupt_Init.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(io_config.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(isr_table.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(lin.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(memory.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(outputs.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(processor_support.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(startup.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(system.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(sys_lib.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(task_scheduler.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(time.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(app_descriptor_cfg.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(bootmailbox.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(drv_diagnostics.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_highlevel.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_lowlevel.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_middlelevel.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(ee_C90_utils.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(ee_config.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(emios_init.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(exceptions.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(intc_sw_handlers.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(pwm_input.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(spidrv.o)
- .bss           0x40000f98        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(sysclk_init.o)
- .bss           0x40000f98        0x0 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(alloc.o)
- .bss           0x40000f98        0x0 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(rand.o)
- .bss           0x40000f98        0x0 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(memcmp.o)
- .bss           0x40000f98        0x0 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(memcpy.o)
- .bss           0x40000f98        0x0 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(memset.o)
- .bss           0x40000f98        0x0 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(__filll_mem.o)
- .bss           0x40000f98        0x0 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libm.a(float.o)
- .bss           0x40000f98        0x0 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libm.a(math_api.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_lshrdi3.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_ashldi3.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_fixunssfsi.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_fixunsdfsi.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_udivdi3.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_umoddi3.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_addsub_sf.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_mul_sf.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_div_sf.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_gt_sf.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_ge_sf.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_lt_sf.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_le_sf.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_si_to_sf.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_sf_to_si.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_sf_to_df.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_thenan_sf.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_usi_to_sf.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_addsub_df.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_mul_df.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_div_df.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_ne_df.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_gt_df.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_ge_df.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_lt_df.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_le_df.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_si_to_df.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_df_to_si.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_make_df.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_thenan_df.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_usi_to_df.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(e200crtresxgpr.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_pack_sf.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_unpack_sf.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_fpcmp_parts_sf.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_pack_df.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_unpack_df.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_fpcmp_parts_df.o)
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/crtend.o
- .bss           0x40000f98        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrtn.o
+ .bss           0x40000f99        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
+ *fill*         0x40000f99        0x3 
+ .bss           0x40000f9c       0x20 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/crtbegin.o
+ .bss           0x40000fbc        0x0 ./objs/LIN2.o
+ .bss           0x40000fbc        0x0 ./objs/Lightning_McSeas_VCU_Current_Mode.o
+ .bss           0x40000fbc        0x0 ./objs/Timer_BGND_9AY_V.o
+ .bss           0x40000fbc        0x0 ./objs/Timer_ooqlV.o
+ .bss           0x40000fbc        0x0 ./objs/XCP_App.o
+ .bss           0x40000fbc        0x0 ./objs/can_3349__0001.o
+ .bss           0x40000fbc        0x0 ./objs/can_3350__0001.o
+ .bss           0x40000fbc        0x0 ./objs/data.o
+ .bss           0x40000fbc        0x0 ./objs/hw_user.o
+ .bss           0x40000fbc        0x0 ./objs/lin_3351__0001.o
+ .bss           0x40000fbc        0x0 ./objs/lin_general.o
+ .bss           0x40000fbc        0x0 ./objs/raptor_printf.o
+ .bss           0x40000fbc        0x0 ./objs/xcp_protocol.o
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_cmd.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_getrxbuf.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_gettxbuf.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_init.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_peekrxbuf.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_rxcallback.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_rxnext.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_txcallback.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_txnext.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmd.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdcalpage.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdchecksum.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdconnect.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmddaq.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmddownload.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmddyndaq.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdflash.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdseednkey.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdupload.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_event.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_stim.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_target.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(SeednKey.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_callbacks.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_daq.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(adc.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can_config.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(crc.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(digital_input.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(flexcan_init.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(Interrupt_Init.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(io_config.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(isr_table.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(lin.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(memory.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(outputs.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(processor_support.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(startup.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(system.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(sys_lib.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(task_scheduler.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(time.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(app_descriptor_cfg.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(bootmailbox.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(drv_diagnostics.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_highlevel.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_lowlevel.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_middlelevel.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(ee_C90_utils.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(ee_config.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(emios_init.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(exceptions.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(intc_sw_handlers.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(pwm_input.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(spidrv.o)
+ .bss           0x40000fbc        0x0 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(sysclk_init.o)
+ .bss           0x40000fbc        0x0 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(alloc.o)
+ .bss           0x40000fbc        0x0 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(rand.o)
+ .bss           0x40000fbc        0x0 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(memcmp.o)
+ .bss           0x40000fbc        0x0 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(memcpy.o)
+ .bss           0x40000fbc        0x0 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(memset.o)
+ .bss           0x40000fbc        0x0 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(__filll_mem.o)
+ .bss           0x40000fbc        0x0 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libm.a(float.o)
+ .bss           0x40000fbc        0x0 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libm.a(math_api.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_lshrdi3.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_ashldi3.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_fixunssfsi.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_fixunsdfsi.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_udivdi3.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_umoddi3.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_addsub_sf.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_mul_sf.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_div_sf.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_gt_sf.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_ge_sf.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_lt_sf.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_le_sf.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_si_to_sf.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_sf_to_si.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_sf_to_df.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_thenan_sf.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_usi_to_sf.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_addsub_df.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_mul_df.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_div_df.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_ne_df.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_gt_df.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_ge_df.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_lt_df.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_le_df.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_si_to_df.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_df_to_si.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_make_df.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_thenan_df.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_usi_to_df.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(e200crtresxgpr.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_pack_sf.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_unpack_sf.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_pack_df.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_unpack_df.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4\libgcc.a(_fpcmp_parts_df.o)
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/crtend.o
+ .bss           0x40000fbc        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrtn.o
  *(.bss.*)
  .bss.rtb_LogicalOperator2_e_prev.9882
-                0x40000f98        0x1 ./objs/Lightning_McSeas_VCU_Current_Mode.o
- *fill*         0x40000f99        0x3 
+                0x40000fbc        0x1 ./objs/Lightning_McSeas_VCU_Current_Mode.o
+ *fill*         0x40000fbd        0x3 
  .bss.Lightning_McSeas_VCU_Current_Mode_DWork
-                0x40000f9c       0x28 ./objs/Lightning_McSeas_VCU_Current_Mode.o
-                0x40000f9c                Lightning_McSeas_VCU_Current_Mode_DWork
+                0x40000fc0       0x28 ./objs/Lightning_McSeas_VCU_Current_Mode.o
+                0x40000fc0                Lightning_McSeas_VCU_Current_Mode_DWork
  .bss.eeWrite_Ptr.10000
-                0x40000fc4        0x4 ./objs/data.o
+                0x40000fe8        0x4 ./objs/data.o
  .bss.eeWrite_Idx.10001
-                0x40000fc8        0x2 ./objs/data.o
- *fill*         0x40000fca        0x2 
+                0x40000fec        0x2 ./objs/data.o
+ *fill*         0x40000fee        0x2 
  .bss.RAMVariables
-                0x40000fcc       0x48 ./objs/data.o
-                0x40000fcc                RAMVariables
+                0x40000ff0       0x48 ./objs/data.o
+                0x40000ff0                RAMVariables
  .bss.EEVariables_RAMShadow
-                0x40001014       0x2c ./objs/data.o
-                0x40001014                EEVariables_RAMShadow
- .bss.page0     0x40001040        0xd ./objs/data.o
-                0x40001040                page0
- *fill*         0x4000104d        0x3 
+                0x40001038       0x2c ./objs/data.o
+                0x40001038                EEVariables_RAMShadow
+ .bss.page0     0x40001064        0xd ./objs/data.o
+                0x40001064                page0
+ *fill*         0x40001071        0x3 
  .bss.CAN3_RxQueue_data
-                0x40001050       0x10 ./objs/hw_user.o
-                0x40001050                CAN3_RxQueue_data
+                0x40001074       0x10 ./objs/hw_user.o
+                0x40001074                CAN3_RxQueue_data
  .bss.g_CAN5_TxQueue
-                0x40001060       0x10 ./objs/hw_user.o
-                0x40001060                g_CAN5_TxQueue
+                0x40001084       0x10 ./objs/hw_user.o
+                0x40001084                g_CAN5_TxQueue
  .bss.g_CAN1_RxQueue
-                0x40001070       0x10 ./objs/hw_user.o
-                0x40001070                g_CAN1_RxQueue
+                0x40001094       0x10 ./objs/hw_user.o
+                0x40001094                g_CAN1_RxQueue
  .bss.CAN5_TxQueue_data
-                0x40001080       0x10 ./objs/hw_user.o
-                0x40001080                CAN5_TxQueue_data
+                0x400010a4       0x10 ./objs/hw_user.o
+                0x400010a4                CAN5_TxQueue_data
  .bss.CAN2_TxQueue_data
-                0x40001090      0x140 ./objs/hw_user.o
-                0x40001090                CAN2_TxQueue_data
+                0x400010b4      0x140 ./objs/hw_user.o
+                0x400010b4                CAN2_TxQueue_data
  .bss.g_CAN4_RxQueue
-                0x400011d0       0x10 ./objs/hw_user.o
-                0x400011d0                g_CAN4_RxQueue
+                0x400011f4       0x10 ./objs/hw_user.o
+                0x400011f4                g_CAN4_RxQueue
  .bss.CAN5_RxQueue_data
-                0x400011e0       0x10 ./objs/hw_user.o
-                0x400011e0                CAN5_RxQueue_data
+                0x40001204       0x10 ./objs/hw_user.o
+                0x40001204                CAN5_RxQueue_data
  .bss.CAN6_RxQueue_data
-                0x400011f0       0x10 ./objs/hw_user.o
-                0x400011f0                CAN6_RxQueue_data
+                0x40001214       0x10 ./objs/hw_user.o
+                0x40001214                CAN6_RxQueue_data
  .bss.g_CAN3_TxQueue
-                0x40001200       0x10 ./objs/hw_user.o
-                0x40001200                g_CAN3_TxQueue
+                0x40001224       0x10 ./objs/hw_user.o
+                0x40001224                g_CAN3_TxQueue
  .bss.g_CAN6_TxQueue
-                0x40001210       0x10 ./objs/hw_user.o
-                0x40001210                g_CAN6_TxQueue
+                0x40001234       0x10 ./objs/hw_user.o
+                0x40001234                g_CAN6_TxQueue
  .bss.g_CAN2_RxQueue
-                0x40001220       0x10 ./objs/hw_user.o
-                0x40001220                g_CAN2_RxQueue
+                0x40001244       0x10 ./objs/hw_user.o
+                0x40001244                g_CAN2_RxQueue
  .bss.CAN6_TxQueue_data
-                0x40001230       0x10 ./objs/hw_user.o
-                0x40001230                CAN6_TxQueue_data
+                0x40001254       0x10 ./objs/hw_user.o
+                0x40001254                CAN6_TxQueue_data
  .bss.CAN4_TxQueue_data
-                0x40001240       0x10 ./objs/hw_user.o
-                0x40001240                CAN4_TxQueue_data
+                0x40001264       0x10 ./objs/hw_user.o
+                0x40001264                CAN4_TxQueue_data
  .bss.CAN1_TxQueue_data
-                0x40001250      0x140 ./objs/hw_user.o
-                0x40001250                CAN1_TxQueue_data
+                0x40001274      0x140 ./objs/hw_user.o
+                0x40001274                CAN1_TxQueue_data
  .bss.g_CAN1_TxQueue
-                0x40001390       0x10 ./objs/hw_user.o
-                0x40001390                g_CAN1_TxQueue
+                0x400013b4       0x10 ./objs/hw_user.o
+                0x400013b4                g_CAN1_TxQueue
  .bss.g_CAN4_TxQueue
-                0x400013a0       0x10 ./objs/hw_user.o
-                0x400013a0                g_CAN4_TxQueue
+                0x400013c4       0x10 ./objs/hw_user.o
+                0x400013c4                g_CAN4_TxQueue
  .bss.CAN4_RxQueue_data
-                0x400013b0       0x10 ./objs/hw_user.o
-                0x400013b0                CAN4_RxQueue_data
+                0x400013d4       0x10 ./objs/hw_user.o
+                0x400013d4                CAN4_RxQueue_data
  .bss.CAN1_RxQueue_data
-                0x400013c0      0x100 ./objs/hw_user.o
-                0x400013c0                CAN1_RxQueue_data
+                0x400013e4      0x100 ./objs/hw_user.o
+                0x400013e4                CAN1_RxQueue_data
  .bss.g_CAN3_RxQueue
-                0x400014c0       0x10 ./objs/hw_user.o
-                0x400014c0                g_CAN3_RxQueue
+                0x400014e4       0x10 ./objs/hw_user.o
+                0x400014e4                g_CAN3_RxQueue
  .bss.CAN2_RxQueue_data
-                0x400014d0      0x100 ./objs/hw_user.o
-                0x400014d0                CAN2_RxQueue_data
+                0x400014f4      0x100 ./objs/hw_user.o
+                0x400014f4                CAN2_RxQueue_data
  .bss.g_CAN6_RxQueue
-                0x400015d0       0x10 ./objs/hw_user.o
-                0x400015d0                g_CAN6_RxQueue
+                0x400015f4       0x10 ./objs/hw_user.o
+                0x400015f4                g_CAN6_RxQueue
  .bss.CAN3_TxQueue_data
-                0x400015e0       0x10 ./objs/hw_user.o
-                0x400015e0                CAN3_TxQueue_data
+                0x40001604       0x10 ./objs/hw_user.o
+                0x40001604                CAN3_TxQueue_data
  .bss.g_CAN2_TxQueue
-                0x400015f0       0x10 ./objs/hw_user.o
-                0x400015f0                g_CAN2_TxQueue
+                0x40001614       0x10 ./objs/hw_user.o
+                0x40001614                g_CAN2_TxQueue
  .bss.g_CAN5_RxQueue
-                0x40001600       0x10 ./objs/hw_user.o
-                0x40001600                g_CAN5_RxQueue
+                0x40001624       0x10 ./objs/hw_user.o
+                0x40001624                g_CAN5_RxQueue
  .bss.Xcp0_OdtEntryAddrs
-                0x40001610      0xaf0 ./objs/xcp_protocol.o
-                0x40001610                Xcp0_OdtEntryAddrs
+                0x40001634      0xaf0 ./objs/xcp_protocol.o
+                0x40001634                Xcp0_OdtEntryAddrs
  .bss.Xcp_Sessions
-                0x40002100       0x18 ./objs/xcp_protocol.o
-                0x40002100                Xcp_Sessions
+                0x40002124       0x18 ./objs/xcp_protocol.o
+                0x40002124                Xcp_Sessions
  .bss.XcpCan0_DynDaqMsgIds
-                0x40002118       0x14 ./objs/xcp_protocol.o
-                0x40002118                XcpCan0_DynDaqMsgIds
+                0x4000213c       0x14 ./objs/xcp_protocol.o
+                0x4000213c                XcpCan0_DynDaqMsgIds
  .bss.Xcp0_DaqStates
-                0x4000212c       0x14 ./objs/xcp_protocol.o
-                0x4000212c                Xcp0_DaqStates
+                0x40002150       0x14 ./objs/xcp_protocol.o
+                0x40002150                Xcp0_DaqStates
  .bss.XcpCan0_QueuePositions
-                0x40002140       0x40 ./objs/xcp_protocol.o
-                0x40002140                XcpCan0_QueuePositions
+                0x40002164       0x40 ./objs/xcp_protocol.o
+                0x40002164                XcpCan0_QueuePositions
  .bss.XcpCan0_QueueBuffers
-                0x40002180      0x350 ./objs/xcp_protocol.o
-                0x40002180                XcpCan0_QueueBuffers
+                0x400021a4      0x350 ./objs/xcp_protocol.o
+                0x400021a4                XcpCan0_QueueBuffers
  .bss.XcpCan0_QueueBufferStates
-                0x400024d0       0x6a ./objs/xcp_protocol.o
-                0x400024d0                XcpCan0_QueueBufferStates
+                0x400024f4       0x6a ./objs/xcp_protocol.o
+                0x400024f4                XcpCan0_QueueBufferStates
  .bss.odtEntryNums
-                0x4000253a       0x64 ./objs/xcp_protocol.o
-                0x4000253a                odtEntryNums
- *fill*         0x4000259e        0x2 
+                0x4000255e       0x64 ./objs/xcp_protocol.o
+                0x4000255e                odtEntryNums
+ *fill*         0x400025c2        0x2 
  .bss.Xcp0_OdtEntryCfgs
-                0x400025a0      0x2bc ./objs/xcp_protocol.o
-                0x400025a0                Xcp0_OdtEntryCfgs
+                0x400025c4      0x2bc ./objs/xcp_protocol.o
+                0x400025c4                Xcp0_OdtEntryCfgs
  .bss.xcpSessions
-                0x4000285c       0x1c C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(SeednKey.o)
-                0x4000285c                xcpSessions
+                0x40002880       0x1c C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(SeednKey.o)
+                0x40002880                xcpSessions
  .bss.sl_adc1_ncmr0
-                0x40002878        0x2 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(adc.o)
+                0x4000289c        0x2 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(adc.o)
  .bss.sl_adc1_ncmr1
-                0x4000287a        0x2 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(adc.o)
- .bss.CANStats  0x4000287c       0xa8 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can.o)
-                0x4000287c                CANStats
- .bss.TxBuf     0x40002924        0x8 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can.o)
+                0x4000289e        0x2 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(adc.o)
+ .bss.CANStats  0x400028a0       0xa8 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can.o)
+                0x400028a0                CANStats
+ .bss.TxBuf     0x40002948        0x8 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can.o)
  .bss.txMailbox.8888
-                0x4000292c        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can.o)
- *fill*         0x4000292d        0x3 
+                0x40002950        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can.o)
+ *fill*         0x40002951        0x3 
  .bss.frame.8917
-                0x40002930       0x10 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can.o)
+                0x40002954       0x10 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can.o)
  .bss.eeDataBuffer
-                0x40002940       0x70 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(memory.o)
-                0x40002940                eeDataBuffer
- .bss.table     0x400029b0       0x80 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(memory.o)
-                0x400029b0                table
+                0x40002964       0x70 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(memory.o)
+                0x40002964                eeDataBuffer
+ .bss.table     0x400029d4       0x80 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(memory.o)
+                0x400029d4                table
  .bss.s_out_status
-                0x40002a30       0xe4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(outputs.o)
-                0x40002a30                s_out_status
+                0x40002a54       0xe4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(outputs.o)
+                0x40002a54                s_out_status
  .bss.g_ResetCause
-                0x40002b14        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(processor_support.o)
+                0x40002b38        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(processor_support.o)
  .bss.time.9172
-                0x40002b18        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(sys_lib.o)
+                0x40002b3c        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(sys_lib.o)
  .bss.TaskStats
-                0x40002b1c      0x200 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(task_scheduler.o)
+                0x40002b40      0x200 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(task_scheduler.o)
  .bss.SchedulerStats
-                0x40002d1c       0x10 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(task_scheduler.o)
+                0x40002d40       0x10 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(task_scheduler.o)
  .bss.TaskParams
-                0x40002d2c      0x100 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(task_scheduler.o)
+                0x40002d50      0x100 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(task_scheduler.o)
  .bss.CurrentTaskId
-                0x40002e2c        0x2 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(task_scheduler.o)
+                0x40002e50        0x2 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(task_scheduler.o)
  .bss.SchedulerStarted
-                0x40002e2e        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(task_scheduler.o)
- *fill*         0x40002e2f        0x1 
+                0x40002e52        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(task_scheduler.o)
+ *fill*         0x40002e53        0x1 
  .bss.g_CurrentTickCount
-                0x40002e30        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(task_scheduler.o)
+                0x40002e54        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(task_scheduler.o)
  .bss.taskId.8316
-                0x40002e34        0x2 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(task_scheduler.o)
- *fill*         0x40002e36        0x2 
+                0x40002e58        0x2 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(task_scheduler.o)
+ *fill*         0x40002e5a        0x2 
  .bss.spiFaultData
-                0x40002e38        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(drv_diagnostics.o)
+                0x40002e5c        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(drv_diagnostics.o)
  .bss.eccErrorModule_Flag
-                0x40002e3c        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_lowlevel.o)
- *fill*         0x40002e3d        0x3 
+                0x40002e60        0x1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_lowlevel.o)
+ *fill*         0x40002e61        0x3 
  .bss.swapCache
-                0x40002e40       0x30 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_middlelevel.o)
+                0x40002e64       0x30 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_middlelevel.o)
  .bss.BUS_PERIOD_TICKS
-                0x40002e70        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(emios_init.o)
+                0x40002e94        0x4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(emios_init.o)
  .bss.pwm_inputs
-                0x40002e74       0x30 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(pwm_input.o)
-                0x40002e74                pwm_inputs
- .bss.head      0x40002ea4        0x4 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(alloc.o)
+                0x40002e98       0x30 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(pwm_input.o)
+                0x40002e98                pwm_inputs
+ .bss.head      0x40002ec8        0x4 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(alloc.o)
  .bss.heap_end.1682
-                0x40002ea8        0x4 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(alloc.o)
+                0x40002ecc        0x4 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(alloc.o)
  *(COMMON)
-                0x40002eac                __BSS_END = .
+                0x40002ed0                __BSS_END = .
                 0x40000904                __DATA_SRAM_ADDR = ADDR (.data)
                 0x40000c88                __SDATA_SRAM_ADDR = ADDR (.sdata)
                 0x00000310                __DATA_SIZE = SIZEOF (.data)
                 0x000000fc                __SDATA_SIZE = SIZEOF (.sdata)
-                0x000466e4                __DATA_ROM_ADDR = LOADADDR (.data)
-                0x00046a68                __SDATA_ROM_ADDR = LOADADDR (.sdata)
+                0x000466dc                __DATA_ROM_ADDR = LOADADDR (.data)
+                0x00046a60                __SDATA_ROM_ADDR = LOADADDR (.sdata)
                 0x00010000                __SRAM_SIZE = SRAM_SIZE
                 0x40000000                __SRAM_BASE_ADDR = SRAM_BASE_ADDR
-                0x00002128                __BSS_SIZE = (__BSS_END - __BSS_START)
+                0x0000214c                __BSS_SIZE = (__BSS_END - __BSS_START)
                 0x40000000                __gcc_ramstart = ORIGIN (sram_memory)
                 0x4000ff80                __gcc_ramend = (ORIGIN (sram_memory) + LENGTH (sram_memory))
                 0x000bffff                __gcc_romend = ORIGIN (flash_end)
                 0x00022ff0                __gcc_end_intc_vector_table = (ADDR (.intc_vector_table) + SIZEOF (.intc_vector_table))
-                0x000466cc                __gcc_rombootcodeend = __gccend_rom
+                0x000466c4                __gcc_rombootcodeend = __gccend_rom
                 0x000bffff                __gcc_app_end = ORIGIN (flash_end)
                 0x00020100                __gcc_begin_app_desc = ORIGIN (flash_app)
-                0x000466cc                __gcc_begin_postbuild_config_desc = ADDR (.postbuild_config_desc)
+                0x000466c4                __gcc_begin_postbuild_config_desc = ADDR (.postbuild_config_desc)
                 0x00021000                __gcc_begin_ivor_branch_table = ADDR (.core_exceptions_table)
                 0x000bffff                __ghs_romend = ORIGIN (flash_end)
                 0x00021000                EXCEPTION_HANDLERS = ADDR (.core_exceptions_table)
                 0x00021000                __IVPR_VALUE = ADDR (.core_exceptions_table)
 OUTPUT(Lightning_McSeas_VCU_Current_Mode.elf elf32-powerpc)
 
-.plt            0x40002eac        0x0 load address 0x00046b64
- .plt           0x40002eac        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
+.plt            0x40002ed0        0x0 load address 0x00046b5c
+ .plt           0x40002ed0        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
 
-.dynbss         0x40002eac        0x0 load address 0x00046b64
- .dynbss        0x40002eac        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
+.dynbss         0x40002ed0        0x0 load address 0x00046b5c
+ .dynbss        0x40002ed0        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
 
-.iplt           0x40002eb0        0x0 load address 0x00046b64
- .iplt          0x40002eb0        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
+.iplt           0x40002ed0        0x0 load address 0x00046b5c
+ .iplt          0x40002ed0        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
 
-.dynsbss        0x40002eac        0x0 load address 0x00046b64
- .dynsbss       0x40002eac        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
+.dynsbss        0x40002ed0        0x0 load address 0x00046b5c
+ .dynsbss       0x40002ed0        0x0 c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
 
 .comment        0x00000000       0x9c
  .comment       0x00000000        0xd c:/nxp/s32ds_power_v2.1/s32ds/build_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.4/ecrti.o
@@ -5346,11 +5354,11 @@ OUTPUT(Lightning_McSeas_VCU_Current_Mode.elf elf32-powerpc)
  .comment       0x0000008f       0x83 ./objs/Timer_BGND_9AY_V.o
  .comment       0x0000008f       0x83 ./objs/Timer_ooqlV.o
  .comment       0x0000008f       0x83 ./objs/XCP_App.o
- .comment       0x0000008f       0x83 ./objs/can_1062__0001.o
- .comment       0x0000008f       0x83 ./objs/can_1063__0001.o
+ .comment       0x0000008f       0x83 ./objs/can_3349__0001.o
+ .comment       0x0000008f       0x83 ./objs/can_3350__0001.o
  .comment       0x0000008f       0x83 ./objs/data.o
  .comment       0x0000008f       0x83 ./objs/hw_user.o
- .comment       0x0000008f       0x83 ./objs/lin_1064__0001.o
+ .comment       0x0000008f       0x83 ./objs/lin_3351__0001.o
  .comment       0x0000008f       0x83 ./objs/lin_general.o
  .comment       0x0000008f       0x83 ./objs/raptor_printf.o
  .comment       0x0000008f       0x83 ./objs/xcp_protocol.o
@@ -5439,9 +5447,9 @@ OUTPUT(Lightning_McSeas_VCU_Current_Mode.elf elf32-powerpc)
  .PPC.EMB.apuinfo
                 0x00000090       0x18 ./objs/XCP_App.o
  .PPC.EMB.apuinfo
-                0x000000a8       0x18 ./objs/can_1062__0001.o
+                0x000000a8       0x18 ./objs/can_3349__0001.o
  .PPC.EMB.apuinfo
-                0x000000c0       0x18 ./objs/can_1063__0001.o
+                0x000000c0       0x18 ./objs/can_3350__0001.o
  .PPC.EMB.apuinfo
                 0x000000d8       0x18 ./objs/data.o
  .PPC.EMB.apuinfo
@@ -5720,11 +5728,11 @@ OUTPUT(Lightning_McSeas_VCU_Current_Mode.elf elf32-powerpc)
  .debug_info    0x000012e5       0x95 ./objs/Timer_BGND_9AY_V.o
  .debug_info    0x0000137a       0x95 ./objs/Timer_ooqlV.o
  .debug_info    0x0000140f      0x464 ./objs/XCP_App.o
- .debug_info    0x00001873     0x17f0 ./objs/can_1062__0001.o
- .debug_info    0x00003063      0x8b8 ./objs/can_1063__0001.o
+ .debug_info    0x00001873     0x17f0 ./objs/can_3349__0001.o
+ .debug_info    0x00003063      0x8b8 ./objs/can_3350__0001.o
  .debug_info    0x0000391b      0x936 ./objs/data.o
  .debug_info    0x00004251      0x8ea ./objs/hw_user.o
- .debug_info    0x00004b3b       0x79 ./objs/lin_1064__0001.o
+ .debug_info    0x00004b3b       0x79 ./objs/lin_3351__0001.o
  .debug_info    0x00004bb4      0x533 ./objs/lin_general.o
  .debug_info    0x000050e7      0xeee ./objs/raptor_printf.o
  .debug_info    0x00005fd5     0x110f ./objs/xcp_protocol.o
@@ -5801,11 +5809,11 @@ OUTPUT(Lightning_McSeas_VCU_Current_Mode.elf elf32-powerpc)
  .debug_abbrev  0x000002e6       0x3b ./objs/Timer_BGND_9AY_V.o
  .debug_abbrev  0x00000321       0x3b ./objs/Timer_ooqlV.o
  .debug_abbrev  0x0000035c      0x15b ./objs/XCP_App.o
- .debug_abbrev  0x000004b7      0x2ee ./objs/can_1062__0001.o
- .debug_abbrev  0x000007a5      0x1db ./objs/can_1063__0001.o
+ .debug_abbrev  0x000004b7      0x2ee ./objs/can_3349__0001.o
+ .debug_abbrev  0x000007a5      0x1db ./objs/can_3350__0001.o
  .debug_abbrev  0x00000980      0x1ad ./objs/data.o
  .debug_abbrev  0x00000b2d      0x163 ./objs/hw_user.o
- .debug_abbrev  0x00000c90       0x26 ./objs/lin_1064__0001.o
+ .debug_abbrev  0x00000c90       0x26 ./objs/lin_3351__0001.o
  .debug_abbrev  0x00000cb6       0xe3 ./objs/lin_general.o
  .debug_abbrev  0x00000d99      0x2b0 ./objs/raptor_printf.o
  .debug_abbrev  0x00001049      0x15a ./objs/xcp_protocol.o
@@ -5882,8 +5890,8 @@ OUTPUT(Lightning_McSeas_VCU_Current_Mode.elf elf32-powerpc)
  .debug_loc     0x00000b26       0x2c ./objs/Timer_BGND_9AY_V.o
  .debug_loc     0x00000b52       0x2c ./objs/Timer_ooqlV.o
  .debug_loc     0x00000b7e      0x236 ./objs/XCP_App.o
- .debug_loc     0x00000db4      0xa89 ./objs/can_1062__0001.o
- .debug_loc     0x0000183d      0x3d2 ./objs/can_1063__0001.o
+ .debug_loc     0x00000db4      0xa89 ./objs/can_3349__0001.o
+ .debug_loc     0x0000183d      0x3d2 ./objs/can_3350__0001.o
  .debug_loc     0x00001c0f      0x1d1 ./objs/data.o
  .debug_loc     0x00001de0       0xdc ./objs/hw_user.o
  .debug_loc     0x00001ebc       0x2c ./objs/lin_general.o
@@ -5959,15 +5967,15 @@ OUTPUT(Lightning_McSeas_VCU_Current_Mode.elf elf32-powerpc)
  .debug_aranges
                 0x000000d8       0x48 ./objs/XCP_App.o
  .debug_aranges
-                0x00000120      0x180 ./objs/can_1062__0001.o
+                0x00000120      0x180 ./objs/can_3349__0001.o
  .debug_aranges
-                0x000002a0       0x90 ./objs/can_1063__0001.o
+                0x000002a0       0x90 ./objs/can_3350__0001.o
  .debug_aranges
                 0x00000330       0x50 ./objs/data.o
  .debug_aranges
                 0x00000380       0x50 ./objs/hw_user.o
  .debug_aranges
-                0x000003d0       0x18 ./objs/lin_1064__0001.o
+                0x000003d0       0x18 ./objs/lin_3351__0001.o
  .debug_aranges
                 0x000003e8       0x20 ./objs/lin_general.o
  .debug_aranges
@@ -6113,11 +6121,11 @@ OUTPUT(Lightning_McSeas_VCU_Current_Mode.elf elf32-powerpc)
  .debug_line    0x00000619       0x44 ./objs/Timer_BGND_9AY_V.o
  .debug_line    0x0000065d       0x3f ./objs/Timer_ooqlV.o
  .debug_line    0x0000069c      0x191 ./objs/XCP_App.o
- .debug_line    0x0000082d      0x4ea ./objs/can_1062__0001.o
- .debug_line    0x00000d17      0x2b4 ./objs/can_1063__0001.o
+ .debug_line    0x0000082d      0x4ea ./objs/can_3349__0001.o
+ .debug_line    0x00000d17      0x2b4 ./objs/can_3350__0001.o
  .debug_line    0x00000fcb      0x1da ./objs/data.o
  .debug_line    0x000011a5      0x1bb ./objs/hw_user.o
- .debug_line    0x00001360       0x1d ./objs/lin_1064__0001.o
+ .debug_line    0x00001360       0x1d ./objs/lin_3351__0001.o
  .debug_line    0x0000137d       0xfa ./objs/lin_general.o
  .debug_line    0x00001477      0x503 ./objs/raptor_printf.o
  .debug_line    0x0000197a       0xca ./objs/xcp_protocol.o
@@ -6188,7 +6196,7 @@ OUTPUT(Lightning_McSeas_VCU_Current_Mode.elf elf32-powerpc)
  .debug_line    0x0000c276      0x18a C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libm.a(float.o)
  .debug_line    0x0000c400      0x2a3 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libm.a(math_api.o)
 
-.debug_str      0x00000000    0x160c1
+.debug_str      0x00000000    0x160b7
  .debug_str     0x00000000      0x62d ./objs/LIN2.o
                                 0x6ed (size before relaxing)
  .debug_str     0x0000062d      0xde1 ./objs/Lightning_McSeas_VCU_Current_Mode.o
@@ -6199,149 +6207,149 @@ OUTPUT(Lightning_McSeas_VCU_Current_Mode.elf elf32-powerpc)
                                 0x295 (size before relaxing)
  .debug_str     0x0000144c      0x177 ./objs/XCP_App.o
                                 0x515 (size before relaxing)
- .debug_str     0x000015c3      0xac6 ./objs/can_1062__0001.o
-                               0x1098 (size before relaxing)
- .debug_str     0x00002089      0x355 ./objs/can_1063__0001.o
-                                0x6ff (size before relaxing)
- .debug_str     0x000023de      0x3af ./objs/data.o
+ .debug_str     0x000015c3      0xab5 ./objs/can_3349__0001.o
+                               0x1087 (size before relaxing)
+ .debug_str     0x00002078      0x35c ./objs/can_3350__0001.o
+                                0x706 (size before relaxing)
+ .debug_str     0x000023d4      0x3af ./objs/data.o
                                 0xbc0 (size before relaxing)
- .debug_str     0x0000278d      0x2ca ./objs/hw_user.o
+ .debug_str     0x00002783      0x2ca ./objs/hw_user.o
                                 0x998 (size before relaxing)
- .debug_str     0x00002a57       0x11 ./objs/lin_1064__0001.o
+ .debug_str     0x00002a4d       0x11 ./objs/lin_3351__0001.o
                                 0x287 (size before relaxing)
- .debug_str     0x00002a68      0x160 ./objs/lin_general.o
+ .debug_str     0x00002a5e      0x160 ./objs/lin_general.o
                                 0x72d (size before relaxing)
- .debug_str     0x00002bc8      0x1ed ./objs/raptor_printf.o
+ .debug_str     0x00002bbe      0x1ed ./objs/raptor_printf.o
                                 0x4a4 (size before relaxing)
- .debug_str     0x00002db5      0x79c ./objs/xcp_protocol.o
+ .debug_str     0x00002dab      0x79c ./objs/xcp_protocol.o
                                 0xef6 (size before relaxing)
- .debug_str     0x00003551     0x3943 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp.o)
+ .debug_str     0x00003547     0x3943 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp.o)
                                0x3dcb (size before relaxing)
- .debug_str     0x00006e94      0x209 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_cmd.o)
+ .debug_str     0x00006e8a      0x209 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_cmd.o)
                                0x3f2d (size before relaxing)
- .debug_str     0x0000709d       0xab C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_getrxbuf.o)
+ .debug_str     0x00007093       0xab C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_getrxbuf.o)
                                0x3e55 (size before relaxing)
- .debug_str     0x00007148       0x41 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_gettxbuf.o)
+ .debug_str     0x0000713e       0x41 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_gettxbuf.o)
                                0x3e64 (size before relaxing)
- .debug_str     0x00007189       0x3e C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_init.o)
+ .debug_str     0x0000717f       0x3e C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_init.o)
                                0x3e7e (size before relaxing)
- .debug_str     0x000071c7       0x3c C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_peekrxbuf.o)
+ .debug_str     0x000071bd       0x3c C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_peekrxbuf.o)
                                0x3e6b (size before relaxing)
- .debug_str     0x00007203       0x7c C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_rxcallback.o)
+ .debug_str     0x000071f9       0x7c C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_rxcallback.o)
                                0x3ec6 (size before relaxing)
- .debug_str     0x0000727f       0x3b C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_rxnext.o)
+ .debug_str     0x00007275       0x3b C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_rxnext.o)
                                0x3e6e (size before relaxing)
- .debug_str     0x000072ba       0x88 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_txcallback.o)
+ .debug_str     0x000072b0       0x88 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_txcallback.o)
                                0x3ee1 (size before relaxing)
- .debug_str     0x00007342       0x4d C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_txnext.o)
+ .debug_str     0x00007338       0x4d C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcpcan_txnext.o)
                                0x3f08 (size before relaxing)
- .debug_str     0x0000738f      0x216 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmd.o)
+ .debug_str     0x00007385      0x216 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmd.o)
                                0x4021 (size before relaxing)
- .debug_str     0x000075a5      0x1e3 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdcalpage.o)
+ .debug_str     0x0000759b      0x1e3 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdcalpage.o)
                                0x3ead (size before relaxing)
- .debug_str     0x00007788       0xe5 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdchecksum.o)
+ .debug_str     0x0000777e       0xe5 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdchecksum.o)
                                0x3bcc (size before relaxing)
- .debug_str     0x0000786d      0x111 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdconnect.o)
+ .debug_str     0x00007863      0x111 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdconnect.o)
                                0x3e4b (size before relaxing)
- .debug_str     0x0000797e      0x348 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmddaq.o)
+ .debug_str     0x00007974      0x348 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmddaq.o)
                                0x409e (size before relaxing)
- .debug_str     0x00007cc6      0x10c C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmddownload.o)
+ .debug_str     0x00007cbc      0x10c C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmddownload.o)
                                0x3ed4 (size before relaxing)
- .debug_str     0x00007dd2       0x87 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmddyndaq.o)
+ .debug_str     0x00007dc8       0x87 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmddyndaq.o)
                                0x3dac (size before relaxing)
- .debug_str     0x00007e59      0x24a C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdflash.o)
+ .debug_str     0x00007e4f      0x24a C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdflash.o)
                                0x3fbf (size before relaxing)
- .debug_str     0x000080a3       0x92 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdseednkey.o)
+ .debug_str     0x00008099       0x92 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdseednkey.o)
                                0x3d9b (size before relaxing)
- .debug_str     0x00008135       0x95 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdupload.o)
+ .debug_str     0x0000812b       0x95 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_cmdupload.o)
                                0x3e66 (size before relaxing)
- .debug_str     0x000081ca       0x62 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_event.o)
+ .debug_str     0x000081c0       0x62 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_event.o)
                                0x3d29 (size before relaxing)
- .debug_str     0x0000822c       0x65 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_stim.o)
+ .debug_str     0x00008222       0x65 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_stim.o)
                                0x3d0f (size before relaxing)
- .debug_str     0x00008291      0xeb9 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_target.o)
+ .debug_str     0x00008287      0xeb9 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_target.o)
                                0x3551 (size before relaxing)
- .debug_str     0x0000914a      0xcaf C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(SeednKey.o)
+ .debug_str     0x00009140      0xcaf C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(SeednKey.o)
                                0x53d6 (size before relaxing)
- .debug_str     0x00009df9       0xc4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_callbacks.o)
+ .debug_str     0x00009def       0xc4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_callbacks.o)
                                0x2c3b (size before relaxing)
- .debug_str     0x00009ebd       0x17 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_daq.o)
+ .debug_str     0x00009eb3       0x17 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\xcp.a(xcp_daq.o)
                                0x3d15 (size before relaxing)
- .debug_str     0x00009ed4     0x2b50 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(adc.o)
+ .debug_str     0x00009eca     0x2b50 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(adc.o)
                                0x6223 (size before relaxing)
- .debug_str     0x0000ca24     0x1270 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can.o)
+ .debug_str     0x0000ca1a     0x1270 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can.o)
                                0x5995 (size before relaxing)
- .debug_str     0x0000dc94       0x6f C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can_config.o)
+ .debug_str     0x0000dc8a       0x6f C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(can_config.o)
                                0x51aa (size before relaxing)
- .debug_str     0x0000dd03       0xb3 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(crc.o)
+ .debug_str     0x0000dcf9       0xb3 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(crc.o)
                                0x4500 (size before relaxing)
- .debug_str     0x0000ddb6      0x184 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(digital_input.o)
+ .debug_str     0x0000ddac      0x184 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(digital_input.o)
                                0x4bda (size before relaxing)
- .debug_str     0x0000df3a     0x1b7b C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(flexcan_init.o)
+ .debug_str     0x0000df30     0x1b7b C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(flexcan_init.o)
                                0x752b (size before relaxing)
- .debug_str     0x0000fab5       0xe7 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(Interrupt_Init.o)
+ .debug_str     0x0000faab       0xe7 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(Interrupt_Init.o)
                                0x46a1 (size before relaxing)
- .debug_str     0x0000fb9c      0x7cc C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(io_config.o)
+ .debug_str     0x0000fb92      0x7cc C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(io_config.o)
                                0x4fbf (size before relaxing)
- .debug_str     0x00010368       0x45 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(isr_table.o)
+ .debug_str     0x0001035e       0x45 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(isr_table.o)
                                0x36ce (size before relaxing)
- .debug_str     0x000103ad      0x669 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(lin.o)
+ .debug_str     0x000103a3      0x669 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(lin.o)
                                0x550f (size before relaxing)
- .debug_str     0x00010a16      0xdb3 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(memory.o)
+ .debug_str     0x00010a0c      0xdb3 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(memory.o)
                                0x45cb (size before relaxing)
- .debug_str     0x000117c9      0x234 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(outputs.o)
+ .debug_str     0x000117bf      0x234 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(outputs.o)
                                0x4ff3 (size before relaxing)
- .debug_str     0x000119fd      0x91b C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(processor_support.o)
+ .debug_str     0x000119f3      0x91b C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(processor_support.o)
                                0x68ae (size before relaxing)
- .debug_str     0x00012318      0x1f1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(system.o)
+ .debug_str     0x0001230e      0x1f1 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(system.o)
                                0x7102 (size before relaxing)
- .debug_str     0x00012509     0x1836 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(sys_lib.o)
+ .debug_str     0x000124ff     0x1836 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(sys_lib.o)
                                0x63f1 (size before relaxing)
- .debug_str     0x00013d3f      0x382 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(task_scheduler.o)
+ .debug_str     0x00013d35      0x382 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(task_scheduler.o)
                                0x5c5b (size before relaxing)
- .debug_str     0x000140c1       0x86 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(time.o)
+ .debug_str     0x000140b7       0x86 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(time.o)
                                0x465e (size before relaxing)
- .debug_str     0x00014147      0x125 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(app_descriptor_cfg.o)
+ .debug_str     0x0001413d      0x125 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(app_descriptor_cfg.o)
                                0x39cf (size before relaxing)
- .debug_str     0x0001426c       0x24 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(bootmailbox.o)
+ .debug_str     0x00014262       0x24 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(bootmailbox.o)
                                0x37bb (size before relaxing)
- .debug_str     0x00014290       0xb4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(drv_diagnostics.o)
+ .debug_str     0x00014286       0xb4 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(drv_diagnostics.o)
                                0x466b (size before relaxing)
- .debug_str     0x00014344      0x8bf C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_highlevel.o)
+ .debug_str     0x0001433a      0x8bf C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_highlevel.o)
                                0x599b (size before relaxing)
- .debug_str     0x00014c03      0x1fc C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_lowlevel.o)
+ .debug_str     0x00014bf9      0x1fc C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_lowlevel.o)
                                0x353d (size before relaxing)
- .debug_str     0x00014dff      0x4cf C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_middlelevel.o)
+ .debug_str     0x00014df5      0x4cf C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(eed_middlelevel.o)
                                0x5d75 (size before relaxing)
- .debug_str     0x000152ce       0xf8 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(ee_C90_utils.o)
+ .debug_str     0x000152c4       0xf8 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(ee_C90_utils.o)
                                0x2bc1 (size before relaxing)
- .debug_str     0x000153c6       0x3f C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(ee_config.o)
+ .debug_str     0x000153bc       0x3f C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(ee_config.o)
                                0x2c24 (size before relaxing)
- .debug_str     0x00015405      0x3fb C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(emios_init.o)
+ .debug_str     0x000153fb      0x3fb C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(emios_init.o)
                                0x4936 (size before relaxing)
- .debug_str     0x00015800       0xa5 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(exceptions.o)
+ .debug_str     0x000157f6       0xa5 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(exceptions.o)
                                0x2077 (size before relaxing)
- .debug_str     0x000158a5       0xd9 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(pwm_input.o)
+ .debug_str     0x0001589b       0xd9 C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(pwm_input.o)
                                0x52a7 (size before relaxing)
- .debug_str     0x0001597e      0x24e C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(spidrv.o)
+ .debug_str     0x00015974      0x24e C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(spidrv.o)
                                0x50b1 (size before relaxing)
- .debug_str     0x00015bcc       0x4d C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(sysclk_init.o)
+ .debug_str     0x00015bc2       0x4d C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/\GCM-5605B-048-2104.a(sysclk_init.o)
                                0x4a69 (size before relaxing)
- .debug_str     0x00015c19      0x229 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(alloc.o)
+ .debug_str     0x00015c0f      0x229 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(alloc.o)
                                 0x32d (size before relaxing)
- .debug_str     0x00015e42       0x1e C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(rand.o)
+ .debug_str     0x00015e38       0x1e C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(rand.o)
                                 0x268 (size before relaxing)
- .debug_str     0x00015e60       0x2e C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(memcmp.o)
+ .debug_str     0x00015e56       0x2e C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(memcmp.o)
                                 0x25f (size before relaxing)
- .debug_str     0x00015e8e       0x15 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(memcpy.o)
+ .debug_str     0x00015e84       0x15 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(memcpy.o)
                                 0x24e (size before relaxing)
- .debug_str     0x00015ea3       0x20 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(memset.o)
+ .debug_str     0x00015e99       0x20 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(memset.o)
                                 0x261 (size before relaxing)
- .debug_str     0x00015ec3       0x1a C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(__filll_mem.o)
+ .debug_str     0x00015eb9       0x1a C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libc99.a(__filll_mem.o)
                                 0x268 (size before relaxing)
- .debug_str     0x00015edd      0x175 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libm.a(float.o)
+ .debug_str     0x00015ed3      0x175 C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libm.a(float.o)
                                 0x520 (size before relaxing)
- .debug_str     0x00016052       0x6f C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libm.a(math_api.o)
+ .debug_str     0x00016048       0x6f C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/lib\libm.a(math_api.o)
                                 0x48e (size before relaxing)
 
 .debug_frame    0x00000000     0x4fbc
@@ -6350,8 +6358,8 @@ OUTPUT(Lightning_McSeas_VCU_Current_Mode.elf elf32-powerpc)
  .debug_frame   0x00000204       0x30 ./objs/Timer_BGND_9AY_V.o
  .debug_frame   0x00000234       0x30 ./objs/Timer_ooqlV.o
  .debug_frame   0x00000264       0xdc ./objs/XCP_App.o
- .debug_frame   0x00000340      0x3e8 ./objs/can_1062__0001.o
- .debug_frame   0x00000728      0x138 ./objs/can_1063__0001.o
+ .debug_frame   0x00000340      0x3e8 ./objs/can_3349__0001.o
+ .debug_frame   0x00000728      0x138 ./objs/can_3350__0001.o
  .debug_frame   0x00000860       0xf0 ./objs/data.o
  .debug_frame   0x00000950       0xd0 ./objs/hw_user.o
  .debug_frame   0x00000a20       0x30 ./objs/lin_general.o
