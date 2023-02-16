@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
     <Data>
         <Item Name="FgndTasksStopped">
-            <Block>&lt;S41&gt;/raptor_data_def</Block>
+            <Block>&lt;S44&gt;/raptor_data_def</Block>
             <Variable>RAMVariables.FgndTasksStopped</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -18,7 +18,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="Wake_Debug_StartupEventRaised">
-            <Block>&lt;S42&gt;/raptor_measurement1</Block>
+            <Block>&lt;S45&gt;/raptor_measurement1</Block>
             <Variable>RAMVariables.Wake_Debug_StartupEventRaised</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -35,7 +35,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="WakeSource_Startup">
-            <Block>&lt;S60&gt;/raptor_measurement</Block>
+            <Block>&lt;S63&gt;/raptor_measurement</Block>
             <Variable>RAMVariables.WakeSource_Startup</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -52,7 +52,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="Wake_LIN2_SleepDelayTime">
-            <Block>&lt;S50&gt;/raptor_adjustment</Block>
+            <Block>&lt;S53&gt;/raptor_adjustment</Block>
             <Variable>EEVariables_DEFAULT.Wake_LIN2_SleepDelayTime</Variable>	
             <Type>Adjustment</Type>
             <NumRows>1</NumRows>
@@ -69,7 +69,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="Wake_CAN2_SleepDelayTime">
-            <Block>&lt;S49&gt;/raptor_adjustment</Block>
+            <Block>&lt;S52&gt;/raptor_adjustment</Block>
             <Variable>EEVariables_DEFAULT.Wake_CAN2_SleepDelayTime</Variable>	
             <Type>Adjustment</Type>
             <NumRows>1</NumRows>
@@ -86,7 +86,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="WAKE_INPUT1_Threshold">
-            <Block>&lt;S45&gt;/raptor_adjustment1</Block>
+            <Block>&lt;S48&gt;/raptor_adjustment1</Block>
             <Variable>EEVariables_DEFAULT.WAKE_INPUT1_Threshold</Variable>	
             <Type>Adjustment</Type>
             <NumRows>1</NumRows>
@@ -103,7 +103,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="KeySwLoTimeThr">
-            <Block>&lt;S53&gt;/raptor_adjustment4</Block>
+            <Block>&lt;S56&gt;/raptor_adjustment4</Block>
             <Variable>EEVariables_DEFAULT.KeySwLoTimeThr</Variable>	
             <Type>Adjustment</Type>
             <NumRows>1</NumRows>
@@ -120,7 +120,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="GCM48Wake_LIN2_cal">
-            <Block>&lt;S54&gt;/raptor_adjustment</Block>
+            <Block>&lt;S57&gt;/raptor_adjustment</Block>
             <Variable>EEVariables_DEFAULT.GCM48Wake_LIN2_cal</Variable>	
             <Type>Adjustment</Type>
             <NumRows>1</NumRows>
@@ -137,7 +137,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="GCM48Wake_CAN2_cal">
-            <Block>&lt;S54&gt;/raptor_adjustment2</Block>
+            <Block>&lt;S57&gt;/raptor_adjustment2</Block>
             <Variable>EEVariables_DEFAULT.GCM48Wake_CAN2_cal</Variable>	
             <Type>Adjustment</Type>
             <NumRows>1</NumRows>
@@ -154,7 +154,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="GCM48Wake_INPUT1_cal">
-            <Block>&lt;S54&gt;/raptor_adjustment1</Block>
+            <Block>&lt;S57&gt;/raptor_adjustment1</Block>
             <Variable>EEVariables_DEFAULT.GCM48Wake_INPUT1_cal</Variable>	
             <Type>Adjustment</Type>
             <NumRows>1</NumRows>
@@ -171,7 +171,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="Wake_DlyStopOfFgndTaskTime">
-            <Block>&lt;S40&gt;/raptor_adjustment</Block>
+            <Block>&lt;S43&gt;/raptor_adjustment</Block>
             <Variable>EEVariables_DEFAULT.Wake_DlyStopOfFgndTaskTime</Variable>	
             <Type>Adjustment</Type>
             <NumRows>1</NumRows>
@@ -188,7 +188,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="Wake_DlyStopOfFgndTaskTTmr">
-            <Block>&lt;S40&gt;/raptor_measurement</Block>
+            <Block>&lt;S43&gt;/raptor_measurement</Block>
             <Variable>RAMVariables.Wake_DlyStopOfFgndTaskTTmr</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -205,7 +205,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="Wake_INPUT1_Vlts">
-            <Block>&lt;S45&gt;/raptor_measurement1</Block>
+            <Block>&lt;S48&gt;/raptor_measurement1</Block>
             <Variable>RAMVariables.Wake_INPUT1_Vlts</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -222,7 +222,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="Wake_LIN2_RxCount">
-            <Block>&lt;S45&gt;/raptor_measurement2</Block>
+            <Block>&lt;S48&gt;/raptor_measurement2</Block>
             <Variable>RAMVariables.Wake_LIN2_RxCount</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -239,7 +239,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="Wake_CAN2_RxCount">
-            <Block>&lt;S45&gt;/raptor_measurement5</Block>
+            <Block>&lt;S48&gt;/raptor_measurement5</Block>
             <Variable>RAMVariables.Wake_CAN2_RxCount</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -256,7 +256,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="Wake_CAN2_SleepDelayTTmr">
-            <Block>&lt;S49&gt;/raptor_measurement</Block>
+            <Block>&lt;S52&gt;/raptor_measurement</Block>
             <Variable>RAMVariables.Wake_CAN2_SleepDelayTTmr</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -273,7 +273,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="Wake_LIN2_SleepDelayTTmr">
-            <Block>&lt;S50&gt;/raptor_measurement</Block>
+            <Block>&lt;S53&gt;/raptor_measurement</Block>
             <Variable>RAMVariables.Wake_LIN2_SleepDelayTTmr</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -290,7 +290,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="dt_read">
-            <Block>&lt;S53&gt;/raptor_measurement3</Block>
+            <Block>&lt;S56&gt;/raptor_measurement3</Block>
             <Variable>RAMVariables.dt_read</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -307,7 +307,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="WakeConfigRegister">
-            <Block>&lt;S54&gt;/raptor_measurement2</Block>
+            <Block>&lt;S57&gt;/raptor_measurement2</Block>
             <Variable>RAMVariables.WakeConfigRegister</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -324,7 +324,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="WakeSource_RaptorIntrnlMeas">
-            <Block>&lt;S54&gt;/raptor_measurement</Block>
+            <Block>&lt;S57&gt;/raptor_measurement</Block>
             <Variable>RAMVariables.WakeSource_RaptorIntrnlMeas</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -341,7 +341,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="Wake_SourceBitAndWakeConfigRegister">
-            <Block>&lt;S54&gt;/raptor_data_def1</Block>
+            <Block>&lt;S57&gt;/raptor_data_def1</Block>
             <Variable>RAMVariables.Wake_SourceBitAndWakeConfigRegister</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -358,7 +358,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="Wake_AnyWakeSourceActive">
-            <Block>&lt;S54&gt;/raptor_data_def2</Block>
+            <Block>&lt;S57&gt;/raptor_data_def2</Block>
             <Variable>RAMVariables.Wake_AnyWakeSourceActive</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -375,7 +375,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="WakeSource_Current">
-            <Block>&lt;S54&gt;/raptor_data_def3</Block>
+            <Block>&lt;S57&gt;/raptor_data_def3</Block>
             <Variable>RAMVariables.WakeSource_Current</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -392,7 +392,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="KeySw_Bgnd">
-            <Block>&lt;S45&gt;/raptor_data_def2</Block>
+            <Block>&lt;S48&gt;/raptor_data_def2</Block>
             <Variable>RAMVariables.KeySw_Bgnd</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>
@@ -409,7 +409,7 @@
             <Function>System|PowerUp_Down</Function>
         </Item>
         <Item Name="KeepModuleOn">
-            <Block>&lt;S39&gt;/raptor_data_def1</Block>
+            <Block>&lt;S42&gt;/raptor_data_def1</Block>
             <Variable>RAMVariables.KeepModuleOn</Variable>	
             <Type>Measurement</Type>
             <NumRows>1</NumRows>

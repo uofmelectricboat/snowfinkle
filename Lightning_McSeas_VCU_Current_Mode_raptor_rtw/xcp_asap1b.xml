@@ -1,0 +1,49 @@
+<XCP>
+	<project_uid>OLf3HFhWdUGyVaKE5dtxm</project_uid>
+	<product_id>20038</product_id> <!--XCPProdID -->
+	<canbus>CAN1</canbus>
+	<baudrate>500k</baudrate>
+	<rxID>0x200</rxID>
+	<rxID_Type>Standard</rxID_Type>
+	<txID>0x300</txID>
+	<rxID_Type>Standard</rxID_Type>
+	<txID_Daq>0x300</txID_Daq>
+	<txID_Daq_Type>Standard</txID_Daq_Type>
+    <bcID>0x100</bcID>
+	<bcID_Type>Standard</bcID_Type>
+	<numDaqs>5</numDaqs>
+	<updateRate>10</updateRate>
+	<numODTs>20</numODTs>
+        <securityDll>raptor_XCPSecurity.dll</securityDll>
+	<daq Name="List_10ms">
+		<number>0</number>
+		<firstpid>0</firstpid>
+		<rate>10</rate>
+		<length>8</length>
+	</daq>
+	<daq Name="List_50ms">
+		<number>1</number>
+		<firstpid>20</firstpid>
+		<rate>50</rate>
+		<length>8</length>
+	</daq>
+	<daq Name="List_100ms">
+		<number>2</number>
+		<firstpid>40</firstpid>
+		<rate>100</rate>
+		<length>8</length>
+	</daq>
+	<daq Name="List_500ms">
+		<number>3</number>
+		<firstpid>60</firstpid>
+		<rate>500</rate>
+		<length>8</length>
+	</daq>
+	<daq Name="List_1000ms">
+		<number>4</number>
+		<firstpid>80</firstpid>
+		<rate>1000</rate>
+		<length>8</length>
+	</daq>
+    <ByteOrder>MSB_FIRST</ByteOrder>
+</XCP>
