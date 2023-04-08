@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'Lightning_McSeas_VCU_Current_Mode'.
  *
- * Model version                  : 6.220
+ * Model version                  : 6.230
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Thu Feb 16 15:12:53 2023
+ * C/C++ source code generated on : Tue Feb 21 17:57:04 2023
  *
  * Target selection: raptor.tlc
  * Embedded hardware selection: Freescale->MPC55xx
@@ -646,37 +646,37 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground_Enable(void)
 {
   /* Enable for S-Function (raptor_sfun_can_txmsg): '<S8>/raptor_can_txmsg4' */
   /* Level2 S-Function Block: '<S8>/raptor_can_txmsg4' (raptor_sfun_can_txmsg) */
-  can_set_period_72__0002(0U);
+  can_set_period_72__0006(0U);
 
   /* Enable for S-Function (raptor_sfun_can_txmsg): '<S8>/raptor_can_txmsg3' */
   /* Level2 S-Function Block: '<S8>/raptor_can_txmsg3' (raptor_sfun_can_txmsg) */
-  can_set_period_71__0005(0U);
+  can_set_period_71__0009(0U);
 
   /* Enable for S-Function (raptor_sfun_can_txmsg): '<S9>/raptor_can_txmsg1' incorporates:
    *  Constant: '<S9>/Constant1'
    */
   /* Level2 S-Function Block: '<S9>/raptor_can_txmsg1' (raptor_sfun_can_txmsg) */
-  can_set_period_174__0002(0U);
+  can_set_period_200__0006(0U);
 
   /* Enable for S-Function (raptor_sfun_can_txmsg): '<S10>/raptor_can_txmsg' */
   /* Level2 S-Function Block: '<S10>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_269__0002(0U);
+  can_set_period_296__0006(0U);
 
   /* Enable for S-Function (raptor_sfun_can_txmsg): '<S11>/raptor_can_txmsg' incorporates:
    *  Constant: '<S11>/Constant'
    */
   /* Level2 S-Function Block: '<S11>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_557__0004(0U);
+  can_set_period_584__0007(0U);
 
   /* Enable for S-Function (raptor_sfun_can_txmsg): '<S11>/raptor_can_txmsg1' incorporates:
    *  Constant: '<S11>/Constant'
    */
   /* Level2 S-Function Block: '<S11>/raptor_can_txmsg1' (raptor_sfun_can_txmsg) */
-  can_set_period_558__0001(0U);
+  can_set_period_585__0005(0U);
 
   /* Enable for S-Function (raptor_sfun_can_txmsg): '<S41>/raptor_can_txmsg' */
   /* Level2 S-Function Block: '<S41>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_596__0001(0U);
+  can_set_period_624__0005(0U);
 }
 
 /* Disable for function-call system: '<Root>/Foreground' */
@@ -684,37 +684,37 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground_Disable(void)
 {
   /* Disable for S-Function (raptor_sfun_can_txmsg): '<S8>/raptor_can_txmsg4' */
   /* Level2 S-Function Block: '<S8>/raptor_can_txmsg4' (raptor_sfun_can_txmsg) */
-  can_set_period_72__0002(0);
+  can_set_period_72__0006(0);
 
   /* Disable for S-Function (raptor_sfun_can_txmsg): '<S8>/raptor_can_txmsg3' */
   /* Level2 S-Function Block: '<S8>/raptor_can_txmsg3' (raptor_sfun_can_txmsg) */
-  can_set_period_71__0005(0);
+  can_set_period_71__0009(0);
 
   /* Disable for S-Function (raptor_sfun_can_txmsg): '<S9>/raptor_can_txmsg1' incorporates:
    *  Constant: '<S9>/Constant1'
    */
   /* Level2 S-Function Block: '<S9>/raptor_can_txmsg1' (raptor_sfun_can_txmsg) */
-  can_set_period_174__0002(0);
+  can_set_period_200__0006(0);
 
   /* Disable for S-Function (raptor_sfun_can_txmsg): '<S10>/raptor_can_txmsg' */
   /* Level2 S-Function Block: '<S10>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_269__0002(0);
+  can_set_period_296__0006(0);
 
   /* Disable for S-Function (raptor_sfun_can_txmsg): '<S11>/raptor_can_txmsg' incorporates:
    *  Constant: '<S11>/Constant'
    */
   /* Level2 S-Function Block: '<S11>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_557__0004(0);
+  can_set_period_584__0007(0);
 
   /* Disable for S-Function (raptor_sfun_can_txmsg): '<S11>/raptor_can_txmsg1' incorporates:
    *  Constant: '<S11>/Constant'
    */
   /* Level2 S-Function Block: '<S11>/raptor_can_txmsg1' (raptor_sfun_can_txmsg) */
-  can_set_period_558__0001(0);
+  can_set_period_585__0005(0);
 
   /* Disable for S-Function (raptor_sfun_can_txmsg): '<S41>/raptor_can_txmsg' */
   /* Level2 S-Function Block: '<S41>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_596__0001(0);
+  can_set_period_624__0005(0);
 }
 
 /* Output and update for function-call system: '<Root>/Foreground' */
@@ -743,7 +743,7 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     uint8_T data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
 
     uint32_T temp;
-    can_get_583__0001(&rtb_raptor_can_rxmsg_o1, NULL, NULL, &data[0], 8);
+    can_get_610__0005(&rtb_raptor_can_rxmsg_o1, NULL, NULL, &data[0], 8);
 
     /* Signal: Channel_1 */
     temp = 0;
@@ -801,8 +801,8 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     data[0U] |= temp_shift;
     temp_shift = (uint8_T)(temp >> 8);
     data[1U] |= temp_shift;
-    can_set_period_72__0002(0U);
-    can_send_72__0002(31U & 0x7FF, 0, 2U, &data[0]);
+    can_set_period_72__0006(0U);
+    can_send_72__0006(31U & 0x7FF, 0, 2U, &data[0]);
   }
 
   /* Gain: '<S8>/Gain1' */
@@ -836,8 +836,8 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     data[0U] |= temp_shift;
     temp_shift = (uint8_T)(temp >> 8);
     data[1U] |= temp_shift;
-    can_set_period_71__0005(0U);
-    can_send_71__0005(32U & 0x7FF, 0, 2U, &data[0]);
+    can_set_period_71__0009(0U);
+    can_send_71__0009(32U & 0x7FF, 0, 2U, &data[0]);
   }
 
   /* S-Function (raptor_sfun_can_rxmsg): '<S9>/raptor_can_rxmsg' */
@@ -847,23 +847,23 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     uint8_T data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
 
     uint32_T temp;
-    can_get_173__0002(&rtb_raptor_can_rxmsg_o1_i, NULL, NULL, &data[0], 8);
+    can_get_199__0006(&rtb_raptor_can_rxmsg_o1_i, NULL, NULL, &data[0], 8);
 
-    /* Signal: bcm_cell_vmax_b */
+    /* Signal: bcm_cell_vmax_a */
     temp = 0;
     temp |= (((uint32_T)data[6U]) & 240) >> 4;
     temp |= ((uint32_T)data[5U]) << 4;
     rtb_Merge_n = (((real_T) temp / (real_T) 500.0) );
 
-    /* Signal: bcm_cell_vmin_b not connected */
+    /* Signal: bcm_cell_vmin_a not connected */
 
-    /* Signal: bcm_i_lem_b     not connected */
+    /* Signal: bcm_i_lem_a     not connected */
 
-    /* Signal: bcm_vbat_b      not connected */
+    /* Signal: bcm_vbat_a      not connected */
 
-    /* Signal: bcm_vbus_b      not connected */
+    /* Signal: bcm_vbus_a      not connected */
 
-    /* Signal: bcm_vfuse_b     not connected */
+    /* Signal: bcm_vfuse_a     not connected */
   }
 
   /* Outputs for IfAction SubSystem: '<S13>/If Action Subsystem1' incorporates:
@@ -889,7 +889,7 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     uint8_T data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
 
     uint32_T temp;
-    can_get_585__0001(&rtb_raptor_can_rxmsg2_o1, NULL, NULL, &data[0], 8);
+    can_get_612__0005(&rtb_raptor_can_rxmsg2_o1, NULL, NULL, &data[0], 8);
 
     /* Signal: Channel_10     */
     temp = 0;
@@ -981,9 +981,6 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
 
   /* End of If: '<S14>/If' */
 
-  /* Gain: '<S9>/Gain1' */
-  rtb_Gain2 = 10.0 * rtb_Merge_n;
-
   /* S-Function (raptor_sfun_can_txmsg): '<S9>/raptor_can_txmsg1' incorporates:
    *  Constant: '<S9>/Constant1'
    */
@@ -1017,15 +1014,15 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     /* charger_max_current - StartBit: 24U, BitLength: 16U, Endian: 1U */
 
     /* signal type is unsigned */
-    if (rtb_Gain2 < 0.0000000000F)
+    if (rtb_Merge_n < 0.0000000000F)
       temp = (uint32_T)0U;
-    else if (rtb_Gain2 > 6553.5000000000F)
+    else if (rtb_Merge_n > 6553.5000000000F)
       temp = (uint32_T)65535U;
     else {
-      if ((real_T)rtb_Gain2 < 0)
-        temp = (uint32_T)(int32_T)((rtb_Gain2) * 10.0f);
+      if ((real_T)rtb_Merge_n < 0)
+        temp = (uint32_T)(int32_T)((rtb_Merge_n) * 10.0f);
       else
-        temp = (uint32_T)((rtb_Gain2) * 10.0f);
+        temp = (uint32_T)((rtb_Merge_n) * 10.0f);
     }
 
     temp_shift = (uint8_T)(temp >> 0);
@@ -1052,8 +1049,8 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     data[1U] |= temp_shift;
     temp_shift = (uint8_T)(temp >> 8);
     data[0U] |= temp_shift;
-    can_set_period_174__0002(0U);
-    can_send_174__0002(403105268U & 0x1FFFFFFF, 1, 8U, &data[0]);
+    can_set_period_200__0006(0U);
+    can_send_200__0006(403105268U & 0x1FFFFFFF, 1, 8U, &data[0]);
   }
 
   /* Outputs for IfAction SubSystem: '<S26>/If Action Subsystem1' incorporates:
@@ -1172,8 +1169,8 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     temp_shift = (uint8_T)(temp << 2);
     temp_shift &= ((uint8_T)4U);
     data[0U] |= temp_shift;
-    can_set_period_269__0002(0U);
-    can_send_269__0002(1024U & 0x7FF, 0, 4U, &data[0]);
+    can_set_period_296__0006(0U);
+    can_send_296__0006(1024U & 0x7FF, 0, 4U, &data[0]);
   }
 
   /* S-Function (raptor_sfun_can_rxmsg): '<S7>/raptor_can_rxmsg1' */
@@ -1183,7 +1180,7 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     uint8_T data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
 
     uint32_T temp;
-    can_get_584__0001(&rtb_raptor_can_rxmsg1_o1, NULL, NULL, &data[0], 8);
+    can_get_611__0005(&rtb_raptor_can_rxmsg1_o1, NULL, NULL, &data[0], 8);
 
     /* Signal: Channel_5 */
     temp = 0;
@@ -1438,8 +1435,8 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     temp_shift = (uint8_T)(temp << 2);
     temp_shift &= ((uint8_T)60U);
     data[0U] |= temp_shift;
-    can_set_period_557__0004(0U);
-    can_send_557__0004(218038727U & 0x1FFFFFFF, 1, 8U, &data[0]);
+    can_set_period_584__0007(0U);
+    can_send_584__0007(218038727U & 0x1FFFFFFF, 1, 8U, &data[0]);
   }
 
   /* Gain: '<S11>/Gain1' incorporates:
@@ -1612,8 +1609,8 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     temp_shift = (uint8_T)(temp << 2);
     temp_shift &= ((uint8_T)60U);
     data[0U] |= temp_shift;
-    can_set_period_558__0001(0U);
-    can_send_558__0001(218042823U & 0x1FFFFFFF, 1, 8U, &data[0]);
+    can_set_period_585__0005(0U);
+    can_send_585__0005(218042823U & 0x1FFFFFFF, 1, 8U, &data[0]);
   }
 
   /* S-Function (raptor_sfun_digital_in): '<S41>/raptor_digital_in' */
@@ -1664,8 +1661,8 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     temp_shift = (uint8_T)(temp << 1);
     temp_shift &= ((uint8_T)2U);
     data[0U] |= temp_shift;
-    can_set_period_596__0001(0U);
-    can_send_596__0001(1306U & 0x7FF, 0, 8U, &data[0]);
+    can_set_period_624__0005(0U);
+    can_send_624__0005(1306U & 0x7FF, 0, 8U, &data[0]);
   }
 }
 

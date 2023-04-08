@@ -1,0 +1,37 @@
+-DSTART_FROM_FLASH
+-DMPC560xB
+-DGCM_5605B_048_2104
+-I"C:/Users/jerod/OneDrive/Documents/School-Files/Boat_Team/GitHubFiles/Most Update VCU"
+-I"C:/Users/jerod/OneDrive/Documents/School-Files/Boat_Team/GitHubFiles/Most Update VCU/EB_Charging_Program_Feb_raptor_rtw"
+-I"C:/Program Files/MATLAB/R2021b/extern/include"
+-I"C:/Program Files/MATLAB/R2021b/simulink/include"
+-I"C:/Program Files/MATLAB/R2021b/rtw/c/src"
+-I"C:/Program Files/MATLAB/R2021b/rtw/c/src/ext_mode/common"
+-I"C:/Program Files/MATLAB/R2021b/rtw/c/ert"
+-I"C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib"
+-I"C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/API"
+-I"C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/API/REG_API"
+-I"C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/API/C90"
+-I"C:/Program Files (x86)/NewEagle/Raptor/2021b_1.0.14409/GCM-5605B-048/lib/API/ee_driver"
+-I"C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/EWL_C/include/pa"
+-I"C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2/EWL_C/include"
+-O1
+-g0
+-gstrict-dwarf
+-Wall
+-c
+-fno-common
+-fshort-enums
+-fno-strict-aliasing
+-fmessage-length=0
+-fsingle-precision-constant
+-funsigned-char
+-ffunction-sections
+-fdata-sections
+-gdwarf-2
+-meabi
+-msoft-float
+-mcpu=e200z0
+-mfloat-gprs=single
+-specs=ewl_c9x_noio.specs
+--sysroot="C:/NXP/S32DS_Power_v2.1/S32DS/build_tools/e200_ewl2"

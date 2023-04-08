@@ -37,12 +37,33 @@ BU_:
 
 
 BO_ 550 command1: 8 Vector__XXX
- SG_ throttleCurrent : 0|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ throttleCurrent1 : 0|16@1- (1,0) [0|0] "" Vector__XXX
 
-BO_ 2 receive1: 8 Vector__XXX
- SG_ controllerTemp : 0|16@1- (1,0) [0|0] "10*C" Vector__XXX
- SG_ motorTemp : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 422 receive1: 8 Vector__XXX
+ SG_ controllerTemp1 : 0|16@1- (1,0) [0|0] "10*C" Vector__XXX
+ SG_ motorTemp1 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorRPM1 : 32|16@1+ (1,0) [0|0] "(null)" Vector__XXX
+ SG_ Zeros : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 0 NMT: 8 Vector__XXX
+ SG_ o1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ id : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1830 heartBeatMC1: 8 Vector__XXX
+ SG_ hbMC1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1831 heartBeatMC2: 8 Vector__XXX
+ SG_ hbMC2 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 551 command2: 8 Vector__XXX
+ SG_ throttleCurrent2 : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 423 receive2: 8 Vector__XXX
+ SG_ controllerTemp2 : 0|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ motorTemp2 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
 
 
 
+CM_ SG_ 0 o1 "value 01 hex";
+CM_ SG_ 0 id "controller id hex (0x26 or 0x27 in our case)";
 

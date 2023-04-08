@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'Lightning_McSeas_VCU_Current_Mode'.
  *
- * Model version                  : 6.206
+ * Model version                  : 6.234
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Thu Feb 16 14:36:14 2023
+ * C/C++ source code generated on : Fri Apr  7 09:59:18 2023
  *
  * Target selection: raptor.tlc
  * Embedded hardware selection: Freescale->MPC55xx
