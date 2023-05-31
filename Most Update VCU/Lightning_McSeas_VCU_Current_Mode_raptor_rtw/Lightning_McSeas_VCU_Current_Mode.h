@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'Lightning_McSeas_VCU_Current_Mode'.
  *
- * Model version                  : 6.230
+ * Model version                  : 6.277
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Tue Feb 21 17:57:04 2023
+ * C/C++ source code generated on : Tue May 30 12:37:30 2023
  *
  * Target selection: raptor.tlc
  * Embedded hardware selection: Freescale->MPC55xx
@@ -19,6 +19,7 @@
 
 #ifndef RTW_HEADER_Lightning_McSeas_VCU_Current_Mode_h_
 #define RTW_HEADER_Lightning_McSeas_VCU_Current_Mode_h_
+#include <math.h>
 #include <string.h>
 #ifndef Lightning_McSeas_VCU_Current_Mode_COMMON_INCLUDES_
 #define Lightning_McSeas_VCU_Current_Mode_COMMON_INCLUDES_
@@ -30,40 +31,42 @@
 #include "sdk_interface.h"
 #include "xcp_protocol.h"
 #include "LIN2_common.h"
-#include "can_1074__0027.h"
-#include "can_1075__0027.h"
-#include "lin_1076__0027.h"
+#include "can_1072__0034.h"
+#include "can_1073__0034.h"
+#include "lin_1074__0034.h"
 #endif                  /* Lightning_McSeas_VCU_Current_Mode_COMMON_INCLUDES_ */
 
 #include "Lightning_McSeas_VCU_Current_Mode_types.h"
+#include "rt_nonfinite.h"
+#include "rtGetInf.h"
 
 /* Macros for accessing real-time model data structure */
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  uint32_T DelayInput1_DSTATE;         /* '<S59>/Delay Input1' */
-  uint32_T UnitDelay1_DSTATE;          /* '<S53>/Unit Delay1' */
-  uint32_T DelayInput1_DSTATE_j;       /* '<S58>/Delay Input1' */
-  uint32_T UnitDelay1_DSTATE_m;        /* '<S52>/Unit Delay1' */
-  uint32_T UnitDelay_DSTATE;           /* '<S56>/Unit Delay' */
-  uint32_T UnitDelay1_DSTATE_a;        /* '<S43>/Unit Delay1' */
-  uint32_T raptor_delta_time_DWORK1;   /* '<S56>/raptor_delta_time' */
-  boolean_T UnitDelay2_DSTATE;         /* '<S53>/Unit Delay2' */
-  boolean_T UnitDelay2_DSTATE_b;       /* '<S52>/Unit Delay2' */
-  boolean_T DelayInput1_DSTATE_o;      /* '<S60>/Delay Input1' */
-  boolean_T UnitDelay_DSTATE_i;        /* '<S61>/Unit Delay' */
-  boolean_T UnitDelay2_DSTATE_j;       /* '<S43>/Unit Delay2' */
-  boolean_T UnitDelay_DSTATE_ik;       /* '<S46>/Unit Delay' */
-  boolean_T UnitDelay_DSTATE_a;        /* '<S42>/Unit Delay' */
-  boolean_T UnitDelay1_DSTATE_o;       /* '<S42>/Unit Delay1' */
-  boolean_T init1_DSTATE;              /* '<S57>/init = 1' */
+  uint32_T DelayInput1_DSTATE;         /* '<S42>/Delay Input1' */
+  uint32_T UnitDelay1_DSTATE;          /* '<S36>/Unit Delay1' */
+  uint32_T DelayInput1_DSTATE_j;       /* '<S41>/Delay Input1' */
+  uint32_T UnitDelay1_DSTATE_m;        /* '<S35>/Unit Delay1' */
+  uint32_T UnitDelay_DSTATE;           /* '<S39>/Unit Delay' */
+  uint32_T UnitDelay1_DSTATE_a;        /* '<S26>/Unit Delay1' */
+  uint32_T raptor_delta_time_DWORK1;   /* '<S39>/raptor_delta_time' */
+  boolean_T UnitDelay2_DSTATE;         /* '<S36>/Unit Delay2' */
+  boolean_T UnitDelay2_DSTATE_b;       /* '<S35>/Unit Delay2' */
+  boolean_T DelayInput1_DSTATE_o;      /* '<S43>/Delay Input1' */
+  boolean_T UnitDelay_DSTATE_i;        /* '<S44>/Unit Delay' */
+  boolean_T UnitDelay2_DSTATE_j;       /* '<S26>/Unit Delay2' */
+  boolean_T UnitDelay_DSTATE_ik;       /* '<S29>/Unit Delay' */
+  boolean_T UnitDelay_DSTATE_a;        /* '<S25>/Unit Delay' */
+  boolean_T UnitDelay1_DSTATE_o;       /* '<S25>/Unit Delay1' */
+  boolean_T init1_DSTATE;              /* '<S40>/init = 1' */
 } D_Work_Lightning_McSeas_VCU_Current_Mode;
 
 /* Zero-crossing (trigger) state */
 typedef struct {
-  ZCSigState StoreEEPROM_Trig_ZCE;     /* '<S42>/Store EEPROM' */
-  ZCSigState RaiseStartupEvent_Trig_ZCE;/* '<S42>/Raise Startup Event' */
-  ZCSigState RaiseShutdownEvent_Trig_ZCE;/* '<S42>/Raise Shutdown Event' */
+  ZCSigState StoreEEPROM_Trig_ZCE;     /* '<S25>/Store EEPROM' */
+  ZCSigState RaiseStartupEvent_Trig_ZCE;/* '<S25>/Raise Startup Event' */
+  ZCSigState RaiseShutdownEvent_Trig_ZCE;/* '<S25>/Raise Shutdown Event' */
 } PrevZCSigStates_Lightning_McSeas_VCU_Current_Mode;
 
 /* Block states (default storage) */
@@ -100,63 +103,46 @@ extern void Lightning_McSeas_VCU_Current_Mode_terminate(void);
  * '<S4>'   : 'Lightning_McSeas_VCU_Current_Mode/Foreground/Analog'
  * '<S5>'   : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN'
  * '<S6>'   : 'Lightning_McSeas_VCU_Current_Mode/Foreground/Digial'
- * '<S7>'   : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx'
- * '<S8>'   : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Actuators'
- * '<S9>'   : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging'
- * '<S10>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Switch'
- * '<S11>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU'
- * '<S12>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/Inverter'
- * '<S13>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/Max Voltage Cell Control'
- * '<S14>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/Subsystem1'
- * '<S15>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/Switch Control'
- * '<S16>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/Inverter/If Action Subsystem'
- * '<S17>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/Inverter/If Action Subsystem1'
- * '<S18>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/Max Voltage Cell Control/If Action Subsystem'
- * '<S19>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/Max Voltage Cell Control/If Action Subsystem1'
- * '<S20>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/Subsystem1/If Action Subsystem'
- * '<S21>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/Subsystem1/If Action Subsystem1'
- * '<S22>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/Subsystem1/If Action Subsystem2'
- * '<S23>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/Switch Control/If Action Subsystem'
- * '<S24>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/Switch Control/If Action Subsystem1'
- * '<S25>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Switch/If statement for on off switch'
- * '<S26>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Switch/If statement for on off switch2'
- * '<S27>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Switch/If statement for on off switch/If Action Subsystem'
- * '<S28>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Switch/If statement for on off switch/If Action Subsystem1'
- * '<S29>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Switch/If statement for on off switch2/If Action Subsystem'
- * '<S30>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Switch/If statement for on off switch2/If Action Subsystem1'
- * '<S31>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/If statement for on off switch1'
- * '<S32>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/If statement for on off switch2'
- * '<S33>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/If statement for on off switch4'
- * '<S34>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/If statement for on off switch1/If Action Subsystem'
- * '<S35>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/If statement for on off switch1/If Action Subsystem1'
- * '<S36>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/If statement for on off switch2/If Action Subsystem2'
- * '<S37>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/If statement for on off switch2/If Action Subsystem3'
- * '<S38>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/If statement for on off switch2/If Action Subsystem4'
- * '<S39>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/If statement for on off switch4/If Action Subsystem'
- * '<S40>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/If statement for on off switch4/If Action Subsystem1'
- * '<S41>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/Digial/WaterDetection'
- * '<S42>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background'
- * '<S43>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/CntrSat2'
- * '<S44>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Raise Shutdown Event'
- * '<S45>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Raise Startup Event'
- * '<S46>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/SR'
- * '<S47>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Store EEPROM'
- * '<S48>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources'
- * '<S49>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Raise Shutdown Event/raptor_shutdown'
- * '<S50>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Raise Startup Event/raptor_startup'
- * '<S51>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Store EEPROM/raptor_store_nv'
- * '<S52>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/CntrSat'
- * '<S53>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/CntrSat1'
- * '<S54>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Compare To Zero'
- * '<S55>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Compare To Zero1'
- * '<S56>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Debounce2'
- * '<S57>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Decode amd Ignore Some Wake Sources'
- * '<S58>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Dtc'
- * '<S59>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Dtc1'
- * '<S60>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Debounce2/Detect Change'
- * '<S61>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Debounce2/SetRst Init = 0'
- * '<S62>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Decode amd Ignore Some Wake Sources/Compare To Zero1'
- * '<S63>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Decode amd Ignore Some Wake Sources/Startup Wake Source'
+ * '<S7>'   : 'Lightning_McSeas_VCU_Current_Mode/Foreground/Analog/Temperature Sensors'
+ * '<S8>'   : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/Actuators'
+ * '<S9>'   : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/Battery Switch'
+ * '<S10>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/MCU'
+ * '<S11>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/Battery Switch/If statement for on off switch'
+ * '<S12>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/Battery Switch/If statement for on off switch2'
+ * '<S13>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/Battery Switch/If statement for on off switch/If Action Subsystem'
+ * '<S14>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/Battery Switch/If statement for on off switch/If Action Subsystem1'
+ * '<S15>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/Battery Switch/If statement for on off switch2/If Action Subsystem'
+ * '<S16>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/Battery Switch/If statement for on off switch2/If Action Subsystem1'
+ * '<S17>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/MCU/If statement for on off switch2'
+ * '<S18>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/MCU/Motor Controller NMT id Switch'
+ * '<S19>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/MCU/If statement for on off switch2/If Action Subsystem2'
+ * '<S20>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/MCU/If statement for on off switch2/If Action Subsystem3'
+ * '<S21>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/MCU/If statement for on off switch2/If Action Subsystem4'
+ * '<S22>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/MCU/Motor Controller NMT id Switch/If Action Subsystem1'
+ * '<S23>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/MCU/Motor Controller NMT id Switch/If Action Subsystem2'
+ * '<S24>'  : 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/MCU/Motor Controller NMT id Switch/If Action Subsystem3'
+ * '<S25>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background'
+ * '<S26>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/CntrSat2'
+ * '<S27>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Raise Shutdown Event'
+ * '<S28>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Raise Startup Event'
+ * '<S29>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/SR'
+ * '<S30>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Store EEPROM'
+ * '<S31>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources'
+ * '<S32>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Raise Shutdown Event/raptor_shutdown'
+ * '<S33>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Raise Startup Event/raptor_startup'
+ * '<S34>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Store EEPROM/raptor_store_nv'
+ * '<S35>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/CntrSat'
+ * '<S36>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/CntrSat1'
+ * '<S37>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Compare To Zero'
+ * '<S38>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Compare To Zero1'
+ * '<S39>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Debounce2'
+ * '<S40>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Decode amd Ignore Some Wake Sources'
+ * '<S41>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Dtc'
+ * '<S42>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Dtc1'
+ * '<S43>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Debounce2/Detect Change'
+ * '<S44>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Debounce2/SetRst Init = 0'
+ * '<S45>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Decode amd Ignore Some Wake Sources/Compare To Zero1'
+ * '<S46>'  : 'Lightning_McSeas_VCU_Current_Mode/GCM48 Power Up_Down/Background/Wake sources/Decode amd Ignore Some Wake Sources/Startup Wake Source'
  */
 #endif                     /* RTW_HEADER_Lightning_McSeas_VCU_Current_Mode_h_ */
 

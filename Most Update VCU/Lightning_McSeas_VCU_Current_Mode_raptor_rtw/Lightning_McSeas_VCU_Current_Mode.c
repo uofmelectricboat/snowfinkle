@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'Lightning_McSeas_VCU_Current_Mode'.
  *
- * Model version                  : 6.230
+ * Model version                  : 6.277
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Tue Feb 21 17:57:04 2023
+ * C/C++ source code generated on : Tue May 30 12:37:30 2023
  *
  * Target selection: raptor.tlc
  * Embedded hardware selection: Freescale->MPC55xx
@@ -30,65 +30,65 @@ PrevZCSigStates_Lightning_McSeas_VCU_Current_Mode
 /* System initialize for function-call system: '<S2>/Background' */
 void Lightning_McSeas_VCU_Current_Mode_Background_Init(void)
 {
-  /* Start for S-Function (raptor_sfun_analog_in): '<S48>/raptor_analog_in1' */
+  /* Start for S-Function (raptor_sfun_analog_in): '<S31>/raptor_analog_in1' */
 
   /* S-Function Block: WAKE_INPUT1 */
   {
   }
 
-  /* Start for S-Function (raptor_sfun_digital_out): '<S42>/raptor_digital_out' */
+  /* Start for S-Function (raptor_sfun_digital_out): '<S25>/raptor_digital_out' */
 
   /* S-Function Block: POWER_HOLD */
   {
   }
 
-  /* Start for S-Function (raptor_sfun_internal_measurement): '<S57>/raptor_internal_measurement' */
+  /* Start for S-Function (raptor_sfun_internal_measurement): '<S40>/raptor_internal_measurement' */
 
   /* S-Function Block: WAKE_SOURCE */
   {
   }
 
-  /* InitializeConditions for S-Function (raptor_sfun_delta_time): '<S56>/raptor_delta_time' */
+  /* InitializeConditions for S-Function (raptor_sfun_delta_time): '<S39>/raptor_delta_time' */
   Lightning_McSeas_VCU_Current_Mode_DWork.raptor_delta_time_DWORK1 = ticks();
 
-  /* InitializeConditions for UnitDelay: '<S56>/Unit Delay' */
+  /* InitializeConditions for UnitDelay: '<S39>/Unit Delay' */
   Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay_DSTATE = 1U;
 
-  /* InitializeConditions for UnitDelay: '<S57>/init = 1' */
+  /* InitializeConditions for UnitDelay: '<S40>/init = 1' */
   Lightning_McSeas_VCU_Current_Mode_DWork.init1_DSTATE = true;
   Lightning_McSeas_VCU_Current_Mode_PrevZCSigState.RaiseShutdownEvent_Trig_ZCE =
     POS_ZCSIG;
 
-  /* End of SystemInitialize for SubSystem: '<S42>/Raise Shutdown Event' */
+  /* End of SystemInitialize for SubSystem: '<S25>/Raise Shutdown Event' */
   Lightning_McSeas_VCU_Current_Mode_PrevZCSigState.RaiseStartupEvent_Trig_ZCE =
     ZERO_ZCSIG;
 
-  /* End of SystemInitialize for SubSystem: '<S42>/Raise Startup Event' */
+  /* End of SystemInitialize for SubSystem: '<S25>/Raise Startup Event' */
 }
 
 /* System reset for function-call system: '<S2>/Background' */
 void Lightning_McSeas_VCU_Current_Mode_Background_Reset(void)
 {
-  /* InitializeConditions for S-Function (raptor_sfun_delta_time): '<S56>/raptor_delta_time' */
+  /* InitializeConditions for S-Function (raptor_sfun_delta_time): '<S39>/raptor_delta_time' */
   Lightning_McSeas_VCU_Current_Mode_DWork.raptor_delta_time_DWORK1 = ticks();
 
-  /* InitializeConditions for UnitDelay: '<S56>/Unit Delay' */
+  /* InitializeConditions for UnitDelay: '<S39>/Unit Delay' */
   Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay_DSTATE = 1U;
 
-  /* InitializeConditions for UnitDelay: '<S57>/init = 1' */
+  /* InitializeConditions for UnitDelay: '<S40>/init = 1' */
   Lightning_McSeas_VCU_Current_Mode_DWork.init1_DSTATE = true;
 
-  /* SystemReset for Triggered SubSystem: '<S42>/Raise Shutdown Event' */
+  /* SystemReset for Triggered SubSystem: '<S25>/Raise Shutdown Event' */
   Lightning_McSeas_VCU_Current_Mode_PrevZCSigState.RaiseShutdownEvent_Trig_ZCE =
     POS_ZCSIG;
 
-  /* End of SystemReset for SubSystem: '<S42>/Raise Shutdown Event' */
+  /* End of SystemReset for SubSystem: '<S25>/Raise Shutdown Event' */
 
-  /* SystemReset for Triggered SubSystem: '<S42>/Raise Startup Event' */
+  /* SystemReset for Triggered SubSystem: '<S25>/Raise Startup Event' */
   Lightning_McSeas_VCU_Current_Mode_PrevZCSigState.RaiseStartupEvent_Trig_ZCE =
     ZERO_ZCSIG;
 
-  /* End of SystemReset for SubSystem: '<S42>/Raise Startup Event' */
+  /* End of SystemReset for SubSystem: '<S25>/Raise Startup Event' */
 }
 
 /* Output and update for function-call system: '<S2>/Background' */
@@ -122,32 +122,32 @@ void Lightning_McSeas_VCU_Current_Mode_Background(void)
   boolean_T rtb_RelationalOperator_i;
   boolean_T rtb_UnitDelay_l;
 
-  /* S-Function (raptor_sfun_lin_state): '<S48>/raptor_lin_state' */
-  /* S-Function Block: <S48>/raptor_lin_state */
+  /* S-Function (raptor_sfun_lin_state): '<S31>/raptor_lin_state' */
+  /* S-Function Block: <S31>/raptor_lin_state */
   {
     rtb_raptor_lin_state_o1 = LIN2_GetStatus(LIN2_LIN2_NODE, (uint32_t *)
       &rtb_raptor_lin_state_o3, (uint32_t *)&rtb_raptor_lin_state_o2);
   }
 
-  /* RelationalOperator: '<S59>/Relational Operator' incorporates:
-   *  UnitDelay: '<S59>/Delay Input1'
+  /* RelationalOperator: '<S42>/Relational Operator' incorporates:
+   *  UnitDelay: '<S42>/Delay Input1'
    */
   rtb_RelationalOperator = (rtb_raptor_lin_state_o2 ==
     Lightning_McSeas_VCU_Current_Mode_DWork.DelayInput1_DSTATE);
 
-  /* Logic: '<S48>/Logical Operator3' */
+  /* Logic: '<S31>/Logical Operator3' */
   rtb_Compare_n = !rtb_RelationalOperator;
 
-  /* MultiPortSwitch: '<S53>/Multiport Switch1' incorporates:
-   *  Constant: '<S53>/Constant1'
+  /* MultiPortSwitch: '<S36>/Multiport Switch1' incorporates:
+   *  Constant: '<S36>/Constant1'
    */
   if (!rtb_Compare_n) {
-    /* MultiPortSwitch: '<S53>/Multiport Switch' incorporates:
-     *  Constant: '<S53>/Constant'
-     *  Logic: '<S53>/Logical Operator1'
-     *  Sum: '<S53>/Add'
-     *  UnitDelay: '<S53>/Unit Delay1'
-     *  UnitDelay: '<S53>/Unit Delay2'
+    /* MultiPortSwitch: '<S36>/Multiport Switch' incorporates:
+     *  Constant: '<S36>/Constant'
+     *  Logic: '<S36>/Logical Operator1'
+     *  Sum: '<S36>/Add'
+     *  UnitDelay: '<S36>/Unit Delay1'
+     *  UnitDelay: '<S36>/Unit Delay2'
      */
     if (Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay2_DSTATE ||
         (!rtb_RelationalOperator)) {
@@ -158,45 +158,45 @@ void Lightning_McSeas_VCU_Current_Mode_Background(void)
         Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay1_DSTATE + 1U;
     }
 
-    /* End of MultiPortSwitch: '<S53>/Multiport Switch' */
+    /* End of MultiPortSwitch: '<S36>/Multiport Switch' */
   } else {
     rtb_MultiportSwitch1 = 0U;
   }
 
-  /* End of MultiPortSwitch: '<S53>/Multiport Switch1' */
-  /* Logic: '<S53>/Logical Operator3' incorporates:
-   *  Logic: '<S53>/Logical Operator4'
-   *  RelationalOperator: '<S53>/Relational Operator'
-   *  S-Function (raptor_sfun_adjustment): '<S53>/raptor_adjustment'
+  /* End of MultiPortSwitch: '<S36>/Multiport Switch1' */
+  /* Logic: '<S36>/Logical Operator3' incorporates:
+   *  Logic: '<S36>/Logical Operator4'
+   *  RelationalOperator: '<S36>/Relational Operator'
+   *  S-Function (raptor_sfun_adjustment): '<S36>/raptor_adjustment'
    */
   rtb_RelationalOperator = ((rtb_MultiportSwitch1 >=
     (Wake_LIN2_SleepDelayTime_Data())) && (!rtb_Compare_n));
 
-  /* S-Function (raptor_sfun_can_state): '<S48>/raptor_can_state1' */
-  /* S-Function Block: <S48>/raptor_can_state1 */
+  /* S-Function (raptor_sfun_can_state): '<S31>/raptor_can_state1' */
+  /* S-Function Block: <S31>/raptor_can_state1 */
   UNUSED_VAR(rtb_raptor_can_state1_o1);
   get_CAN_bus_state(CAN2, (uint32_t*)&rtb_raptor_can_state1_o2, (uint32_t*)
                     &rtb_raptor_can_state1_o3);
 
-  /* Logic: '<S48>/Logical Operator' incorporates:
-   *  Logic: '<S52>/Logical Operator1'
-   *  MultiPortSwitch: '<S52>/Multiport Switch1'
-   *  RelationalOperator: '<S58>/Relational Operator'
-   *  UnitDelay: '<S58>/Delay Input1'
+  /* Logic: '<S31>/Logical Operator' incorporates:
+   *  Logic: '<S35>/Logical Operator1'
+   *  MultiPortSwitch: '<S35>/Multiport Switch1'
+   *  RelationalOperator: '<S41>/Relational Operator'
+   *  UnitDelay: '<S41>/Delay Input1'
    */
   rtb_Compare_n = (rtb_raptor_can_state1_o2 !=
                    Lightning_McSeas_VCU_Current_Mode_DWork.DelayInput1_DSTATE_j);
 
-  /* MultiPortSwitch: '<S52>/Multiport Switch1' incorporates:
-   *  Constant: '<S52>/Constant1'
+  /* MultiPortSwitch: '<S35>/Multiport Switch1' incorporates:
+   *  Constant: '<S35>/Constant1'
    */
   if (!rtb_Compare_n) {
-    /* MultiPortSwitch: '<S52>/Multiport Switch' incorporates:
-     *  Constant: '<S52>/Constant'
-     *  Logic: '<S52>/Logical Operator1'
-     *  Sum: '<S52>/Add'
-     *  UnitDelay: '<S52>/Unit Delay1'
-     *  UnitDelay: '<S52>/Unit Delay2'
+    /* MultiPortSwitch: '<S35>/Multiport Switch' incorporates:
+     *  Constant: '<S35>/Constant'
+     *  Logic: '<S35>/Logical Operator1'
+     *  Sum: '<S35>/Add'
+     *  UnitDelay: '<S35>/Unit Delay1'
+     *  UnitDelay: '<S35>/Unit Delay2'
      */
     if (Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay2_DSTATE_b ||
         rtb_Compare_n) {
@@ -207,43 +207,43 @@ void Lightning_McSeas_VCU_Current_Mode_Background(void)
         Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay1_DSTATE_m + 1U;
     }
 
-    /* End of MultiPortSwitch: '<S52>/Multiport Switch' */
+    /* End of MultiPortSwitch: '<S35>/Multiport Switch' */
   } else {
     rtb_MultiportSwitch1_a = 0U;
   }
 
-  /* Logic: '<S52>/Logical Operator3' incorporates:
-   *  Logic: '<S52>/Logical Operator4'
-   *  RelationalOperator: '<S52>/Relational Operator'
-   *  S-Function (raptor_sfun_adjustment): '<S52>/raptor_adjustment'
+  /* Logic: '<S35>/Logical Operator3' incorporates:
+   *  Logic: '<S35>/Logical Operator4'
+   *  RelationalOperator: '<S35>/Relational Operator'
+   *  S-Function (raptor_sfun_adjustment): '<S35>/raptor_adjustment'
    */
   rtb_RelationalOperator_i = ((rtb_MultiportSwitch1_a >=
     (Wake_CAN2_SleepDelayTime_Data())) && (!rtb_Compare_n));
 
-  /* S-Function (raptor_sfun_analog_in): '<S48>/raptor_analog_in1' */
+  /* S-Function (raptor_sfun_analog_in): '<S31>/raptor_analog_in1' */
   /* S-Function Block: WAKE_INPUT1 */
   {
     rtb_raptor_analog_in1 = ADC_Read_Chan(KEYSW);
   }
 
-  /* RelationalOperator: '<S48>/Relational Operator1' incorporates:
-   *  S-Function (raptor_sfun_adjustment): '<S48>/raptor_adjustment1'
+  /* RelationalOperator: '<S31>/Relational Operator1' incorporates:
+   *  S-Function (raptor_sfun_adjustment): '<S31>/raptor_adjustment1'
    */
   rtb_RelationalOperator1 = (rtb_raptor_analog_in1 > ((uint16_T)
     (WAKE_INPUT1_Threshold_Data())));
 
-  /* S-Function (raptor_sfun_delta_time): '<S56>/raptor_delta_time' */
+  /* S-Function (raptor_sfun_delta_time): '<S39>/raptor_delta_time' */
   {
     rtb_raptor_delta_time = GetDeltaTime_ms((uint32_t*)
       &Lightning_McSeas_VCU_Current_Mode_DWork.raptor_delta_time_DWORK1);
   }
 
-  /* MultiPortSwitch: '<S56>/Multiport Switch1' incorporates:
-   *  Constant: '<S56>/Constant'
-   *  RelationalOperator: '<S60>/FixPt Relational Operator'
-   *  Sum: '<S56>/Add'
-   *  UnitDelay: '<S56>/Unit Delay'
-   *  UnitDelay: '<S60>/Delay Input1'
+  /* MultiPortSwitch: '<S39>/Multiport Switch1' incorporates:
+   *  Constant: '<S39>/Constant'
+   *  RelationalOperator: '<S43>/FixPt Relational Operator'
+   *  Sum: '<S39>/Add'
+   *  UnitDelay: '<S39>/Unit Delay'
+   *  UnitDelay: '<S43>/Delay Input1'
    */
   if (rtb_RelationalOperator1 ==
       Lightning_McSeas_VCU_Current_Mode_DWork.DelayInput1_DSTATE_o) {
@@ -253,19 +253,19 @@ void Lightning_McSeas_VCU_Current_Mode_Background(void)
     rtb_MultiportSwitch1_b = 0U;
   }
 
-  /* End of MultiPortSwitch: '<S56>/Multiport Switch1' */
-  /* MultiPortSwitch: '<S61>/Multiport Switch' incorporates:
-   *  Constant: '<S61>/Constant'
-   *  Logic: '<S56>/Logical Operator2'
-   *  Logic: '<S56>/Logical Operator3'
-   *  RelationalOperator: '<S56>/Relational Operator1'
-   *  S-Function (raptor_sfun_adjustment): '<S56>/raptor_adjustment4'
+  /* End of MultiPortSwitch: '<S39>/Multiport Switch1' */
+  /* MultiPortSwitch: '<S44>/Multiport Switch' incorporates:
+   *  Constant: '<S44>/Constant'
+   *  Logic: '<S39>/Logical Operator2'
+   *  Logic: '<S39>/Logical Operator3'
+   *  RelationalOperator: '<S39>/Relational Operator1'
+   *  S-Function (raptor_sfun_adjustment): '<S39>/raptor_adjustment4'
    */
   if (rtb_RelationalOperator1 || (rtb_MultiportSwitch1_b < (KeySwLoTimeThr_Data())))
   {
-    /* MultiPortSwitch: '<S61>/Multiport Switch1' incorporates:
-     *  Constant: '<S61>/Constant1'
-     *  UnitDelay: '<S61>/Unit Delay'
+    /* MultiPortSwitch: '<S44>/Multiport Switch1' incorporates:
+     *  Constant: '<S44>/Constant1'
+     *  UnitDelay: '<S44>/Unit Delay'
      */
     if (!rtb_RelationalOperator1) {
       rtb_MultiportSwitch_d =
@@ -274,64 +274,64 @@ void Lightning_McSeas_VCU_Current_Mode_Background(void)
       rtb_MultiportSwitch_d = true;
     }
 
-    /* End of MultiPortSwitch: '<S61>/Multiport Switch1' */
+    /* End of MultiPortSwitch: '<S44>/Multiport Switch1' */
   } else {
     rtb_MultiportSwitch_d = false;
   }
 
-  /* End of MultiPortSwitch: '<S61>/Multiport Switch' */
+  /* End of MultiPortSwitch: '<S44>/Multiport Switch' */
 
-  /* Sum: '<S57>/Add1' incorporates:
-   *  Constant: '<S54>/Constant'
-   *  Constant: '<S55>/Constant'
-   *  Gain: '<S57>/Gain12'
-   *  Gain: '<S57>/Gain6'
-   *  Gain: '<S57>/Gain8'
-   *  Logic: '<S48>/Logical Operator1'
-   *  Logic: '<S48>/Logical Operator2'
-   *  Logic: '<S48>/Logical Operator4'
-   *  Logic: '<S48>/Logical Operator5'
-   *  RelationalOperator: '<S54>/Compare'
-   *  RelationalOperator: '<S55>/Compare'
+  /* Sum: '<S40>/Add1' incorporates:
+   *  Constant: '<S37>/Constant'
+   *  Constant: '<S38>/Constant'
+   *  Gain: '<S40>/Gain12'
+   *  Gain: '<S40>/Gain6'
+   *  Gain: '<S40>/Gain8'
+   *  Logic: '<S31>/Logical Operator1'
+   *  Logic: '<S31>/Logical Operator2'
+   *  Logic: '<S31>/Logical Operator4'
+   *  Logic: '<S31>/Logical Operator5'
+   *  RelationalOperator: '<S37>/Compare'
+   *  RelationalOperator: '<S38>/Compare'
    */
   rtb_Add1 = (uint16_T)(((uint32_T)(((rtb_raptor_lin_state_o2 > 0U) &&
     (!rtb_RelationalOperator)) << 2) + (((rtb_raptor_can_state1_o2 > 0U) &&
     (!rtb_RelationalOperator_i)) << 1)) + rtb_MultiportSwitch_d);
 
-  /* S-Function (raptor_sfun_internal_measurement): '<S57>/raptor_internal_measurement' incorporates:
-   *  Gain: '<S57>/Gain4'
-   *  Gain: '<S57>/Gain5'
-   *  S-Function (raptor_sfun_adjustment): '<S57>/raptor_adjustment'
-   *  S-Function (raptor_sfun_adjustment): '<S57>/raptor_adjustment1'
-   *  S-Function (raptor_sfun_adjustment): '<S57>/raptor_adjustment2'
-   *  Sum: '<S57>/Add'
+  /* S-Function (raptor_sfun_internal_measurement): '<S40>/raptor_internal_measurement' incorporates:
+   *  Gain: '<S40>/Gain4'
+   *  Gain: '<S40>/Gain5'
+   *  S-Function (raptor_sfun_adjustment): '<S40>/raptor_adjustment'
+   *  S-Function (raptor_sfun_adjustment): '<S40>/raptor_adjustment1'
+   *  S-Function (raptor_sfun_adjustment): '<S40>/raptor_adjustment2'
+   *  Sum: '<S40>/Add'
    */
   rtb_raptor_internal_measurement = (uint16_T)(((uint32_T)
     ((GCM48Wake_LIN2_cal_Data()) << 2) + ((GCM48Wake_CAN2_cal_Data()) << 1)) +
     (GCM48Wake_INPUT1_cal_Data()));
 
-  /* S-Function (sfix_bitop): '<S57>/Bitwise AND' */
+  /* S-Function (sfix_bitop): '<S40>/Bitwise AND' */
   rtb_BitwiseAND = (uint16_T)(rtb_Add1 & rtb_raptor_internal_measurement);
 
-  /* RelationalOperator: '<S62>/Compare' incorporates:
-   *  Constant: '<S62>/Constant'
+  /* RelationalOperator: '<S45>/Compare' incorporates:
+   *  Constant: '<S45>/Constant'
    */
   rtb_Compare_n = (rtb_BitwiseAND > 0);
 
-  /* Logic: '<S42>/Logical Operator1' incorporates:
-   *  S-Function (raptor_sfun_data_read): '<S42>/raptor_data_read1'
+  /* Logic: '<S25>/Logical Operator1' incorporates:
+   *  S-Function (raptor_sfun_data_read): '<S25>/raptor_data_read1'
    */
   rtb_KeepOnrequestiscurrentlytrue = (rtb_Compare_n || KeepModuleOn_Data());
 
-  /* MultiPortSwitch: '<S43>/Multiport Switch1' incorporates:
-   *  Constant: '<S43>/Constant1'
+  /* MultiPortSwitch: '<S26>/Multiport Switch1' incorporates:
+   *  Constant: '<S26>/Constant1'
    */
   if (!rtb_KeepOnrequestiscurrentlytrue) {
-    /* MultiPortSwitch: '<S43>/Multiport Switch' incorporates:
-     *  Constant: '<S43>/Constant'
-     *  Sum: '<S43>/Add'
-     *  UnitDelay: '<S43>/Unit Delay1'
-     *  UnitDelay: '<S43>/Unit Delay2'
+    /* MultiPortSwitch: '<S26>/Multiport Switch' incorporates:
+     *  Constant: '<S26>/Constant'
+     *  Sum: '<S26>/Add'
+     *  UnitDelay: '<S26>/Unit Delay1'
+     *  UnitDelay: '<S26>/Unit Delay2'
      */
     if (Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay2_DSTATE_j) {
       rtb_MultiportSwitch1_p =
@@ -341,27 +341,27 @@ void Lightning_McSeas_VCU_Current_Mode_Background(void)
         Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay1_DSTATE_a + 1U;
     }
 
-    /* End of MultiPortSwitch: '<S43>/Multiport Switch' */
+    /* End of MultiPortSwitch: '<S26>/Multiport Switch' */
   } else {
     rtb_MultiportSwitch1_p = 0U;
   }
 
-  /* End of MultiPortSwitch: '<S43>/Multiport Switch1' */
-  /* Logic: '<S43>/Logical Operator3' incorporates:
-   *  Logic: '<S43>/Logical Operator4'
-   *  RelationalOperator: '<S43>/Relational Operator'
-   *  S-Function (raptor_sfun_adjustment): '<S43>/raptor_adjustment'
+  /* End of MultiPortSwitch: '<S26>/Multiport Switch1' */
+  /* Logic: '<S26>/Logical Operator3' incorporates:
+   *  Logic: '<S26>/Logical Operator4'
+   *  RelationalOperator: '<S26>/Relational Operator'
+   *  S-Function (raptor_sfun_adjustment): '<S26>/raptor_adjustment'
    */
   rtb_LogicalOperator3_m = ((rtb_MultiportSwitch1_p >=
     (Wake_DlyStopOfFgndTaskTime_Data())) && (!rtb_KeepOnrequestiscurrentlytrue));
 
-  /* MultiPortSwitch: '<S46>/Multiport Switch' incorporates:
-   *  Constant: '<S46>/Constant'
+  /* MultiPortSwitch: '<S29>/Multiport Switch' incorporates:
+   *  Constant: '<S29>/Constant'
    */
   if (!rtb_LogicalOperator3_m) {
-    /* MultiPortSwitch: '<S46>/Multiport Switch1' incorporates:
-     *  Constant: '<S46>/Constant1'
-     *  UnitDelay: '<S46>/Unit Delay'
+    /* MultiPortSwitch: '<S29>/Multiport Switch1' incorporates:
+     *  Constant: '<S29>/Constant1'
+     *  UnitDelay: '<S29>/Unit Delay'
      */
     if (!rtb_KeepOnrequestiscurrentlytrue) {
       rtb_MultiportSwitch_ko =
@@ -370,125 +370,125 @@ void Lightning_McSeas_VCU_Current_Mode_Background(void)
       rtb_MultiportSwitch_ko = true;
     }
 
-    /* End of MultiPortSwitch: '<S46>/Multiport Switch1' */
+    /* End of MultiPortSwitch: '<S29>/Multiport Switch1' */
   } else {
     rtb_MultiportSwitch_ko = false;
   }
 
-  /* End of MultiPortSwitch: '<S46>/Multiport Switch' */
+  /* End of MultiPortSwitch: '<S29>/Multiport Switch' */
 
-  /* Logic: '<S42>/Logical Operator4' */
+  /* Logic: '<S25>/Logical Operator4' */
   rtb_KeepOnrequestiscurrentlytrue = (rtb_KeepOnrequestiscurrentlytrue ||
     rtb_MultiportSwitch_ko);
 
-  /* Outputs for Triggered SubSystem: '<S42>/Raise Shutdown Event' incorporates:
-   *  TriggerPort: '<S44>/init state = 1 to trigger at wakeup if awoken by a wake source  that we want to ignore'
+  /* Outputs for Triggered SubSystem: '<S25>/Raise Shutdown Event' incorporates:
+   *  TriggerPort: '<S27>/init state = 1 to trigger at wakeup if awoken by a wake source  that we want to ignore'
    */
   if ((!rtb_KeepOnrequestiscurrentlytrue) &&
       (Lightning_McSeas_VCU_Current_Mode_PrevZCSigState.RaiseShutdownEvent_Trig_ZCE
        != ZERO_ZCSIG)) {
-    /* S-Function (raptor_sfun_data_write): '<S44>/raptor_data_write' incorporates:
-     *  Constant: '<S44>/Constant'
+    /* S-Function (raptor_sfun_data_write): '<S27>/raptor_data_write' incorporates:
+     *  Constant: '<S27>/Constant'
      */
     FgndTasksStopped_Data() = true;
 
-    /* S-Function (fcgen): '<S44>/Function-Call Generator' incorporates:
-     *  SubSystem: '<S44>/raptor_shutdown'
+    /* S-Function (fcgen): '<S27>/Function-Call Generator' incorporates:
+     *  SubSystem: '<S27>/raptor_shutdown'
      */
-    /* S-Function (raptor_sfun_shutdown): '<S49>/raptor_data_write' */
+    /* S-Function (raptor_sfun_shutdown): '<S32>/raptor_data_write' */
     /* S-Function Block */
     {
       extern void App_Shutdown(void);
       App_Shutdown();
     }
 
-    /* End of Outputs for S-Function (fcgen): '<S44>/Function-Call Generator' */
+    /* End of Outputs for S-Function (fcgen): '<S27>/Function-Call Generator' */
   }
 
   Lightning_McSeas_VCU_Current_Mode_PrevZCSigState.RaiseShutdownEvent_Trig_ZCE =
     rtb_KeepOnrequestiscurrentlytrue;
 
-  /* End of Outputs for SubSystem: '<S42>/Raise Shutdown Event' */
+  /* End of Outputs for SubSystem: '<S25>/Raise Shutdown Event' */
 
-  /* Outputs for Triggered SubSystem: '<S42>/Raise Startup Event' incorporates:
-   *  TriggerPort: '<S45>/init state zero so it triggers at wake if wake request is true'
+  /* Outputs for Triggered SubSystem: '<S25>/Raise Startup Event' incorporates:
+   *  TriggerPort: '<S28>/init state zero so it triggers at wake if wake request is true'
    */
   if (rtb_KeepOnrequestiscurrentlytrue &&
       (Lightning_McSeas_VCU_Current_Mode_PrevZCSigState.RaiseStartupEvent_Trig_ZCE
        != POS_ZCSIG)) {
-    /* S-Function (raptor_sfun_measurement): '<S45>/raptor_measurement1' incorporates:
-     *  Constant: '<S45>/Constant'
+    /* S-Function (raptor_sfun_measurement): '<S28>/raptor_measurement1' incorporates:
+     *  Constant: '<S28>/Constant'
      */
     Wake_Debug_StartupEventRaised_Data() = true;
 
-    /* S-Function (raptor_sfun_data_write): '<S45>/raptor_data_write' incorporates:
-     *  Constant: '<S45>/Constant1'
+    /* S-Function (raptor_sfun_data_write): '<S28>/raptor_data_write' incorporates:
+     *  Constant: '<S28>/Constant1'
      */
     FgndTasksStopped_Data() = false;
 
-    /* S-Function (fcgen): '<S45>/Function-Call Generator' incorporates:
-     *  SubSystem: '<S45>/raptor_startup'
+    /* S-Function (fcgen): '<S28>/Function-Call Generator' incorporates:
+     *  SubSystem: '<S28>/raptor_startup'
      */
-    /* S-Function (raptor_sfun_startup): '<S50>/raptor_data_write' */
+    /* S-Function (raptor_sfun_startup): '<S33>/raptor_data_write' */
     /* S-Function Block */
     {
       extern void App_Startup(void);
       App_Startup();
     }
 
-    /* End of Outputs for S-Function (fcgen): '<S45>/Function-Call Generator' */
+    /* End of Outputs for S-Function (fcgen): '<S28>/Function-Call Generator' */
   }
 
-  /* Outputs for Triggered SubSystem: '<S42>/Raise Shutdown Event' incorporates:
-   *  TriggerPort: '<S44>/init state = 1 to trigger at wakeup if awoken by a wake source  that we want to ignore'
+  /* Outputs for Triggered SubSystem: '<S25>/Raise Shutdown Event' incorporates:
+   *  TriggerPort: '<S27>/init state = 1 to trigger at wakeup if awoken by a wake source  that we want to ignore'
    */
   Lightning_McSeas_VCU_Current_Mode_PrevZCSigState.RaiseStartupEvent_Trig_ZCE =
     rtb_KeepOnrequestiscurrentlytrue;
 
-  /* End of Outputs for SubSystem: '<S42>/Raise Shutdown Event' */
-  /* End of Outputs for SubSystem: '<S42>/Raise Startup Event' */
+  /* End of Outputs for SubSystem: '<S25>/Raise Shutdown Event' */
+  /* End of Outputs for SubSystem: '<S25>/Raise Startup Event' */
 
-  /* UnitDelay: '<S42>/Unit Delay' */
+  /* UnitDelay: '<S25>/Unit Delay' */
   rtb_UnitDelay_l = Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay_DSTATE_a;
 
-  /* Outputs for Triggered SubSystem: '<S42>/Store EEPROM' incorporates:
-   *  TriggerPort: '<S47>/Trigger'
+  /* Outputs for Triggered SubSystem: '<S25>/Store EEPROM' incorporates:
+   *  TriggerPort: '<S30>/Trigger'
    */
   if ((!Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay_DSTATE_a) &&
       (Lightning_McSeas_VCU_Current_Mode_PrevZCSigState.StoreEEPROM_Trig_ZCE !=
        ZERO_ZCSIG)) {
-    /* S-Function (fcgen): '<S47>/Function-Call Generator' incorporates:
-     *  SubSystem: '<S47>/raptor_store_nv'
+    /* S-Function (fcgen): '<S30>/Function-Call Generator' incorporates:
+     *  SubSystem: '<S30>/raptor_store_nv'
      */
-    /* S-Function (raptor_sfun_store_nv): '<S51>/raptor_data_write' */
+    /* S-Function (raptor_sfun_store_nv): '<S34>/raptor_data_write' */
     /* S-Function Block */
     {
       App_EE_Store();
     }
 
-    /* End of Outputs for S-Function (fcgen): '<S47>/Function-Call Generator' */
+    /* End of Outputs for S-Function (fcgen): '<S30>/Function-Call Generator' */
   }
 
-  /* End of UnitDelay: '<S42>/Unit Delay' */
+  /* End of UnitDelay: '<S25>/Unit Delay' */
   Lightning_McSeas_VCU_Current_Mode_PrevZCSigState.StoreEEPROM_Trig_ZCE =
     rtb_UnitDelay_l;
 
-  /* End of Outputs for SubSystem: '<S42>/Store EEPROM' */
+  /* End of Outputs for SubSystem: '<S25>/Store EEPROM' */
 
-  /* S-Function (raptor_sfun_nv_status): '<S42>/raptor_sfun_nv_status' */
+  /* S-Function (raptor_sfun_nv_status): '<S25>/raptor_sfun_nv_status' */
   /* S-Function Block */
   {
     rtb_raptor_sfun_nv_status = (EEPROM_State_Data() == EE_STORE_IN_PROGESS);
   }
 
-  /* Logic: '<S42>/Logical Operator2' incorporates:
-   *  UnitDelay: '<S42>/Unit Delay1'
+  /* Logic: '<S25>/Logical Operator2' incorporates:
+   *  UnitDelay: '<S25>/Unit Delay1'
    */
   rtb_LogicalOperator2_e = (rtb_raptor_sfun_nv_status ||
     rtb_KeepOnrequestiscurrentlytrue ||
     Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay1_DSTATE_o);
 
-  /* S-Function (raptor_sfun_digital_out): '<S42>/raptor_digital_out' */
+  /* S-Function (raptor_sfun_digital_out): '<S25>/raptor_digital_out' */
   /* S-Function Block: POWER_HOLD */
   {
     {
@@ -502,121 +502,121 @@ void Lightning_McSeas_VCU_Current_Mode_Background(void)
     }
   }
 
-  /* S-Function (raptor_sfun_measurement): '<S43>/raptor_measurement' */
+  /* S-Function (raptor_sfun_measurement): '<S26>/raptor_measurement' */
   Wake_DlyStopOfFgndTaskTTmr_Data() = rtb_MultiportSwitch1_p;
 
-  /* S-Function (raptor_sfun_data_write): '<S48>/raptor_data_write1' */
+  /* S-Function (raptor_sfun_data_write): '<S31>/raptor_data_write1' */
   KeySw_Bgnd_Data() = rtb_MultiportSwitch_d;
 
-  /* S-Function (raptor_sfun_measurement): '<S48>/raptor_measurement1' */
+  /* S-Function (raptor_sfun_measurement): '<S31>/raptor_measurement1' */
   Wake_INPUT1_Vlts_Data() = rtb_raptor_analog_in1;
 
-  /* S-Function (raptor_sfun_measurement): '<S48>/raptor_measurement2' */
+  /* S-Function (raptor_sfun_measurement): '<S31>/raptor_measurement2' */
   Wake_LIN2_RxCount_Data() = rtb_raptor_lin_state_o2;
 
-  /* S-Function (raptor_sfun_measurement): '<S48>/raptor_measurement5' */
+  /* S-Function (raptor_sfun_measurement): '<S31>/raptor_measurement5' */
   Wake_CAN2_RxCount_Data() = rtb_raptor_can_state1_o2;
 
-  /* S-Function (raptor_sfun_measurement): '<S52>/raptor_measurement' */
+  /* S-Function (raptor_sfun_measurement): '<S35>/raptor_measurement' */
   Wake_CAN2_SleepDelayTTmr_Data() = rtb_MultiportSwitch1_a;
 
-  /* S-Function (raptor_sfun_measurement): '<S53>/raptor_measurement' */
+  /* S-Function (raptor_sfun_measurement): '<S36>/raptor_measurement' */
   Wake_LIN2_SleepDelayTTmr_Data() = rtb_MultiportSwitch1;
 
-  /* S-Function (raptor_sfun_measurement): '<S56>/raptor_measurement3' */
+  /* S-Function (raptor_sfun_measurement): '<S39>/raptor_measurement3' */
   dt_read_Data() = rtb_raptor_delta_time;
 
-  /* Outputs for Enabled SubSystem: '<S57>/Startup Wake Source' incorporates:
-   *  EnablePort: '<S63>/Enable'
+  /* Outputs for Enabled SubSystem: '<S40>/Startup Wake Source' incorporates:
+   *  EnablePort: '<S46>/Enable'
    */
-  /* UnitDelay: '<S57>/init = 1' */
+  /* UnitDelay: '<S40>/init = 1' */
   if (Lightning_McSeas_VCU_Current_Mode_DWork.init1_DSTATE) {
-    /* S-Function (raptor_sfun_measurement): '<S63>/raptor_measurement' */
+    /* S-Function (raptor_sfun_measurement): '<S46>/raptor_measurement' */
     WakeSource_Startup_Data() = rtb_BitwiseAND;
   }
 
-  /* End of UnitDelay: '<S57>/init = 1' */
-  /* End of Outputs for SubSystem: '<S57>/Startup Wake Source' */
+  /* End of UnitDelay: '<S40>/init = 1' */
+  /* End of Outputs for SubSystem: '<S40>/Startup Wake Source' */
 
-  /* S-Function (raptor_sfun_data_write): '<S57>/raptor_data_write1' */
+  /* S-Function (raptor_sfun_data_write): '<S40>/raptor_data_write1' */
   Wake_AnyWakeSourceActive_Data() = rtb_Compare_n;
 
-  /* S-Function (raptor_sfun_data_write): '<S57>/raptor_data_write2' */
+  /* S-Function (raptor_sfun_data_write): '<S40>/raptor_data_write2' */
   Wake_SourceBitAndWakeConfigRegister_Data() = rtb_BitwiseAND;
 
-  /* S-Function (raptor_sfun_data_write): '<S57>/raptor_data_write3' */
+  /* S-Function (raptor_sfun_data_write): '<S40>/raptor_data_write3' */
   WakeSource_Current_Data() = rtb_Add1;
 
-  /* S-Function (raptor_sfun_measurement): '<S57>/raptor_measurement2' */
+  /* S-Function (raptor_sfun_measurement): '<S40>/raptor_measurement2' */
   WakeConfigRegister_Data() = rtb_raptor_internal_measurement;
 
-  /* S-Function (raptor_sfun_internal_measurement): '<S57>/raptor_internal_measurement' */
+  /* S-Function (raptor_sfun_internal_measurement): '<S40>/raptor_internal_measurement' */
   /* S-Function Block: WAKE_SOURCE */
   {
     extern uint8_t Get_Wake_Source( void );
     rtb_raptor_internal_measurement = Get_Wake_Source();
   }
 
-  /* S-Function (raptor_sfun_measurement): '<S57>/raptor_measurement' */
+  /* S-Function (raptor_sfun_measurement): '<S40>/raptor_measurement' */
   WakeSource_RaptorIntrnlMeas_Data() = rtb_raptor_internal_measurement;
 
-  /* Update for UnitDelay: '<S59>/Delay Input1' */
+  /* Update for UnitDelay: '<S42>/Delay Input1' */
   Lightning_McSeas_VCU_Current_Mode_DWork.DelayInput1_DSTATE =
     rtb_raptor_lin_state_o2;
 
-  /* Update for UnitDelay: '<S53>/Unit Delay2' */
+  /* Update for UnitDelay: '<S36>/Unit Delay2' */
   Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay2_DSTATE =
     rtb_RelationalOperator;
 
-  /* Update for UnitDelay: '<S53>/Unit Delay1' */
+  /* Update for UnitDelay: '<S36>/Unit Delay1' */
   Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay1_DSTATE =
     rtb_MultiportSwitch1;
 
-  /* Update for UnitDelay: '<S58>/Delay Input1' */
+  /* Update for UnitDelay: '<S41>/Delay Input1' */
   Lightning_McSeas_VCU_Current_Mode_DWork.DelayInput1_DSTATE_j =
     rtb_raptor_can_state1_o2;
 
-  /* Update for UnitDelay: '<S52>/Unit Delay2' */
+  /* Update for UnitDelay: '<S35>/Unit Delay2' */
   Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay2_DSTATE_b =
     rtb_RelationalOperator_i;
 
-  /* Update for UnitDelay: '<S52>/Unit Delay1' */
+  /* Update for UnitDelay: '<S35>/Unit Delay1' */
   Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay1_DSTATE_m =
     rtb_MultiportSwitch1_a;
 
-  /* Update for UnitDelay: '<S60>/Delay Input1' */
+  /* Update for UnitDelay: '<S43>/Delay Input1' */
   Lightning_McSeas_VCU_Current_Mode_DWork.DelayInput1_DSTATE_o =
     rtb_RelationalOperator1;
 
-  /* Update for UnitDelay: '<S56>/Unit Delay' */
+  /* Update for UnitDelay: '<S39>/Unit Delay' */
   Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay_DSTATE =
     rtb_MultiportSwitch1_b;
 
-  /* Update for UnitDelay: '<S61>/Unit Delay' */
+  /* Update for UnitDelay: '<S44>/Unit Delay' */
   Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay_DSTATE_i =
     rtb_MultiportSwitch_d;
 
-  /* Update for UnitDelay: '<S43>/Unit Delay2' */
+  /* Update for UnitDelay: '<S26>/Unit Delay2' */
   Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay2_DSTATE_j =
     rtb_LogicalOperator3_m;
 
-  /* Update for UnitDelay: '<S43>/Unit Delay1' */
+  /* Update for UnitDelay: '<S26>/Unit Delay1' */
   Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay1_DSTATE_a =
     rtb_MultiportSwitch1_p;
 
-  /* Update for UnitDelay: '<S46>/Unit Delay' */
+  /* Update for UnitDelay: '<S29>/Unit Delay' */
   Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay_DSTATE_ik =
     rtb_MultiportSwitch_ko;
 
-  /* Update for UnitDelay: '<S42>/Unit Delay' */
+  /* Update for UnitDelay: '<S25>/Unit Delay' */
   Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay_DSTATE_a =
     rtb_KeepOnrequestiscurrentlytrue;
 
-  /* Update for UnitDelay: '<S42>/Unit Delay1' */
+  /* Update for UnitDelay: '<S25>/Unit Delay1' */
   Lightning_McSeas_VCU_Current_Mode_DWork.UnitDelay1_DSTATE_o = rtb_UnitDelay_l;
 
-  /* Update for UnitDelay: '<S57>/init = 1' incorporates:
-   *  Constant: '<S57>/Constant'
+  /* Update for UnitDelay: '<S40>/init = 1' incorporates:
+   *  Constant: '<S40>/Constant'
    */
   Lightning_McSeas_VCU_Current_Mode_DWork.init1_DSTATE = false;
 }
@@ -624,7 +624,19 @@ void Lightning_McSeas_VCU_Current_Mode_Background(void)
 /* System initialize for function-call system: '<Root>/Foreground' */
 void Lightning_McSeas_VCU_Current_Mode_Foreground_Init(void)
 {
-  /* Start for S-Function (raptor_sfun_digital_in): '<S41>/raptor_digital_in' */
+  /* Start for S-Function (raptor_sfun_analog_in): '<S7>/raptor_analog_in' */
+
+  /* S-Function Block: AN7 */
+  {
+  }
+
+  /* Start for S-Function (raptor_sfun_analog_in): '<S7>/raptor_analog_in1' */
+
+  /* S-Function Block: AN8 */
+  {
+  }
+
+  /* Start for S-Function (raptor_sfun_digital_in): '<S6>/raptor_digital_in' */
 
   /* S-Function Block: DG1 */
   {
@@ -632,7 +644,7 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground_Init(void)
     din_pad_config(DG1_DG);
   }
 
-  /* Start for S-Function (raptor_sfun_digital_in): '<S41>/raptor_digital_in1' */
+  /* Start for S-Function (raptor_sfun_digital_in): '<S6>/raptor_digital_in1' */
 
   /* S-Function Block: DG2 */
   {
@@ -644,77 +656,77 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground_Init(void)
 /* Enable for function-call system: '<Root>/Foreground' */
 void Lightning_McSeas_VCU_Current_Mode_Foreground_Enable(void)
 {
+  /* Enable for S-Function (raptor_sfun_can_txmsg): '<S7>/raptor_can_txmsg' */
+  /* Level2 S-Function Block: '<S7>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
+  can_set_period_8__0006(0U);
+
   /* Enable for S-Function (raptor_sfun_can_txmsg): '<S8>/raptor_can_txmsg4' */
   /* Level2 S-Function Block: '<S8>/raptor_can_txmsg4' (raptor_sfun_can_txmsg) */
-  can_set_period_72__0006(0U);
+  can_set_period_68__0006(0U);
 
   /* Enable for S-Function (raptor_sfun_can_txmsg): '<S8>/raptor_can_txmsg3' */
   /* Level2 S-Function Block: '<S8>/raptor_can_txmsg3' (raptor_sfun_can_txmsg) */
-  can_set_period_71__0009(0U);
+  can_set_period_67__0009(0U);
 
-  /* Enable for S-Function (raptor_sfun_can_txmsg): '<S9>/raptor_can_txmsg1' incorporates:
-   *  Constant: '<S9>/Constant1'
+  /* Enable for S-Function (raptor_sfun_can_txmsg): '<S10>/raptor_can_txmsg4' */
+  /* Level2 S-Function Block: '<S10>/raptor_can_txmsg4' (raptor_sfun_can_txmsg) */
+  can_set_period_588__0005(0U);
+
+  /* Enable for S-Function (raptor_sfun_can_txmsg): '<S10>/raptor_can_txmsg5' */
+  /* Level2 S-Function Block: '<S10>/raptor_can_txmsg5' (raptor_sfun_can_txmsg) */
+  can_set_period_589__0005(0U);
+
+  /* Enable for S-Function (raptor_sfun_can_txmsg): '<S10>/raptor_can_txmsg2' incorporates:
+   *  Constant: '<S10>/Constant3'
    */
-  /* Level2 S-Function Block: '<S9>/raptor_can_txmsg1' (raptor_sfun_can_txmsg) */
-  can_set_period_200__0006(0U);
+  /* Level2 S-Function Block: '<S10>/raptor_can_txmsg2' (raptor_sfun_can_txmsg) */
+  can_set_period_586__0005(0U);
 
-  /* Enable for S-Function (raptor_sfun_can_txmsg): '<S10>/raptor_can_txmsg' */
-  /* Level2 S-Function Block: '<S10>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_296__0006(0U);
+  /* Enable for S-Function (raptor_sfun_can_txmsg): '<S9>/raptor_can_txmsg' */
+  /* Level2 S-Function Block: '<S9>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
+  can_set_period_292__0006(0U);
 
-  /* Enable for S-Function (raptor_sfun_can_txmsg): '<S11>/raptor_can_txmsg' incorporates:
-   *  Constant: '<S11>/Constant'
-   */
-  /* Level2 S-Function Block: '<S11>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_584__0007(0U);
-
-  /* Enable for S-Function (raptor_sfun_can_txmsg): '<S11>/raptor_can_txmsg1' incorporates:
-   *  Constant: '<S11>/Constant'
-   */
-  /* Level2 S-Function Block: '<S11>/raptor_can_txmsg1' (raptor_sfun_can_txmsg) */
-  can_set_period_585__0005(0U);
-
-  /* Enable for S-Function (raptor_sfun_can_txmsg): '<S41>/raptor_can_txmsg' */
-  /* Level2 S-Function Block: '<S41>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_624__0005(0U);
+  /* Enable for S-Function (raptor_sfun_can_txmsg): '<S6>/raptor_can_txmsg' */
+  /* Level2 S-Function Block: '<S6>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
+  can_set_period_622__0005(0U);
 }
 
 /* Disable for function-call system: '<Root>/Foreground' */
 void Lightning_McSeas_VCU_Current_Mode_Foreground_Disable(void)
 {
+  /* Disable for S-Function (raptor_sfun_can_txmsg): '<S7>/raptor_can_txmsg' */
+  /* Level2 S-Function Block: '<S7>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
+  can_set_period_8__0006(0);
+
   /* Disable for S-Function (raptor_sfun_can_txmsg): '<S8>/raptor_can_txmsg4' */
   /* Level2 S-Function Block: '<S8>/raptor_can_txmsg4' (raptor_sfun_can_txmsg) */
-  can_set_period_72__0006(0);
+  can_set_period_68__0006(0);
 
   /* Disable for S-Function (raptor_sfun_can_txmsg): '<S8>/raptor_can_txmsg3' */
   /* Level2 S-Function Block: '<S8>/raptor_can_txmsg3' (raptor_sfun_can_txmsg) */
-  can_set_period_71__0009(0);
+  can_set_period_67__0009(0);
 
-  /* Disable for S-Function (raptor_sfun_can_txmsg): '<S9>/raptor_can_txmsg1' incorporates:
-   *  Constant: '<S9>/Constant1'
+  /* Disable for S-Function (raptor_sfun_can_txmsg): '<S10>/raptor_can_txmsg4' */
+  /* Level2 S-Function Block: '<S10>/raptor_can_txmsg4' (raptor_sfun_can_txmsg) */
+  can_set_period_588__0005(0);
+
+  /* Disable for S-Function (raptor_sfun_can_txmsg): '<S10>/raptor_can_txmsg5' */
+  /* Level2 S-Function Block: '<S10>/raptor_can_txmsg5' (raptor_sfun_can_txmsg) */
+  can_set_period_589__0005(0);
+
+  /* Disable for S-Function (raptor_sfun_can_txmsg): '<S10>/raptor_can_txmsg2' incorporates:
+   *  Constant: '<S10>/Constant3'
    */
-  /* Level2 S-Function Block: '<S9>/raptor_can_txmsg1' (raptor_sfun_can_txmsg) */
-  can_set_period_200__0006(0);
+  /* Level2 S-Function Block: '<S10>/raptor_can_txmsg2' (raptor_sfun_can_txmsg) */
+  can_set_period_586__0005(0);
 
-  /* Disable for S-Function (raptor_sfun_can_txmsg): '<S10>/raptor_can_txmsg' */
-  /* Level2 S-Function Block: '<S10>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_296__0006(0);
+  /* Disable for S-Function (raptor_sfun_can_txmsg): '<S9>/raptor_can_txmsg' */
+  /* Level2 S-Function Block: '<S9>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
+  can_set_period_292__0006(0);
 
-  /* Disable for S-Function (raptor_sfun_can_txmsg): '<S11>/raptor_can_txmsg' incorporates:
-   *  Constant: '<S11>/Constant'
-   */
-  /* Level2 S-Function Block: '<S11>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_584__0007(0);
-
-  /* Disable for S-Function (raptor_sfun_can_txmsg): '<S11>/raptor_can_txmsg1' incorporates:
-   *  Constant: '<S11>/Constant'
-   */
-  /* Level2 S-Function Block: '<S11>/raptor_can_txmsg1' (raptor_sfun_can_txmsg) */
-  can_set_period_585__0005(0);
-
-  /* Disable for S-Function (raptor_sfun_can_txmsg): '<S41>/raptor_can_txmsg' */
-  /* Level2 S-Function Block: '<S41>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_624__0005(0);
+  /* Disable for S-Function (raptor_sfun_can_txmsg): '<S6>/raptor_can_txmsg' */
+  /* Level2 S-Function Block: '<S6>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
+  can_set_period_622__0005(0);
 }
 
 /* Output and update for function-call system: '<Root>/Foreground' */
@@ -722,23 +734,67 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
 {
   /* local block i/o variables */
   real_T rtb_raptor_can_rxmsg_o2;
-  real_T rtb_raptor_can_rxmsg_o3_l;
+  real_T rtb_raptor_can_rxmsg_o3;
   real_T rtb_Merge;
-  real_T rtb_Merge_j;
-  real_T rtb_Merge_n;
-  real_T rtb_Merge_ns;
-  real_T rtb_Merge_d;
+  real_T rtb_Merge_p;
   uint16_T rtb_raptor_can_rxmsg_o1;
-  uint16_T rtb_raptor_can_rxmsg_o1_i;
-  uint16_T rtb_raptor_can_rxmsg2_o1;
   uint16_T rtb_raptor_can_rxmsg1_o1;
+  uint16_T rtb_raptor_can_rxmsg2_o1;
+  uint16_T rtb_raptor_can_rxmsg1_o1_j;
+  uint16_T rtb_raptor_can_rxmsg2_o1_e;
   boolean_T rtb_raptor_digital_in;
   boolean_T rtb_raptor_digital_in1;
   real_T rtb_Gain2;
+  int16_T rtb_Cast;
 
-  /* S-Function (raptor_sfun_can_rxmsg): '<S7>/raptor_can_rxmsg' */
+  /* S-Function (raptor_sfun_can_txmsg): '<S7>/raptor_can_txmsg' incorporates:
+   *  S-Function (raptor_sfun_analog_in): '<S7>/raptor_analog_in'
+   *  S-Function (raptor_sfun_analog_in): '<S7>/raptor_analog_in1'
+   */
 
-  /* S-Function Block:<S7>/raptor_can_rxmsg */
+  /* S-Function Block:<S7>/raptor_can_txmsg */
+  {
+    uint8_T data[8U] = { 0, 0, 0, 0, 0, 0, 0, 0, };
+
+    uint32_T temp;
+    uint8_T temp_shift;
+
+    /* Signal: Gearbox1 */
+    /* Gearbox1 - StartBit: 0U, BitLength: 16U, Endian: 0U */
+
+    /* signal type is unsigned */
+
+    /* Optimize the checks out since both the min and max are within the limits of this particular data type */
+    {
+      temp = (uint32_T)((((uint16_T)ADC_Read_Chan(AN7))));
+    }
+
+    temp_shift = (uint8_T)(temp >> 0);
+    data[0U] |= temp_shift;
+    temp_shift = (uint8_T)(temp >> 8);
+    data[1U] |= temp_shift;
+
+    /* Signal: Gearbox2 */
+    /* Gearbox2 - StartBit: 16U, BitLength: 16U, Endian: 0U */
+
+    /* signal type is unsigned */
+
+    /* Optimize the checks out since both the min and max are within the limits of this particular data type */
+    {
+      temp = (uint32_T)((((uint16_T)ADC_Read_Chan(AN8))));
+    }
+
+    temp_shift = (uint8_T)(temp >> 0);
+    data[2U] |= temp_shift;
+    temp_shift = (uint8_T)(temp >> 8);
+    data[3U] |= temp_shift;
+    can_set_period_8__0006(0U);
+    can_send_8__0006(1307U & 0x7FF, 0, 8U, &data[0]);
+  }
+
+  /* S-Function (raptor_sfun_can_rxmsg): '<S5>/raptor_can_rxmsg' */
+
+  /* S-Function Block:<S5>/raptor_can_rxmsg */
   {
     uint8_T data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
 
@@ -755,7 +811,7 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     temp = 0;
     temp |= ((uint32_T)data[2U]) ;
     temp |= ((uint32_T)data[3U]) << 8;
-    rtb_raptor_can_rxmsg_o3_l = (((real_T) temp ) + (real_T)-1230.0);
+    rtb_raptor_can_rxmsg_o3 = (((real_T) temp ) + (real_T)-1230.0);
 
     /* Signal: Channel_3 */
     temp = 0;
@@ -767,7 +823,7 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     temp = 0;
     temp |= ((uint32_T)data[6U]) ;
     temp |= ((uint32_T)data[7U]) << 8;
-    rtb_Merge_n = (((real_T) temp ) + (real_T)-1230.0);
+    rtb_Merge_p = (((real_T) temp ) + (real_T)-1230.0);
   }
 
   /* Gain: '<S8>/Gain2' */
@@ -801,12 +857,12 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     data[0U] |= temp_shift;
     temp_shift = (uint8_T)(temp >> 8);
     data[1U] |= temp_shift;
-    can_set_period_72__0006(0U);
-    can_send_72__0006(31U & 0x7FF, 0, 2U, &data[0]);
+    can_set_period_68__0006(0U);
+    can_send_68__0006(31U & 0x7FF, 0, 2U, &data[0]);
   }
 
   /* Gain: '<S8>/Gain1' */
-  rtb_Gain2 = 51.0 * rtb_Merge_n;
+  rtb_Gain2 = 51.0 * rtb_Merge_p;
 
   /* S-Function (raptor_sfun_can_txmsg): '<S8>/raptor_can_txmsg3' */
 
@@ -836,258 +892,366 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     data[0U] |= temp_shift;
     temp_shift = (uint8_T)(temp >> 8);
     data[1U] |= temp_shift;
-    can_set_period_71__0009(0U);
-    can_send_71__0009(32U & 0x7FF, 0, 2U, &data[0]);
+    can_set_period_67__0009(0U);
+    can_send_67__0009(32U & 0x7FF, 0, 2U, &data[0]);
   }
 
-  /* S-Function (raptor_sfun_can_rxmsg): '<S9>/raptor_can_rxmsg' */
+  /* S-Function (raptor_sfun_can_rxmsg): '<S5>/raptor_can_rxmsg1' */
 
-  /* S-Function Block:<S9>/raptor_can_rxmsg */
+  /* S-Function Block:<S5>/raptor_can_rxmsg1 */
   {
     uint8_T data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
 
     uint32_T temp;
-    can_get_199__0006(&rtb_raptor_can_rxmsg_o1_i, NULL, NULL, &data[0], 8);
+    can_get_611__0005(&rtb_raptor_can_rxmsg1_o1, NULL, NULL, &data[0], 8);
 
-    /* Signal: bcm_cell_vmax_a */
-    temp = 0;
-    temp |= (((uint32_T)data[6U]) & 240) >> 4;
-    temp |= ((uint32_T)data[5U]) << 4;
-    rtb_Merge_n = (((real_T) temp / (real_T) 500.0) );
-
-    /* Signal: bcm_cell_vmin_a not connected */
-
-    /* Signal: bcm_i_lem_a     not connected */
-
-    /* Signal: bcm_vbat_a      not connected */
-
-    /* Signal: bcm_vbus_a      not connected */
-
-    /* Signal: bcm_vfuse_a     not connected */
-  }
-
-  /* Outputs for IfAction SubSystem: '<S13>/If Action Subsystem1' incorporates:
-   *  ActionPort: '<S19>/Action Port'
-   */
-  /* Outputs for IfAction SubSystem: '<S13>/If Action Subsystem' incorporates:
-   *  ActionPort: '<S18>/Action Port'
-   */
-  /* If: '<S13>/If' incorporates:
-   *  Inport: '<S18>/In1'
-   *  Inport: '<S19>/In1'
-   *  Merge: '<S13>/Merge'
-   */
-  rtb_Merge = !(rtb_Merge_n > 4.15);
-
-  /* End of Outputs for SubSystem: '<S13>/If Action Subsystem' */
-  /* End of Outputs for SubSystem: '<S13>/If Action Subsystem1' */
-
-  /* S-Function (raptor_sfun_can_rxmsg): '<S7>/raptor_can_rxmsg2' */
-
-  /* S-Function Block:<S7>/raptor_can_rxmsg2 */
-  {
-    uint8_T data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
-
-    uint32_T temp;
-    can_get_612__0005(&rtb_raptor_can_rxmsg2_o1, NULL, NULL, &data[0], 8);
-
-    /* Signal: Channel_10     */
+    /* Signal: Channel_5 */
     temp = 0;
     temp |= ((uint32_T)data[0U]) ;
     temp |= ((uint32_T)data[1U]) << 8;
-    rtb_Merge_j = (((real_T) temp ) + (real_T)-1230.0);
+    rtb_Merge_p = (((real_T) temp ) + (real_T)-1230.0);
 
-    /* Signal: Channel_9      */
-    temp = 0;
-    temp |= ((uint32_T)data[2U]) ;
-    temp |= ((uint32_T)data[3U]) << 8;
-    rtb_Merge_ns = (((real_T) temp ) + (real_T)-1230.0);
+    /* Signal: Channel_6 not connected */
 
-    /* Signal: NewSignal_0007 not connected */
+    /* Signal: Channel_7 not connected */
 
-    /* Signal: NewSignal_0008 not connected */
+    /* Signal: Channel_8 not connected */
   }
 
-  /* Outputs for IfAction SubSystem: '<S15>/If Action Subsystem1' incorporates:
-   *  ActionPort: '<S24>/Action Port'
-   */
-  /* Outputs for IfAction SubSystem: '<S15>/If Action Subsystem' incorporates:
-   *  ActionPort: '<S23>/Action Port'
-   */
-  /* If: '<S15>/If' incorporates:
-   *  Inport: '<S23>/In1'
-   *  Inport: '<S24>/In1'
-   *  Merge: '<S32>/Merge'
-   */
-  rtb_Merge_d = (rtb_Merge_ns > 350.0);
-
-  /* End of Outputs for SubSystem: '<S15>/If Action Subsystem' */
-  /* End of Outputs for SubSystem: '<S15>/If Action Subsystem1' */
-
-  /* Outputs for IfAction SubSystem: '<S12>/If Action Subsystem1' incorporates:
-   *  ActionPort: '<S17>/Action Port'
-   */
-  /* Outputs for IfAction SubSystem: '<S12>/If Action Subsystem' incorporates:
-   *  ActionPort: '<S16>/Action Port'
-   */
-  /* If: '<S12>/If' incorporates:
-   *  Inport: '<S16>/In1'
-   *  Inport: '<S17>/In1'
-   *  Merge: '<S32>/Merge'
-   *  Product: '<S9>/Product'
-   */
-  rtb_Merge_d = !(rtb_Merge * rtb_Merge_d > 0.0);
-
-  /* End of Outputs for SubSystem: '<S12>/If Action Subsystem' */
-  /* End of Outputs for SubSystem: '<S12>/If Action Subsystem1' */
-
-  /* If: '<S14>/If' */
-  if (rtb_Merge_n < 4.05) {
-    /* Outputs for IfAction SubSystem: '<S14>/If Action Subsystem' incorporates:
+  /* If: '<S17>/If' */
+  if (rtb_Merge_p > 1200.0) {
+    /* Outputs for IfAction SubSystem: '<S17>/If Action Subsystem3' incorporates:
      *  ActionPort: '<S20>/Action Port'
      */
-    /* Merge: '<S14>/Merge' incorporates:
-     *  Constant: '<S14>/Constant'
-     *  Inport: '<S20>/In1'
+    /* Merge: '<S11>/Merge' incorporates:
+     *  Constant: '<S17>/Constant2'
+     *  Inport: '<S20>/Xb'
      */
-    rtb_Merge_n = 16.0;
+    rtb_Merge_p = 1.0;
 
-    /* End of Outputs for SubSystem: '<S14>/If Action Subsystem' */
-  } else if (rtb_Merge_n < 4.1) {
-    /* Outputs for IfAction SubSystem: '<S14>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S22>/Action Port'
+    /* End of Outputs for SubSystem: '<S17>/If Action Subsystem3' */
+  } else if (rtb_Merge_p > 250.0) {
+    /* Outputs for IfAction SubSystem: '<S17>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S19>/Action Port'
      */
-    /* Merge: '<S14>/Merge' incorporates:
-     *  Constant: '<S9>/Constant'
-     *  Gain: '<S9>/Gain'
-     *  Inport: '<S22>/In1'
-     *  Sum: '<S9>/Sum'
+    /* Merge: '<S11>/Merge' incorporates:
+     *  Constant: '<S17>/Constant1'
+     *  Inport: '<S19>/Xb'
      */
-    rtb_Merge_n = -242.0 * rtb_Merge_n + 996.1;
+    rtb_Merge_p = 0.0;
 
-    /* End of Outputs for SubSystem: '<S14>/If Action Subsystem2' */
+    /* End of Outputs for SubSystem: '<S17>/If Action Subsystem2' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S14>/If Action Subsystem1' incorporates:
+    /* Outputs for IfAction SubSystem: '<S17>/If Action Subsystem4' incorporates:
      *  ActionPort: '<S21>/Action Port'
      */
-    /* Merge: '<S14>/Merge' incorporates:
-     *  Constant: '<S14>/Constant1'
-     *  Inport: '<S21>/In1'
+    /* Merge: '<S11>/Merge' incorporates:
+     *  Constant: '<S17>/Constant3'
+     *  Inport: '<S21>/Xb'
      */
-    rtb_Merge_n = 3.9;
+    rtb_Merge_p = -1.0;
 
-    /* End of Outputs for SubSystem: '<S14>/If Action Subsystem1' */
+    /* End of Outputs for SubSystem: '<S17>/If Action Subsystem4' */
   }
 
-  /* End of If: '<S14>/If' */
+  /* End of If: '<S17>/If' */
 
-  /* S-Function (raptor_sfun_can_txmsg): '<S9>/raptor_can_txmsg1' incorporates:
-   *  Constant: '<S9>/Constant1'
+  /* Merge: '<S12>/Merge' incorporates:
+   *  Gain: '<S10>/Gain'
+   *  Product: '<S10>/Product1'
    */
+  rtb_Merge = rtb_raptor_can_rxmsg_o2 * rtb_Merge_p * 26.0;
 
-  /* S-Function Block:<S9>/raptor_can_txmsg1 */
+  /* Saturate: '<S10>/Saturation' */
+  if (rtb_Merge > 32767.0) {
+    /* Merge: '<S12>/Merge' */
+    rtb_Merge = 32767.0;
+  } else if (rtb_Merge < -32768.0) {
+    /* Merge: '<S12>/Merge' */
+    rtb_Merge = -32768.0;
+  }
+
+  /* End of Saturate: '<S10>/Saturation' */
+
+  /* DataTypeConversion: '<S10>/Cast1' */
+  rtb_Gain2 = floor(rtb_Merge);
+  if (rtIsNaN(rtb_Gain2) || rtIsInf(rtb_Gain2)) {
+    rtb_Gain2 = 0.0;
+  } else {
+    rtb_Gain2 = fmod(rtb_Gain2, 65536.0);
+  }
+
+  rtb_Cast = (int16_T)(rtb_Gain2 < 0.0 ? (int32_T)(int16_T)-(int16_T)(uint16_T)
+                       -rtb_Gain2 : (int32_T)(int16_T)(uint16_T)rtb_Gain2);
+
+  /* End of DataTypeConversion: '<S10>/Cast1' */
+
+  /* S-Function (raptor_sfun_can_txmsg): '<S10>/raptor_can_txmsg4' */
+
+  /* S-Function Block:<S10>/raptor_can_txmsg4 */
   {
     uint8_T data[8U] = { 0, 0, 0, 0, 0, 0, 0, 0, };
 
     uint32_T temp;
     uint8_T temp_shift;
 
-    /* Signal: charger_control     */
-    /* charger_control     - StartBit: 32U, BitLength: 8U, Endian: 0U */
+    /* Signal: throttleCurrent1 */
+    /* throttleCurrent1 - StartBit: 0U, BitLength: 16U, Endian: 0U */
+    {
+      /* signal type is signed */
+      int32_T tempS;
+      if ((int16_T)rtb_Cast < -32768.0)
+        tempS = (int32_T)-32768.0;
+      else if ((int16_T)rtb_Cast > 32767.0)
+        tempS = (int32_T)32767.0;
+      else
+        tempS = (int32_T)((rtb_Cast));
+      temp = *((uint32_T*)&tempS);
+    }
+
+    temp_shift = (uint8_T)(temp >> 0);
+    data[0U] |= temp_shift;
+    temp_shift = (uint8_T)(temp >> 8);
+    data[1U] |= temp_shift;
+    can_set_period_588__0005(0U);
+    can_send_588__0005(550U & 0x7FF, 0, 8U, &data[0]);
+  }
+
+  /* Merge: '<S11>/Merge' incorporates:
+   *  Gain: '<S10>/Gain1'
+   *  Product: '<S10>/Product'
+   */
+  rtb_Merge_p = rtb_raptor_can_rxmsg_o3 * rtb_Merge_p * -26.0;
+
+  /* Saturate: '<S10>/Saturation2' */
+  if (rtb_Merge_p > 32767.0) {
+    /* Merge: '<S11>/Merge' */
+    rtb_Merge_p = 32767.0;
+  } else if (rtb_Merge_p < -32768.0) {
+    /* Merge: '<S11>/Merge' */
+    rtb_Merge_p = -32768.0;
+  }
+
+  /* End of Saturate: '<S10>/Saturation2' */
+
+  /* DataTypeConversion: '<S10>/Cast' */
+  rtb_Gain2 = floor(rtb_Merge_p);
+  if (rtIsNaN(rtb_Gain2) || rtIsInf(rtb_Gain2)) {
+    rtb_Gain2 = 0.0;
+  } else {
+    rtb_Gain2 = fmod(rtb_Gain2, 65536.0);
+  }
+
+  rtb_Cast = (int16_T)(rtb_Gain2 < 0.0 ? (int32_T)(int16_T)-(int16_T)(uint16_T)
+                       -rtb_Gain2 : (int32_T)(int16_T)(uint16_T)rtb_Gain2);
+
+  /* End of DataTypeConversion: '<S10>/Cast' */
+
+  /* S-Function (raptor_sfun_can_txmsg): '<S10>/raptor_can_txmsg5' */
+
+  /* S-Function Block:<S10>/raptor_can_txmsg5 */
+  {
+    uint8_T data[8U] = { 0, 0, 0, 0, 0, 0, 0, 0, };
+
+    uint32_T temp;
+    uint8_T temp_shift;
+
+    /* Signal: throttleCurrent2 */
+    /* throttleCurrent2 - StartBit: 0U, BitLength: 16U, Endian: 0U */
+    {
+      /* signal type is signed */
+      int32_T tempS;
+      if ((int16_T)rtb_Cast < -32768.0)
+        tempS = (int32_T)-32768.0;
+      else if ((int16_T)rtb_Cast > 32767.0)
+        tempS = (int32_T)32767.0;
+      else
+        tempS = (int32_T)((rtb_Cast));
+      temp = *((uint32_T*)&tempS);
+    }
+
+    temp_shift = (uint8_T)(temp >> 0);
+    data[0U] |= temp_shift;
+    temp_shift = (uint8_T)(temp >> 8);
+    data[1U] |= temp_shift;
+    can_set_period_589__0005(0U);
+    can_send_589__0005(551U & 0x7FF, 0, 8U, &data[0]);
+  }
+
+  /* S-Function (raptor_sfun_can_rxmsg): '<S10>/raptor_can_rxmsg2' */
+
+  /* S-Function Block:<S10>/raptor_can_rxmsg2 */
+  {
+    uint8_T data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
+
+    uint32_T temp;
+    can_get_585__0005(&rtb_raptor_can_rxmsg2_o1, NULL, NULL, &data[0], 8);
+
+    /* Signal: hbMC1 */
+    temp = 0;
+    temp |= ((uint32_T)data[0U]) ;
+    rtb_Merge_p = (((real_T) temp ) );
+  }
+
+  /* S-Function (raptor_sfun_can_rxmsg): '<S10>/raptor_can_rxmsg1' */
+
+  /* S-Function Block:<S10>/raptor_can_rxmsg1 */
+  {
+    uint8_T data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
+
+    uint32_T temp;
+    can_get_1454__0035(&rtb_raptor_can_rxmsg1_o1_j, NULL, NULL, &data[0], 8);
+
+    /* Signal: hbMC2 */
+    temp = 0;
+    temp |= ((uint32_T)data[0U]) ;
+    rtb_Merge = (((real_T) temp ) );
+  }
+
+  /* If: '<S18>/If' */
+  if (rtb_Merge_p == 127.0) {
+    /* Outputs for IfAction SubSystem: '<S18>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S23>/Action Port'
+     */
+    /* Merge: '<S11>/Merge' incorporates:
+     *  Constant: '<S18>/Constant1'
+     *  Inport: '<S23>/Xb1'
+     */
+    rtb_Merge_p = 38.0;
+
+    /* End of Outputs for SubSystem: '<S18>/If Action Subsystem2' */
+  } else if (rtb_Merge == 127.0) {
+    /* Outputs for IfAction SubSystem: '<S18>/If Action Subsystem3' incorporates:
+     *  ActionPort: '<S24>/Action Port'
+     */
+    /* Merge: '<S11>/Merge' incorporates:
+     *  Constant: '<S18>/Constant3'
+     *  Inport: '<S24>/Xb1'
+     */
+    rtb_Merge_p = 39.0;
+
+    /* End of Outputs for SubSystem: '<S18>/If Action Subsystem3' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S18>/If Action Subsystem1' incorporates:
+     *  ActionPort: '<S22>/Action Port'
+     */
+    /* Merge: '<S11>/Merge' incorporates:
+     *  Constant: '<S18>/Constant2'
+     *  Inport: '<S22>/Xb1'
+     */
+    rtb_Merge_p = 0.0;
+
+    /* End of Outputs for SubSystem: '<S18>/If Action Subsystem1' */
+  }
+
+  /* End of If: '<S18>/If' */
+
+  /* S-Function (raptor_sfun_can_txmsg): '<S10>/raptor_can_txmsg2' incorporates:
+   *  Constant: '<S10>/Constant3'
+   */
+
+  /* S-Function Block:<S10>/raptor_can_txmsg2 */
+  {
+    uint8_T data[8U] = { 0, 0, 0, 0, 0, 0, 0, 0, };
+
+    uint32_T temp;
+    uint8_T temp_shift;
+
+    /* Signal: id */
+    /* id - StartBit: 8U, BitLength: 8U, Endian: 0U */
 
     /* signal type is unsigned */
-    if (rtb_Merge_d < 0.0000000000F)
+    if (rtb_Merge_p < 0.0000000000F)
       temp = (uint32_T)0U;
-    else if (rtb_Merge_d > 255.0000000000F)
+    else if (rtb_Merge_p > 255.0000000000F)
       temp = (uint32_T)255U;
     else {
-      if ((real_T)rtb_Merge_d < 0)
-        temp = (uint32_T)(int32_T)((rtb_Merge_d));
+      if ((real_T)rtb_Merge_p < 0)
+        temp = (uint32_T)(int32_T)((rtb_Merge_p));
       else
-        temp = (uint32_T)((rtb_Merge_d));
-    }
-
-    temp_shift = (uint8_T)(temp >> 0);
-    data[4U] |= temp_shift;
-
-    /* Signal: charger_max_current */
-    /* charger_max_current - StartBit: 24U, BitLength: 16U, Endian: 1U */
-
-    /* signal type is unsigned */
-    if (rtb_Merge_n < 0.0000000000F)
-      temp = (uint32_T)0U;
-    else if (rtb_Merge_n > 6553.5000000000F)
-      temp = (uint32_T)65535U;
-    else {
-      if ((real_T)rtb_Merge_n < 0)
-        temp = (uint32_T)(int32_T)((rtb_Merge_n) * 10.0f);
-      else
-        temp = (uint32_T)((rtb_Merge_n) * 10.0f);
-    }
-
-    temp_shift = (uint8_T)(temp >> 0);
-    data[3U] |= temp_shift;
-    temp_shift = (uint8_T)(temp >> 8);
-    data[2U] |= temp_shift;
-
-    /* Signal: charger_max_voltage */
-    /* charger_max_voltage - StartBit: 8U, BitLength: 16U, Endian: 1U */
-
-    /* signal type is unsigned */
-    if (820.0 < 0.0000000000F)
-      temp = (uint32_T)0U;
-    else if (820.0 > 6553.5000000000F)
-      temp = (uint32_T)65535U;
-    else {
-      if ((real_T)820.0 < 0)
-        temp = (uint32_T)(int32_T)((820.0) * 10.0f);
-      else
-        temp = (uint32_T)((820.0) * 10.0f);
+        temp = (uint32_T)((rtb_Merge_p));
     }
 
     temp_shift = (uint8_T)(temp >> 0);
     data[1U] |= temp_shift;
-    temp_shift = (uint8_T)(temp >> 8);
+
+    /* Signal: o1 */
+    /* o1 - StartBit: 0U, BitLength: 8U, Endian: 0U */
+
+    /* signal type is unsigned */
+    if (1.0 < 0.0000000000F)
+      temp = (uint32_T)0U;
+    else if (1.0 > 255.0000000000F)
+      temp = (uint32_T)255U;
+    else {
+      if ((real_T)1.0 < 0)
+        temp = (uint32_T)(int32_T)((1.0));
+      else
+        temp = (uint32_T)((1.0));
+    }
+
+    temp_shift = (uint8_T)(temp >> 0);
     data[0U] |= temp_shift;
-    can_set_period_200__0006(0U);
-    can_send_200__0006(403105268U & 0x1FFFFFFF, 1, 8U, &data[0]);
+    can_set_period_586__0005(0U);
+    can_send_586__0005(0U & 0x7FF, 0, 8U, &data[0]);
   }
 
-  /* Outputs for IfAction SubSystem: '<S26>/If Action Subsystem1' incorporates:
-   *  ActionPort: '<S30>/Action Port'
-   */
-  /* Outputs for IfAction SubSystem: '<S26>/If Action Subsystem' incorporates:
-   *  ActionPort: '<S29>/Action Port'
-   */
-  /* If: '<S26>/If' incorporates:
-   *  Inport: '<S29>/Xa'
-   *  Inport: '<S30>/Xb'
-   *  Merge: '<S32>/Merge'
-   */
-  rtb_Merge_d = (rtb_Merge_ns > 250.0);
+  /* S-Function (raptor_sfun_can_rxmsg): '<S5>/raptor_can_rxmsg2' */
 
-  /* End of Outputs for SubSystem: '<S26>/If Action Subsystem' */
-  /* End of Outputs for SubSystem: '<S26>/If Action Subsystem1' */
+  /* S-Function Block:<S5>/raptor_can_rxmsg2 */
+  {
+    uint8_T data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
 
-  /* Outputs for IfAction SubSystem: '<S25>/If Action Subsystem1' incorporates:
-   *  ActionPort: '<S28>/Action Port'
+    /* Signal: Channel_10     not connected */
+    uint32_T temp;
+    can_get_612__0005(&rtb_raptor_can_rxmsg2_o1_e, NULL, NULL, &data[0], 8);
+
+    /* Signal: Channel_9      */
+    temp = 0;
+    temp |= ((uint32_T)data[2U]) ;
+    temp |= ((uint32_T)data[3U]) << 8;
+    rtb_Merge_p = (((real_T) temp ) + (real_T)-1230.0);
+
+    /* Signal: NewSignal_0007 not connected */
+
+    /* Signal: NewSignal_0008 not connected */
+  }
+
+  /* Outputs for IfAction SubSystem: '<S12>/If Action Subsystem1' incorporates:
+   *  ActionPort: '<S16>/Action Port'
    */
-  /* Outputs for IfAction SubSystem: '<S25>/If Action Subsystem' incorporates:
-   *  ActionPort: '<S27>/Action Port'
+  /* Outputs for IfAction SubSystem: '<S12>/If Action Subsystem' incorporates:
+   *  ActionPort: '<S15>/Action Port'
    */
-  /* If: '<S25>/If' incorporates:
-   *  Inport: '<S27>/Xa'
-   *  Inport: '<S28>/Xb'
-   *  Merge: '<S33>/Merge'
+  /* If: '<S12>/If' incorporates:
+   *  Inport: '<S15>/Xa'
+   *  Inport: '<S16>/Xb'
+   *  Merge: '<S12>/Merge'
    */
-  rtb_Merge_ns = (rtb_Merge_ns > 1200.0);
+  rtb_Merge = (rtb_Merge_p > 250.0);
 
-  /* End of Outputs for SubSystem: '<S25>/If Action Subsystem' */
-  /* End of Outputs for SubSystem: '<S25>/If Action Subsystem1' */
+  /* End of Outputs for SubSystem: '<S12>/If Action Subsystem' */
+  /* End of Outputs for SubSystem: '<S12>/If Action Subsystem1' */
 
-  /* S-Function (raptor_sfun_can_txmsg): '<S10>/raptor_can_txmsg' */
+  /* Outputs for IfAction SubSystem: '<S11>/If Action Subsystem1' incorporates:
+   *  ActionPort: '<S14>/Action Port'
+   */
+  /* Outputs for IfAction SubSystem: '<S11>/If Action Subsystem' incorporates:
+   *  ActionPort: '<S13>/Action Port'
+   */
+  /* If: '<S11>/If' incorporates:
+   *  Inport: '<S13>/Xa'
+   *  Inport: '<S14>/Xb'
+   *  Merge: '<S11>/Merge'
+   */
+  rtb_Merge_p = (rtb_Merge_p > 1200.0);
 
-  /* S-Function Block:<S10>/raptor_can_txmsg */
+  /* End of Outputs for SubSystem: '<S11>/If Action Subsystem' */
+  /* End of Outputs for SubSystem: '<S11>/If Action Subsystem1' */
+
+  /* S-Function (raptor_sfun_can_txmsg): '<S9>/raptor_can_txmsg' */
+
+  /* S-Function Block:<S9>/raptor_can_txmsg */
   {
     uint8_T data[4U] = { 0, 0, 0, 0, };
 
@@ -1098,15 +1262,15 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     /* hsc_bcm_enable      - StartBit: 0U, BitLength: 1U, Endian: 1U */
 
     /* signal type is unsigned */
-    if (rtb_Merge_d < 0.0000000000F)
+    if (rtb_Merge < 0.0000000000F)
       temp = (uint32_T)0U;
-    else if (rtb_Merge_d > 1.0000000000F)
+    else if (rtb_Merge > 1.0000000000F)
       temp = (uint32_T)1U;
     else {
-      if ((real_T)rtb_Merge_d < 0)
-        temp = (uint32_T)(int32_T)((rtb_Merge_d));
+      if ((real_T)rtb_Merge < 0)
+        temp = (uint32_T)(int32_T)((rtb_Merge));
       else
-        temp = (uint32_T)((rtb_Merge_d));
+        temp = (uint32_T)((rtb_Merge));
     }
 
     temp_shift = (uint8_T)(temp >> 0);
@@ -1155,479 +1319,39 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     /* hsc_bcm_mainc_close - StartBit: 2U, BitLength: 1U, Endian: 1U */
 
     /* signal type is unsigned */
-    if (rtb_Merge_ns < 0.0000000000F)
+    if (rtb_Merge_p < 0.0000000000F)
       temp = (uint32_T)0U;
-    else if (rtb_Merge_ns > 1.0000000000F)
+    else if (rtb_Merge_p > 1.0000000000F)
       temp = (uint32_T)1U;
     else {
-      if ((real_T)rtb_Merge_ns < 0)
-        temp = (uint32_T)(int32_T)((rtb_Merge_ns));
+      if ((real_T)rtb_Merge_p < 0)
+        temp = (uint32_T)(int32_T)((rtb_Merge_p));
       else
-        temp = (uint32_T)((rtb_Merge_ns));
+        temp = (uint32_T)((rtb_Merge_p));
     }
 
     temp_shift = (uint8_T)(temp << 2);
     temp_shift &= ((uint8_T)4U);
     data[0U] |= temp_shift;
-    can_set_period_296__0006(0U);
-    can_send_296__0006(1024U & 0x7FF, 0, 4U, &data[0]);
+    can_set_period_292__0006(0U);
+    can_send_292__0006(1024U & 0x7FF, 0, 4U, &data[0]);
   }
 
-  /* S-Function (raptor_sfun_can_rxmsg): '<S7>/raptor_can_rxmsg1' */
-
-  /* S-Function Block:<S7>/raptor_can_rxmsg1 */
-  {
-    uint8_T data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
-
-    uint32_T temp;
-    can_get_611__0005(&rtb_raptor_can_rxmsg1_o1, NULL, NULL, &data[0], 8);
-
-    /* Signal: Channel_5 */
-    temp = 0;
-    temp |= ((uint32_T)data[0U]) ;
-    temp |= ((uint32_T)data[1U]) << 8;
-    rtb_Merge_d = (((real_T) temp ) + (real_T)-1230.0);
-
-    /* Signal: Channel_6 not connected */
-
-    /* Signal: Channel_7 not connected */
-
-    /* Signal: Channel_8 not connected */
-  }
-
-  /* If: '<S32>/If' */
-  if (rtb_Merge_d > 1200.0) {
-    /* Outputs for IfAction SubSystem: '<S32>/If Action Subsystem3' incorporates:
-     *  ActionPort: '<S37>/Action Port'
-     */
-    /* Merge: '<S32>/Merge' incorporates:
-     *  Constant: '<S32>/Constant2'
-     *  Inport: '<S37>/Xb'
-     */
-    rtb_Merge_d = 1.0;
-
-    /* End of Outputs for SubSystem: '<S32>/If Action Subsystem3' */
-  } else if (rtb_Merge_d > 250.0) {
-    /* Outputs for IfAction SubSystem: '<S32>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S36>/Action Port'
-     */
-    /* Merge: '<S32>/Merge' incorporates:
-     *  Constant: '<S32>/Constant1'
-     *  Inport: '<S36>/Xb'
-     */
-    rtb_Merge_d = 0.0;
-
-    /* End of Outputs for SubSystem: '<S32>/If Action Subsystem2' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S32>/If Action Subsystem4' incorporates:
-     *  ActionPort: '<S38>/Action Port'
-     */
-    /* Merge: '<S32>/Merge' incorporates:
-     *  Constant: '<S32>/Constant3'
-     *  Inport: '<S38>/Xb'
-     */
-    rtb_Merge_d = -1.0;
-
-    /* End of Outputs for SubSystem: '<S32>/If Action Subsystem4' */
-  }
-
-  /* End of If: '<S32>/If' */
-
-  /* Gain: '<S11>/Gain' incorporates:
-   *  Product: '<S11>/Product1'
-   */
-  rtb_Gain2 = rtb_raptor_can_rxmsg_o2 * rtb_Merge_d * -0.02;
-
-  /* Outputs for IfAction SubSystem: '<S33>/If Action Subsystem1' incorporates:
-   *  ActionPort: '<S40>/Action Port'
-   */
-  /* Outputs for IfAction SubSystem: '<S33>/If Action Subsystem' incorporates:
-   *  ActionPort: '<S39>/Action Port'
-   */
-  /* If: '<S33>/If' incorporates:
-   *  Inport: '<S39>/Xa'
-   *  Inport: '<S40>/Xb'
-   *  Merge: '<S33>/Merge'
-   */
-  rtb_Merge_ns = (rtb_Merge_j > 250.0);
-
-  /* End of Outputs for SubSystem: '<S33>/If Action Subsystem' */
-  /* End of Outputs for SubSystem: '<S33>/If Action Subsystem1' */
-
-  /* Outputs for IfAction SubSystem: '<S31>/If Action Subsystem1' incorporates:
-   *  ActionPort: '<S35>/Action Port'
-   */
-  /* Outputs for IfAction SubSystem: '<S31>/If Action Subsystem' incorporates:
-   *  ActionPort: '<S34>/Action Port'
-   */
-  /* If: '<S31>/If' incorporates:
-   *  Inport: '<S34>/Xa'
-   *  Inport: '<S35>/Xb'
-   *  Merge: '<S31>/Merge'
-   */
-  rtb_Merge_j = (rtb_Merge_j > 1200.0);
-
-  /* End of Outputs for SubSystem: '<S31>/If Action Subsystem' */
-  /* End of Outputs for SubSystem: '<S31>/If Action Subsystem1' */
-
-  /* S-Function (raptor_sfun_can_txmsg): '<S11>/raptor_can_txmsg' incorporates:
-   *  Constant: '<S11>/Constant'
-   */
-
-  /* S-Function Block:<S11>/raptor_can_txmsg */
-  {
-    uint8_T data[8U] = { 0, 0, 0, 0, 0, 0, 0, 0, };
-
-    uint32_T temp;
-    uint8_T temp_shift;
-
-    /* Signal: I1_CommandAcCurrent    */
-    /* I1_CommandAcCurrent    - StartBit: 32U, BitLength: 16U, Endian: 0U */
-
-    /* signal type is unsigned */
-    if (rtb_Gain2 < -1600.0000000000F)
-      temp = (uint32_T)0U;
-    else if (rtb_Gain2 > 1676.7500000000F)
-      temp = (uint32_T)65535U;
-    else {
-      if ((real_T)rtb_Gain2 < 0)
-        temp = (uint32_T)(int32_T)((rtb_Gain2- -1600.0f) * 20.0f);
-      else
-        temp = (uint32_T)((rtb_Gain2- -1600.0f) * 20.0f);
-    }
-
-    temp_shift = (uint8_T)(temp >> 0);
-    data[4U] |= temp_shift;
-    temp_shift = (uint8_T)(temp >> 8);
-    data[5U] |= temp_shift;
-
-    /* Signal: I1_CommandContact      */
-    /* I1_CommandContact      - StartBit: 6U, BitLength: 2U, Endian: 0U */
-
-    /* signal type is unsigned */
-    if (rtb_Merge_ns < 0.0000000000F)
-      temp = (uint32_T)0U;
-    else if (rtb_Merge_ns > 3.0000000000F)
-      temp = (uint32_T)3U;
-    else {
-      if ((real_T)rtb_Merge_ns < 0)
-        temp = (uint32_T)(int32_T)((rtb_Merge_ns));
-      else
-        temp = (uint32_T)((rtb_Merge_ns));
-    }
-
-    temp_shift = (uint8_T)(temp << 6);
-    temp_shift &= ((uint8_T)192U);
-    data[0U] |= temp_shift;
-
-    /* Signal: I1_CommandEnable       */
-    /* I1_CommandEnable       - StartBit: 0U, BitLength: 2U, Endian: 0U */
-
-    /* signal type is unsigned */
-    if (rtb_Merge_j < 0.0000000000F)
-      temp = (uint32_T)0U;
-    else if (rtb_Merge_j > 3.0000000000F)
-      temp = (uint32_T)3U;
-    else {
-      if ((real_T)rtb_Merge_j < 0)
-        temp = (uint32_T)(int32_T)((rtb_Merge_j));
-      else
-        temp = (uint32_T)((rtb_Merge_j));
-    }
-
-    temp_shift = (uint8_T)(temp >> 0);
-    temp_shift &= ((uint8_T)3U);
-    data[0U] |= temp_shift;
-
-    /* Signal: I1_CommandFan          */
-    /* I1_CommandFan          - StartBit: 8U, BitLength: 2U, Endian: 0U */
-
-    /* signal type is unsigned */
-    if (0.0 < 0.0000000000F)
-      temp = (uint32_T)0U;
-    else if (0.0 > 3.0000000000F)
-      temp = (uint32_T)3U;
-    else {
-      if ((real_T)0.0 < 0)
-        temp = (uint32_T)(int32_T)((0.0));
-      else
-        temp = (uint32_T)((0.0));
-    }
-
-    temp_shift = (uint8_T)(temp >> 0);
-    temp_shift &= ((uint8_T)3U);
-    data[1U] |= temp_shift;
-
-    /* Signal: I1_CommandSpeed        */
-    /* I1_CommandSpeed        - StartBit: 16U, BitLength: 16U, Endian: 0U */
-
-    /* signal type is unsigned */
-    if (0.0 < -8032.7500000000F)
-      temp = (uint32_T)0U;
-    else if (0.0 > 8351.0000000000F)
-      temp = (uint32_T)65535U;
-    else {
-      if ((real_T)0.0 < 0)
-        temp = (uint32_T)(int32_T)((0.0- -8032.75f) * 4.0f);
-      else
-        temp = (uint32_T)((0.0- -8032.75f) * 4.0f);
-    }
-
-    temp_shift = (uint8_T)(temp >> 0);
-    data[2U] |= temp_shift;
-    temp_shift = (uint8_T)(temp >> 8);
-    data[3U] |= temp_shift;
-
-    /* Signal: I1_CommandVoltage      */
-    /* I1_CommandVoltage      - StartBit: 48U, BitLength: 16U, Endian: 0U */
-
-    /* signal type is unsigned */
-    if (0.0 < 0.0000000000F)
-      temp = (uint32_T)0U;
-    else if (0.0 > 3276.7500000000F)
-      temp = (uint32_T)65535U;
-    else {
-      if ((real_T)0.0 < 0)
-        temp = (uint32_T)(int32_T)((0.0) * 20.0f);
-      else
-        temp = (uint32_T)((0.0) * 20.0f);
-    }
-
-    temp_shift = (uint8_T)(temp >> 0);
-    data[6U] |= temp_shift;
-    temp_shift = (uint8_T)(temp >> 8);
-    data[7U] |= temp_shift;
-
-    /* Signal: I1_EnableDebugMessages */
-    /* I1_EnableDebugMessages - StartBit: 10U, BitLength: 2U, Endian: 0U */
-
-    /* signal type is unsigned */
-    if (0.0 < 0.0000000000F)
-      temp = (uint32_T)0U;
-    else if (0.0 > 3.0000000000F)
-      temp = (uint32_T)3U;
-    else {
-      if ((real_T)0.0 < 0)
-        temp = (uint32_T)(int32_T)((0.0));
-      else
-        temp = (uint32_T)((0.0));
-    }
-
-    temp_shift = (uint8_T)(temp << 2);
-    temp_shift &= ((uint8_T)12U);
-    data[1U] |= temp_shift;
-
-    /* Signal: I1_ReqControlMode      */
-    /* I1_ReqControlMode      - StartBit: 2U, BitLength: 4U, Endian: 0U */
-
-    /* signal type is unsigned */
-    if (1.0 < 0.0000000000F)
-      temp = (uint32_T)0U;
-    else if (1.0 > 15.0000000000F)
-      temp = (uint32_T)15U;
-    else {
-      if ((real_T)1.0 < 0)
-        temp = (uint32_T)(int32_T)((1.0));
-      else
-        temp = (uint32_T)((1.0));
-    }
-
-    temp_shift = (uint8_T)(temp << 2);
-    temp_shift &= ((uint8_T)60U);
-    data[0U] |= temp_shift;
-    can_set_period_584__0007(0U);
-    can_send_584__0007(218038727U & 0x1FFFFFFF, 1, 8U, &data[0]);
-  }
-
-  /* Gain: '<S11>/Gain1' incorporates:
-   *  Product: '<S11>/Product'
-   */
-  rtb_Gain2 = rtb_raptor_can_rxmsg_o3_l * rtb_Merge_d * 0.02;
-
-  /* S-Function (raptor_sfun_can_txmsg): '<S11>/raptor_can_txmsg1' incorporates:
-   *  Constant: '<S11>/Constant'
-   */
-
-  /* S-Function Block:<S11>/raptor_can_txmsg1 */
-  {
-    uint8_T data[8U] = { 0, 0, 0, 0, 0, 0, 0, 0, };
-
-    uint32_T temp;
-    uint8_T temp_shift;
-
-    /* Signal: I2_CommandAcCurrent    */
-    /* I2_CommandAcCurrent    - StartBit: 32U, BitLength: 16U, Endian: 0U */
-
-    /* signal type is unsigned */
-    if (rtb_Gain2 < -1600.0000000000F)
-      temp = (uint32_T)0U;
-    else if (rtb_Gain2 > 1676.7500000000F)
-      temp = (uint32_T)65535U;
-    else {
-      if ((real_T)rtb_Gain2 < 0)
-        temp = (uint32_T)(int32_T)((rtb_Gain2- -1600.0f) * 20.0f);
-      else
-        temp = (uint32_T)((rtb_Gain2- -1600.0f) * 20.0f);
-    }
-
-    temp_shift = (uint8_T)(temp >> 0);
-    data[4U] |= temp_shift;
-    temp_shift = (uint8_T)(temp >> 8);
-    data[5U] |= temp_shift;
-
-    /* Signal: I2_CommandContact      */
-    /* I2_CommandContact      - StartBit: 6U, BitLength: 2U, Endian: 0U */
-
-    /* signal type is unsigned */
-    if (rtb_Merge_ns < 0.0000000000F)
-      temp = (uint32_T)0U;
-    else if (rtb_Merge_ns > 3.0000000000F)
-      temp = (uint32_T)3U;
-    else {
-      if ((real_T)rtb_Merge_ns < 0)
-        temp = (uint32_T)(int32_T)((rtb_Merge_ns));
-      else
-        temp = (uint32_T)((rtb_Merge_ns));
-    }
-
-    temp_shift = (uint8_T)(temp << 6);
-    temp_shift &= ((uint8_T)192U);
-    data[0U] |= temp_shift;
-
-    /* Signal: I2_CommandEnable       */
-    /* I2_CommandEnable       - StartBit: 0U, BitLength: 2U, Endian: 0U */
-
-    /* signal type is unsigned */
-    if (rtb_Merge_j < 0.0000000000F)
-      temp = (uint32_T)0U;
-    else if (rtb_Merge_j > 3.0000000000F)
-      temp = (uint32_T)3U;
-    else {
-      if ((real_T)rtb_Merge_j < 0)
-        temp = (uint32_T)(int32_T)((rtb_Merge_j));
-      else
-        temp = (uint32_T)((rtb_Merge_j));
-    }
-
-    temp_shift = (uint8_T)(temp >> 0);
-    temp_shift &= ((uint8_T)3U);
-    data[0U] |= temp_shift;
-
-    /* Signal: I2_CommandFan          */
-    /* I2_CommandFan          - StartBit: 8U, BitLength: 2U, Endian: 0U */
-
-    /* signal type is unsigned */
-    if (0.0 < 0.0000000000F)
-      temp = (uint32_T)0U;
-    else if (0.0 > 3.0000000000F)
-      temp = (uint32_T)3U;
-    else {
-      if ((real_T)0.0 < 0)
-        temp = (uint32_T)(int32_T)((0.0));
-      else
-        temp = (uint32_T)((0.0));
-    }
-
-    temp_shift = (uint8_T)(temp >> 0);
-    temp_shift &= ((uint8_T)3U);
-    data[1U] |= temp_shift;
-
-    /* Signal: I2_CommandSpeed        */
-    /* I2_CommandSpeed        - StartBit: 16U, BitLength: 16U, Endian: 0U */
-
-    /* signal type is unsigned */
-    if (0.0 < -8032.7500000000F)
-      temp = (uint32_T)0U;
-    else if (0.0 > 8351.0000000000F)
-      temp = (uint32_T)65535U;
-    else {
-      if ((real_T)0.0 < 0)
-        temp = (uint32_T)(int32_T)((0.0- -8032.75f) * 4.0f);
-      else
-        temp = (uint32_T)((0.0- -8032.75f) * 4.0f);
-    }
-
-    temp_shift = (uint8_T)(temp >> 0);
-    data[2U] |= temp_shift;
-    temp_shift = (uint8_T)(temp >> 8);
-    data[3U] |= temp_shift;
-
-    /* Signal: I2_CommandVoltage      */
-    /* I2_CommandVoltage      - StartBit: 48U, BitLength: 16U, Endian: 0U */
-
-    /* signal type is unsigned */
-    if (0.0 < 0.0000000000F)
-      temp = (uint32_T)0U;
-    else if (0.0 > 3276.7500000000F)
-      temp = (uint32_T)65535U;
-    else {
-      if ((real_T)0.0 < 0)
-        temp = (uint32_T)(int32_T)((0.0) * 20.0f);
-      else
-        temp = (uint32_T)((0.0) * 20.0f);
-    }
-
-    temp_shift = (uint8_T)(temp >> 0);
-    data[6U] |= temp_shift;
-    temp_shift = (uint8_T)(temp >> 8);
-    data[7U] |= temp_shift;
-
-    /* Signal: I2_EnableDebugMessages */
-    /* I2_EnableDebugMessages - StartBit: 10U, BitLength: 2U, Endian: 0U */
-
-    /* signal type is unsigned */
-    if (0.0 < 0.0000000000F)
-      temp = (uint32_T)0U;
-    else if (0.0 > 3.0000000000F)
-      temp = (uint32_T)3U;
-    else {
-      if ((real_T)0.0 < 0)
-        temp = (uint32_T)(int32_T)((0.0));
-      else
-        temp = (uint32_T)((0.0));
-    }
-
-    temp_shift = (uint8_T)(temp << 2);
-    temp_shift &= ((uint8_T)12U);
-    data[1U] |= temp_shift;
-
-    /* Signal: I2_ReqControlMode      */
-    /* I2_ReqControlMode      - StartBit: 2U, BitLength: 4U, Endian: 0U */
-
-    /* signal type is unsigned */
-    if (1.0 < 0.0000000000F)
-      temp = (uint32_T)0U;
-    else if (1.0 > 15.0000000000F)
-      temp = (uint32_T)15U;
-    else {
-      if ((real_T)1.0 < 0)
-        temp = (uint32_T)(int32_T)((1.0));
-      else
-        temp = (uint32_T)((1.0));
-    }
-
-    temp_shift = (uint8_T)(temp << 2);
-    temp_shift &= ((uint8_T)60U);
-    data[0U] |= temp_shift;
-    can_set_period_585__0005(0U);
-    can_send_585__0005(218042823U & 0x1FFFFFFF, 1, 8U, &data[0]);
-  }
-
-  /* S-Function (raptor_sfun_digital_in): '<S41>/raptor_digital_in' */
+  /* S-Function (raptor_sfun_digital_in): '<S6>/raptor_digital_in' */
   /* S-Function Block: DG1 */
   {
     rtb_raptor_digital_in = (boolean_T) Digital_Input_Read_Chan(DG1_DG);
   }
 
-  /* S-Function (raptor_sfun_digital_in): '<S41>/raptor_digital_in1' */
+  /* S-Function (raptor_sfun_digital_in): '<S6>/raptor_digital_in1' */
   /* S-Function Block: DG2 */
   {
     rtb_raptor_digital_in1 = (boolean_T) Digital_Input_Read_Chan(DG2_DG);
   }
 
-  /* S-Function (raptor_sfun_can_txmsg): '<S41>/raptor_can_txmsg' */
+  /* S-Function (raptor_sfun_can_txmsg): '<S6>/raptor_can_txmsg' */
 
-  /* S-Function Block:<S41>/raptor_can_txmsg */
+  /* S-Function Block:<S6>/raptor_can_txmsg */
   {
     uint8_T data[8U] = { 0, 0, 0, 0, 0, 0, 0, 0, };
 
@@ -1661,8 +1385,8 @@ void Lightning_McSeas_VCU_Current_Mode_Foreground(void)
     temp_shift = (uint8_T)(temp << 1);
     temp_shift &= ((uint8_T)2U);
     data[0U] |= temp_shift;
-    can_set_period_624__0005(0U);
-    can_send_624__0005(1306U & 0x7FF, 0, 8U, &data[0]);
+    can_set_period_622__0005(0U);
+    can_send_622__0005(1306U & 0x7FF, 0, 8U, &data[0]);
   }
 }
 
@@ -1687,6 +1411,9 @@ void Lightning_McSeas_VCU_Current_Mode_step(void)
 void Lightning_McSeas_VCU_Current_Mode_initialize(void)
 {
   /* Registration code */
+
+  /* initialize non-finites */
+  rt_InitInfAndNaN(sizeof(real_T));
 
   /* states (dwork) */
   (void) memset((void *)&Lightning_McSeas_VCU_Current_Mode_DWork, 0,

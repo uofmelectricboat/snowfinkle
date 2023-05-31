@@ -25,10 +25,10 @@ Warning: 'Output Port 6' of 'EB_Charging_Program_Feb/Foreground/Battery Switch/r
 Warning: 'Output Port 7' of 'EB_Charging_Program_Feb/Foreground/Battery Switch/raptor_can_rxmsg' is not connected.
 Warning: 'Input Port 2' of 'EB_Charging_Program_Feb/Foreground/Battery Switch/raptor_can_txmsg' is not connected.
 Warning: 'Input Port 3' of 'EB_Charging_Program_Feb/Foreground/Battery Switch/raptor_can_txmsg' is not connected.
-### Model update completed... (2.0 seconds) 
+### Model update completed... (1.9 seconds) 
 ### Building with Raptor_2021b_1.0.14409...
 ### Building with MATLAB R2021b(x64)...
-### Current Time: Apr 07, 2023 16:05:29
+### Current Time: Apr 12, 2023 17:38:19
 ### Raptor-Dev 2021b is operating in Lite mode - Limited Model Size
 ### Raptor IO Customization for Target: GCM-5605B-048-2104...
 Processing with raptor_rlc... 
@@ -147,16 +147,17 @@ Warning: 'Input Port 3' of 'EB_Charging_Program_Feb/Foreground/Battery Switch/ra
 ........................
 ### Caching model source code
 ...............................................................................
-...................................................................
+..................................................................
 ### Writing header file EB_Charging_Program_Feb_types.h
-### Writing header file EB_Charging_Program_Feb.h
 .
+### Writing header file EB_Charging_Program_Feb.h
 ### Writing source file EB_Charging_Program_Feb.c
 ### Writing header file rtwtypes.h
 ### Writing header file zero_crossing_types.h
 ### Writing header file EB_Charging_Program_Feb_private.h
+.
 ### TLC code generation complete.
-..
+.
 ### Found Timed Triggers
 Timer_ooqlV, Interval : Foreground
 Timer_BGND_9AY_V, Interval : Background
@@ -186,11 +187,11 @@ powerpc-eabivle-gcc "@compiler.args" -o "./objs/LIN2.o" LIN2.c
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/Timer_BGND_9AY_V.o" Timer_BGND_9AY_V.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/Timer_ooqlV.o" Timer_ooqlV.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/XCP_App.o" XCP_App.c  
-powerpc-eabivle-gcc "@compiler.args" -o "./objs/can_2066__0005.o" can_2066__0005.c  
-powerpc-eabivle-gcc "@compiler.args" -o "./objs/can_2067__0005.o" can_2067__0005.c  
+powerpc-eabivle-gcc "@compiler.args" -o "./objs/can_2626__0001.o" can_2626__0001.c  
+powerpc-eabivle-gcc "@compiler.args" -o "./objs/can_2627__0001.o" can_2627__0001.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/data.o" data.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/hw_user.o" hw_user.c  
-powerpc-eabivle-gcc "@compiler.args" -o "./objs/lin_2068__0005.o" lin_2068__0005.c  
+powerpc-eabivle-gcc "@compiler.args" -o "./objs/lin_2628__0001.o" lin_2628__0001.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/lin_general.o" lin_general.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/raptor_printf.o" raptor_printf.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/xcp_protocol.o" xcp_protocol.c  
@@ -200,7 +201,7 @@ Copy : EB_Charging_Program_Feb.hex
 Generating ASAP2 file... 
 A2L:  Build Dir: C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Charger_Config\EB_Charging_Program_Feb_raptor_rtw 
 A2L: Model Name: EB_Charging_Program_Feb 
-A2L:    SwIDTxt: EB_Charging_Program_Feb_074 
+A2L:    SwIDTxt: EB_Charging_Program_Feb_080 
 A2L:     Target: GCM-5605B-048-2104 
 Address Mode: SYM 
 Preparing to generate ASAP2 file... 
@@ -208,10 +209,10 @@ Creating ASAP2 file for access level 4...
 Creating ASAP2 file for access level 2... 
 Creating ASAP2 file for access level 1... 
 Creating ASAP2 file for access level RPG... 
-Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Charger_Config\EB_Charging_Program_Feb_raptor_rtw\EB_Charging_Program_Feb_074_A1.a2l
-Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Charger_Config\EB_Charging_Program_Feb_raptor_rtw\EB_Charging_Program_Feb_074_A2.a2l
-Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Charger_Config\EB_Charging_Program_Feb_raptor_rtw\EB_Charging_Program_Feb_074_A4.a2l
-Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Charger_Config\EB_Charging_Program_Feb_raptor_rtw\EB_Charging_Program_Feb_074_RPG.a2l
+Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Charger_Config\EB_Charging_Program_Feb_raptor_rtw\EB_Charging_Program_Feb_080_A1.a2l
+Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Charger_Config\EB_Charging_Program_Feb_raptor_rtw\EB_Charging_Program_Feb_080_A2.a2l
+Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Charger_Config\EB_Charging_Program_Feb_raptor_rtw\EB_Charging_Program_Feb_080_A4.a2l
+Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Charger_Config\EB_Charging_Program_Feb_raptor_rtw\EB_Charging_Program_Feb_080_RPG.a2l
 settings = 
   struct with fields:
                Target: 'GCM-5605B-048-2104'
@@ -232,14 +233,14 @@ settings =
             RaptorDir: 'C:\Program Files (x86)\NewEagle\Raptor\2021b_1.0.14409'
           AddBuildNum: 1
           SetFileName: 0
-             BuildNum: 74
+             BuildNum: 80
         buildLocation: 'Raptor Default'
-              SwIdTxt: 'EB_Charging_Program_Feb_074'
-             CalIdTxt: 'EB_Charging_Program_Feb_074_000'
+              SwIdTxt: 'EB_Charging_Program_Feb_080'
+             CalIdTxt: 'EB_Charging_Program_Feb_080_000'
          HardwareType: '18940163'
            IdTableRev: '4'
        ProgramFileExt: 'hex'
-            DateStamp: '07-Apr-2023 16:05:45'
+            DateStamp: '12-Apr-2023 17:38:41'
          OutputHexA2L: 0
           exeLocation: 'C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Charger_Config\EB_Charging_Program_Feb_raptor_rtw'
           a2lLocation: 'C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Charger_Config\EB_Charging_Program_Feb_raptor_rtw'
@@ -249,7 +250,7 @@ settings =
 ### Calculating Memory Usage
 Memory Usage Summary:
  
-   FLASH (ALL)                         :  110066  of  655104 Bytes ( 16.8 %)
+   FLASH (ALL)                         :  110070  of  655104 Bytes ( 16.8 %)
                         CONSTVariables :     172             Bytes (  0.0 %)
                    EEVariables_DEFAULT :      44             Bytes (  0.0 %)
                       Timer_BGND_9AY_V :      20             Bytes (  0.0 %)
@@ -270,11 +271,11 @@ Descriptor.exe - Manipulates GCM48-5605B ROM binary images.
  Check descriptor.......Done.
  Writing output file....Done.
  Complete.
-RPG written to: C:\ECU\rpg\EB_Charging_Program_Feb_074.rpg
+RPG written to: C:\ECU\rpg\EB_Charging_Program_Feb_080.rpg
 RILPackager: Finished
  
-Build Number: 74
-Build Time: 29.1 seconds.
+Build Number: 80
+Build Time: 37.2 seconds.
  
 ########################################
 #####   Successful Raptor Build    #####

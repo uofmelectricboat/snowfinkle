@@ -7,7 +7,7 @@
    Copyright (c) 2018 New Eagle Products, Inc.
    All rights reserved.
 
-   Code Generated at: Fri Apr  7 16:05:33 2023
+   Code Generated at: Wed Apr 12 17:38:25 2023
  *****************************************************************************/
 
 #include "EB_Charging_Program_Feb.h"
@@ -147,14 +147,14 @@ void application_int(void)
   /* CAN Bus Initializations */
   CANFrame_Queue_Create(&g_CAN1_TxQueue, CAN1_TxQueue_data, (20));
   CANFrame_Queue_Create(&g_CAN1_RxQueue, CAN1_RxQueue_data, (16));
-  pre_start_CAN_2066__0005();          /* <Root>/raptor_can_def */
+  pre_start_CAN_2626__0001();          /* <Root>/raptor_can_def */
   CANFrame_Queue_Create(&g_CAN2_TxQueue, CAN2_TxQueue_data, (20));
   CANFrame_Queue_Create(&g_CAN2_RxQueue, CAN2_RxQueue_data, (16));
-  pre_start_CAN_2067__0005();          /* <Root>/raptor_can_def1 */
+  pre_start_CAN_2627__0001();          /* <Root>/raptor_can_def1 */
 
   /* start_CAN(); */
-  post_start_CAN_2066__0005();         /* <Root>/raptor_can_def */
-  post_start_CAN_2067__0005();         /* <Root>/raptor_can_def1 */
+  post_start_CAN_2626__0001();         /* <Root>/raptor_can_def */
+  post_start_CAN_2627__0001();         /* <Root>/raptor_can_def1 */
   Xcp_Initialize();
 
   {

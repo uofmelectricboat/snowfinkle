@@ -5,34 +5,23 @@
 ########################################
  
 ### Performing model update...
-Warning: 'Output Port 1' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/raptor_can_rxmsg' is not connected.
-Warning: 'Output Port 1' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/raptor_can_rxmsg1' is not connected.
-Warning: 'Output Port 3' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/raptor_can_rxmsg1' is not connected.
-Warning: 'Output Port 4' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/raptor_can_rxmsg1' is not connected.
-Warning: 'Output Port 5' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/raptor_can_rxmsg1' is not connected.
-Warning: 'Output Port 1' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/raptor_can_rxmsg2' is not connected.
-Warning: 'Output Port 4' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/raptor_can_rxmsg2' is not connected.
-Warning: 'Output Port 5' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/raptor_can_rxmsg2' is not connected.
-Warning: 'Input Port 2' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Switch/raptor_can_txmsg' is not connected.
-Warning: 'Input Port 3' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Switch/raptor_can_txmsg' is not connected.
-Warning: 'Output Port 1' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/raptor_can_rxmsg' is not connected.
-Warning: 'Output Port 3' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/raptor_can_rxmsg' is not connected.
-Warning: 'Output Port 4' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/raptor_can_rxmsg' is not connected.
-Warning: 'Output Port 5' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/raptor_can_rxmsg' is not connected.
-Warning: 'Output Port 6' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/raptor_can_rxmsg' is not connected.
-Warning: 'Output Port 7' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/raptor_can_rxmsg' is not connected.
-Warning: 'Input Port 4' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg' is not connected.
-Warning: 'Input Port 5' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg' is not connected.
-Warning: 'Input Port 6' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg' is not connected.
-Warning: 'Input Port 7' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg' is not connected.
-Warning: 'Input Port 4' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg1' is not connected.
-Warning: 'Input Port 5' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg1' is not connected.
-Warning: 'Input Port 6' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg1' is not connected.
-Warning: 'Input Port 7' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg1' is not connected.
-### Model update completed... (2.1 seconds) 
+Warning: 'Input Port 2' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/Battery Switch/raptor_can_txmsg' is not connected.
+Warning: 'Input Port 3' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/Battery Switch/raptor_can_txmsg' is not connected.
+Warning: 'Output Port 1' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/MCU/raptor_can_rxmsg1' is not connected.
+Warning: 'Output Port 1' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/MCU/raptor_can_rxmsg2' is not connected.
+Warning: 'Output Port 1' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/raptor_can_rxmsg' is not connected.
+Warning: 'Output Port 1' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/raptor_can_rxmsg1' is not connected.
+Warning: 'Output Port 3' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/raptor_can_rxmsg1' is not connected.
+Warning: 'Output Port 4' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/raptor_can_rxmsg1' is not connected.
+Warning: 'Output Port 5' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/raptor_can_rxmsg1' is not connected.
+Warning: 'Output Port 1' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/raptor_can_rxmsg2' is not connected.
+Warning: 'Output Port 2' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/raptor_can_rxmsg2' is not connected.
+Warning: 'Output Port 4' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/raptor_can_rxmsg2' is not connected.
+Warning: 'Output Port 5' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/raptor_can_rxmsg2' is not connected.
+### Model update completed... (1.5 seconds) 
 ### Building with Raptor_2021b_1.0.14409...
 ### Building with MATLAB R2021b(x64)...
-### Current Time: Feb 21, 2023 17:56:50
+### Current Time: May 30, 2023 12:37:25
 ### Raptor-Dev 2021b is operating in Lite mode - Limited Model Size
 ### Raptor IO Customization for Target: GCM-5605B-048-2104...
 Processing with raptor_rlc... 
@@ -120,30 +109,19 @@ Processing : GCM_5605B_048_ertTemplate.rlc...
 ### Real-Time Workshop, entering code generation...
 ### Generating code and artifacts to 'Model specific' folder structure
 ### Generating code into build folder: C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Most Update VCU\Lightning_McSeas_VCU_Current_Mode_raptor_rtw
-Warning: 'Output Port 1' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/raptor_can_rxmsg' is not connected.
-Warning: 'Output Port 1' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/raptor_can_rxmsg1' is not connected.
-Warning: 'Output Port 3' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/raptor_can_rxmsg1' is not connected.
-Warning: 'Output Port 4' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/raptor_can_rxmsg1' is not connected.
-Warning: 'Output Port 5' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/raptor_can_rxmsg1' is not connected.
-Warning: 'Output Port 1' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/raptor_can_rxmsg2' is not connected.
-Warning: 'Output Port 4' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/raptor_can_rxmsg2' is not connected.
-Warning: 'Output Port 5' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/raptor_can_rxmsg2' is not connected.
-Warning: 'Input Port 2' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Switch/raptor_can_txmsg' is not connected.
-Warning: 'Input Port 3' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Switch/raptor_can_txmsg' is not connected.
-Warning: 'Output Port 1' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/raptor_can_rxmsg' is not connected.
-Warning: 'Output Port 3' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/raptor_can_rxmsg' is not connected.
-Warning: 'Output Port 4' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/raptor_can_rxmsg' is not connected.
-Warning: 'Output Port 5' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/raptor_can_rxmsg' is not connected.
-Warning: 'Output Port 6' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/raptor_can_rxmsg' is not connected.
-Warning: 'Output Port 7' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/Battery Charging/raptor_can_rxmsg' is not connected.
-Warning: 'Input Port 4' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg' is not connected.
-Warning: 'Input Port 5' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg' is not connected.
-Warning: 'Input Port 6' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg' is not connected.
-Warning: 'Input Port 7' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg' is not connected.
-Warning: 'Input Port 4' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg1' is not connected.
-Warning: 'Input Port 5' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg1' is not connected.
-Warning: 'Input Port 6' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg1' is not connected.
-Warning: 'Input Port 7' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC Rx/MCU/raptor_can_txmsg1' is not connected.
+Warning: 'Input Port 2' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/Battery Switch/raptor_can_txmsg' is not connected.
+Warning: 'Input Port 3' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/Battery Switch/raptor_can_txmsg' is not connected.
+Warning: 'Output Port 1' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/MCU/raptor_can_rxmsg1' is not connected.
+Warning: 'Output Port 1' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/MCU/raptor_can_rxmsg2' is not connected.
+Warning: 'Output Port 1' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/raptor_can_rxmsg' is not connected.
+Warning: 'Output Port 1' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/raptor_can_rxmsg1' is not connected.
+Warning: 'Output Port 3' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/raptor_can_rxmsg1' is not connected.
+Warning: 'Output Port 4' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/raptor_can_rxmsg1' is not connected.
+Warning: 'Output Port 5' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/raptor_can_rxmsg1' is not connected.
+Warning: 'Output Port 1' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/raptor_can_rxmsg2' is not connected.
+Warning: 'Output Port 2' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/raptor_can_rxmsg2' is not connected.
+Warning: 'Output Port 4' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/raptor_can_rxmsg2' is not connected.
+Warning: 'Output Port 5' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/raptor_can_rxmsg2' is not connected.
 
 ### Real-Time Workshop, beginning target language compiler...
 ### Checking for I/O Conflicts
@@ -152,20 +130,26 @@ Warning: 'Input Port 7' of 'Lightning_McSeas_VCU_Current_Mode/Foreground/CAN/RC 
         ### Loading TLC function libraries
 ........
 ### Initial pass through model to cache user defined code
-..........................
+.........................
 ### Caching model source code
 ...............................................................................
 ...............................................................................
-............
+.
 ### Writing header file Lightning_McSeas_VCU_Current_Mode_types.h
+.
 ### Writing header file Lightning_McSeas_VCU_Current_Mode.h
 ### Writing source file Lightning_McSeas_VCU_Current_Mode.c
 ### Writing header file rtwtypes.h
-.
 ### Writing header file zero_crossing_types.h
+### Writing header file rt_nonfinite.h
+.
+### Writing source file rt_nonfinite.c
 ### Writing header file Lightning_McSeas_VCU_Current_Mode_private.h
+### Writing header file rtGetInf.h
+### Writing source file rtGetInf.c
+.
 ### TLC code generation complete.
-..
+.
 ### Found Timed Triggers
 Timer_ooqlV, Interval : Foreground
 Timer_BGND_9AY_V, Interval : Background
@@ -195,13 +179,15 @@ Lightning_McSeas_VCU_Current_Mode.c:105:11: warning: variable 'rtb_raptor_lin_st
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/Timer_BGND_9AY_V.o" Timer_BGND_9AY_V.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/Timer_ooqlV.o" Timer_ooqlV.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/XCP_App.o" XCP_App.c  
-powerpc-eabivle-gcc "@compiler.args" -o "./objs/can_1074__0027.o" can_1074__0027.c  
-powerpc-eabivle-gcc "@compiler.args" -o "./objs/can_1075__0027.o" can_1075__0027.c  
+powerpc-eabivle-gcc "@compiler.args" -o "./objs/can_1072__0034.o" can_1072__0034.c  
+powerpc-eabivle-gcc "@compiler.args" -o "./objs/can_1073__0034.o" can_1073__0034.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/data.o" data.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/hw_user.o" hw_user.c  
-powerpc-eabivle-gcc "@compiler.args" -o "./objs/lin_1076__0027.o" lin_1076__0027.c  
+powerpc-eabivle-gcc "@compiler.args" -o "./objs/lin_1074__0034.o" lin_1074__0034.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/lin_general.o" lin_general.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/raptor_printf.o" raptor_printf.c  
+powerpc-eabivle-gcc "@compiler.args" -o "./objs/rtGetInf.o" rtGetInf.c  
+powerpc-eabivle-gcc "@compiler.args" -o "./objs/rt_nonfinite.o" rt_nonfinite.c  
 powerpc-eabivle-gcc "@compiler.args" -o "./objs/xcp_protocol.o" xcp_protocol.c  
 Linking Lightning_McSeas_VCU_Current_Mode ... 
 Copy : Lightning_McSeas_VCU_Current_Mode.hex  
@@ -209,18 +195,18 @@ Copy : Lightning_McSeas_VCU_Current_Mode.hex
 Generating ASAP2 file... 
 A2L:  Build Dir: C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Most Update VCU\Lightning_McSeas_VCU_Current_Mode_raptor_rtw 
 A2L: Model Name: Lightning_McSeas_VCU_Current_Mode 
-A2L:    SwIDTxt: Lightning_McSeas_VCU_Current_Mode_076 
+A2L:    SwIDTxt: Lightning_McSeas_VCU_Current_Mode_096 
 A2L:     Target: GCM-5605B-048-2104 
 Address Mode: SYM 
 Preparing to generate ASAP2 file... 
 Creating ASAP2 file for access level 4... 
-Creating ASAP2 file for access level 2... 
-Creating ASAP2 file for access level 1... 
 Creating ASAP2 file for access level RPG... 
-Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Most Update VCU\Lightning_McSeas_VCU_Current_Mode_raptor_rtw\Lightning_McSeas_VCU_Current_Mode_076_A1.a2l
-Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Most Update VCU\Lightning_McSeas_VCU_Current_Mode_raptor_rtw\Lightning_McSeas_VCU_Current_Mode_076_A2.a2l
-Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Most Update VCU\Lightning_McSeas_VCU_Current_Mode_raptor_rtw\Lightning_McSeas_VCU_Current_Mode_076_A4.a2l
-Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Most Update VCU\Lightning_McSeas_VCU_Current_Mode_raptor_rtw\Lightning_McSeas_VCU_Current_Mode_076_RPG.a2l
+Creating ASAP2 file for access level 1... 
+Creating ASAP2 file for access level 2... 
+Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Most Update VCU\Lightning_McSeas_VCU_Current_Mode_raptor_rtw\Lightning_McSeas_VCU_Current_Mode_096_A1.a2l
+Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Most Update VCU\Lightning_McSeas_VCU_Current_Mode_raptor_rtw\Lightning_McSeas_VCU_Current_Mode_096_A2.a2l
+Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Most Update VCU\Lightning_McSeas_VCU_Current_Mode_raptor_rtw\Lightning_McSeas_VCU_Current_Mode_096_A4.a2l
+Created ASAP2 file : C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Most Update VCU\Lightning_McSeas_VCU_Current_Mode_raptor_rtw\Lightning_McSeas_VCU_Current_Mode_096_RPG.a2l
 settings = 
   struct with fields:
                Target: 'GCM-5605B-048-2104'
@@ -241,14 +227,14 @@ settings =
             RaptorDir: 'C:\Program Files (x86)\NewEagle\Raptor\2021b_1.0.14409'
           AddBuildNum: 1
           SetFileName: 0
-             BuildNum: 76
+             BuildNum: 96
         buildLocation: 'Raptor Default'
-              SwIdTxt: 'Lightning_McSeas_VCU_Current_Mode_076'
-             CalIdTxt: 'Lightning_McSeas_VCU_Current_Mode_076_000'
+              SwIdTxt: 'Lightning_McSeas_VCU_Current_Mode_096'
+             CalIdTxt: 'Lightning_McSeas_VCU_Current_Mode_096_000'
          HardwareType: '18940163'
            IdTableRev: '4'
        ProgramFileExt: 'hex'
-            DateStamp: '21-Feb-2023 17:57:37'
+            DateStamp: '30-May-2023 12:37:42'
          OutputHexA2L: 0
           exeLocation: 'C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Most Update VCU\Lightning_McSeas_VCU_Current_Mode_raptor_rtw'
           a2lLocation: 'C:\Users\jerod\OneDrive\Documents\School-Files\Boat_Team\GitHubFiles\Most Update VCU\Lightning_McSeas_VCU_Current_Mode_raptor_rtw'
@@ -258,13 +244,13 @@ settings =
 ### Calculating Memory Usage
 Memory Usage Summary:
  
-   FLASH (ALL)                         :  111864  of  655104 Bytes ( 17.1 %)
+   FLASH (ALL)                         :  112390  of  655104 Bytes ( 17.2 %)
                         CONSTVariables :     204             Bytes (  0.0 %)
                    EEVariables_DEFAULT :      44             Bytes (  0.0 %)
                       Timer_BGND_9AY_V :      20             Bytes (  0.0 %)
                            Timer_ooqlV :      20             Bytes (  0.0 %)
    EEPROM                              :      44  of   13440 Bytes (  0.3 %)
-   INTERNAL RAM                        :   11385  of   65408 Bytes ( 17.4 %)
+   INTERNAL RAM                        :   11446  of   65408 Bytes ( 17.5 %)
                  EEVariables_RAMShadow :      44             Bytes (  0.1 %)
                           RAMVariables :      72             Bytes (  0.1 %)
                                  STACK :    2048             Bytes (  3.1 %)
@@ -279,11 +265,11 @@ Descriptor.exe - Manipulates GCM48-5605B ROM binary images.
  Check descriptor.......Done.
  Writing output file....Done.
  Complete.
-RPG written to: C:\ECU\rpg\Lightning_McSeas_VCU_Current_Mode_076.rpg
+RPG written to: C:\ECU\rpg\Lightning_McSeas_VCU_Current_Mode_096.rpg
 RILPackager: Finished
  
-Build Number: 76
-Build Time: 70.2 seconds.
+Build Number: 96
+Build Time: 33.0 seconds.
  
 ########################################
 #####   Successful Raptor Build    #####

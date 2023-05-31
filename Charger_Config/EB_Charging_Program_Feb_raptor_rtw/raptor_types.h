@@ -7,7 +7,7 @@
    Copyright (c) 2018 New Eagle Products, Inc.
    All rights reserved.
 
-   Code Generated at: Fri Apr  7 16:05:33 2023
+   Code Generated at: Wed Apr 12 17:38:25 2023
  *****************************************************************************/
 
 #ifndef RAPTOR_TYPES_H

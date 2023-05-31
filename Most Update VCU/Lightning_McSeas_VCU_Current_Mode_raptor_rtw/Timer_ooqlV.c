@@ -7,7 +7,7 @@
    Copyright (c) 2018 New Eagle Products, Inc.
    All rights reserved.
 
-   Code Generated at: Tue Feb 21 17:57:04 2023
+   Code Generated at: Tue May 30 12:37:30 2023
  *****************************************************************************/
 
 #include "Lightning_McSeas_VCU_Current_Mode.h"

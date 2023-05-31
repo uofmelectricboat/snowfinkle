@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'EB_Charging_Program_Feb'.
  *
- * Model version                  : 6.230
+ * Model version                  : 6.240
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Fri Apr  7 16:05:33 2023
+ * C/C++ source code generated on : Wed Apr 12 17:38:25 2023
  *
  * Target selection: raptor.tlc
  * Embedded hardware selection: Freescale->MPC55xx

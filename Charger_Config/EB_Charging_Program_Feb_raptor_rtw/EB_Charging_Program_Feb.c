@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'EB_Charging_Program_Feb'.
  *
- * Model version                  : 6.230
+ * Model version                  : 6.240
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Fri Apr  7 16:05:33 2023
+ * C/C++ source code generated on : Wed Apr 12 17:38:25 2023
  *
  * Target selection: raptor.tlc
  * Embedded hardware selection: Freescale->MPC55xx
@@ -604,17 +604,17 @@ void EB_Charging_Program_Feb_Foreground_Enable(void)
    *  Constant: '<S4>/Constant1'
    */
   /* Level2 S-Function Block: '<S4>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_2013__0002(0U);
+  can_set_period_2090__0001(0U);
 
   /* Enable for S-Function (raptor_sfun_can_txmsg): '<S4>/raptor_can_txmsg1' incorporates:
    *  Constant: '<S4>/Constant4'
    */
   /* Level2 S-Function Block: '<S4>/raptor_can_txmsg1' (raptor_sfun_can_txmsg) */
-  can_set_period_2014__0002(0U);
+  can_set_period_2091__0001(0U);
 
   /* Enable for S-Function (raptor_sfun_can_txmsg): '<S5>/raptor_can_txmsg' */
   /* Level2 S-Function Block: '<S5>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_3121__0002(0U);
+  can_set_period_2170__0001(0U);
 }
 
 /* Disable for function-call system: '<Root>/Foreground' */
@@ -624,17 +624,17 @@ void EB_Charging_Program_Feb_Foreground_Disable(void)
    *  Constant: '<S4>/Constant1'
    */
   /* Level2 S-Function Block: '<S4>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_2013__0002(0);
+  can_set_period_2090__0001(0);
 
   /* Disable for S-Function (raptor_sfun_can_txmsg): '<S4>/raptor_can_txmsg1' incorporates:
    *  Constant: '<S4>/Constant4'
    */
   /* Level2 S-Function Block: '<S4>/raptor_can_txmsg1' (raptor_sfun_can_txmsg) */
-  can_set_period_2014__0002(0);
+  can_set_period_2091__0001(0);
 
   /* Disable for S-Function (raptor_sfun_can_txmsg): '<S5>/raptor_can_txmsg' */
   /* Level2 S-Function Block: '<S5>/raptor_can_txmsg' (raptor_sfun_can_txmsg) */
-  can_set_period_3121__0002(0);
+  can_set_period_2170__0001(0);
 }
 
 /* Output and update for function-call system: '<Root>/Foreground' */
@@ -646,8 +646,6 @@ void EB_Charging_Program_Feb_Foreground(void)
   uint16_T rtb_raptor_can_rxmsg_o1;
   uint16_T rtb_raptor_can_rxmsg1_o1;
   uint16_T rtb_raptor_can_rxmsg_o1_i;
-  real_T rtb_Gain1;
-  real_T rtb_Sum2;
 
   /* S-Function (raptor_sfun_can_rxmsg): '<S4>/raptor_can_rxmsg' */
 
@@ -656,7 +654,7 @@ void EB_Charging_Program_Feb_Foreground(void)
     uint8_T data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
 
     uint32_T temp;
-    can_get_2011__0002(&rtb_raptor_can_rxmsg_o1, NULL, NULL, &data[0], 8);
+    can_get_2088__0001(&rtb_raptor_can_rxmsg_o1, NULL, NULL, &data[0], 8);
 
     /* Signal: bcm_cell_vmax_a */
     temp = 0;
@@ -691,51 +689,45 @@ void EB_Charging_Program_Feb_Foreground(void)
   /* End of Outputs for SubSystem: '<S6>/If Action Subsystem' */
   /* End of Outputs for SubSystem: '<S6>/If Action Subsystem1' */
 
-  /* Sum: '<S4>/Sum2' */
-  rtb_Sum2 = rtb_Plus;
-
   /* If: '<S8>/If' */
   if (rtb_Merge < 4.05) {
     /* Outputs for IfAction SubSystem: '<S8>/If Action Subsystem' incorporates:
      *  ActionPort: '<S14>/Action Port'
      */
-    /* Sum: '<S5>/Plus' incorporates:
+    /* Merge: '<S7>/Merge' incorporates:
      *  Constant: '<S8>/Constant'
      *  Inport: '<S14>/In1'
      */
-    rtb_Plus = 16.0;
+    rtb_Merge = 16.0;
 
     /* End of Outputs for SubSystem: '<S8>/If Action Subsystem' */
   } else if (rtb_Merge < 4.1) {
     /* Outputs for IfAction SubSystem: '<S8>/If Action Subsystem2' incorporates:
      *  ActionPort: '<S16>/Action Port'
      */
-    /* Sum: '<S5>/Plus' incorporates:
+    /* Merge: '<S7>/Merge' incorporates:
      *  Constant: '<S4>/Constant'
      *  Gain: '<S4>/Gain'
      *  Inport: '<S16>/In1'
      *  Sum: '<S4>/Sum'
      */
-    rtb_Plus = -242.0 * rtb_Merge + 996.1;
+    rtb_Merge = -242.0 * rtb_Merge + 996.1;
 
     /* End of Outputs for SubSystem: '<S8>/If Action Subsystem2' */
   } else {
     /* Outputs for IfAction SubSystem: '<S8>/If Action Subsystem1' incorporates:
      *  ActionPort: '<S15>/Action Port'
      */
-    /* Sum: '<S5>/Plus' incorporates:
+    /* Merge: '<S7>/Merge' incorporates:
      *  Constant: '<S8>/Constant1'
      *  Inport: '<S15>/In1'
      */
-    rtb_Plus = 3.9;
+    rtb_Merge = 3.9;
 
     /* End of Outputs for SubSystem: '<S8>/If Action Subsystem1' */
   }
 
   /* End of If: '<S8>/If' */
-
-  /* Gain: '<S4>/Gain1' */
-  rtb_Gain1 = 10.0 * rtb_Plus;
 
   /* S-Function (raptor_sfun_can_txmsg): '<S4>/raptor_can_txmsg' incorporates:
    *  Constant: '<S4>/Constant1'
@@ -752,15 +744,15 @@ void EB_Charging_Program_Feb_Foreground(void)
     /* charger_control     - StartBit: 32U, BitLength: 8U, Endian: 0U */
 
     /* signal type is unsigned */
-    if (rtb_Sum2 < 0.0000000000F)
+    if (rtb_Plus < 0.0000000000F)
       temp = (uint32_T)0U;
-    else if (rtb_Sum2 > 255.0000000000F)
+    else if (rtb_Plus > 255.0000000000F)
       temp = (uint32_T)255U;
     else {
-      if ((real_T)rtb_Sum2 < 0)
-        temp = (uint32_T)(int32_T)((rtb_Sum2));
+      if ((real_T)rtb_Plus < 0)
+        temp = (uint32_T)(int32_T)((rtb_Plus));
       else
-        temp = (uint32_T)((rtb_Sum2));
+        temp = (uint32_T)((rtb_Plus));
     }
 
     temp_shift = (uint8_T)(temp >> 0);
@@ -770,15 +762,15 @@ void EB_Charging_Program_Feb_Foreground(void)
     /* charger_max_current - StartBit: 24U, BitLength: 16U, Endian: 1U */
 
     /* signal type is unsigned */
-    if (rtb_Gain1 < 0.0000000000F)
+    if (rtb_Merge < 0.0000000000F)
       temp = (uint32_T)0U;
-    else if (rtb_Gain1 > 6553.5000000000F)
+    else if (rtb_Merge > 6553.5000000000F)
       temp = (uint32_T)65535U;
     else {
-      if ((real_T)rtb_Gain1 < 0)
-        temp = (uint32_T)(int32_T)((rtb_Gain1) * 10.0f);
+      if ((real_T)rtb_Merge < 0)
+        temp = (uint32_T)(int32_T)((rtb_Merge) * 10.0f);
       else
-        temp = (uint32_T)((rtb_Gain1) * 10.0f);
+        temp = (uint32_T)((rtb_Merge) * 10.0f);
     }
 
     temp_shift = (uint8_T)(temp >> 0);
@@ -790,23 +782,23 @@ void EB_Charging_Program_Feb_Foreground(void)
     /* charger_max_voltage - StartBit: 8U, BitLength: 16U, Endian: 1U */
 
     /* signal type is unsigned */
-    if (820.0 < 0.0000000000F)
+    if (96.0 < 0.0000000000F)
       temp = (uint32_T)0U;
-    else if (820.0 > 6553.5000000000F)
+    else if (96.0 > 6553.5000000000F)
       temp = (uint32_T)65535U;
     else {
-      if ((real_T)820.0 < 0)
-        temp = (uint32_T)(int32_T)((820.0) * 10.0f);
+      if ((real_T)96.0 < 0)
+        temp = (uint32_T)(int32_T)((96.0) * 10.0f);
       else
-        temp = (uint32_T)((820.0) * 10.0f);
+        temp = (uint32_T)((96.0) * 10.0f);
     }
 
     temp_shift = (uint8_T)(temp >> 0);
     data[1U] |= temp_shift;
     temp_shift = (uint8_T)(temp >> 8);
     data[0U] |= temp_shift;
-    can_set_period_2013__0002(0U);
-    can_send_2013__0002(403105268U & 0x1FFFFFFF, 1, 8U, &data[0]);
+    can_set_period_2090__0001(0U);
+    can_send_2090__0001(403105268U & 0x1FFFFFFF, 1, 8U, &data[0]);
   }
 
   /* S-Function (raptor_sfun_can_rxmsg): '<S4>/raptor_can_rxmsg1' */
@@ -816,7 +808,7 @@ void EB_Charging_Program_Feb_Foreground(void)
     uint8_T data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
 
     uint32_T temp;
-    can_get_2012__0002(&rtb_raptor_can_rxmsg1_o1, NULL, NULL, &data[0], 8);
+    can_get_2089__0001(&rtb_raptor_can_rxmsg1_o1, NULL, NULL, &data[0], 8);
 
     /* Signal: bcm_cell_vmax_b */
     temp = 0;
@@ -850,9 +842,6 @@ void EB_Charging_Program_Feb_Foreground(void)
 
   /* End of Outputs for SubSystem: '<S7>/If Action Subsystem' */
   /* End of Outputs for SubSystem: '<S7>/If Action Subsystem1' */
-
-  /* Sum: '<S4>/Sum3' */
-  rtb_Sum2 = rtb_Merge;
 
   /* If: '<S9>/If' */
   if (rtb_Plus < 4.05) {
@@ -894,9 +883,6 @@ void EB_Charging_Program_Feb_Foreground(void)
 
   /* End of If: '<S9>/If' */
 
-  /* Gain: '<S4>/Gain3' */
-  rtb_Gain1 = 10.0 * rtb_Plus;
-
   /* S-Function (raptor_sfun_can_txmsg): '<S4>/raptor_can_txmsg1' incorporates:
    *  Constant: '<S4>/Constant4'
    */
@@ -912,15 +898,15 @@ void EB_Charging_Program_Feb_Foreground(void)
     /* charger_control     - StartBit: 32U, BitLength: 8U, Endian: 0U */
 
     /* signal type is unsigned */
-    if (rtb_Sum2 < 0.0000000000F)
+    if (rtb_Merge < 0.0000000000F)
       temp = (uint32_T)0U;
-    else if (rtb_Sum2 > 255.0000000000F)
+    else if (rtb_Merge > 255.0000000000F)
       temp = (uint32_T)255U;
     else {
-      if ((real_T)rtb_Sum2 < 0)
-        temp = (uint32_T)(int32_T)((rtb_Sum2));
+      if ((real_T)rtb_Merge < 0)
+        temp = (uint32_T)(int32_T)((rtb_Merge));
       else
-        temp = (uint32_T)((rtb_Sum2));
+        temp = (uint32_T)((rtb_Merge));
     }
 
     temp_shift = (uint8_T)(temp >> 0);
@@ -930,15 +916,15 @@ void EB_Charging_Program_Feb_Foreground(void)
     /* charger_max_current - StartBit: 24U, BitLength: 16U, Endian: 1U */
 
     /* signal type is unsigned */
-    if (rtb_Gain1 < 0.0000000000F)
+    if (rtb_Plus < 0.0000000000F)
       temp = (uint32_T)0U;
-    else if (rtb_Gain1 > 6553.5000000000F)
+    else if (rtb_Plus > 6553.5000000000F)
       temp = (uint32_T)65535U;
     else {
-      if ((real_T)rtb_Gain1 < 0)
-        temp = (uint32_T)(int32_T)((rtb_Gain1) * 10.0f);
+      if ((real_T)rtb_Plus < 0)
+        temp = (uint32_T)(int32_T)((rtb_Plus) * 10.0f);
       else
-        temp = (uint32_T)((rtb_Gain1) * 10.0f);
+        temp = (uint32_T)((rtb_Plus) * 10.0f);
     }
 
     temp_shift = (uint8_T)(temp >> 0);
@@ -950,23 +936,23 @@ void EB_Charging_Program_Feb_Foreground(void)
     /* charger_max_voltage - StartBit: 8U, BitLength: 16U, Endian: 1U */
 
     /* signal type is unsigned */
-    if (820.0 < 0.0000000000F)
+    if (96.0 < 0.0000000000F)
       temp = (uint32_T)0U;
-    else if (820.0 > 6553.5000000000F)
+    else if (96.0 > 6553.5000000000F)
       temp = (uint32_T)65535U;
     else {
-      if ((real_T)820.0 < 0)
-        temp = (uint32_T)(int32_T)((820.0) * 10.0f);
+      if ((real_T)96.0 < 0)
+        temp = (uint32_T)(int32_T)((96.0) * 10.0f);
       else
-        temp = (uint32_T)((820.0) * 10.0f);
+        temp = (uint32_T)((96.0) * 10.0f);
     }
 
     temp_shift = (uint8_T)(temp >> 0);
     data[1U] |= temp_shift;
     temp_shift = (uint8_T)(temp >> 8);
     data[0U] |= temp_shift;
-    can_set_period_2014__0002(0U);
-    can_send_2014__0002(403105780U & 0x1FFFFFFF, 1, 8U, &data[0]);
+    can_set_period_2091__0001(0U);
+    can_send_2091__0001(403105780U & 0x1FFFFFFF, 1, 8U, &data[0]);
   }
 
   /* S-Function (raptor_sfun_can_rxmsg): '<S5>/raptor_can_rxmsg' */
@@ -976,7 +962,7 @@ void EB_Charging_Program_Feb_Foreground(void)
     uint8_T data[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
 
     uint32_T temp;
-    can_get_3120__0002(&rtb_raptor_can_rxmsg_o1_i, NULL, NULL, &data[0], 8);
+    can_get_2169__0001(&rtb_raptor_can_rxmsg_o1_i, NULL, NULL, &data[0], 8);
 
     /* Signal: bcm_cell_vmax_a */
     temp = 0;
@@ -1084,8 +1070,8 @@ void EB_Charging_Program_Feb_Foreground(void)
     temp_shift = (uint8_T)(temp << 2);
     temp_shift &= ((uint8_T)4U);
     data[0U] |= temp_shift;
-    can_set_period_3121__0002(0U);
-    can_send_3121__0002(1024U & 0x7FF, 0, 4U, &data[0]);
+    can_set_period_2170__0001(0U);
+    can_send_2170__0001(1024U & 0x7FF, 0, 4U, &data[0]);
   }
 }
 
